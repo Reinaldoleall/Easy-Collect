@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>PriceAudit Pro - Gestão de Preços</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0f172a">
+
+    <script src="./tcss.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            overscroll-behavior: none;
+            -webkit-tap-highlight-color: transparent;
+            padding-bottom: calc(85px + env(safe-area-inset-bottom));
+        }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+        .animate-pulse-slow { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    </style>
+</head>
+<body class="text-slate-800 min-h-full flex flex-col w-full selection:bg-blue-500 selection:text-white">
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-3 space-y-3">
+
+        <!-- ABA 1: CONSULTA & PDF -->
+        <section id="tab-consulta" class="space-y-3">
+            <div class="bg-white p-3.5 rounded-2xl shadow-xs border border-slate-200">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2.5 mb-2.5 border-b border-slate-100 pb-2.5">
+                    <div>
+                        <h2 class="text-sm sm:text-base font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-magnifying-glass-chart text-blue-600"></i>
+                            Consulta & Relatório PDF
+                        </h2>
+                        <p class="text-[11px] text-slate-500">Filtre por estado, loja e marca. Ou exporte tudo com "Completo".</p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between w-full sm:w-auto gap-1.5">
+                        <label class="flex items-center gap-1 text-[11px] font-medium text-slate-700 bg-slate-100 px-2 py-1.5 rounded-lg cursor-pointer">
+                            <input type="checkbox" id="pdf-include-logs" checked class="rounded text-blue-600">
+                            <span>Logs PDF</span>
+                        </label>
+                        <button onclick="window.app.generateFullPDF()" title="Exportar TUDO" class="bg-slate-800 hover:bg-slate-900 text-white font-semibold text-xs px-3 py-2 rounded-xl shadow-xs transition flex items-center gap-1">
+                            <i class="fa-solid fa-database"></i>
+                            <span>Completo</span>
+                        </button>
+                        <button onclick="window.app.generatePDF()" class="bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-3 py-2 rounded-xl shadow-xs transition flex items-center gap-1">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Gerar PDF</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
+                    <div>
+                        <label class="block text-[10px] font-semibold text-slate-600 uppercase mb-1">1. Estado (UF)</label>
+                        <select id="filter-uf" onchange="window.app.onFilterChange('uf')" class="w-full rounded-xl border border-slate-300 px-2 py-1.5 text-xs bg-slate-50 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                            <option value="ALL">Todas (UF)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-semibold text-slate-600 uppercase mb-1">2. Loja (ID)</label>
+                        <select id="filter-store" onchange="window.app.onFilterChange('store')" class="w-full rounded-xl border border-slate-300 px-2 py-1.5 text-xs bg-slate-50 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                            <option value="ALL">Todas as Lojas</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-semibold text-slate-600 uppercase mb-1">3. Marca</label>
+                        <select id="filter-brand" onchange="window.app.renderConsulta()" class="w-full rounded-xl border border-slate-300 px-2 py-1.5 text-xs bg-slate-50 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                            <option value="ALL">Todas as Marcas</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-semibold text-slate-600 uppercase mb-1">4. Buscar</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-search absolute left-2.5 top-2.5 text-slate-400 text-xs"></i>
+                            <input type="text" id="filter-search" oninput="window.app.debouncedRenderConsulta()" placeholder="Produto ou SKU..." class="w-full rounded-xl border border-slate-300 pl-7 pr-2 py-1.5 text-xs bg-slate-50 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="selected-store-banner" class="hidden bg-gradient-to-r from-blue-900 to-slate-900 text-white p-3.5 rounded-2xl shadow-md">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2.5">
+                    <div class="space-y-0.5 min-w-0">
+                        <div class="flex items-center gap-2">
+                            <span id="banner-store-uf" class="bg-blue-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">RJ</span>
+                            <span id="banner-store-revenda" class="bg-amber-500/20 text-amber-300 font-mono text-[10px] px-2 py-0.5 rounded truncate">ID</span>
+                        </div>
+                        <h3 id="banner-store-name" class="text-xs sm:text-base font-bold truncate">Loja Selecionada</h3>
+                        <p id="banner-store-address" class="text-[11px] text-slate-300 truncate"><i class="fa-solid fa-location-dot mr-1"></i> Endereço</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 bg-white/10 p-2 rounded-xl text-center shrink-0 w-full sm:w-auto">
+                        <div class="px-3 border-r border-white/15">
+                            <span class="block text-[9px] text-slate-300">Itens</span>
+                            <strong id="banner-store-count" class="text-sm text-white">0</strong>
+                        </div>
+                        <div class="px-3">
+                            <span class="block text-[9px] text-slate-300">Logs</span>
+                            <strong id="banner-store-logs" class="text-sm text-amber-300">0</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                <div class="px-3.5 py-2.5 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+                    <h3 class="font-bold text-slate-700 text-xs uppercase tracking-wider">Preços Atuais & Variação</h3>
+                    <span id="consulta-count-badge" class="text-[10px] bg-blue-100 text-blue-800 font-semibold px-2 py-0.5 rounded-full">0 regs</span>
+                </div>
+                <div id="consulta-skeleton" class="p-4 space-y-3 hidden">
+                    <div class="h-12 bg-slate-100 rounded-xl animate-pulse-slow"></div>
+                    <div class="h-12 bg-slate-100 rounded-xl animate-pulse-slow"></div>
+                    <div class="h-12 bg-slate-100 rounded-xl animate-pulse-slow"></div>
+                </div>
+                <div id="consulta-mobile-list" class="md:hidden divide-y divide-slate-200"></div>
+                <div class="hidden md:block overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100/80 text-slate-600 text-xs uppercase border-b border-slate-200">
+                                <th class="py-3 px-4">Loja / Revenda ID</th>
+                                <th class="py-3 px-4">UF</th>
+                                <th class="py-3 px-4">Marca</th>
+                                <th class="py-3 px-4">Produto</th>
+                                <th class="py-3 px-4 text-right">Anterior</th>
+                                <th class="py-3 px-4 text-right">Atual</th>
+                                <th class="py-3 px-4 text-center">Variação</th>
+                                <th class="py-3 px-4">Atualização</th>
+                                <th class="py-3 px-4 text-center">Histórico</th>
+                            </tr>
+                        </thead>
+                        <tbody id="consulta-table-body" class="divide-y divide-slate-200 text-sm"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 2: PREÇOS -->
+        <section id="tab-precos" class="hidden space-y-3">
+            <div class="bg-white p-3.5 rounded-2xl shadow-xs border border-slate-200">
+                <div class="mb-2.5">
+                    <h2 class="text-sm sm:text-base font-bold text-slate-800 flex items-center gap-1.5">
+                        <i class="fa-solid fa-cash-register text-emerald-600"></i>
+                        Atualizador de Preços por Loja
+                    </h2>
+                    <p class="text-[11px] text-slate-500">Escolha a loja e lance os novos preços rapidamente.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-700 uppercase mb-1">1. Selecione a Loja *</label>
+                        <select id="pricing-store-select" onchange="window.app.renderPricingTable()" class="w-full rounded-xl border border-slate-300 px-2.5 py-1.5 text-xs font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white truncate">
+                            <option value="">-- Escolha uma Loja --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-700 uppercase mb-1">2. Marca</label>
+                        <select id="pricing-brand-select" onchange="window.app.renderPricingTable()" class="w-full rounded-xl border border-slate-300 px-2 py-1.5 text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white truncate">
+                            <option value="ALL">Todas as Marcas</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-700 uppercase mb-1">3. Buscar Produto</label>
+                        <input type="text" id="pricing-search" oninput="window.app.debouncedRenderPricingTable()" placeholder="Filtrar produto..." class="w-full rounded-xl border border-slate-300 px-2.5 py-1.5 text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-white truncate">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                <div class="px-3.5 py-2.5 border-b border-slate-200 bg-slate-50 flex justify-between items-center">
+                    <h3 id="pricing-table-title" class="font-bold text-slate-700 text-xs truncate">Selecione uma loja acima</h3>
+                </div>
+                <div id="pricing-mobile-list" class="md:hidden divide-y divide-slate-200"></div>
+                <div class="hidden md:block overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-600 text-xs uppercase border-b border-slate-200">
+                                <th class="py-3 px-4">Marca</th>
+                                <th class="py-3 px-4">Produto / SKU</th>
+                                <th class="py-3 px-4 text-right">Preço Atual</th>
+                                <th class="py-3 px-4 text-right">Preço Anterior</th>
+                                <th class="py-3 px-4 w-56">Novo Preço (R$)</th>
+                                <th class="py-3 px-4 text-center">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pricing-table-body" class="divide-y divide-slate-200 text-sm"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 3: LOJAS -->
+        <section id="tab-lojas" class="hidden grid grid-cols-1 lg:grid-cols-3 gap-3">
+            <div class="bg-white p-3.5 rounded-2xl shadow-xs border border-slate-200 h-fit">
+                <h2 class="text-sm sm:text-base font-bold text-slate-800 mb-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-store text-blue-600"></i>
+                    Cadastrar Loja / Unidade
+                </h2>
+                <p class="text-[11px] text-slate-500 mb-3">Insira o <strong>ID de Revenda</strong> exclusivo da unidade e o Estado (UF).</p>
+
+                <form onsubmit="window.app.handleCreateStore(event)" class="space-y-2.5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">ID da Revenda *</label>
+                        <input type="text" id="store-revenda-id" required placeholder="Ex: CRF-RJ-001" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs font-mono uppercase focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nome da Loja *</label>
+                        <input type="text" id="store-name" required placeholder="Ex: Carrefour Barra" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Estado (UF) *</label>
+                            <select id="store-uf" required class="w-full rounded-xl border border-slate-300 px-2.5 py-2 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white">
+                                <option value="RJ">RJ - Rio de Janeiro</option>
+                                <option value="SP">SP - São Paulo</option>
+                                <option value="MG">MG - Minas Gerais</option>
+                                <option value="ES">ES - Espírito Santo</option>
+                                <option value="PR">PR - Paraná</option>
+                                <option value="SC">SC - Santa Catarina</option>
+                                <option value="RS">RS - Rio Grande do Sul</option>
+                                <option value="BA">BA - Bahia</option>
+                                <option value="PE">PE - Pernambuco</option>
+                                <option value="CE">CE - Ceará</option>
+                                <option value="DF">DF - Distrito Federal</option>
+                                <option value="GO">GO - Goiás</option>
+                                <option value="AM">AM - Amazonas</option>
+                                <option value="PA">PA - Pará</option>
+                                <option value="OUTRO">Outro Estado</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Cidade *</label>
+                            <input type="text" id="store-city" required placeholder="Ex: Rio de Janeiro" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Endereço</label>
+                        <input type="text" id="store-address" placeholder="Ex: Av. das Américas, 5150" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                    <button type="submit" id="btn-save-store" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-xl shadow-xs transition text-xs flex justify-center items-center gap-1.5">
+                        <i class="fa-solid fa-plus-circle"></i>
+                        <span>Salvar Loja</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="lg:col-span-2 bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden flex flex-col">
+                <div class="px-3.5 py-2.5 border-b border-slate-200 bg-slate-50 flex justify-between items-center gap-2">
+                    <h3 class="font-bold text-slate-700 text-xs uppercase">Lojas Cadastradas</h3>
+                    <input type="text" id="search-store-list" oninput="window.app.renderStoresList()" placeholder="Filtrar loja..." class="rounded-lg border border-slate-300 px-2.5 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500 w-36 sm:w-auto">
+                </div>
+                <div id="stores-mobile-list" class="md:hidden divide-y divide-slate-200"></div>
+                <div class="hidden md:block overflow-x-auto flex-grow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-600 text-xs uppercase border-b border-slate-200">
+                                <th class="py-3 px-4">Revenda ID</th>
+                                <th class="py-3 px-4">Loja / Rede</th>
+                                <th class="py-3 px-4">UF / Cidade</th>
+                                <th class="py-3 px-4 text-center">Itens</th>
+                                <th class="py-3 px-4 text-right">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stores-table-body" class="divide-y divide-slate-200 text-sm"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 4: CATÁLOGO -->
+        <section id="tab-catalogo" class="hidden space-y-3">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+                <div class="bg-white p-3.5 rounded-2xl shadow-xs border border-slate-200 h-fit space-y-3">
+                    <div>
+                        <h2 class="text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-copyright text-purple-600"></i>
+                            1. Cadastrar Marca
+                        </h2>
+                        <form onsubmit="window.app.handleCreateBrand(event)" class="mt-2 space-y-2">
+                            <input type="text" id="brand-name" required placeholder="Ex: Nestlé, Ambev..." class="w-full rounded-xl border border-slate-300 px-3 py-1.5 text-xs focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                            <input type="text" id="brand-category" placeholder="Categoria (ex: Alimentos, Bebidas)" class="w-full rounded-xl border border-slate-300 px-3 py-1.5 text-xs focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-xl text-xs">Adicionar Marca</button>
+                        </form>
+                    </div>
+
+                    <hr class="border-slate-200">
+
+                    <div>
+                        <h2 class="text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-box-open text-indigo-600"></i>
+                            2. Cadastrar Produto
+                        </h2>
+                        <form onsubmit="window.app.handleCreateProduct(event)" class="mt-2 space-y-2">
+                            <select id="product-brand-select" required class="w-full rounded-xl border border-slate-300 px-3 py-1.5 text-xs bg-white truncate">
+                                <option value="">-- Selecione a Marca --</option>
+                            </select>
+                            <input type="text" id="product-name" required placeholder="Ex: Leite Condensado 395g" class="w-full rounded-xl border border-slate-300 px-3 py-1.5 text-xs">
+                            <div class="grid grid-cols-2 gap-2">
+                                <input type="text" id="product-sku" placeholder="SKU / Código" class="w-full rounded-xl border border-slate-300 px-3 py-1.5 text-xs font-mono">
+                                <select id="product-unit" class="w-full rounded-xl border border-slate-300 px-2 py-1.5 text-xs bg-white">
+                                    <option value="UN">UN</option>
+                                    <option value="KG">KG</option>
+                                    <option value="CX">CX</option>
+                                    <option value="FD">FD</option>
+                                    <option value="LT">LT</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-xl text-xs">Salvar Produto</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="px-3.5 py-2.5 border-b border-slate-200 bg-slate-50 flex justify-between items-center gap-2">
+                        <h3 class="font-bold text-slate-700 text-xs uppercase">Catálogo de Produtos</h3>
+                        <select id="catalog-filter-brand" onchange="window.app.renderCatalog()" class="rounded-lg border border-slate-300 px-2 py-1 text-xs bg-white truncate max-w-[140px]">
+                            <option value="ALL">Todas as Marcas</option>
+                        </select>
+                    </div>
+                    <div id="catalog-mobile-list" class="md:hidden divide-y divide-slate-200"></div>
+                    <div class="hidden md:block overflow-x-auto flex-grow">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-100 text-slate-600 text-xs uppercase border-b border-slate-200">
+                                    <th class="py-3 px-4">Marca</th>
+                                    <th class="py-3 px-4">Produto</th>
+                                    <th class="py-3 px-4">SKU</th>
+                                    <th class="py-3 px-4 text-center">Unid.</th>
+                                    <th class="py-3 px-4 text-center">Lojas c/ Preço</th>
+                                    <th class="py-3 px-4 text-right">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="catalog-table-body" class="divide-y divide-slate-200 text-sm"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 5: LOGS -->
+        <section id="tab-logs" class="hidden space-y-3">
+            <div class="bg-white p-3.5 rounded-2xl shadow-xs border border-slate-200">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2.5 mb-3">
+                    <div>
+                        <h2 class="text-sm sm:text-base font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-clock-rotate-left text-amber-600"></i>
+                            Histórico de Alterações de Preços
+                        </h2>
+                        <p class="text-[11px] text-slate-500">Registro de todas as atualizações de preços realizadas nas lojas.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 w-full sm:w-auto">
+                        <select id="log-filter-store" onchange="window.app.renderLogs()" class="rounded-xl border border-slate-300 px-2 py-1.5 text-xs bg-slate-50 truncate">
+                            <option value="ALL">Todas as Lojas</option>
+                        </select>
+                        <select id="log-filter-brand" onchange="window.app.renderLogs()" class="rounded-xl border border-slate-300 px-2 py-1.5 text-xs bg-slate-50 truncate">
+                            <option value="ALL">Todas as Marcas</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="logs-mobile-list" class="md:hidden divide-y divide-slate-200 border-t border-slate-200"></div>
+                <div class="hidden md:block overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-600 text-xs uppercase border-b border-slate-200">
+                                <th class="py-3 px-4">Data / Hora</th>
+                                <th class="py-3 px-4">Loja (Revenda ID)</th>
+                                <th class="py-3 px-4">UF</th>
+                                <th class="py-3 px-4">Marca & Produto</th>
+                                <th class="py-3 px-4 text-right">Antigo</th>
+                                <th class="py-3 px-4 text-right">Novo</th>
+                                <th class="py-3 px-4 text-center">Variação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logs-table-body" class="divide-y divide-slate-200 text-sm"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 6: SISTEMA -->
+        <section id="tab-mais" class="hidden space-y-3">
+            <div class="bg-white p-4 rounded-2xl shadow-xs border border-slate-200 max-w-xl mx-auto space-y-4">
+                <div class="border-b pb-3 flex justify-between items-start gap-2">
+                    <div>
+                        <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-database text-blue-600"></i> Sistema & Banco de Dados
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-0.5">Gerenciamento de dados em nuvem em tempo real.</p>
+                    </div>
+                    <span id="connection-badge" class="inline-flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-full text-[10px] shrink-0">
+                        <span id="status-dot" class="w-2 h-2 rounded-full bg-amber-400 animate-pulse-slow"></span>
+                        <span id="status-text" class="text-slate-600 font-medium">Conectando...</span>
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 text-center">
+                    <div class="bg-slate-50 border p-3 rounded-xl"><span class="block text-[10px] uppercase text-slate-500">Lojas</span><strong id="stat-stores" class="text-lg font-bold text-slate-800">0</strong></div>
+                    <div class="bg-slate-50 border p-3 rounded-xl"><span class="block text-[10px] uppercase text-slate-500">Marcas</span><strong id="stat-brands" class="text-lg font-bold text-slate-800">0</strong></div>
+                    <div class="bg-slate-50 border p-3 rounded-xl"><span class="block text-[10px] uppercase text-slate-500">Produtos</span><strong id="stat-products" class="text-lg font-bold text-slate-800">0</strong></div>
+                    <div class="bg-slate-50 border p-3 rounded-xl"><span class="block text-[10px] uppercase text-slate-500">Logs</span><strong id="stat-logs" class="text-lg font-bold text-slate-800">0</strong></div>
+                </div>
+
+                <div class="bg-slate-100 p-3.5 rounded-xl space-y-1">
+                    <span class="block text-[10px] text-slate-500 font-semibold uppercase">Projeto Firebase:</span>
+                    <code class="block text-slate-800 bg-white p-2 rounded border font-mono text-[10px] break-all">rota2d</code>
+                    <span class="block text-[10px] text-slate-500 font-semibold uppercase mt-2">ID da Sessão Atual:</span>
+                    <code id="user-id-display" class="block text-slate-800 bg-white p-2 rounded border font-mono text-[10px] break-all">Conectando...</code>
+                </div>
+
+                <div id="connection-status-panel" class="bg-emerald-50 border border-emerald-200 text-emerald-900 p-3.5 rounded-xl flex items-start gap-2.5">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i>
+                    <div>
+                        <p class="font-bold text-xs">Firebase Conectado</p>
+                        <p class="text-[11px] mt-0.5">Dados sincronizados em tempo real entre todos os usuários.</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 text-blue-900 p-3.5 rounded-xl flex items-start gap-2.5">
+                    <i class="fa-solid fa-lightbulb text-blue-600 text-base mt-0.5"></i>
+                    <div>
+                        <p class="font-bold text-xs">Primeiros passos</p>
+                        <p class="text-[11px] mt-0.5">1) Cadastre suas <strong>Lojas</strong> na aba Lojas → 2) Cadastre <strong>Marcas e Produtos</strong> no Catálogo → 3) Lance os <strong>Preços</strong> em cada loja.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl space-y-2">
+                    <p class="font-bold text-xs text-slate-700 flex items-center gap-1.5"><i class="fa-solid fa-file-export text-slate-600"></i> Exportações disponíveis</p>
+                    <div class="text-[11px] text-slate-600 space-y-1">
+                        <p>• <strong>Completo</strong> (aba Consulta) → PDF com Lojas + Marcas + Produtos + Preços + Logs.</p>
+                        <p>• <strong>Gerar PDF</strong> (aba Consulta) → Relatório filtrado por UF/Loja/Marca.</p>
+                        <p>• <strong>PDF</strong> (aba Lojas, por loja) → Relatório individual com dados e histórico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-slate-900 border-t border-slate-800 text-slate-400 z-40 shadow-2xl pb-[env(safe-area-inset-bottom)]">
+        <div class="grid grid-cols-6 h-16 max-w-2xl mx-auto">
+            <button onclick="window.app.switchTab('consulta')" id="tab-btn-consulta" class="flex flex-col items-center justify-center gap-0.5 text-blue-400 font-semibold transition">
+                <i class="fa-solid fa-file-pdf text-base"></i>
+                <span class="text-[9px]">Consulta</span>
+            </button>
+            <button onclick="window.app.switchTab('precos')" id="tab-btn-precos" class="flex flex-col items-center justify-center gap-0.5 hover:text-slate-200 transition">
+                <i class="fa-solid fa-cash-register text-base"></i>
+                <span class="text-[9px]">Preços</span>
+            </button>
+            <button onclick="window.app.switchTab('lojas')" id="tab-btn-lojas" class="flex flex-col items-center justify-center gap-0.5 hover:text-slate-200 transition">
+                <i class="fa-solid fa-store text-base"></i>
+                <span class="text-[9px]">Lojas</span>
+            </button>
+            <button onclick="window.app.switchTab('catalogo')" id="tab-btn-catalogo" class="flex flex-col items-center justify-center gap-0.5 hover:text-slate-200 transition">
+                <i class="fa-solid fa-boxes-stacked text-base"></i>
+                <span class="text-[9px]">Catálogo</span>
+            </button>
+            <button onclick="window.app.switchTab('logs')" id="tab-btn-logs" class="flex flex-col items-center justify-center gap-0.5 hover:text-slate-200 transition">
+                <i class="fa-solid fa-clock-rotate-left text-base"></i>
+                <span class="text-[9px]">Logs</span>
+            </button>
+            <button onclick="window.app.switchTab('mais')" id="tab-btn-mais" class="flex flex-col items-center justify-center gap-0.5 hover:text-slate-200 transition">
+                <i class="fa-solid fa-database text-base text-blue-400"></i>
+                <span class="text-[9px]">Sistema</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MODAL HISTÓRICO -->
+    <div id="modal-item-history" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh]">
+            <div class="px-4 py-3 bg-slate-900 text-white flex justify-between items-center">
+                <div>
+                    <h3 id="history-modal-title" class="font-bold text-sm truncate">Histórico</h3>
+                    <p id="history-modal-subtitle" class="text-[10px] text-slate-400 truncate"></p>
+                </div>
+                <button onclick="window.app.closeModal('modal-item-history')" class="text-slate-300 hover:text-white p-2 text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-4 overflow-y-auto flex-grow">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-600 text-[10px] uppercase border-b">
+                            <th class="py-2 px-2">Data / Hora</th>
+                            <th class="py-2 px-2 text-right">Anterior</th>
+                            <th class="py-2 px-2 text-right">Novo</th>
+                            <th class="py-2 px-2 text-center">Var.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-modal-tbody" class="divide-y text-xs"></tbody>
+                </table>
+            </div>
+            <div class="px-4 py-3 bg-slate-50 border-t flex justify-end">
+                <button onclick="window.app.closeModal('modal-item-history')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs px-4 py-2 rounded-xl font-semibold">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CONFIRMAÇÃO -->
+    <div id="modal-confirm" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full shadow-2xl border border-slate-200 overflow-hidden p-5 text-center space-y-4">
+            <div class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto text-xl">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div>
+                <h3 id="confirm-title" class="font-bold text-slate-800 text-base">Excluir Registro?</h3>
+                <p id="confirm-desc" class="text-xs text-slate-500 mt-1">Esta ação não poderá ser desfeita.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="window.app.closeModal('modal-confirm')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs py-2.5 rounded-xl">Cancelar</button>
+                <button id="btn-confirm-action" class="bg-red-600 hover:bg-red-700 text-white font-semibold text-xs py-2.5 rounded-xl">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, addDoc, deleteDoc, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // ============================================================
+        // FIREBASE CONFIG (projeto rota2d)
+        // ============================================================
+        const FIREBASE_CONFIG = {
+            apiKey: "AIzaSyCB38WnYMpHHEYAAUNvhFq2f-11GGtgHoU",
+            authDomain: "rota2d.firebaseapp.com",
+            projectId: "rota2d",
+            storageBucket: "rota2d.firebasestorage.app",
+            messagingSenderId: "666041472214",
+            appId: "1:666041472214:web:428c49431d8acc5759e577"
+        };
+
+        // Suporte a ambiente Claude (usa __firebase_config se existir, senão usa o config acima)
+        const firebaseConfig = typeof __firebase_config !== 'undefined'
+            ? JSON.parse(__firebase_config)
+            : FIREBASE_CONFIG;
+
+        let app, db, auth;
+        let currentUser = null;
+
+        const state = { stores: [], brands: [], products: [], storePrices: [], priceLogs: [], isLoading: true };
+
+        const formatBRL = (val) => (val === null || val === undefined || isNaN(val)) ? '—' : Number(val).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        const formatDate = (isoStr) => !isoStr ? '—' : new Date(isoStr).toLocaleDateString('pt-BR') + ' ' + new Date(isoStr).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            const colors = { success: 'bg-slate-900 border-emerald-500 text-white', error: 'bg-red-950 border-red-500 text-white', info: 'bg-blue-950 border-blue-400 text-white' };
+            const icons = { success: 'fa-circle-check text-emerald-400', error: 'fa-triangle-exclamation text-red-400', info: 'fa-circle-info text-blue-400' };
+            toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl shadow-xl border-l-4 text-xs font-medium transition-all duration-300 ${colors[type] || colors.info}`;
+            toast.innerHTML = `<i class="fa-solid ${icons[type] || icons.info} text-base shrink-0"></i><span class="flex-1">${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 4000);
+        }
+
+        function vibrate() { if (navigator.vibrate) navigator.vibrate(15); }
+
+        function updateConnectionBadge(online, textOverride = null) {
+            const dot = document.getElementById('status-dot');
+            const text = document.getElementById('status-text');
+            const badge = document.getElementById('connection-badge');
+            const panel = document.getElementById('connection-status-panel');
+            if (!dot || !text) return;
+            if (online) {
+                dot.className = "w-2 h-2 rounded-full bg-emerald-500";
+                text.textContent = textOverride || "Online";
+                text.className = "text-emerald-700 font-medium";
+                if (badge) badge.className = "inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full text-[10px] shrink-0";
+                if (panel) {
+                    panel.className = "bg-emerald-50 border border-emerald-200 text-emerald-900 p-3.5 rounded-xl flex items-start gap-2.5";
+                    panel.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-600 text-base mt-0.5"></i><div><p class="font-bold text-xs">Firebase Conectado — projeto rota2d</p><p class="text-[11px] mt-0.5">Dados sincronizados em tempo real entre todos os usuários.</p></div>`;
+                }
+            } else {
+                dot.className = "w-2 h-2 rounded-full bg-red-500 animate-pulse-slow";
+                text.textContent = textOverride || "Desconectado";
+                text.className = "text-red-700 font-medium";
+                if (badge) badge.className = "inline-flex items-center gap-1.5 bg-red-50 border border-red-200 px-2.5 py-1 rounded-full text-[10px] shrink-0";
+                if (panel) {
+                    panel.className = "bg-red-50 border border-red-200 text-red-900 p-3.5 rounded-xl flex items-start gap-2.5";
+                    panel.innerHTML = `<i class="fa-solid fa-triangle-exclamation text-red-600 text-base mt-0.5"></i><div><p class="font-bold text-xs">Falha na conexão</p><p class="text-[11px] mt-0.5">${textOverride || 'Verifique se o Anonymous Auth e o Firestore estão ativos no Firebase Console.'}</p></div>`;
+                }
+            }
+        }
+
+        async function initFirebase() {
+            try {
+                app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // Escuta o estado de autenticação ANTES de tentar
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        currentUser = user;
+                        document.getElementById('user-id-display').textContent = user.uid;
+                        updateConnectionBadge(true, "Online");
+                        setupListeners();
+                    } else {
+                        updateConnectionBadge(false, "Sem sessão");
+                    }
+                });
+
+                // Login (custom token no ambiente Claude, senão anonymous)
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (err) {
+                console.error("Erro Firebase:", err);
+                const msg = err.code === 'auth/configuration-not-found'
+                    ? "Ative o login ANÔNIMO no Firebase Console → Authentication → Anonymous."
+                    : err.code === 'auth/operation-not-allowed'
+                    ? "O método Anonymous não está habilitado no Firebase Console."
+                    : (err.message || "Erro de conexão");
+                updateConnectionBadge(false, msg.substring(0, 80));
+                showToast(msg, "error");
+            }
+        }
+
+        // Caminhos no Firestore — coleções raiz (mais simples para projeto próprio)
+        const getCol = (name) => collection(db, name);
+        const getDocRef = (name, id) => doc(db, name, id);
+
+        function setupListeners() {
+            if (!currentUser) return;
+            document.getElementById('consulta-skeleton').classList.remove('hidden');
+            ['stores', 'brands', 'products', 'store_prices', 'price_logs'].forEach((colName) => {
+                onSnapshot(getCol(colName), (snap) => {
+                    if (colName === 'stores') state.stores = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+                    if (colName === 'brands') state.brands = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+                    if (colName === 'products') state.products = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+                    if (colName === 'store_prices') state.storePrices = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+                    if (colName === 'price_logs') state.priceLogs = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b)=>new Date(b.timestamp||0)-new Date(a.timestamp||0));
+                    state.isLoading = false;
+                    document.getElementById('consulta-skeleton').classList.add('hidden');
+                    refreshAllViews();
+                }, (err) => {
+                    console.error(`Erro no listener ${colName}:`, err);
+                    showToast(`Erro ao carregar ${colName}. Verifique as Rules do Firestore.`, "error");
+                    updateConnectionBadge(false, "Erro nos dados");
+                });
+            });
+        }
+
+        function refreshAllViews() {
+            document.getElementById('stat-stores').textContent = state.stores.length;
+            document.getElementById('stat-brands').textContent = state.brands.length;
+            document.getElementById('stat-products').textContent = state.products.length;
+            document.getElementById('stat-logs').textContent = state.priceLogs.length;
+            populateSelects();
+            renderConsulta();
+            renderPricingTable();
+            renderStoresList();
+            renderCatalog();
+            renderLogs();
+        }
+
+        function populateSelects() {
+            const ufs = [...new Set(state.stores.map(s => s.uf).filter(Boolean))].sort();
+            const filterUf = document.getElementById('filter-uf');
+            const curUf = filterUf.value;
+            filterUf.innerHTML = `<option value="ALL">Todas (UF)</option>` + ufs.map(u => `<option value="${u}">${u}</option>`).join('');
+            if (ufs.includes(curUf)) filterUf.value = curUf;
+
+            updateStoreDropdown();
+
+            const brandOpts = `<option value="ALL">Todas as Marcas</option>` + state.brands.map(b => `<option value="${b.id}">${b.name}</option>`).join('');
+            ['filter-brand', 'pricing-brand-select', 'catalog-filter-brand', 'log-filter-brand'].forEach(id => {
+                const el = document.getElementById(id);
+                const val = el.value;
+                el.innerHTML = brandOpts;
+                if (state.brands.some(b => b.id === val)) el.value = val;
+            });
+
+            const prodBrand = document.getElementById('product-brand-select');
+            const curPB = prodBrand.value;
+            prodBrand.innerHTML = `<option value="">-- Selecione --</option>` + state.brands.map(b => `<option value="${b.id}">${b.name}</option>`).join('');
+            if (state.brands.some(b => b.id === curPB)) prodBrand.value = curPB;
+
+            const pricingStore = document.getElementById('pricing-store-select');
+            const curPS = pricingStore.value;
+            pricingStore.innerHTML = `<option value="">-- Escolha uma Loja --</option>` + state.stores.map(s => `<option value="${s.id}">[${s.revendaId}] ${s.name} (${s.uf})</option>`).join('');
+            if (state.stores.some(s => s.id === curPS)) pricingStore.value = curPS;
+
+            const logStore = document.getElementById('log-filter-store');
+            const curLS = logStore.value;
+            logStore.innerHTML = `<option value="ALL">Todas as Lojas</option>` + state.stores.map(s => `<option value="${s.id}">[${s.revendaId}] ${s.name} (${s.uf})</option>`).join('');
+            if (state.stores.some(s => s.id === curLS)) logStore.value = curLS;
+        }
+
+        function updateStoreDropdown() {
+            const uf = document.getElementById('filter-uf').value;
+            const filterStore = document.getElementById('filter-store');
+            const cur = filterStore.value;
+            const stores = uf === 'ALL' ? state.stores : state.stores.filter(s => s.uf === uf);
+            filterStore.innerHTML = `<option value="ALL">Todas as Lojas (${stores.length})</option>` + stores.map(s => `<option value="${s.id}">[${s.revendaId}] ${s.name}</option>`).join('');
+            if (stores.some(s => s.id === cur)) filterStore.value = cur;
+        }
+
+        function onFilterChange(type) {
+            if (type === 'uf') updateStoreDropdown();
+            renderConsulta();
+        }
+
+        let debounceTimer;
+        function debouncedRenderConsulta() { clearTimeout(debounceTimer); debounceTimer = setTimeout(() => renderConsulta(), 250); }
+        function debouncedRenderPricingTable() { clearTimeout(debounceTimer); debounceTimer = setTimeout(() => renderPricingTable(), 250); }
+
+        async function handleCreateStore(e) {
+            e.preventDefault();
+            if (!currentUser) return;
+            const btn = document.getElementById('btn-save-store');
+            btn.disabled = true;
+            const revendaId = document.getElementById('store-revenda-id').value.trim().toUpperCase();
+            const name = document.getElementById('store-name').value.trim();
+            const uf = document.getElementById('store-uf').value;
+            const city = document.getElementById('store-city').value.trim();
+            const address = document.getElementById('store-address').value.trim();
+            if (state.stores.some(s => s.revendaId.toUpperCase() === revendaId)) {
+                showToast(`O ID de Revenda "${revendaId}" já está em uso!`, "error");
+                btn.disabled = false;
+                return;
+            }
+            try {
+                await addDoc(getCol('stores'), { revendaId, name, uf, city, address, createdAt: new Date().toISOString(), createdBy: currentUser.uid });
+                e.target.reset();
+                vibrate();
+                showToast(`Loja [${revendaId}] salva com sucesso!`);
+            } catch (err) {
+                console.error(err);
+                showToast("Erro ao salvar loja. Verifique as Rules do Firestore.", "error");
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        async function handleCreateBrand(e) {
+            e.preventDefault();
+            if (!currentUser) return;
+            const name = document.getElementById('brand-name').value.trim();
+            const category = document.getElementById('brand-category').value.trim() || 'Geral';
+            if (state.brands.some(b => b.name.toLowerCase() === name.toLowerCase())) return showToast("Marca já cadastrada.", "error");
+            try {
+                await addDoc(getCol('brands'), { name, category, createdAt: new Date().toISOString() });
+                e.target.reset();
+                vibrate();
+                showToast(`Marca "${name}" cadastrada!`);
+            } catch(e) { console.error(e); showToast("Erro ao cadastrar marca.", "error"); }
+        }
+
+        async function handleCreateProduct(e) {
+            e.preventDefault();
+            if (!currentUser) return;
+            const brandId = document.getElementById('product-brand-select').value;
+            const name = document.getElementById('product-name').value.trim();
+            const sku = document.getElementById('product-sku').value.trim() || 'S/SKU';
+            const unit = document.getElementById('product-unit').value;
+            if (!brandId) return showToast("Selecione uma marca.", "error");
+            try {
+                await addDoc(getCol('products'), { brandId, name, sku, unit, createdAt: new Date().toISOString() });
+                document.getElementById('product-name').value = '';
+                document.getElementById('product-sku').value = '';
+                vibrate();
+                showToast(`Produto "${name}" salvo!`);
+            } catch(e) { console.error(e); showToast("Erro ao salvar produto.", "error"); }
+        }
+
+        async function saveProductPrice(storeId, productId, brandId, inputId) {
+            if (!currentUser) return;
+            const inputEl = document.getElementById(inputId);
+            const val = parseFloat(inputEl.value.replace(',', '.').trim());
+            if (isNaN(val) || val <= 0) return showToast("Insira um valor válido maior que zero.", "error");
+            const docId = `${storeId}_${productId}`;
+            const existing = state.storePrices.find(sp => sp.id === docId);
+            const oldPrice = existing ? Number(existing.currentPrice) : null;
+            if (oldPrice === val) return showToast("O preço é o mesmo.", "info");
+            const now = new Date().toISOString();
+            try {
+                await setDoc(getDocRef('store_prices', docId), {
+                    storeId, productId, brandId, currentPrice: val, previousPrice: oldPrice ?? val,
+                    updatedAt: now, updatedBy: currentUser.uid
+                });
+                await addDoc(getCol('price_logs'), {
+                    storeId, productId, brandId, oldPrice, newPrice: val, timestamp: now, userId: currentUser.uid
+                });
+                inputEl.value = '';
+                vibrate();
+                showToast("Preço atualizado com sucesso!");
+            } catch(e) { console.error(e); showToast("Erro ao atualizar preço.", "error"); }
+        }
+
+        function confirmDelete(type, id, name) {
+            const modal = document.getElementById('modal-confirm');
+            document.getElementById('confirm-title').textContent = `Excluir ${type === 'store' ? 'Loja' : 'Produto'}?`;
+            document.getElementById('confirm-desc').textContent = `Deseja realmente remover "${name}"?`;
+            const btnConfirm = document.getElementById('btn-confirm-action');
+            btnConfirm.onclick = async () => {
+                try {
+                    await deleteDoc(getDocRef(type === 'store' ? 'stores' : 'products', id));
+                    closeModal('modal-confirm');
+                    vibrate();
+                    showToast("Item excluído com sucesso!", "info");
+                } catch(e) { console.error(e); showToast("Erro ao excluir item.", "error"); }
+            };
+            modal.classList.remove('hidden');
+        }
+
+        function getFilteredConsulta() {
+            const uf = document.getElementById('filter-uf').value;
+            const store = document.getElementById('filter-store').value;
+            const brand = document.getElementById('filter-brand').value;
+            const search = (document.getElementById('filter-search').value || '').toLowerCase().trim();
+            const sMap = Object.fromEntries(state.stores.map(s => [s.id, s]));
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+            const pMap = Object.fromEntries(state.products.map(p => [p.id, p]));
+            let rows = state.storePrices.map(sp => {
+                const st = sMap[sp.storeId], pr = pMap[sp.productId];
+                const br = bMap[sp.brandId || (pr ? pr.brandId : '')];
+                if (!st || !pr) return null;
+                const diff = (sp.previousPrice && sp.previousPrice !== sp.currentPrice) ? (((sp.currentPrice - sp.previousPrice) / sp.previousPrice) * 100) : 0;
+                return { ...sp, storeName: st.name, revendaId: st.revendaId, uf: st.uf, city: st.city, address: st.address, brandName: br ? br.name : 'Outros', productName: pr.name, sku: pr.sku, unit: pr.unit, diffPercent: diff };
+            }).filter(Boolean);
+            if (uf !== 'ALL') rows = rows.filter(r => r.uf === uf);
+            if (store !== 'ALL') rows = rows.filter(r => r.storeId === store);
+            if (brand !== 'ALL') rows = rows.filter(r => r.brandId === brand);
+            if (search) rows = rows.filter(r => r.productName.toLowerCase().includes(search) || r.sku.toLowerCase().includes(search) || r.revendaId.toLowerCase().includes(search));
+            return rows.sort((a,b) => (a.revendaId||'').localeCompare(b.revendaId||''));
+        }
+
+        function renderConsulta() {
+            const storeId = document.getElementById('filter-store').value;
+            const banner = document.getElementById('selected-store-banner');
+            if (storeId !== 'ALL') {
+                const st = state.stores.find(s => s.id === storeId);
+                if (st) {
+                    banner.classList.remove('hidden');
+                    document.getElementById('banner-store-uf').textContent = st.uf;
+                    document.getElementById('banner-store-revenda').textContent = `ID: ${st.revendaId}`;
+                    document.getElementById('banner-store-name').textContent = st.name;
+                    const fullAddr = `${st.city} - ${st.uf}${st.address ? ' • ' + st.address : ''}`;
+                    document.getElementById('banner-store-address').innerHTML = `<i class="fa-solid fa-location-dot mr-1"></i> ${fullAddr}`;
+                    document.getElementById('banner-store-count').textContent = state.storePrices.filter(sp => sp.storeId === st.id).length;
+                    document.getElementById('banner-store-logs').textContent = state.priceLogs.filter(l => l.storeId === st.id).length;
+                }
+            } else { banner.classList.add('hidden'); }
+
+            const rows = getFilteredConsulta();
+            document.getElementById('consulta-count-badge').textContent = `${rows.length} regs`;
+            const tbody = document.getElementById('consulta-table-body');
+            const mobile = document.getElementById('consulta-mobile-list');
+
+            if (rows.length === 0) {
+                const empty = `<div class="py-10 text-center text-slate-400"><i class="fa-solid fa-folder-open text-3xl mb-2"></i><p class="text-xs">Nenhum registro encontrado.</p><p class="text-[10px] mt-1">Cadastre lojas, produtos e lance preços para começar.</p></div>`;
+                mobile.innerHTML = empty; tbody.innerHTML = `<tr><td colspan="9">${empty}</td></tr>`;
+                return;
+            }
+
+            mobile.innerHTML = rows.map(r => {
+                let badge = `<span class="text-[9px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">Estável</span>`;
+                if (r.diffPercent > 0) badge = `<span class="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-semibold">+${r.diffPercent.toFixed(1)}%</span>`;
+                if (r.diffPercent < 0) badge = `<span class="text-[9px] bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded font-semibold">${r.diffPercent.toFixed(1)}%</span>`;
+                return `
+                    <div class="p-3 space-y-1.5">
+                        <div class="flex justify-between items-start gap-2">
+                            <div>
+                                <span class="text-[9px] font-bold text-purple-700 uppercase">${r.brandName}</span>
+                                <h4 class="font-bold text-slate-900 text-xs">${r.productName}</h4>
+                                <span class="text-[9px] text-slate-400 font-mono">SKU: ${r.sku}</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs font-extrabold text-slate-900">${formatBRL(r.currentPrice)}</div>
+                                <div class="text-[9px] text-slate-400 line-through">${formatBRL(r.previousPrice)}</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-1 border-t border-slate-100 text-xs">
+                            <div class="flex items-center gap-1">
+                                <span class="font-bold text-[9px] bg-slate-200 px-1 py-0.5 rounded">${r.uf}</span>
+                                <span class="font-mono text-[9px] bg-blue-50 text-blue-700 px-1 py-0.5 rounded">${r.revendaId}</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                ${badge}
+                                <button onclick="window.app.openItemHistory('${r.storeId}', '${r.productId}')" class="bg-amber-50 text-amber-800 text-[10px] font-semibold px-2 py-1 rounded-lg">Log</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            tbody.innerHTML = rows.map(r => {
+                let badge = `<span class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Estável</span>`;
+                if (r.diffPercent > 0) badge = `<span class="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded font-semibold">+${r.diffPercent.toFixed(1)}%</span>`;
+                if (r.diffPercent < 0) badge = `<span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded font-semibold">${r.diffPercent.toFixed(1)}%</span>`;
+                return `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="py-3 px-4"><div class="font-semibold">${r.storeName}</div><span class="font-mono text-[10px] bg-blue-50 text-blue-700 px-1 rounded">${r.revendaId}</span></td>
+                        <td class="py-3 px-4"><span class="font-bold text-xs bg-slate-200 px-2 py-0.5 rounded">${r.uf}</span></td>
+                        <td class="py-3 px-4 font-medium text-purple-700">${r.brandName}</td>
+                        <td class="py-3 px-4"><div class="font-medium">${r.productName}</div><span class="text-xs text-slate-400 font-mono">SKU: ${r.sku}</span></td>
+                        <td class="py-3 px-4 text-right text-slate-400 line-through">${formatBRL(r.previousPrice)}</td>
+                        <td class="py-3 px-4 text-right font-bold text-slate-900">${formatBRL(r.currentPrice)}</td>
+                        <td class="py-3 px-4 text-center">${badge}</td>
+                        <td class="py-3 px-4 text-xs text-slate-500">${formatDate(r.updatedAt)}</td>
+                        <td class="py-3 px-4 text-center">
+                            <button onclick="window.app.openItemHistory('${r.storeId}', '${r.productId}')" class="bg-amber-50 text-amber-800 text-xs px-2.5 py-1 rounded-lg font-medium"><i class="fa-solid fa-clock-rotate-left mr-1"></i>Log</button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderPricingTable() {
+            const storeId = document.getElementById('pricing-store-select').value;
+            const brandId = document.getElementById('pricing-brand-select').value;
+            const search = (document.getElementById('pricing-search').value || '').toLowerCase().trim();
+            const tbody = document.getElementById('pricing-table-body');
+            const mobile = document.getElementById('pricing-mobile-list');
+            const title = document.getElementById('pricing-table-title');
+
+            if (!storeId) {
+                title.textContent = "Selecione uma loja acima";
+                mobile.innerHTML = `<div class="py-6 text-center text-slate-400 text-xs">Selecione uma loja para gerenciar preços.</div>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400 text-xs">Selecione uma loja.</td></tr>`;
+                return;
+            }
+            const store = state.stores.find(s => s.id === storeId);
+            title.innerHTML = `Loja: <span class="text-blue-700 font-bold">[${store.revendaId}] ${store.name}</span>`;
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+            let prods = state.products;
+            if (brandId !== 'ALL') prods = prods.filter(p => p.brandId === brandId);
+            if (search) prods = prods.filter(p => p.name.toLowerCase().includes(search) || p.sku.toLowerCase().includes(search));
+            if (prods.length === 0) {
+                mobile.innerHTML = `<div class="py-6 text-center text-slate-400 text-xs">Nenhum produto encontrado.</div>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400 text-xs">Nenhum produto.</td></tr>`;
+                return;
+            }
+            mobile.innerHTML = prods.map(p => {
+                const br = bMap[p.brandId];
+                const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === p.id);
+                const cur = sp ? sp.currentPrice : null;
+                const inputId = `mob_p_${storeId}_${p.id}`;
+                return `
+                    <div class="p-3 space-y-2">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-[9px] font-bold text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded">${br ? br.name : ''}</span>
+                                <h4 class="font-bold text-slate-800 text-xs mt-1">${p.name}</h4>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-[9px] text-slate-400">Atual</span>
+                                <div class="font-extrabold text-xs ${cur ? 'text-emerald-700' : 'text-slate-400'}">${cur ? formatBRL(cur) : 'Sem preço'}</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <div class="relative flex-1">
+                                <span class="absolute left-2.5 top-2 text-xs text-slate-400 font-bold">R$</span>
+                                <input type="number" inputmode="decimal" step="0.01" id="${inputId}" placeholder="${cur ? cur.toFixed(2) : '0.00'}" class="w-full rounded-xl border pl-7 pr-2 py-1.5 text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            </div>
+                            <button onclick="window.app.saveProductPrice('${storeId}', '${p.id}', '${p.brandId}', '${inputId}')" class="bg-emerald-600 text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-xs">Salvar</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            tbody.innerHTML = prods.map(p => {
+                const br = bMap[p.brandId];
+                const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === p.id);
+                const cur = sp ? sp.currentPrice : null;
+                const inputId = `desk_p_${storeId}_${p.id}`;
+                return `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="py-3 px-4 font-semibold text-purple-700">${br ? br.name : ''}</td>
+                        <td class="py-3 px-4"><div class="font-medium">${p.name}</div><span class="text-xs text-slate-400 font-mono">SKU: ${p.sku}</span></td>
+                        <td class="py-3 px-4 text-right font-bold ${cur ? 'text-emerald-700' : 'text-slate-400'}">${cur ? formatBRL(cur) : '—'}</td>
+                        <td class="py-3 px-4 text-right text-xs text-slate-400">${sp?.previousPrice ? formatBRL(sp.previousPrice) : '—'}</td>
+                        <td class="py-3 px-4">
+                            <div class="relative">
+                                <span class="absolute left-3 top-2 text-xs text-slate-400 font-bold">R$</span>
+                                <input type="number" inputmode="decimal" step="0.01" id="${inputId}" placeholder="${cur ? cur.toFixed(2) : '0.00'}" class="w-full rounded-lg border pl-8 pr-3 py-1.5 text-sm font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            </div>
+                        </td>
+                        <td class="py-3 px-4 text-center">
+                            <button onclick="window.app.saveProductPrice('${storeId}', '${p.id}', '${p.brandId}', '${inputId}')" class="bg-emerald-600 text-white text-xs font-semibold px-3 py-2 rounded-lg shadow-xs">Atualizar</button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderStoresList() {
+            const search = (document.getElementById('search-store-list').value || '').toLowerCase().trim();
+            const tbody = document.getElementById('stores-table-body');
+            const mobile = document.getElementById('stores-mobile-list');
+            let list = state.stores;
+            if (search) list = list.filter(s => s.name.toLowerCase().includes(search) || s.revendaId.toLowerCase().includes(search));
+            if (list.length === 0) {
+                mobile.innerHTML = `<div class="py-6 text-center text-slate-400 text-xs">Nenhuma loja cadastrada.</div>`;
+                tbody.innerHTML = `<tr><td colspan="5" class="py-6 text-center text-slate-400 text-xs">Nenhuma loja cadastrada.</td></tr>`;
+                return;
+            }
+            mobile.innerHTML = list.map(s => {
+                const count = state.storePrices.filter(sp => sp.storeId === s.id).length;
+                return `
+                    <div class="p-3 flex justify-between items-center gap-2">
+                        <div class="min-w-0 space-y-0.5">
+                            <div class="flex items-center gap-1">
+                                <span class="font-bold text-[9px] bg-slate-200 px-1 rounded">${s.uf}</span>
+                                <span class="font-mono font-bold text-[10px] bg-blue-100 text-blue-800 px-1.5 rounded">${s.revendaId}</span>
+                                <span class="text-[10px] text-emerald-700">• ${count} itens</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-xs truncate">${s.name}</h4>
+                        </div>
+                        <div class="flex items-center gap-1 shrink-0">
+                            <button onclick="window.app.generateStorePDF('${s.id}')" title="PDF da Loja" class="bg-red-50 text-red-700 text-xs px-2 py-1.5 rounded-lg font-semibold"><i class="fa-solid fa-file-pdf"></i></button>
+                            <button onclick="window.app.goToStore('${s.id}')" class="bg-blue-50 text-blue-700 text-xs px-2.5 py-1.5 rounded-lg font-semibold">Preços</button>
+                            <button onclick="window.app.confirmDelete('store', '${s.id}', '${s.name}')" class="text-slate-400 hover:text-red-600 p-2"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            tbody.innerHTML = list.map(s => {
+                const count = state.storePrices.filter(sp => sp.storeId === s.id).length;
+                return `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="py-3 px-4"><span class="font-mono font-bold text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">${s.revendaId}</span></td>
+                        <td class="py-3 px-4"><div class="font-semibold">${s.name}</div><div class="text-xs text-slate-400">${s.address || ''}</div></td>
+                        <td class="py-3 px-4"><span class="font-bold text-xs bg-slate-200 px-2 py-0.5 rounded mr-1">${s.uf}</span>${s.city}</td>
+                        <td class="py-3 px-4 text-center"><span class="text-xs bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full font-semibold">${count}</span></td>
+                        <td class="py-3 px-4 text-right space-x-1">
+                            <button onclick="window.app.generateStorePDF('${s.id}')" title="PDF da Loja" class="bg-red-50 text-red-700 text-xs px-2.5 py-1.5 rounded-lg font-medium"><i class="fa-solid fa-file-pdf"></i></button>
+                            <button onclick="window.app.goToStore('${s.id}')" class="bg-blue-50 text-blue-700 text-xs px-2.5 py-1.5 rounded-lg font-medium">Preços</button>
+                            <button onclick="window.app.confirmDelete('store', '${s.id}', '${s.name}')" class="text-slate-400 hover:text-red-600 p-2"><i class="fa-solid fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderCatalog() {
+            const filter = document.getElementById('catalog-filter-brand').value;
+            const tbody = document.getElementById('catalog-table-body');
+            const mobile = document.getElementById('catalog-mobile-list');
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+            let prods = state.products;
+            if (filter !== 'ALL') prods = prods.filter(p => p.brandId === filter);
+            if (prods.length === 0) {
+                mobile.innerHTML = `<div class="py-6 text-center text-slate-400 text-xs">Nenhum produto no catálogo.</div>`;
+                tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400 text-xs">Nenhum produto.</td></tr>`;
+                return;
+            }
+            mobile.innerHTML = prods.map(p => {
+                const br = bMap[p.brandId];
+                const count = state.storePrices.filter(sp => sp.productId === p.id).length;
+                return `
+                    <div class="p-3 flex justify-between items-center gap-2">
+                        <div class="min-w-0 space-y-0.5">
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-bold text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded text-[9px]">${br ? br.name : ''}</span>
+                                <span class="text-[10px] text-slate-500">${count} lojas c/ preço</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-xs truncate">${p.name}</h4>
+                            <p class="text-[9px] font-mono text-slate-400">SKU: ${p.sku} • ${p.unit}</p>
+                        </div>
+                        <button onclick="window.app.confirmDelete('product', '${p.id}', '${p.name}')" class="text-slate-400 hover:text-red-600 p-2"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                `;
+            }).join('');
+            tbody.innerHTML = prods.map(p => {
+                const br = bMap[p.brandId];
+                const count = state.storePrices.filter(sp => sp.productId === p.id).length;
+                return `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="py-3 px-4"><span class="font-semibold text-purple-700 bg-purple-50 px-2 py-1 rounded text-xs">${br ? br.name : ''}</span></td>
+                        <td class="py-3 px-4 font-medium">${p.name}</td>
+                        <td class="py-3 px-4 font-mono text-xs text-slate-500">${p.sku}</td>
+                        <td class="py-3 px-4 text-center text-xs font-semibold">${p.unit}</td>
+                        <td class="py-3 px-4 text-center"><span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full font-medium">${count} lojas</span></td>
+                        <td class="py-3 px-4 text-right"><button onclick="window.app.confirmDelete('product', '${p.id}', '${p.name}')" class="text-slate-400 hover:text-red-600 p-1.5"><i class="fa-solid fa-trash-can"></i></button></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderLogs() {
+            const storeId = document.getElementById('log-filter-store').value;
+            const brandId = document.getElementById('log-filter-brand').value;
+            const tbody = document.getElementById('logs-table-body');
+            const mobile = document.getElementById('logs-mobile-list');
+            const sMap = Object.fromEntries(state.stores.map(s => [s.id, s]));
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+            const pMap = Object.fromEntries(state.products.map(p => [p.id, p]));
+            let logs = state.priceLogs;
+            if (storeId !== 'ALL') logs = logs.filter(l => l.storeId === storeId);
+            if (brandId !== 'ALL') logs = logs.filter(l => l.brandId === brandId);
+            if (logs.length === 0) {
+                mobile.innerHTML = `<div class="py-6 text-center text-slate-400 text-xs">Nenhum log registrado.</div>`;
+                tbody.innerHTML = `<tr><td colspan="7" class="py-6 text-center text-slate-400 text-xs">Nenhum log registrado.</td></tr>`;
+                return;
+            }
+            mobile.innerHTML = logs.map(l => {
+                const st = sMap[l.storeId], pr = pMap[l.productId], br = bMap[l.brandId || (pr ? pr.brandId : '')];
+                let diff = `<span class="text-[9px] bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded">Inicial</span>`;
+                if (l.oldPrice) {
+                    const pct = (((l.newPrice - l.oldPrice) / l.oldPrice) * 100).toFixed(1);
+                    diff = pct > 0 ? `<span class="text-[9px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-semibold">+${pct}%</span>` : `<span class="text-[9px] bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded font-semibold">${pct}%</span>`;
+                }
+                return `
+                    <div class="py-2.5 px-3 space-y-1">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-[9px] font-bold text-purple-700 uppercase">${br ? br.name : ''}</span>
+                                <h4 class="font-bold text-slate-800 text-xs">${pr ? pr.name : ''}</h4>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-[9px] text-slate-400 line-through mr-1">${l.oldPrice ? formatBRL(l.oldPrice) : ''}</span>
+                                <span class="font-bold text-slate-900 text-xs">${formatBRL(l.newPrice)}</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center text-[10px] text-slate-500">
+                            <span><strong class="bg-slate-200 px-1 rounded">${st ? st.uf : ''}</strong> ${st ? st.revendaId : ''} • ${formatDate(l.timestamp)}</span>
+                            ${diff}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            tbody.innerHTML = logs.map(l => {
+                const st = sMap[l.storeId], pr = pMap[l.productId], br = bMap[l.brandId || (pr ? pr.brandId : '')];
+                let diff = `<span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded">Inicial</span>`;
+                if (l.oldPrice) {
+                    const pct = (((l.newPrice - l.oldPrice) / l.oldPrice) * 100).toFixed(1);
+                    diff = pct > 0 ? `<span class="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded font-semibold">+${pct}%</span>` : `<span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded font-semibold">${pct}%</span>`;
+                }
+                return `
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="py-3 px-4 text-xs text-slate-500">${formatDate(l.timestamp)}</td>
+                        <td class="py-3 px-4"><div class="font-semibold text-xs">${st ? st.name : ''}</div><span class="font-mono text-[10px] text-blue-700 bg-blue-50 px-1 rounded">${st ? st.revendaId : ''}</span></td>
+                        <td class="py-3 px-4"><span class="text-xs font-bold bg-slate-200 px-2 py-0.5 rounded">${st ? st.uf : ''}</span></td>
+                        <td class="py-3 px-4"><span class="text-xs font-semibold text-purple-700">${br ? br.name : ''}</span><div class="text-xs font-medium">${pr ? pr.name : ''}</div></td>
+                        <td class="py-3 px-4 text-right text-xs text-slate-400">${l.oldPrice ? formatBRL(l.oldPrice) : '—'}</td>
+                        <td class="py-3 px-4 text-right font-bold">${formatBRL(l.newPrice)}</td>
+                        <td class="py-3 px-4 text-center">${diff}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function openItemHistory(storeId, productId) {
+            const st = state.stores.find(s => s.id === storeId);
+            const pr = state.products.find(p => p.id === productId);
+            const br = state.brands.find(b => b.id === (pr ? pr.brandId : ''));
+            document.getElementById('history-modal-title').textContent = `${pr ? pr.name : ''} (${br ? br.name : ''})`;
+            document.getElementById('history-modal-subtitle').textContent = `Loja: [${st ? st.revendaId : ''}] ${st ? st.name : ''}`;
+            const logs = state.priceLogs.filter(l => l.storeId === storeId && l.productId === productId);
+            const tbody = document.getElementById('history-modal-tbody');
+            tbody.innerHTML = logs.length === 0 ? `<tr><td colspan="4" class="py-4 text-center text-slate-400 text-xs">Sem registros.</td></tr>` : logs.map(l => {
+                let pctText = 'Inicial', cls = 'text-blue-600';
+                if (l.oldPrice) {
+                    const pct = (((l.newPrice - l.oldPrice) / l.oldPrice) * 100).toFixed(1);
+                    pctText = pct > 0 ? `+${pct}%` : `${pct}%`;
+                    cls = pct > 0 ? 'text-red-600 font-bold' : 'text-emerald-600 font-bold';
+                }
+                return `<tr class="border-b"><td class="py-2 px-2 text-xs text-slate-500">${formatDate(l.timestamp)}</td><td class="py-2 px-2 text-right text-slate-400">${l.oldPrice ? formatBRL(l.oldPrice) : '—'}</td><td class="py-2 px-2 text-right font-bold">${formatBRL(l.newPrice)}</td><td class="py-2 px-2 text-center text-xs ${cls}">${pctText}</td></tr>`;
+            }).join('');
+            document.getElementById('modal-item-history').classList.remove('hidden');
+        }
+
+        function ensureSpace(doc, currentY, needed) {
+            const pageHeight = doc.internal.pageSize.getHeight();
+            if (currentY + needed > pageHeight - 14) { doc.addPage(); return 14; }
+            return currentY;
+        }
+
+        // PDF 1 — RELATÓRIO FILTRADO
+        function generatePDF() {
+            const rows = getFilteredConsulta();
+            if (rows.length === 0) return showToast("Sem dados para gerar PDF.", "error");
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF('landscape', 'mm', 'a4');
+            const uf = document.getElementById('filter-uf').value;
+            const storeId = document.getElementById('filter-store').value;
+            const brandId = document.getElementById('filter-brand').value;
+            const includeLogs = document.getElementById('pdf-include-logs').checked;
+            const store = storeId !== 'ALL' ? state.stores.find(s => s.id === storeId) : null;
+            const brand = brandId !== 'ALL' ? state.brands.find(b => b.id === brandId) : null;
+
+            doc.setFillColor(15, 23, 42);
+            doc.rect(0, 0, 297, 28, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text("RELATORIO DE PRECOS E AUDITORIA", 14, 10);
+            doc.setFontSize(8.5);
+            doc.setFont('helvetica', 'normal');
+            const line1 = store ? `Loja: ${store.name} [${store.revendaId}] - ${store.uf}` : `Filtro UF: ${uf === 'ALL' ? 'Todas' : uf} | Todas as Lojas`;
+            doc.text(line1, 14, 17);
+            doc.text(`Marca: ${brand ? brand.name : 'Todas'} | Gerado em: ${formatDate(new Date().toISOString())}`, 14, 23);
+
+            const body = rows.map(r => [
+                r.revendaId, r.storeName, r.uf, r.brandName, `${r.productName} (${r.unit})`, r.sku,
+                formatBRL(r.previousPrice), formatBRL(r.currentPrice), r.diffPercent ? r.diffPercent.toFixed(1) + '%' : '0%', formatDate(r.updatedAt)
+            ]);
+            doc.autoTable({
+                startY: 32,
+                head: [['Revenda ID', 'Loja', 'UF', 'Marca', 'Produto', 'SKU', 'Anterior', 'Atual', 'Var %', 'Atualização']],
+                body, theme: 'grid',
+                headStyles: { fillColor: [37, 99, 235], fontSize: 8 },
+                bodyStyles: { fontSize: 7.5 },
+                margin: { left: 14, right: 14 }
+            });
+
+            if (includeLogs) {
+                const sMap = Object.fromEntries(state.stores.map(s => [s.id, s]));
+                const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+                const pMap = Object.fromEntries(state.products.map(p => [p.id, p]));
+                const logs = state.priceLogs.filter(l => {
+                    const st = sMap[l.storeId];
+                    if (!st) return false;
+                    if (uf !== 'ALL' && st.uf !== uf) return false;
+                    if (storeId !== 'ALL' && l.storeId !== storeId) return false;
+                    if (brandId !== 'ALL' && l.brandId !== brandId) return false;
+                    return true;
+                });
+                if (logs.length > 0) {
+                    let finalY = doc.lastAutoTable.finalY + 10;
+                    if (finalY > 170) { doc.addPage(); finalY = 20; }
+                    doc.setTextColor(15, 23, 42);
+                    doc.setFontSize(10);
+                    doc.setFont('helvetica', 'bold');
+                    doc.text("HISTORICO DE ALTERACOES DE PRECOS (LOG)", 14, finalY);
+                    const logBody = logs.slice(0, 100).map(l => {
+                        const st = sMap[l.storeId], pr = pMap[l.productId];
+                        const br = bMap[l.brandId || (pr ? pr.brandId : '')];
+                        const pct = (l.oldPrice && l.oldPrice > 0) ? (((l.newPrice - l.oldPrice) / l.oldPrice) * 100).toFixed(1) + '%' : 'Inicial';
+                        return [formatDate(l.timestamp), st ? `${st.revendaId} - ${st.name}` : '—', st ? st.uf : '—', br ? br.name : '—', pr ? pr.name : '—', l.oldPrice ? formatBRL(l.oldPrice) : '—', formatBRL(l.newPrice), pct];
+                    });
+                    doc.autoTable({
+                        startY: finalY + 4,
+                        head: [['Data / Hora', 'Loja (Revenda ID)', 'UF', 'Marca', 'Produto', 'Antigo', 'Novo', 'Variacao']],
+                        body: logBody, theme: 'striped',
+                        headStyles: { fillColor: [217, 119, 6], textColor: 255, fontSize: 8, fontStyle: 'bold' },
+                        bodyStyles: { fontSize: 7 },
+                        margin: { left: 14, right: 14 }
+                    });
+                }
+            }
+            doc.save(store ? `Relatorio_${store.revendaId}.pdf` : `Relatorio_Geral_${uf}.pdf`);
+            showToast("PDF gerado com sucesso!");
+        }
+
+        // PDF 2 — COMPLETO
+        function generateFullPDF() {
+            const total = state.stores.length + state.brands.length + state.products.length + state.storePrices.length + state.priceLogs.length;
+            if (total === 0) return showToast("Nada para exportar. Cadastre dados primeiro.", "error");
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF('landscape', 'mm', 'a4');
+            const now = new Date().toISOString();
+
+            doc.setFillColor(15, 23, 42);
+            doc.rect(0, 0, 297, 32, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            doc.text("PRICEAUDIT - RELATORIO COMPLETO", 14, 12);
+            doc.setFontSize(9);
+            doc.setFont('helvetica', 'normal');
+            doc.text(`Gerado em: ${formatDate(now)}`, 14, 20);
+            doc.text(`Lojas: ${state.stores.length}  |  Marcas: ${state.brands.length}  |  Produtos: ${state.products.length}  |  Precos: ${state.storePrices.length}  |  Logs: ${state.priceLogs.length}`, 14, 27);
+
+            let y = 40;
+            const sMap = Object.fromEntries(state.stores.map(s => [s.id, s]));
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+            const pMap = Object.fromEntries(state.products.map(p => [p.id, p]));
+
+            if (state.stores.length > 0) {
+                doc.setTextColor(15, 23, 42); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+                doc.text("1. LOJAS CADASTRADAS", 14, y); y += 4;
+                doc.autoTable({
+                    startY: y,
+                    head: [['Revenda ID', 'Nome', 'UF', 'Cidade', 'Endereco', 'Produtos c/ Preco']],
+                    body: state.stores.map(s => [s.revendaId, s.name, s.uf, s.city || '—', s.address || '—', String(state.storePrices.filter(sp => sp.storeId === s.id).length)]),
+                    theme: 'grid',
+                    headStyles: { fillColor: [37, 99, 235], fontSize: 8 },
+                    bodyStyles: { fontSize: 7.5 },
+                    margin: { left: 14, right: 14 }
+                });
+                y = doc.lastAutoTable.finalY + 10;
+            }
+            if (state.brands.length > 0) {
+                y = ensureSpace(doc, y, 20);
+                doc.setTextColor(15, 23, 42); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+                doc.text("2. MARCAS", 14, y); y += 4;
+                doc.autoTable({
+                    startY: y,
+                    head: [['Marca', 'Categoria', 'Produtos']],
+                    body: state.brands.map(b => [b.name, b.category || 'Geral', String(state.products.filter(p => p.brandId === b.id).length)]),
+                    theme: 'grid',
+                    headStyles: { fillColor: [147, 51, 234], fontSize: 8 },
+                    bodyStyles: { fontSize: 7.5 },
+                    margin: { left: 14, right: 14 }
+                });
+                y = doc.lastAutoTable.finalY + 10;
+            }
+            if (state.products.length > 0) {
+                y = ensureSpace(doc, y, 20);
+                doc.setTextColor(15, 23, 42); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+                doc.text("3. CATALOGO DE PRODUTOS", 14, y); y += 4;
+                doc.autoTable({
+                    startY: y,
+                    head: [['Marca', 'Produto', 'SKU', 'Unidade', 'Lojas c/ Preco']],
+                    body: state.products.map(p => [bMap[p.brandId] ? bMap[p.brandId].name : '—', p.name, p.sku, p.unit, String(state.storePrices.filter(sp => sp.productId === p.id).length)]),
+                    theme: 'grid',
+                    headStyles: { fillColor: [79, 70, 229], fontSize: 8 },
+                    bodyStyles: { fontSize: 7.5 },
+                    margin: { left: 14, right: 14 }
+                });
+                y = doc.lastAutoTable.finalY + 10;
+            }
+            if (state.storePrices.length > 0) {
+                y = ensureSpace(doc, y, 20);
+                doc.setTextColor(15, 23, 42); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+                doc.text("4. PRECOS ATUAIS", 14, y); y += 4;
+                const body = state.storePrices.map(sp => {
+                    const st = sMap[sp.storeId], pr = pMap[sp.productId];
+                    const br = bMap[sp.brandId || (pr ? pr.brandId : '')];
+                    if (!st || !pr) return null;
+                    const diff = (sp.previousPrice && sp.previousPrice !== sp.currentPrice) ? (((sp.currentPrice - sp.previousPrice) / sp.previousPrice) * 100).toFixed(1) + '%' : '0%';
+                    return [st.revendaId, st.name, st.uf, br ? br.name : '—', pr.name, pr.sku, formatBRL(sp.previousPrice), formatBRL(sp.currentPrice), diff, formatDate(sp.updatedAt)];
+                }).filter(Boolean);
+                doc.autoTable({
+                    startY: y,
+                    head: [['Revenda ID', 'Loja', 'UF', 'Marca', 'Produto', 'SKU', 'Anterior', 'Atual', 'Var %', 'Atualizado']],
+                    body, theme: 'grid',
+                    headStyles: { fillColor: [16, 185, 129], fontSize: 8 },
+                    bodyStyles: { fontSize: 7.5 },
+                    margin: { left: 14, right: 14 }
+                });
+                y = doc.lastAutoTable.finalY + 10;
+            }
+            if (state.priceLogs.length > 0) {
+                y = ensureSpace(doc, y, 20);
+                doc.setTextColor(15, 23, 42); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+                doc.text("5. HISTORICO DE ALTERACOES (LOGS)", 14, y); y += 4;
+                const body = state.priceLogs.map(l => {
+                    const st = sMap[l.storeId], pr = pMap[l.productId];
+                    const br = bMap[l.brandId || (pr ? pr.brandId : '')];
+                    const pct = (l.oldPrice && l.oldPrice > 0) ? (((l.newPrice - l.oldPrice) / l.oldPrice) * 100).toFixed(1) + '%' : 'Inicial';
+                    return [formatDate(l.timestamp), st ? st.revendaId : '—', st ? st.name : '—', st ? st.uf : '—', br ? br.name : '—', pr ? pr.name : '—', l.oldPrice ? formatBRL(l.oldPrice) : '—', formatBRL(l.newPrice), pct];
+                });
+                doc.autoTable({
+                    startY: y,
+                    head: [['Data / Hora', 'Revenda ID', 'Loja', 'UF', 'Marca', 'Produto', 'Antigo', 'Novo', 'Var %']],
+                    body, theme: 'striped',
+                    headStyles: { fillColor: [217, 119, 6], fontSize: 8 },
+                    bodyStyles: { fontSize: 7 },
+                    margin: { left: 14, right: 14 }
+                });
+            }
+            doc.save(`PriceAudit_Completo_${new Date().toISOString().slice(0,10)}.pdf`);
+            showToast("PDF completo gerado!");
+        }
+
+        // PDF 3 — POR LOJA
+        function generateStorePDF(storeId) {
+            const store = state.stores.find(s => s.id === storeId);
+            if (!store) return showToast("Loja não encontrada.", "error");
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF('portrait', 'mm', 'a4');
+
+            doc.setFillColor(15, 23, 42);
+            doc.rect(0, 0, 210, 34, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(14); doc.setFont('helvetica', 'bold');
+            doc.text("RELATORIO DA LOJA", 14, 12);
+            doc.setFontSize(10); doc.setFont('helvetica', 'normal');
+            doc.text(store.name, 14, 19);
+            doc.setFontSize(8.5);
+            doc.text(`Revenda ID: ${store.revendaId}  |  UF: ${store.uf}`, 14, 25);
+            doc.text(`Gerado em: ${formatDate(new Date().toISOString())}`, 14, 31);
+
+            let y = 44;
+            doc.setTextColor(15, 23, 42);
+            doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+            doc.text("INFORMACOES DA LOJA", 14, y); y += 4;
+
+            doc.autoTable({
+                startY: y,
+                body: [
+                    ['Revenda ID', store.revendaId], ['Nome', store.name], ['UF', store.uf],
+                    ['Cidade', store.city || '—'], ['Endereco', store.address || '—'],
+                    ['Produtos com Preco', String(state.storePrices.filter(sp => sp.storeId === storeId).length)],
+                    ['Total de Logs', String(state.priceLogs.filter(l => l.storeId === storeId).length)]
+                ],
+                theme: 'grid',
+                bodyStyles: { fontSize: 8.5 },
+                columnStyles: { 0: { fontStyle: 'bold', cellWidth: 45 } },
+                margin: { left: 14, right: 14 }
+            });
+            y = doc.lastAutoTable.finalY + 10;
+
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+            const pMap = Object.fromEntries(state.products.map(p => [p.id, p]));
+
+            const pricesList = state.storePrices.filter(sp => sp.storeId === storeId);
+            if (pricesList.length > 0) {
+                y = ensureSpace(doc, y, 20);
+                doc.setTextColor(15, 23, 42); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+                doc.text("PRODUTOS E PRECOS NA LOJA", 14, y); y += 4;
+                doc.autoTable({
+                    startY: y,
+                    head: [['Marca', 'Produto', 'SKU', 'Un', 'Anterior', 'Atual', 'Var %', 'Atualizado']],
+                    body: pricesList.map(sp => {
+                        const pr = pMap[sp.productId];
+                        const br = bMap[sp.brandId || (pr ? pr.brandId : '')];
+                        const diff = (sp.previousPrice && sp.previousPrice !== sp.currentPrice) ? (((sp.currentPrice - sp.previousPrice) / sp.previousPrice) * 100).toFixed(1) + '%' : '0%';
+                        return [br ? br.name : '—', pr ? pr.name : '—', pr ? pr.sku : '—', pr ? pr.unit : '—', formatBRL(sp.previousPrice), formatBRL(sp.currentPrice), diff, formatDate(sp.updatedAt)];
+                    }),
+                    theme: 'grid',
+                    headStyles: { fillColor: [16, 185, 129], fontSize: 8 },
+                    bodyStyles: { fontSize: 7.5 },
+                    margin: { left: 14, right: 14 }
+                });
+                y = doc.lastAutoTable.finalY + 10;
+            }
+
+            const logsList = state.priceLogs.filter(l => l.storeId === storeId);
+            if (logsList.length > 0) {
+                y = ensureSpace(doc, y, 20);
+                doc.setTextColor(15, 23, 42); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+                doc.text("HISTORICO DE ALTERACOES", 14, y); y += 4;
+                doc.autoTable({
+                    startY: y,
+                    head: [['Data / Hora', 'Marca', 'Produto', 'Antigo', 'Novo', 'Var %']],
+                    body: logsList.map(l => {
+                        const pr = pMap[l.productId];
+                        const br = bMap[l.brandId || (pr ? pr.brandId : '')];
+                        const pct = (l.oldPrice && l.oldPrice > 0) ? (((l.newPrice - l.oldPrice) / l.oldPrice) * 100).toFixed(1) + '%' : 'Inicial';
+                        return [formatDate(l.timestamp), br ? br.name : '—', pr ? pr.name : '—', l.oldPrice ? formatBRL(l.oldPrice) : '—', formatBRL(l.newPrice), pct];
+                    }),
+                    theme: 'striped',
+                    headStyles: { fillColor: [217, 119, 6], fontSize: 8 },
+                    bodyStyles: { fontSize: 7.5 },
+                    margin: { left: 14, right: 14 }
+                });
+            }
+            doc.save(`Loja_${store.revendaId}.pdf`);
+            showToast(`PDF da loja ${store.revendaId} gerado!`);
+        }
+
+        function switchTab(tab) {
+            ['consulta', 'precos', 'lojas', 'catalogo', 'logs', 'mais'].forEach(t => {
+                document.getElementById(`tab-${t}`).classList.toggle('hidden', t !== tab);
+                const btn = document.getElementById(`tab-btn-${t}`);
+                if (btn) {
+                    if (t === tab) {
+                        btn.classList.add('text-blue-400', 'font-semibold');
+                        btn.classList.remove('text-slate-400');
+                    } else {
+                        btn.classList.remove('text-blue-400', 'font-semibold');
+                        btn.classList.add('text-slate-400');
+                    }
+                }
+            });
+            vibrate();
+        }
+
+        function goToStore(id) {
+            switchTab('precos');
+            document.getElementById('pricing-store-select').value = id;
+            renderPricingTable();
+        }
+
+        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+        window.app = {
+            switchTab, onFilterChange, renderConsulta, debouncedRenderConsulta, renderPricingTable, debouncedRenderPricingTable,
+            renderStoresList, renderCatalog, renderLogs, handleCreateStore, handleCreateBrand, handleCreateProduct,
+            saveProductPrice, confirmDelete, openItemHistory,
+            generatePDF, generateFullPDF, generateStorePDF,
+            closeModal, goToStore
+        };
+
+        window.addEventListener('DOMContentLoaded', initFirebase);
+    </script>
+</body>
+</html>
