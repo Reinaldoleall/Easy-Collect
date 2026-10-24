@@ -93,12 +93,171 @@
             box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
         }
 
-        /* Mobile bottom nav safe padding */
+        /* Mobile bottom nav safe padding (generoso para nunca cortar botões ou produtos) */
         @media (max-width: 767px) {
             main {
-                padding-bottom: calc(88px + env(safe-area-inset-bottom));
+                padding-bottom: calc(160px + env(safe-area-inset-bottom)) !important;
             }
         }
+
+        /* Animações e Estilos de Modais e Bottom Sheets Estilo App */
+        @keyframes slideUpSheet {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-sheet-up {
+            animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .app-picker-trigger {
+            transition: all 0.15s ease-in-out;
+        }
+        .app-picker-trigger:active {
+            transform: scale(0.985);
+        }
+
+        /* ======================================================== */
+        /* MODO DIA / MODO NOITE (LIGHT / DARK SYSTEM)             */
+        /* ======================================================== */
+        [data-theme="light"] {
+            --bg-dark: #f8fafc;
+            --bg-card: #ffffff;
+            --border-card: #e2e8f0;
+        }
+
+        [data-theme="light"] body {
+            background-color: #f8fafc !important;
+            color: #0f172a !important;
+        }
+
+        [data-theme="light"] aside {
+            background-color: #ffffff !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        [data-theme="light"] .glass-header {
+            background: rgba(255, 255, 255, 0.95) !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+        }
+
+        [data-theme="light"] .glass-panel,
+        [data-theme="light"] .bg-\[\#131b2e\],
+        [data-theme="light"] .bg-\[\#090d16\],
+        [data-theme="light"] .bg-\[\#0b0f19\] {
+            background-color: #ffffff !important;
+            border-color: #e2e8f0 !important;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        [data-theme="light"] .bg-slate-900,
+        [data-theme="light"] .bg-slate-950,
+        [data-theme="light"] .bg-slate-900\/80,
+        [data-theme="light"] .bg-slate-950\/60,
+        [data-theme="light"] .bg-slate-900\/60,
+        [data-theme="light"] .bg-slate-900\/40,
+        [data-theme="light"] .bg-slate-800\/60,
+        [data-theme="light"] .bg-slate-800\/80,
+        [data-theme="light"] .bg-slate-800 {
+            background-color: #f1f5f9 !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        [data-theme="light"] .text-white,
+        [data-theme="light"] .text-slate-100,
+        [data-theme="light"] .text-slate-200 {
+            color: #0f172a !important;
+        }
+
+        [data-theme="light"] .text-slate-300 {
+            color: #1e293b !important;
+        }
+
+        [data-theme="light"] .text-slate-400 {
+            color: #475569 !important;
+        }
+
+        [data-theme="light"] .text-slate-500 {
+            color: #64748b !important;
+        }
+
+        [data-theme="light"] .border-slate-800,
+        [data-theme="light"] .border-slate-800\/80,
+        [data-theme="light"] .border-slate-700,
+        [data-theme="light"] .border-slate-700\/80,
+        [data-theme="light"] .border-slate-700\/60 {
+            border-color: #e2e8f0 !important;
+        }
+
+        [data-theme="light"] input,
+        [data-theme="light"] select,
+        [data-theme="light"] textarea {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border-color: #cbd5e1 !important;
+        }
+
+        [data-theme="light"] input::placeholder,
+        [data-theme="light"] textarea::placeholder {
+            color: #94a3b8 !important;
+        }
+
+        [data-theme="light"] table thead tr {
+            background-color: #f1f5f9 !important;
+            color: #334155 !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        [data-theme="light"] table tbody tr {
+            border-color: #f1f5f9 !important;
+        }
+
+        [data-theme="light"] table tbody tr:hover {
+            background-color: #f8fafc !important;
+        }
+
+        [data-theme="light"] nav.fixed.bottom-0 {
+            background-color: rgba(255, 255, 255, 0.96) !important;
+            border-top: 1px solid #e2e8f0 !important;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        [data-theme="light"] #mobile-drawer > div:last-child {
+            background-color: #ffffff !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        [data-theme="light"] .nav-item-active {
+            background: #eff6ff !important;
+            color: #2563eb !important;
+            border-color: #bfdbfe !important;
+            box-shadow: 0 1px 3px rgba(37, 99, 235, 0.1) !important;
+        }
+
+        [data-theme="light"] #theme-toggle-btn {
+            background-color: #ffffff !important;
+            border-color: #e2e8f0 !important;
+            color: #0f172a !important;
+        }
+
+        [data-theme="light"] #app-picker-modal > div:last-child {
+            background-color: #ffffff !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        [data-theme="light"] .app-picker-trigger {
+            background-color: #ffffff !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+        }
+
+        [data-theme="light"] #picker-search-container {
+            background-color: #f8fafc !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        [data-theme="light"] ::-webkit-scrollbar-track { background: #f8fafc; }
+        [data-theme="light"] ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+        [data-theme="light"] ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col md:flex-row bg-[#0b0f19] text-slate-100 selection:bg-blue-600 selection:text-white">
@@ -200,6 +359,15 @@
         <!-- PWA Install Banner & Status Card (Sidebar Footer) -->
         <div class="p-4 border-t border-slate-800/80 space-y-3 bg-slate-950/60">
             
+            <!-- Botão de Alternar Modo Claro / Escuro -->
+            <button onclick="window.app.toggleTheme()" class="w-full py-2 px-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-between transition group cursor-pointer" title="Alternar entre Modo Dia e Modo Noite">
+                <div class="flex items-center gap-2">
+                    <i id="side-theme-icon" class="fa-solid fa-moon text-indigo-400 text-xs"></i>
+                    <span id="side-theme-label">Modo Noite</span>
+                </div>
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider group-hover:text-blue-400">Alternar</span>
+            </button>
+
             <!-- Botão de Instalar PWA -->
             <button id="sidebar-install-btn" onclick="window.app.promptPWAInstall()" class="w-full hidden relative overflow-hidden group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs py-2.5 px-3 rounded-xl shadow-lg shadow-blue-600/25 transition flex items-center justify-center gap-2">
                 <i class="fa-solid fa-download animate-bounce text-sm"></i>
@@ -254,6 +422,12 @@
             <!-- Right Header Actions -->
             <div class="flex items-center gap-2">
                 
+                <!-- Botão Alternador Modo Dia / Noite (Light & Dark) -->
+                <button id="theme-toggle-btn" onclick="window.app.toggleTheme()" class="px-2.5 py-1.5 rounded-xl border border-slate-700/80 bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white transition flex items-center gap-1.5 cursor-pointer shadow-xs" title="Alternar entre Modo Dia e Modo Noite" aria-label="Alternar Tema">
+                    <i id="theme-toggle-icon" class="fa-solid fa-moon text-indigo-400 text-xs"></i>
+                    <span id="theme-toggle-text" class="text-[11px] font-semibold hidden sm:inline">Modo Noite</span>
+                </button>
+
                 <!-- Botão Instalar PWA no Header (Mobile & Desktop) -->
                 <button id="header-install-btn" onclick="window.app.promptPWAInstall()" class="hidden bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-md shadow-blue-500/20 items-center gap-1.5 transition">
                     <i class="fa-solid fa-download text-xs"></i>
@@ -398,29 +572,57 @@
                         </div>
                     </div>
 
-                    <!-- Grid de Filtros Rápidos -->
+                    <!-- Grid de Filtros Rápidos com Seletores Estilo App -->
                     <div class="grid grid-cols-2 md:grid-cols-5 gap-2 sm:gap-2.5">
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">1. Estado (UF)</label>
-                            <select id="filter-uf" onchange="window.app.onFilterChange('uf')" class="w-full rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                            <button type="button" onclick="window.app.openSelectPicker('filter-uf', 'Selecionar Estado (UF)', 'fa-solid fa-map-pin text-cyan-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 flex items-center justify-between group transition hover:border-blue-500/60 shadow-xs cursor-pointer">
+                                <div class="flex items-center gap-1.5 truncate">
+                                    <i class="fa-solid fa-map-pin text-cyan-400 text-[11px] shrink-0"></i>
+                                    <span id="picker-lbl-filter-uf" class="truncate font-semibold">Todas as UFs</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-blue-400 transition-colors shrink-0 ml-1"></i>
+                            </button>
+                            <select id="filter-uf" onchange="window.app.onFilterChange('uf')" class="hidden">
                                 <option value="ALL">Todas as UFs</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">2. Loja / Revenda</label>
-                            <select id="filter-store" onchange="window.app.onFilterChange('store')" class="w-full rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                            <button type="button" onclick="window.app.openSelectPicker('filter-store', 'Selecionar Loja / Revenda', 'fa-solid fa-store text-blue-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 flex items-center justify-between group transition hover:border-blue-500/60 shadow-xs cursor-pointer">
+                                <div class="flex items-center gap-1.5 truncate">
+                                    <i class="fa-solid fa-store text-blue-400 text-[11px] shrink-0"></i>
+                                    <span id="picker-lbl-filter-store" class="truncate font-semibold">Todas as Lojas</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-blue-400 transition-colors shrink-0 ml-1"></i>
+                            </button>
+                            <select id="filter-store" onchange="window.app.onFilterChange('store')" class="hidden">
                                 <option value="ALL">Todas as Lojas</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">3. Marca</label>
-                            <select id="filter-brand" onchange="window.app.renderConsulta()" class="w-full rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                            <button type="button" onclick="window.app.openSelectPicker('filter-brand', 'Filtrar por Marca', 'fa-solid fa-boxes-stacked text-purple-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 flex items-center justify-between group transition hover:border-purple-500/60 shadow-xs cursor-pointer">
+                                <div class="flex items-center gap-1.5 truncate">
+                                    <i class="fa-solid fa-boxes-stacked text-purple-400 text-[11px] shrink-0"></i>
+                                    <span id="picker-lbl-filter-brand" class="truncate font-semibold">Todas as Marcas</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-purple-400 transition-colors shrink-0 ml-1"></i>
+                            </button>
+                            <select id="filter-brand" onchange="window.app.renderConsulta()" class="hidden">
                                 <option value="ALL">Todas as Marcas</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">4. Variação</label>
-                            <select id="filter-variation" onchange="window.app.renderConsulta()" class="w-full rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none truncate">
+                            <button type="button" onclick="window.app.openSelectPicker('filter-variation', 'Filtrar Variação de Preço', 'fa-solid fa-arrow-trend-up text-emerald-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700/80 px-2.5 py-2 text-xs bg-slate-900 text-slate-200 flex items-center justify-between group transition hover:border-emerald-500/60 shadow-xs cursor-pointer">
+                                <div class="flex items-center gap-1.5 truncate">
+                                    <i class="fa-solid fa-arrow-trend-up text-emerald-400 text-[11px] shrink-0"></i>
+                                    <span id="picker-lbl-filter-variation" class="truncate font-semibold">Todas as Variações</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-emerald-400 transition-colors shrink-0 ml-1"></i>
+                            </button>
+                            <select id="filter-variation" onchange="window.app.renderConsulta()" class="hidden">
                                 <option value="ALL">Todas as Variações</option>
                                 <option value="UP">Com Aumento (+)</option>
                                 <option value="DOWN">Com Queda (-)</option>
@@ -507,13 +709,27 @@
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
                         <div>
                             <label class="block text-[10px] font-bold text-emerald-400 uppercase mb-1">1. Selecione a Loja / Filial *</label>
-                            <select id="pricing-store-select" onchange="window.app.renderPricingTable()" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-200 font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none truncate">
+                            <button type="button" onclick="window.app.openSelectPicker('pricing-store-select', 'Selecione a Loja / Filial', 'fa-solid fa-store text-emerald-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-100 font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none flex items-center justify-between group transition hover:border-emerald-500/60 shadow-xs cursor-pointer">
+                                <div class="flex items-center gap-2 truncate">
+                                    <i class="fa-solid fa-store text-emerald-400 text-xs shrink-0"></i>
+                                    <span id="picker-lbl-pricing-store-select" class="truncate font-bold">-- Escolha uma Loja --</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-emerald-400 transition-colors shrink-0 ml-1"></i>
+                            </button>
+                            <select id="pricing-store-select" onchange="window.app.renderPricingTable()" class="hidden">
                                 <option value="">-- Escolha uma Loja --</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">2. Filtrar Marca</label>
-                            <select id="pricing-brand-select" onchange="window.app.renderPricingTable()" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none truncate">
+                            <button type="button" onclick="window.app.openSelectPicker('pricing-brand-select', 'Filtrar por Marca', 'fa-solid fa-boxes-stacked text-purple-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-200 font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none flex items-center justify-between group transition hover:border-purple-500/60 shadow-xs cursor-pointer">
+                                <div class="flex items-center gap-2 truncate">
+                                    <i class="fa-solid fa-boxes-stacked text-purple-400 text-xs shrink-0"></i>
+                                    <span id="picker-lbl-pricing-brand-select" class="truncate font-bold">Todas as Marcas</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-purple-400 transition-colors shrink-0 ml-1"></i>
+                            </button>
+                            <select id="pricing-brand-select" onchange="window.app.renderPricingTable()" class="hidden">
                                 <option value="ALL">Todas as Marcas</option>
                             </select>
                         </div>
@@ -696,7 +912,11 @@
                             <p class="text-[11px] text-slate-400 mb-2">Vincule o produto à marca correspondente.</p>
                             
                             <form onsubmit="window.app.handleCreateProduct(event)" class="space-y-2">
-                                <select id="product-brand-select" required class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-100 focus:ring-2 focus:ring-indigo-500 focus:outline-none truncate">
+                                <button type="button" onclick="window.app.openSelectPicker('product-brand-select', 'Selecione a Marca', 'fa-solid fa-copyright text-purple-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-100 flex items-center justify-between group transition hover:border-indigo-500/60 shadow-xs cursor-pointer">
+                                    <span id="picker-lbl-product-brand-select" class="truncate font-semibold">-- Selecione a Marca --</span>
+                                    <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-indigo-400 transition-colors shrink-0 ml-1"></i>
+                                </button>
+                                <select id="product-brand-select" required class="hidden">
                                     <option value="">-- Selecione a Marca --</option>
                                 </select>
                                 <input type="text" id="product-name" required placeholder="Nome do Produto (Ex: Leite Moça 395g)" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-100 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
@@ -729,7 +949,11 @@
                                 <h3 class="font-bold text-slate-200 text-xs uppercase tracking-wider">Catálogo de Produtos</h3>
                             </div>
                             <div class="flex items-center gap-2 w-full sm:w-auto">
-                                <select id="catalog-filter-brand" onchange="window.app.renderCatalog()" class="rounded-xl border border-slate-700 px-3 py-1.5 text-xs bg-slate-900 text-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-500 truncate">
+                                <button type="button" onclick="window.app.openSelectPicker('catalog-filter-brand', 'Filtrar por Marca', 'fa-solid fa-boxes-stacked text-purple-400')" class="app-picker-trigger rounded-xl border border-slate-700 px-3 py-1.5 text-xs bg-slate-900 text-slate-200 flex items-center gap-2 group transition hover:border-purple-500/60 shadow-xs cursor-pointer">
+                                    <span id="picker-lbl-catalog-filter-brand" class="truncate font-bold">Todas as Marcas</span>
+                                    <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-purple-400 transition-colors shrink-0"></i>
+                                </button>
+                                <select id="catalog-filter-brand" onchange="window.app.renderCatalog()" class="hidden">
                                     <option value="ALL">Todas as Marcas</option>
                                 </select>
                             </div>
@@ -773,12 +997,24 @@
                             <p class="text-[11px] text-slate-400">Rastreabilidade completa de todas as mudanças de preços lançadas por loja.</p>
                         </div>
                         <div class="grid grid-cols-2 gap-2 w-full sm:w-auto">
-                            <select id="log-filter-store" onchange="window.app.renderLogs()" class="rounded-xl border border-slate-700 px-3 py-1.5 text-xs bg-slate-900 text-slate-200 focus:outline-none truncate">
-                                <option value="ALL">Todas as Lojas</option>
-                            </select>
-                            <select id="log-filter-brand" onchange="window.app.renderLogs()" class="rounded-xl border border-slate-700 px-3 py-1.5 text-xs bg-slate-900 text-slate-200 focus:outline-none truncate">
-                                <option value="ALL">Todas as Marcas</option>
-                            </select>
+                            <div>
+                                <button type="button" onclick="window.app.openSelectPicker('log-filter-store', 'Filtrar por Loja', 'fa-solid fa-store text-cyan-400')" class="app-picker-trigger w-full rounded-xl border border-slate-700 px-3 py-1.5 text-xs bg-slate-900 text-slate-200 flex items-center justify-between group transition hover:border-cyan-500/60 shadow-xs cursor-pointer">
+                                    <span id="picker-lbl-log-filter-store" class="truncate font-semibold">Todas as Lojas</span>
+                                    <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-cyan-400 transition-colors shrink-0 ml-1"></i>
+                                </button>
+                                <select id="log-filter-store" onchange="window.app.renderLogs()" class="hidden">
+                                    <option value="ALL">Todas as Lojas</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button type="button" onclick="window.app.openSelectPicker('log-filter-brand', 'Filtrar por Marca', 'fa-solid fa-boxes-stacked text-purple-400')" class="app-picker-trigger w-full rounded-xl border border-slate-700 px-3 py-1.5 text-xs bg-slate-900 text-slate-200 flex items-center justify-between group transition hover:border-purple-500/60 shadow-xs cursor-pointer">
+                                    <span id="picker-lbl-log-filter-brand" class="truncate font-semibold">Todas as Marcas</span>
+                                    <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-purple-400 transition-colors shrink-0 ml-1"></i>
+                                </button>
+                                <select id="log-filter-brand" onchange="window.app.renderLogs()" class="hidden">
+                                    <option value="ALL">Todas as Marcas</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
@@ -1024,22 +1260,34 @@
 
             <!-- Drawer Footer -->
             <div class="pt-4 border-t border-slate-800 space-y-2">
+                <!-- Botão de Alternar Modo Dia / Noite -->
+                <button onclick="window.app.toggleTheme()" class="w-full py-2.5 px-3 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-between transition cursor-pointer">
+                    <div class="flex items-center gap-2">
+                        <i id="drawer-theme-icon" class="fa-solid fa-moon text-indigo-400 text-xs"></i>
+                        <span id="drawer-theme-label">Modo Noite</span>
+                    </div>
+                    <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Trocar</span>
+                </button>
+
                 <button id="drawer-install-btn" onclick="window.app.promptPWAInstall(); window.app.toggleMobileDrawer();" class="w-full hidden bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs py-2.5 rounded-xl shadow-lg flex items-center justify-center gap-2">
                     <i class="fa-solid fa-download"></i>
                     <span>Instalar Aplicativo PWA</span>
                 </button>
-                <p class="text-[10px] text-center text-slate-500">Versão 1.0.1 • Easy Collect PWA</p>
+                <p class="text-[10px] text-center text-slate-500">Versão 1.0.3 • Easy Collect PWA</p>
             </div>
         </div>
     </div>
 
     <!-- ======================================================== -->
-    <!-- MODAIS DO SISTEMA                                        -->
+    <!-- MODAIS DO SISTEMA ESTILO APP NATIVO (BOTTOM SHEETS)       -->
     <!-- ======================================================== -->
 
     <!-- Modal 1: Histórico de Preços do Item -->
-    <div id="modal-item-history" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-[#131b2e] rounded-2xl max-w-lg w-full shadow-2xl border border-slate-800 overflow-hidden flex flex-col max-h-[85vh]">
+    <div id="modal-item-history" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 transition-all">
+        <div class="bg-[#131b2e] rounded-t-3xl sm:rounded-2xl max-w-lg w-full shadow-2xl border-t sm:border border-slate-700/80 overflow-hidden flex flex-col max-h-[85vh] animate-sheet-up">
+            <div class="sm:hidden pt-3 pb-1 flex justify-center">
+                <div class="w-12 h-1.5 bg-slate-700/80 rounded-full"></div>
+            </div>
             <div class="px-5 py-4 bg-slate-900 border-b border-slate-800 flex justify-between items-center">
                 <div>
                     <h3 id="history-modal-title" class="font-bold text-sm text-white truncate">Histórico de Auditoria</h3>
@@ -1066,9 +1314,12 @@
         </div>
     </div>
 
-    <!-- Modal 2: Editar Loja (NOVO) -->
-    <div id="modal-edit-store" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-[#131b2e] rounded-2xl max-w-md w-full shadow-2xl border border-slate-800 overflow-hidden p-5 space-y-4">
+    <!-- Modal 2: Editar Loja -->
+    <div id="modal-edit-store" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 transition-all">
+        <div class="bg-[#131b2e] rounded-t-3xl sm:rounded-2xl max-w-md w-full shadow-2xl border-t sm:border border-slate-700/80 overflow-hidden p-5 space-y-4 max-h-[90vh] overflow-y-auto animate-sheet-up">
+            <div class="sm:hidden -mt-2 mb-2 flex justify-center">
+                <div class="w-12 h-1.5 bg-slate-700/80 rounded-full"></div>
+            </div>
             <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                 <h3 class="font-bold text-white text-base flex items-center gap-2">
                     <i class="fa-solid fa-pen-to-square text-cyan-400"></i>
@@ -1089,7 +1340,11 @@
                 <div class="grid grid-cols-2 gap-2">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">Estado (UF) *</label>
-                        <select id="edit-store-uf" required class="w-full rounded-xl border border-slate-700 px-2.5 py-2 text-xs bg-slate-900 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        <button type="button" onclick="window.app.openSelectPicker('edit-store-uf', 'Selecionar Estado (UF)', 'fa-solid fa-map-pin text-cyan-400')" class="app-picker-trigger w-full text-left rounded-xl border border-slate-700 px-2.5 py-2 text-xs bg-slate-900 text-slate-100 flex items-center justify-between group transition hover:border-blue-500/60 shadow-xs cursor-pointer">
+                            <span id="picker-lbl-edit-store-uf" class="truncate font-semibold">SP</span>
+                            <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-blue-400 transition-colors shrink-0 ml-1"></i>
+                        </button>
+                        <select id="edit-store-uf" required class="hidden">
                             <option value="SP">SP</option><option value="RJ">RJ</option><option value="MG">MG</option><option value="ES">ES</option>
                             <option value="PR">PR</option><option value="SC">SC</option><option value="RS">RS</option><option value="BA">BA</option>
                             <option value="PE">PE</option><option value="CE">CE</option><option value="DF">DF</option><option value="GO">GO</option>
@@ -1114,8 +1369,11 @@
     </div>
 
     <!-- Modal 3: Confirmação de Exclusão -->
-    <div id="modal-confirm" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-[#131b2e] rounded-2xl max-w-sm w-full shadow-2xl border border-slate-800 overflow-hidden p-5 text-center space-y-4">
+    <div id="modal-confirm" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 transition-all">
+        <div class="bg-[#131b2e] rounded-t-3xl sm:rounded-2xl max-w-sm w-full shadow-2xl border-t sm:border border-slate-700/80 overflow-hidden p-5 text-center space-y-4 animate-sheet-up">
+            <div class="sm:hidden -mt-2 mb-2 flex justify-center">
+                <div class="w-12 h-1.5 bg-slate-700/80 rounded-full"></div>
+            </div>
             <div class="w-12 h-12 bg-red-500/15 border border-red-500/30 text-red-400 rounded-full flex items-center justify-center mx-auto text-xl">
                 <i class="fa-solid fa-triangle-exclamation"></i>
             </div>
@@ -1130,9 +1388,12 @@
         </div>
     </div>
 
-    <!-- Modal 4: Lançamento Rápido de Preço direto da Consulta (NOVO) -->
-    <div id="modal-quick-price" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-[#131b2e] rounded-2xl max-w-sm w-full shadow-2xl border border-slate-800 overflow-hidden p-5 space-y-4">
+    <!-- Modal 4: Lançamento Rápido de Preço direto da Consulta -->
+    <div id="modal-quick-price" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 transition-all">
+        <div class="bg-[#131b2e] rounded-t-3xl sm:rounded-2xl max-w-sm w-full shadow-2xl border-t sm:border border-slate-700/80 overflow-hidden p-5 space-y-4 animate-sheet-up">
+            <div class="sm:hidden -mt-2 mb-2 flex justify-center">
+                <div class="w-12 h-1.5 bg-slate-700/80 rounded-full"></div>
+            </div>
             <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                 <div>
                     <h3 class="font-bold text-white text-sm">Atualizar Preço</h3>
@@ -1156,6 +1417,60 @@
                     <button onclick="window.app.closeModal('modal-quick-price')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2.5 rounded-xl font-semibold">Cancelar</button>
                     <button id="btn-quick-price-save" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs py-2.5 rounded-xl font-bold shadow-md shadow-emerald-600/20">Salvar Preço</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL BOTTOM SHEET: SELETOR DE OPÇÕES ESTILO APP NATIVO  -->
+    <!-- ======================================================== -->
+    <div id="app-picker-modal" class="fixed inset-0 z-50 hidden transition-opacity duration-200">
+        <!-- Backdrop com blur -->
+        <div onclick="window.app.closePicker()" class="absolute inset-0 bg-slate-950/75 backdrop-blur-xs transition-opacity"></div>
+
+        <!-- Painel Bottom Sheet no Mobile / Modal Flutuante no Desktop -->
+        <div class="absolute inset-x-0 bottom-0 md:inset-auto md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 bg-[#101726] border-t md:border border-slate-700/80 rounded-t-3xl md:rounded-2xl shadow-2xl max-w-md w-full max-h-[85vh] md:max-h-[75vh] flex flex-col overflow-hidden transition-all duration-300 animate-sheet-up">
+            
+            <!-- Puxador tátil (Drag indicator pill no Mobile) -->
+            <div class="md:hidden pt-3 pb-1 flex justify-center">
+                <div class="w-12 h-1.5 bg-slate-700 rounded-full"></div>
+            </div>
+
+            <!-- Cabeçalho do Seletor -->
+            <div class="px-5 py-3 border-b border-slate-800/80 flex items-center justify-between">
+                <div class="flex items-center gap-2.5 min-w-0">
+                    <div id="picker-icon-box" class="w-8 h-8 rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 flex items-center justify-center shrink-0 text-sm">
+                        <i id="picker-icon" class="fa-solid fa-list-check"></i>
+                    </div>
+                    <div>
+                        <h3 id="picker-title" class="font-bold text-sm text-white truncate">Selecione uma Opção</h3>
+                        <p id="picker-subtitle" class="text-[10px] text-slate-400 font-medium">Toque para selecionar</p>
+                    </div>
+                </div>
+                <button onclick="window.app.closePicker()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Campo de Busca em Tempo Real dentro do Picker -->
+            <div id="picker-search-container" class="px-4 pt-3 pb-2 border-b border-slate-800/60 bg-slate-900/40">
+                <div class="relative">
+                    <i class="fa-solid fa-search absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+                    <input type="text" id="picker-search-input" oninput="window.app.filterPickerOptions(this.value)" placeholder="Filtrar opções..." class="w-full rounded-xl border border-slate-700/80 pl-8 pr-3 py-2 text-xs bg-slate-900 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Lista de Opções Estilo Cartão de App -->
+            <div id="picker-options-list" class="p-3 overflow-y-auto space-y-1.5 flex-1">
+                <!-- Opções renderizadas dinamicamente como cartões de aplicativo -->
+            </div>
+
+            <!-- Rodapé do Seletor -->
+            <div class="p-3 border-t border-slate-800/80 bg-slate-900/60 flex justify-between items-center text-[11px] text-slate-400">
+                <span id="picker-count-badge">0 opções</span>
+                <button onclick="window.app.closePicker()" class="text-xs font-semibold px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+                    Fechar
+                </button>
             </div>
         </div>
     </div>
@@ -1458,6 +1773,8 @@
                 logStore.innerHTML = `<option value="ALL">Todas as Lojas</option>` + state.stores.map(s => `<option value="${s.id}">[${s.revendaId}] ${s.name} (${s.uf})</option>`).join('');
                 if (state.stores.some(s => s.id === curLS)) logStore.value = curLS;
             }
+
+            syncPickerLabels();
         }
 
         function updateStoreDropdown() {
@@ -1467,11 +1784,22 @@
             const stores = uf === 'ALL' ? state.stores : state.stores.filter(s => s.uf === uf);
             filterStore.innerHTML = `<option value="ALL">Todas as Lojas (${stores.length})</option>` + stores.map(s => `<option value="${s.id}">[${s.revendaId}] ${s.name}</option>`).join('');
             if (stores.some(s => s.id === cur)) filterStore.value = cur;
+            syncPickerLabels();
         }
 
         function onFilterChange(type) {
             if (type === 'uf') updateStoreDropdown();
+            syncPickerLabels();
             renderConsulta();
+        }
+
+        function getMobileBottomSpacer(msg = "Fim dos registros") {
+            return `
+                <div class="h-32 md:hidden flex flex-col items-center justify-center py-8 text-slate-500 text-xs">
+                    <div class="w-10 h-1 bg-slate-800 rounded-full mb-2"></div>
+                    <span class="text-[10px] text-slate-500 font-medium">${msg}</span>
+                </div>
+            `;
         }
 
         let debounceTimer;
@@ -1612,7 +1940,7 @@
                         </div>
                     </div>
                 `;
-            }).join('');
+            }).join('') + getMobileBottomSpacer("Fim dos registros auditados");
 
             // Tabela Desktop
             tbody.innerHTML = rows.map(r => {
@@ -1724,7 +2052,7 @@
                         </div>
                     </div>
                 `;
-            }).join('');
+            }).join('') + getMobileBottomSpacer("Fim dos produtos para lançamento");
 
             tbody.innerHTML = prods.map(p => {
                 const br = bMap[p.brandId];
@@ -2003,7 +2331,7 @@
                         </div>
                     </div>
                 `;
-            }).join('');
+            }).join('') + getMobileBottomSpacer("Fim das lojas cadastradas");
 
             tbody.innerHTML = list.map(s => {
                 const count = state.storePrices.filter(sp => sp.storeId === s.id).length;
@@ -2126,7 +2454,7 @@
                         </button>
                     </div>
                 `;
-            }).join('');
+            }).join('') + getMobileBottomSpacer("Fim do catálogo de produtos");
 
             tbody.innerHTML = prods.map(p => {
                 const br = bMap[p.brandId];
@@ -2202,7 +2530,7 @@
                         </div>
                     </div>
                 `;
-            }).join('');
+            }).join('') + getMobileBottomSpacer("Fim dos registros de log");
 
             tbody.innerHTML = logs.map(l => {
                 const st = sMap[l.storeId], pr = pMap[l.productId], br = bMap[l.brandId || (pr ? pr.brandId : '')];
@@ -2566,12 +2894,69 @@
 
         function toggleMobileDrawer() {
             const drawer = document.getElementById('mobile-drawer');
-            drawer.classList.toggle('hidden');
+            if (drawer) drawer.classList.toggle('hidden');
+        }
+
+        // ============================================================
+        // MODO DIA & MODO NOITE (THEME ENGINE)
+        // ============================================================
+        function initTheme() {
+            // Padrão: 'light' (Modo Dia, tela clara e legível)
+            const savedTheme = localStorage.getItem('easy_collect_theme') || 'light';
+            setTheme(savedTheme, false);
+        }
+
+        function setTheme(theme, notify = false) {
+            const html = document.documentElement;
+            const validTheme = (theme === 'dark') ? 'dark' : 'light';
+            html.setAttribute('data-theme', validTheme);
+            localStorage.setItem('easy_collect_theme', validTheme);
+            updateThemeUI(validTheme);
+            if (notify) {
+                showToast(validTheme === 'light' ? 'Modo Dia ativado (Tema Claro)' : 'Modo Noite ativado (Tema Escuro)', 'info');
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme, true);
+            vibrate(12);
+        }
+
+        function updateThemeUI(theme) {
+            const isLight = theme === 'light';
+
+            // Botão Header
+            const headIcon = document.getElementById('theme-toggle-icon');
+            const headText = document.getElementById('theme-toggle-text');
+            if (headIcon) headIcon.className = isLight ? "fa-solid fa-moon text-indigo-500 text-xs" : "fa-solid fa-sun text-amber-400 text-xs";
+            if (headText) headText.textContent = isLight ? "Modo Noite" : "Modo Dia";
+
+            // Botão Sidebar
+            const sideIcon = document.getElementById('side-theme-icon');
+            const sideLabel = document.getElementById('side-theme-label');
+            if (sideIcon) sideIcon.className = isLight ? "fa-solid fa-moon text-indigo-500 text-xs" : "fa-solid fa-sun text-amber-400 text-xs";
+            if (sideLabel) sideLabel.textContent = isLight ? "Modo Noite" : "Modo Dia";
+
+            // Botão Drawer
+            const drawerIcon = document.getElementById('drawer-theme-icon');
+            const drawerLabel = document.getElementById('drawer-theme-label');
+            if (drawerIcon) drawerIcon.className = isLight ? "fa-solid fa-moon text-indigo-500 text-xs" : "fa-solid fa-sun text-amber-400 text-xs";
+            if (drawerLabel) drawerLabel.textContent = isLight ? "Modo Noite" : "Modo Dia";
+
+            // Meta theme-color para navegadores móveis
+            const metaTheme = document.querySelector('meta[name="theme-color"]');
+            if (metaTheme) {
+                metaTheme.setAttribute('content', isLight ? '#f8fafc' : '#0b0f19');
+            }
         }
 
         function goToStore(id) {
             switchTab('precos');
-            document.getElementById('pricing-store-select').value = id;
+            const sel = document.getElementById('pricing-store-select');
+            if (sel) sel.value = id;
+            syncPickerLabels();
             renderPricingTable();
         }
 
@@ -2582,6 +2967,154 @@
 
         function closeModal(id) {
             document.getElementById(id).classList.add('hidden');
+        }
+
+        // ============================================================
+        // APP PICKER ENGINE (SELETOR ESTILO NATIVO BOTTOM SHEET)
+        // ============================================================
+        let currentPickerSelectId = null;
+        let currentPickerOptions = [];
+
+        function syncPickerLabels() {
+            const pickerIds = [
+                'filter-uf',
+                'filter-store',
+                'filter-brand',
+                'filter-variation',
+                'pricing-store-select',
+                'pricing-brand-select',
+                'catalog-filter-brand',
+                'log-filter-store',
+                'log-filter-brand',
+                'product-brand-select',
+                'edit-store-uf'
+            ];
+
+            pickerIds.forEach(id => {
+                const sel = document.getElementById(id);
+                const lbl = document.getElementById(`picker-lbl-${id}`);
+                if (sel && lbl) {
+                    const selectedOpt = sel.options[sel.selectedIndex];
+                    lbl.textContent = selectedOpt ? selectedOpt.text : (sel.options[0]?.text || 'Selecionar...');
+                }
+            });
+        }
+
+        function openSelectPicker(selectId, title = "Selecione uma Opção", icon = "fa-solid fa-list-check text-blue-400") {
+            const sel = document.getElementById(selectId);
+            if (!sel) return;
+
+            currentPickerSelectId = selectId;
+            const titleEl = document.getElementById('picker-title');
+            const iconEl = document.getElementById('picker-icon');
+            if (titleEl) titleEl.textContent = title;
+            if (iconEl) iconEl.className = icon;
+
+            currentPickerOptions = Array.from(sel.options).map(opt => {
+                let subtitle = "";
+                let badge = "";
+                let optIcon = "";
+
+                const text = opt.text;
+                if (text.includes('[') && text.includes(']')) {
+                    const match = text.match(/\[(.*?)\]\s*(.*)/);
+                    if (match) {
+                        badge = match[1];
+                        subtitle = `Código: ${match[1]}`;
+                    }
+                }
+                if (opt.value === 'UP') optIcon = '<i class="fa-solid fa-arrow-trend-up text-red-400"></i>';
+                else if (opt.value === 'DOWN') optIcon = '<i class="fa-solid fa-arrow-trend-down text-emerald-400"></i>';
+                else if (opt.value === 'STABLE') optIcon = '<i class="fa-solid fa-minus text-slate-400"></i>';
+
+                return {
+                    value: opt.value,
+                    text: opt.text,
+                    subtitle: subtitle,
+                    badge: badge,
+                    icon: optIcon
+                };
+            });
+
+            const searchInput = document.getElementById('picker-search-input');
+            if (searchInput) searchInput.value = '';
+
+            renderPickerOptionsList(currentPickerOptions);
+
+            const modal = document.getElementById('app-picker-modal');
+            if (modal) modal.classList.remove('hidden');
+            vibrate(10);
+        }
+
+        function renderPickerOptionsList(options) {
+            const list = document.getElementById('picker-options-list');
+            const sel = document.getElementById(currentPickerSelectId);
+            const curVal = sel ? sel.value : null;
+
+            const countBadge = document.getElementById('picker-count-badge');
+            if (countBadge) countBadge.textContent = `${options.length} ${options.length === 1 ? 'opção' : 'opções'}`;
+
+            if (options.length === 0) {
+                list.innerHTML = `<div class="py-8 text-center text-slate-500 text-xs">Nenhuma opção encontrada na busca.</div>`;
+                return;
+            }
+
+            list.innerHTML = options.map(opt => {
+                const isSelected = opt.value === curVal;
+                const activeClass = isSelected
+                    ? "bg-blue-600/15 border-blue-500/60 shadow-sm"
+                    : "bg-slate-900/60 border-slate-800/80 hover:bg-slate-800/60";
+
+                const checkmark = isSelected
+                    ? `<div class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs shrink-0 shadow-md shadow-blue-500/40">
+                           <i class="fa-solid fa-check"></i>
+                       </div>`
+                    : `<div class="w-6 h-6 rounded-full border border-slate-700/80 shrink-0"></div>`;
+
+                return `
+                    <button type="button" onclick="window.app.selectPickerValue('${opt.value.replace(/'/g, "\\'")}')" class="w-full p-3 rounded-xl border ${activeClass} flex items-center justify-between text-left transition active:scale-[0.99] group cursor-pointer">
+                        <div class="flex items-center gap-3 min-w-0 pr-2">
+                            ${opt.badge ? `<span class="font-mono text-[10px] font-bold px-2 py-0.5 rounded-lg bg-blue-500/15 text-blue-400 border border-blue-500/30 shrink-0">${opt.badge}</span>` : ''}
+                            ${opt.icon ? `<span class="w-6 h-6 rounded-lg bg-slate-800 flex items-center justify-center text-xs shrink-0">${opt.icon}</span>` : ''}
+                            <div class="min-w-0">
+                                <div class="text-xs truncate ${isSelected ? 'text-blue-300 font-bold' : 'text-slate-100 font-medium'}">${opt.text}</div>
+                                ${opt.subtitle ? `<div class="text-[10px] text-slate-400 truncate mt-0.5">${opt.subtitle}</div>` : ''}
+                            </div>
+                        </div>
+                        ${checkmark}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function filterPickerOptions(query) {
+            const q = (query || '').toLowerCase().trim();
+            if (!q) {
+                renderPickerOptionsList(currentPickerOptions);
+                return;
+            }
+            const filtered = currentPickerOptions.filter(o => 
+                o.text.toLowerCase().includes(q) || 
+                (o.subtitle && o.subtitle.toLowerCase().includes(q)) ||
+                (o.badge && o.badge.toLowerCase().includes(q))
+            );
+            renderPickerOptionsList(filtered);
+        }
+
+        function selectPickerValue(val) {
+            const sel = document.getElementById(currentPickerSelectId);
+            if (sel) {
+                sel.value = val;
+                sel.dispatchEvent(new Event('change', { bubbles: true }));
+                syncPickerLabels();
+            }
+            closePicker();
+            vibrate(12);
+        }
+
+        function closePicker() {
+            const modal = document.getElementById('app-picker-modal');
+            if (modal) modal.classList.add('hidden');
         }
 
         // ============================================================
@@ -2720,6 +3253,14 @@
         window.app = {
             switchTab,
             toggleMobileDrawer,
+            initTheme,
+            setTheme,
+            toggleTheme,
+            openSelectPicker,
+            filterPickerOptions,
+            selectPickerValue,
+            closePicker,
+            syncPickerLabels,
             onFilterChange,
             renderConsulta,
             debouncedRenderConsulta,
@@ -2752,10 +3293,14 @@
         };
 
         window.addEventListener('DOMContentLoaded', () => {
+            // Inicializa Modo Dia / Noite (padrão 'light' ou salvo pelo usuário)
+            initTheme();
+
             // Carrega apenas os dados reais gravados localmente ou da nuvem
             loadFromLocalStorage();
 
             refreshAllViews();
+            syncPickerLabels();
             initFirebase();
             setupPWA();
 

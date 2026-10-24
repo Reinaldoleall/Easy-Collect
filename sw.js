@@ -1,5 +1,5 @@
 // Service Worker para Easy Collect PWA
-const CACHE_NAME = 'easy-collect-v1.0.2';
+const CACHE_NAME = 'easy-collect-v1.0.4';
 const STATIC_ASSETS = [
   './',
   './index.html',
