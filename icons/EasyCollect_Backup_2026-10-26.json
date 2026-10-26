@@ -1,0 +1,1284 @@
+{
+  "app": "Easy Collect PWA",
+  "version": "1.0.1",
+  "exportedAt": "2026-10-26T17:53:47.180Z",
+  "stores": [
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I",
+      "revendaId": "11902",
+      "name": "Carrefour",
+      "createdAt": "2026-10-23T14:36:23.597Z",
+      "city": "Campo Grande",
+      "address": "Estrada das Capoeiras 355, Campo Grande - RJ",
+      "createdBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "uf": "RJ"
+    },
+    {
+      "id": "Lxt0OK1rNKq0EsY4r4as",
+      "name": "Lojas Cem",
+      "address": "Rua Doutor Curvelo Cavalcanti, 500 - Vila Margarida, CEP 23815-292.",
+      "createdAt": "2026-10-23T13:50:02.721Z",
+      "uf": "RJ",
+      "revendaId": "86461",
+      "city": "Itaguai",
+      "createdBy": "1WVLm0rIXiSWeX8IzNC5i8zIQz23"
+    }
+  ],
+  "brands": [
+    {
+      "id": "wNhWmjkKvXLGR1bf08Id",
+      "category": "Linha Branca",
+      "createdAt": "2026-10-23T13:51:01.496Z",
+      "name": "Brastemp"
+    },
+    {
+      "id": "VMvYg9ePniVmkgllGdOJ",
+      "createdAt": "2026-10-23T13:51:13.568Z",
+      "name": "Consul",
+      "category": "Linha Branca"
+    },
+    {
+      "id": "dkNv8lhGSMU5NuRL4ueW",
+      "category": "Linha Branca",
+      "createdAt": "2026-10-23T13:52:08.189Z",
+      "name": "Electrolux"
+    },
+    {
+      "id": "EURXTDohKcx0OYiV2UQx",
+      "name": "Hayer",
+      "category": "Linha Branca",
+      "createdAt": "2026-10-23T13:51:57.114Z"
+    },
+    {
+      "id": "lCLixS8pCFeqsLhNxKCt",
+      "name": "LG",
+      "category": "Linha Branca",
+      "createdAt": "2026-10-23T13:51:07.847Z"
+    },
+    {
+      "id": "IlSSyOKPJMXa3ilgSoCN",
+      "name": "Midea",
+      "createdAt": "2026-10-23T13:52:32.999Z",
+      "category": "Linha Branca"
+    },
+    {
+      "id": "m4uodt8a2i1JjMOFUdRB",
+      "createdAt": "2026-10-23T13:53:01.209Z",
+      "category": "Linha Branca",
+      "name": "Mondial"
+    },
+    {
+      "id": "UEdmV7StpEpqicEa5mPR",
+      "category": "Linha Branca",
+      "createdAt": "2026-10-23T13:50:39.781Z",
+      "name": "Panasonic"
+    },
+    {
+      "id": "rKDVByRVkngXqZ7BSo5q",
+      "createdAt": "2026-10-23T13:54:29.357Z",
+      "name": "Philco",
+      "category": "Linha Branca"
+    }
+  ],
+  "products": [
+    {
+      "id": "pr_1792873691689",
+      "unit": "UN",
+      "createdAt": "2026-10-24T20:28:11.689Z",
+      "sku": "SKU-RDCDE",
+      "name": "BMS46AB 32L",
+      "brandId": "wNhWmjkKvXLGR1bf08Id"
+    },
+    {
+      "id": "pr_1792873462481",
+      "name": "BRE66AB 500L",
+      "sku": "43807",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "createdAt": "2026-10-24T20:24:22.481Z",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792871595363",
+      "unit": "UN",
+      "createdAt": "2026-10-24T19:53:15.363Z",
+      "sku": "43806",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "name": "BRE66AK 500L"
+    },
+    {
+      "id": "pr_1792873381609",
+      "createdAt": "2026-10-24T20:23:01.609Z",
+      "name": "BRM46MK 385L",
+      "unit": "UN",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "sku": "43494"
+    },
+    {
+      "id": "pr_1792871559297",
+      "name": "BRM62AK 512L",
+      "createdAt": "2026-10-24T19:52:39.297Z",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "sku": "43803",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792871357755",
+      "name": "BWF14AB 14KG",
+      "createdAt": "2026-10-24T19:49:17.755Z",
+      "unit": "UN",
+      "sku": "39857",
+      "brandId": "wNhWmjkKvXLGR1bf08Id"
+    },
+    {
+      "id": "pr_1792871297270",
+      "name": "BWF16AB 16KG",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "createdAt": "2026-10-24T19:48:17.270Z",
+      "unit": "UN",
+      "sku": "59870"
+    },
+    {
+      "id": "pr_1792871274775",
+      "name": "BWF18AB 18KG",
+      "sku": "5064",
+      "createdAt": "2026-10-24T19:47:54.775Z",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792871322254",
+      "name": "BWJ14A9 14KG",
+      "sku": "39859",
+      "createdAt": "2026-10-24T19:48:42.254Z",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792873748520",
+      "createdAt": "2026-10-24T20:29:08.520Z",
+      "sku": "SKU-EQ6Y9",
+      "unit": "UN",
+      "name": "CMS23AR 23L",
+      "brandId": "VMvYg9ePniVmkgllGdOJ"
+    },
+    {
+      "id": "pr_1792873413515",
+      "brandId": "VMvYg9ePniVmkgllGdOJ",
+      "name": "CRE45MB 399L",
+      "unit": "UN",
+      "sku": "37636",
+      "createdAt": "2026-10-24T20:23:33.515Z"
+    },
+    {
+      "id": "pr_1792870979985",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "name": "DC35A 260L",
+      "createdAt": "2026-10-24T19:42:59.985Z",
+      "sku": "11203",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792871121073",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "ean": null,
+      "createdAt": "2026-10-24T19:45:21.073Z",
+      "networkSkus": [],
+      "sku": "44182",
+      "unit": "UN",
+      "name": "ES40S 431L",
+      "updatedAt": "2026-10-26T02:33:37.736Z"
+    },
+    {
+      "id": "pr_1792873241613",
+      "createdAt": "2026-10-24T20:20:41.613Z",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "unit": "UN",
+      "sku": "69371",
+      "name": "GC-B569NLLM 462L"
+    },
+    {
+      "id": "pr_1792873144314",
+      "unit": "UN",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "sku": "5128",
+      "createdAt": "2026-10-24T20:19:04.314Z",
+      "name": "GNB372PQW 375L"
+    },
+    {
+      "id": "pr_1792873200434",
+      "name": "GNB392PLMB 395L",
+      "sku": "4262",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "createdAt": "2026-10-24T20:20:00.434Z",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792873349174",
+      "unit": "UN",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "sku": "44235",
+      "createdAt": "2026-10-24T20:22:29.174Z",
+      "name": "IF41 380L"
+    },
+    {
+      "id": "pr_1792871043750",
+      "networkSkus": [],
+      "unit": "UN",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "createdAt": "2026-10-24T19:44:03.750Z",
+      "name": "IF41S 380L",
+      "ean": null,
+      "sku": "44233",
+      "updatedAt": "2026-10-26T02:34:00.499Z"
+    },
+    {
+      "id": "pr_1792871056515",
+      "networkSkus": [],
+      "name": "IF43S 390L",
+      "sku": "2891",
+      "updatedAt": "2026-10-26T02:34:56.903Z",
+      "unit": "UN",
+      "ean": null,
+      "createdAt": "2026-10-24T19:44:16.515Z",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW"
+    },
+    {
+      "id": "pr_1792871153998",
+      "unit": "UN",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "name": "IM8S 590L",
+      "createdAt": "2026-10-24T19:45:53.998Z",
+      "sku": "2780"
+    },
+    {
+      "id": "pr_1792871099710",
+      "name": "IT70S 480L",
+      "sku": "4045",
+      "updatedAt": "2026-10-26T02:35:32.017Z",
+      "networkSkus": [],
+      "unit": "UN",
+      "createdAt": "2026-10-24T19:44:59.710Z",
+      "ean": null,
+      "brandId": "dkNv8lhGSMU5NuRL4ueW"
+    },
+    {
+      "id": "pr_1792870949926",
+      "name": "LEE15 14,5KG",
+      "sku": "37600",
+      "createdAt": "2026-10-24T19:42:29.926Z",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792870906373",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "name": "LEE18 18KG",
+      "unit": "UN",
+      "createdAt": "2026-10-24T19:41:46.373Z",
+      "sku": "SKU-66FC5"
+    },
+    {
+      "id": "pr_1792873578909",
+      "unit": "UN",
+      "brandId": "m4uodt8a2i1JjMOFUdRB",
+      "createdAt": "2026-10-24T20:26:18.909Z",
+      "name": "M0034 34L",
+      "sku": "2879"
+    },
+    {
+      "id": "pr_1792873625066",
+      "brandId": "m4uodt8a2i1JjMOFUdRB",
+      "createdAt": "2026-10-24T20:27:05.066Z",
+      "name": "M0O121 21L",
+      "unit": "UN",
+      "sku": "SKU-1AQ1C"
+    },
+    {
+      "id": "pr_1792873779733",
+      "name": "M0O121B PRETO 21L",
+      "sku": "SKU-NN27V",
+      "createdAt": "2026-10-24T20:29:39.733Z",
+      "unit": "UN",
+      "brandId": "m4uodt8a2i1JjMOFUdRB"
+    },
+    {
+      "id": "pr_1792871655061",
+      "createdAt": "2026-10-24T19:54:15.061Z",
+      "name": "MA512W130A 13KG",
+      "unit": "UN",
+      "brandId": "IlSSyOKPJMXa3ilgSoCN",
+      "sku": "3871282"
+    },
+    {
+      "id": "pr_1792873094755",
+      "unit": "UN",
+      "createdAt": "2026-10-24T20:18:14.756Z",
+      "brandId": "IlSSyOKPJMXa3ilgSoCN",
+      "sku": "62846",
+      "name": "MDRT572EVD463 425L"
+    },
+    {
+      "id": "pr_1792873666873",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "sku": "SKU-JU9WZ",
+      "unit": "UN",
+      "name": "MEO44 34L",
+      "createdAt": "2026-10-24T20:27:46.873Z"
+    },
+    {
+      "id": "pr_1792873652536",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "sku": "SKU-9QLJV",
+      "unit": "UN",
+      "name": "MI41S 31L",
+      "createdAt": "2026-10-24T20:27:32.536Z"
+    },
+    {
+      "id": "pr_1792873714866",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "sku": "SKU-JC1EI",
+      "unit": "UN",
+      "name": "MS3043BR 30L",
+      "createdAt": "2026-10-24T20:28:34.866Z"
+    },
+    {
+      "id": "pr_1792870521953",
+      "createdAt": "2026-10-24T19:35:21.953Z",
+      "name": "NA-F150B1WA 15KG",
+      "sku": "37646",
+      "unit": "UN",
+      "brandId": "UEdmV7StpEpqicEa5mPR"
+    },
+    {
+      "id": "pr_1792870475209",
+      "name": "NA-F190G1WA 19KG",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "createdAt": "2026-10-24T19:34:35.209Z",
+      "unit": "UN",
+      "sku": "43020"
+    },
+    {
+      "id": "q9Bvx2n3IlrI29NUclid",
+      "unit": "UN",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "createdAt": "2026-10-23T13:57:41.660Z",
+      "sku": "0380400",
+      "name": "NN-ST25LW 21L"
+    },
+    {
+      "id": "pr_1792870613462",
+      "createdAt": "2026-10-24T19:36:53.462Z",
+      "name": "NN-ST67LS 34L",
+      "unit": "UN",
+      "sku": "7896067222515",
+      "brandId": "UEdmV7StpEpqicEa5mPR"
+    },
+    {
+      "id": "pr_1792870864925",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "name": "NR-BT41PD1XA 387L",
+      "unit": "UN",
+      "createdAt": "2026-10-24T19:41:04.925Z",
+      "sku": "7896067227749"
+    },
+    {
+      "id": "pr_1792870677413",
+      "name": "NR-BT41PD2WA 391L",
+      "sku": "43548",
+      "createdAt": "2026-10-24T19:37:57.413Z",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "unit": "UN"
+    },
+    {
+      "id": "UNH4z1DAzS676jZUXRol",
+      "name": "NR-BT44XFF 391L",
+      "createdAt": "2026-10-23T14:07:17.031Z",
+      "sku": "2523652",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792873539869",
+      "createdAt": "2026-10-24T20:25:39.869Z",
+      "sku": "SKU-VURDF",
+      "unit": "UN",
+      "name": "PMO31S 28L",
+      "brandId": "rKDVByRVkngXqZ7BSo5q"
+    },
+    {
+      "id": "pr_1792873517109",
+      "name": "PMO42EB 42L",
+      "createdAt": "2026-10-24T20:25:17.109Z",
+      "sku": "SKU-281LP",
+      "brandId": "rKDVByRVkngXqZ7BSo5q",
+      "unit": "UN"
+    },
+    {
+      "id": "pr_1792871025878",
+      "sku": "5109",
+      "name": "TF71 480L",
+      "networkSkus": [],
+      "updatedAt": "2026-10-26T02:36:18.683Z",
+      "unit": "UN",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "createdAt": "2026-10-24T19:43:45.878Z",
+      "ean": null
+    },
+    {
+      "id": "pr_1792871077013",
+      "name": "TF71S 480L",
+      "sku": "5110",
+      "createdAt": "2026-10-24T19:44:37.013Z",
+      "unit": "UN",
+      "networkSkus": [],
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "updatedAt": "2026-10-26T02:36:27.575Z",
+      "ean": null
+    }
+  ],
+  "storePrices": [
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_UNH4z1DAzS676jZUXRol",
+      "currentPrice": 2999,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "previousPrice": 2999,
+      "productId": "UNH4z1DAzS676jZUXRol",
+      "updatedAt": "2026-10-24T20:46:41.060Z",
+      "brandId": "UEdmV7StpEpqicEa5mPR"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870475209",
+      "currentPrice": 2799,
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "previousPrice": 2799,
+      "updatedAt": "2026-10-24T20:44:44.296Z",
+      "productId": "pr_1792870475209",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870521953",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 2299,
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "previousPrice": 2299,
+      "productId": "pr_1792870521953",
+      "updatedAt": "2026-10-24T20:44:30.751Z",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870613462",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "currentPrice": 849,
+      "productId": "pr_1792870613462",
+      "updatedAt": "2026-10-24T20:45:17.301Z",
+      "previousPrice": 849,
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870677413",
+      "currentPrice": 2699,
+      "previousPrice": 2699,
+      "productId": "pr_1792870677413",
+      "updatedAt": "2026-10-24T20:46:03.182Z",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870864925",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "updatedAt": "2026-10-24T20:45:50.566Z",
+      "productId": "pr_1792870864925",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "previousPrice": 2999,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 2999
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870906373",
+      "currentPrice": 2398,
+      "productId": "pr_1792870906373",
+      "updatedAt": "2026-10-24T20:41:57.686Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "previousPrice": 2398
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870949926",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "productId": "pr_1792870949926",
+      "updatedAt": "2026-10-24T20:41:50.111Z",
+      "previousPrice": 1998,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "currentPrice": 1998
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792870979985",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "updatedAt": "2026-10-24T20:38:56.309Z",
+      "productId": "pr_1792870979985",
+      "currentPrice": 2399,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "previousPrice": 2399
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871025878",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 3748,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792871025878",
+      "updatedAt": "2026-10-24T20:47:38.366Z",
+      "previousPrice": 3748
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871043750",
+      "currentPrice": 2999,
+      "previousPrice": 2999,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792871043750",
+      "updatedAt": "2026-10-24T20:40:44.238Z",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871056515",
+      "productId": "pr_1792871056515",
+      "updatedAt": "2026-10-24T20:41:08.120Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "previousPrice": 2999,
+      "currentPrice": 2999
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871077013",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "previousPrice": 3898,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "currentPrice": 3898,
+      "productId": "pr_1792871077013",
+      "updatedAt": "2026-10-24T20:47:45.071Z"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871099710",
+      "productId": "pr_1792871099710",
+      "updatedAt": "2026-10-24T20:41:36.569Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 3998,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "previousPrice": 3998
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871121073",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "previousPrice": 5499,
+      "productId": "pr_1792871121073",
+      "updatedAt": "2026-10-24T20:39:23.171Z",
+      "currentPrice": 5499,
+      "brandId": "dkNv8lhGSMU5NuRL4ueW"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871153998",
+      "currentPrice": 7999,
+      "previousPrice": 7999,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792871153998",
+      "updatedAt": "2026-10-24T20:41:22.340Z",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871274775",
+      "currentPrice": 2398,
+      "previousPrice": 2398,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "productId": "pr_1792871274775",
+      "updatedAt": "2026-10-24T20:33:35.414Z"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871297270",
+      "previousPrice": 2599,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792871297270",
+      "updatedAt": "2026-10-24T20:33:24.600Z",
+      "currentPrice": 2599
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871322254",
+      "previousPrice": 1999,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "updatedAt": "2026-10-24T20:33:49.643Z",
+      "productId": "pr_1792871322254",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "currentPrice": 1999,
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871357755",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792871357755",
+      "updatedAt": "2026-10-24T20:33:11.979Z",
+      "currentPrice": 1998,
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "previousPrice": 1998
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871559297",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "productId": "pr_1792871559297",
+      "updatedAt": "2026-10-24T20:32:49.833Z",
+      "previousPrice": 4599,
+      "currentPrice": 4599,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871595363",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 5299,
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "updatedAt": "2026-10-24T20:32:15.948Z",
+      "productId": "pr_1792871595363",
+      "previousPrice": 5299
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792871655061",
+      "previousPrice": 1999,
+      "brandId": "IlSSyOKPJMXa3ilgSoCN",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "updatedAt": "2026-10-24T20:43:19.301Z",
+      "productId": "pr_1792871655061",
+      "currentPrice": 1999,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873094755",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "previousPrice": 3599,
+      "brandId": "IlSSyOKPJMXa3ilgSoCN",
+      "productId": "pr_1792873094755",
+      "updatedAt": "2026-10-24T20:43:33.663Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 3599
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873144314",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "previousPrice": 2698,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "currentPrice": 2698,
+      "productId": "pr_1792873144314",
+      "updatedAt": "2026-10-24T20:40:05.540Z"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873200434",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873200434",
+      "updatedAt": "2026-10-24T20:40:21.097Z",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "previousPrice": 2848,
+      "currentPrice": 2848,
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873241613",
+      "currentPrice": 4048,
+      "previousPrice": 4048,
+      "productId": "pr_1792873241613",
+      "updatedAt": "2026-10-24T20:39:46.405Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873349174",
+      "previousPrice": 2698,
+      "productId": "pr_1792873349174",
+      "updatedAt": "2026-10-24T20:40:39.393Z",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "currentPrice": 2698,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873381609",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "previousPrice": 2998,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873381609",
+      "updatedAt": "2026-10-24T20:32:35.165Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 2998
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873413515",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873413515",
+      "updatedAt": "2026-10-24T20:34:31.356Z",
+      "previousPrice": 3298,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 3298,
+      "brandId": "VMvYg9ePniVmkgllGdOJ"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873462481",
+      "previousPrice": 4999,
+      "currentPrice": 4999,
+      "updatedAt": "2026-10-24T20:32:01.395Z",
+      "productId": "pr_1792873462481",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873517109",
+      "updatedAt": "2026-10-24T20:47:20.399Z",
+      "productId": "pr_1792873517109",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "previousPrice": 749,
+      "currentPrice": 749,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "rKDVByRVkngXqZ7BSo5q"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873539869",
+      "brandId": "rKDVByRVkngXqZ7BSo5q",
+      "currentPrice": 649,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792873539869",
+      "updatedAt": "2026-10-24T20:47:08.641Z",
+      "previousPrice": 649,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873578909",
+      "currentPrice": 699,
+      "previousPrice": 699,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792873578909",
+      "updatedAt": "2026-10-24T20:50:54.209Z",
+      "brandId": "m4uodt8a2i1JjMOFUdRB",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873625066",
+      "previousPrice": 549,
+      "brandId": "m4uodt8a2i1JjMOFUdRB",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "currentPrice": 549,
+      "productId": "pr_1792873625066",
+      "updatedAt": "2026-10-24T20:42:55.083Z"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873652536",
+      "productId": "pr_1792873652536",
+      "updatedAt": "2026-10-24T20:43:59.121Z",
+      "currentPrice": 899,
+      "previousPrice": 899,
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873666873",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "currentPrice": 549,
+      "previousPrice": 549,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792873666873",
+      "updatedAt": "2026-10-24T20:43:47.253Z",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873691689",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873691689",
+      "updatedAt": "2026-10-24T20:31:30.769Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "previousPrice": 799,
+      "currentPrice": 799
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873714866",
+      "productId": "pr_1792873714866",
+      "updatedAt": "2026-10-24T20:44:15.538Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "previousPrice": 749,
+      "currentPrice": 749
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873748520",
+      "previousPrice": 569,
+      "currentPrice": 569,
+      "brandId": "VMvYg9ePniVmkgllGdOJ",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792873748520",
+      "updatedAt": "2026-10-24T20:34:10.553Z"
+    },
+    {
+      "id": "DSGqouAhlHDcJJg7hm4I_pr_1792873779733",
+      "updatedBy": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "currentPrice": 529,
+      "previousPrice": 529,
+      "productId": "pr_1792873779733",
+      "updatedAt": "2026-10-24T20:43:04.044Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "m4uodt8a2i1JjMOFUdRB"
+    },
+    {
+      "id": "Lxt0OK1rNKq0EsY4r4as_UNH4z1DAzS676jZUXRol",
+      "storeId": "Lxt0OK1rNKq0EsY4r4as",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "updatedBy": "1WVLm0rIXiSWeX8IzNC5i8zIQz23",
+      "previousPrice": 3158,
+      "currentPrice": 3158,
+      "productId": "UNH4z1DAzS676jZUXRol",
+      "updatedAt": "2026-10-23T14:07:56.979Z"
+    },
+    {
+      "id": "Lxt0OK1rNKq0EsY4r4as_q9Bvx2n3IlrI29NUclid",
+      "storeId": "Lxt0OK1rNKq0EsY4r4as",
+      "currentPrice": 628,
+      "previousPrice": 628,
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "updatedBy": "1WVLm0rIXiSWeX8IzNC5i8zIQz23",
+      "productId": "q9Bvx2n3IlrI29NUclid",
+      "updatedAt": "2026-10-23T13:58:28.143Z"
+    }
+  ],
+  "priceLogs": [
+    {
+      "id": "log_1792875054209_7vrp",
+      "brandId": "m4uodt8a2i1JjMOFUdRB",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "timestamp": "2026-10-24T20:50:54.209Z",
+      "oldPrice": null,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "newPrice": 699,
+      "productId": "pr_1792873578909"
+    },
+    {
+      "id": "log_1792874865071_wai8",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "timestamp": "2026-10-24T20:47:45.071Z",
+      "oldPrice": null,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "productId": "pr_1792871077013",
+      "newPrice": 3898
+    },
+    {
+      "id": "log_1792874858366_ymdq",
+      "productId": "pr_1792871025878",
+      "newPrice": 3748,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "oldPrice": null,
+      "timestamp": "2026-10-24T20:47:38.366Z",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW"
+    },
+    {
+      "id": "log_1792874840399_h7r7",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "rKDVByRVkngXqZ7BSo5q",
+      "timestamp": "2026-10-24T20:47:20.399Z",
+      "oldPrice": null,
+      "newPrice": 749,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873517109"
+    },
+    {
+      "id": "log_1792874828642_thzp",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873539869",
+      "newPrice": 649,
+      "brandId": "rKDVByRVkngXqZ7BSo5q",
+      "oldPrice": null,
+      "timestamp": "2026-10-24T20:47:08.641Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "log_1792874801060_5v25",
+      "oldPrice": null,
+      "productId": "UNH4z1DAzS676jZUXRol",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "timestamp": "2026-10-24T20:46:41.060Z",
+      "newPrice": 2999
+    },
+    {
+      "id": "log_1792874763182_9pnm",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "newPrice": 2699,
+      "timestamp": "2026-10-24T20:46:03.182Z",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "productId": "pr_1792870677413",
+      "oldPrice": null,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "log_1792874750566_qowa",
+      "productId": "pr_1792870864925",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "oldPrice": null,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "timestamp": "2026-10-24T20:45:50.566Z",
+      "newPrice": 2999
+    },
+    {
+      "id": "log_1792874717301_zt31",
+      "oldPrice": null,
+      "productId": "pr_1792870613462",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "newPrice": 849,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "timestamp": "2026-10-24T20:45:17.301Z"
+    },
+    {
+      "id": "log_1792874684296_htti",
+      "timestamp": "2026-10-24T20:44:44.296Z",
+      "newPrice": 2799,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "oldPrice": null,
+      "productId": "pr_1792870475209",
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "log_1792874670751_5008",
+      "newPrice": 2299,
+      "brandId": "UEdmV7StpEpqicEa5mPR",
+      "timestamp": "2026-10-24T20:44:30.751Z",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792870521953",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874655538_n1mb",
+      "timestamp": "2026-10-24T20:44:15.538Z",
+      "newPrice": 749,
+      "oldPrice": null,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873714866",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "lCLixS8pCFeqsLhNxKCt"
+    },
+    {
+      "id": "log_1792874639121_vvfh",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873652536",
+      "newPrice": 899,
+      "oldPrice": null,
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "timestamp": "2026-10-24T20:43:59.121Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "log_1792874627253_mxbb",
+      "oldPrice": null,
+      "productId": "pr_1792873666873",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "timestamp": "2026-10-24T20:43:47.253Z",
+      "newPrice": 549
+    },
+    {
+      "id": "log_1792874613663_4abz",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "IlSSyOKPJMXa3ilgSoCN",
+      "timestamp": "2026-10-24T20:43:33.663Z",
+      "newPrice": 3599,
+      "oldPrice": null,
+      "productId": "pr_1792873094755"
+    },
+    {
+      "id": "log_1792874599301_umo7",
+      "productId": "pr_1792871655061",
+      "newPrice": 1999,
+      "brandId": "IlSSyOKPJMXa3ilgSoCN",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "timestamp": "2026-10-24T20:43:19.301Z",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874584044_uo9j",
+      "oldPrice": null,
+      "timestamp": "2026-10-24T20:43:04.044Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873779733",
+      "brandId": "m4uodt8a2i1JjMOFUdRB",
+      "newPrice": 529
+    },
+    {
+      "id": "log_1792874575083_n5rp",
+      "newPrice": 549,
+      "timestamp": "2026-10-24T20:42:55.083Z",
+      "brandId": "m4uodt8a2i1JjMOFUdRB",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873625066",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874517686_d6vd",
+      "oldPrice": null,
+      "timestamp": "2026-10-24T20:41:57.686Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "newPrice": 2398,
+      "productId": "pr_1792870906373"
+    },
+    {
+      "id": "log_1792874510111_k5qp",
+      "timestamp": "2026-10-24T20:41:50.111Z",
+      "newPrice": 1998,
+      "oldPrice": null,
+      "productId": "pr_1792870949926",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW"
+    },
+    {
+      "id": "log_1792874496569_c82w",
+      "timestamp": "2026-10-24T20:41:36.569Z",
+      "newPrice": 3998,
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792871099710",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874482340_50gl",
+      "productId": "pr_1792871153998",
+      "newPrice": 7999,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "timestamp": "2026-10-24T20:41:22.340Z",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874468120_4h5c",
+      "oldPrice": null,
+      "productId": "pr_1792871056515",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "timestamp": "2026-10-24T20:41:08.120Z",
+      "newPrice": 2999
+    },
+    {
+      "id": "log_1792874444238_isxw",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "oldPrice": null,
+      "productId": "pr_1792871043750",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "newPrice": 2999,
+      "timestamp": "2026-10-24T20:40:44.238Z"
+    },
+    {
+      "id": "log_1792874439393_ynoq",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873349174",
+      "newPrice": 2698,
+      "oldPrice": null,
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "timestamp": "2026-10-24T20:40:39.393Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "log_1792874421097_tya3",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792873200434",
+      "oldPrice": null,
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "newPrice": 2848,
+      "timestamp": "2026-10-24T20:40:21.097Z"
+    },
+    {
+      "id": "log_1792874405541_nl3j",
+      "productId": "pr_1792873144314",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "oldPrice": null,
+      "brandId": "lCLixS8pCFeqsLhNxKCt",
+      "timestamp": "2026-10-24T20:40:05.540Z",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "newPrice": 2698
+    },
+    {
+      "id": "log_1792874386405_10dp",
+      "productId": "pr_1792873241613",
+      "newPrice": 4048,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "timestamp": "2026-10-24T20:39:46.405Z",
+      "oldPrice": null,
+      "brandId": "lCLixS8pCFeqsLhNxKCt"
+    },
+    {
+      "id": "log_1792874363171_o1bd",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "oldPrice": null,
+      "timestamp": "2026-10-24T20:39:23.171Z",
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "newPrice": 5499,
+      "productId": "pr_1792871121073",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "log_1792874336309_xewm",
+      "productId": "pr_1792870979985",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "newPrice": 2399,
+      "brandId": "dkNv8lhGSMU5NuRL4ueW",
+      "timestamp": "2026-10-24T20:38:56.309Z",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874071356_l6r6",
+      "productId": "pr_1792873413515",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "newPrice": 3298,
+      "brandId": "VMvYg9ePniVmkgllGdOJ",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "timestamp": "2026-10-24T20:34:31.356Z",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874050553_4h6h",
+      "oldPrice": null,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792873748520",
+      "brandId": "VMvYg9ePniVmkgllGdOJ",
+      "newPrice": 569,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "timestamp": "2026-10-24T20:34:10.553Z"
+    },
+    {
+      "id": "log_1792874029643_fkdv",
+      "newPrice": 1999,
+      "productId": "pr_1792871322254",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "oldPrice": null,
+      "timestamp": "2026-10-24T20:33:49.643Z",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2"
+    },
+    {
+      "id": "log_1792874015414_ztgz",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "newPrice": 2398,
+      "timestamp": "2026-10-24T20:33:35.414Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792871274775",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792874004600_yjyr",
+      "timestamp": "2026-10-24T20:33:24.600Z",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "oldPrice": null,
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "newPrice": 2599,
+      "productId": "pr_1792871297270"
+    },
+    {
+      "id": "log_1792873991979_56dy",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "timestamp": "2026-10-24T20:33:11.979Z",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "oldPrice": null,
+      "newPrice": 1998,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792871357755"
+    },
+    {
+      "id": "log_1792873969833_ftro",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792871559297",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "oldPrice": null,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "newPrice": 4599,
+      "timestamp": "2026-10-24T20:32:49.833Z"
+    },
+    {
+      "id": "log_1792873955165_xtdt",
+      "oldPrice": null,
+      "timestamp": "2026-10-24T20:32:35.165Z",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792873381609",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "newPrice": 2998
+    },
+    {
+      "id": "log_1792873935948_49v4",
+      "timestamp": "2026-10-24T20:32:15.948Z",
+      "newPrice": 5299,
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "productId": "pr_1792871595363",
+      "oldPrice": null
+    },
+    {
+      "id": "log_1792873921395_qonj",
+      "timestamp": "2026-10-24T20:32:01.395Z",
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "newPrice": 4999,
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "oldPrice": null,
+      "productId": "pr_1792873462481",
+      "storeId": "DSGqouAhlHDcJJg7hm4I"
+    },
+    {
+      "id": "log_1792873890770_ge9s",
+      "brandId": "wNhWmjkKvXLGR1bf08Id",
+      "timestamp": "2026-10-24T20:31:30.769Z",
+      "newPrice": 799,
+      "userId": "F2MYxfDMDUehxVuI7iMWQqv3MyL2",
+      "storeId": "DSGqouAhlHDcJJg7hm4I",
+      "productId": "pr_1792873691689",
+      "oldPrice": null
+    }
+  ],
+  "stockLogs": []
+}

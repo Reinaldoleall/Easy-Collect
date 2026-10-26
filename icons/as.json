@@ -1,0 +1,2662 @@
+[
+  {
+    "id": "-P3bBCGaSeNuLC73KYky",
+    "answer": "1250W",
+    "importedAt": 1791658874067,
+    "options": [
+      "1250W",
+      "900W",
+      "800W",
+      "700W"
+    ],
+    "question": "Quero comprar o modelo NN-ST25LWRU, porém gostaria de saber a potência de entrada, das opções abaixo qual a correta?",
+    "series": "Básico",
+    "title": "Quero comprar o modelo NN-ST25",
+    "updatedAt": 1791662859245
+  },
+  {
+    "id": "-P3bBCJgVpBoA75Ku9Bc",
+    "answer": "600 Rpm",
+    "importedAt": 1791658874265,
+    "options": [
+      "700 Rpm",
+      "760 Rpm",
+      "590 Rpm",
+      "600 Rpm"
+    ],
+    "question": "Sobre a centrifugação na lavadora NA-F190G1, o cliente gostaria de saber a velocidade de centrifugação?",
+    "series": "Básico",
+    "title": "Sobre a centrifugação na lavad",
+    "updatedAt": 1791659112622
+  },
+  {
+    "id": "-P3bBCMZdNYMf5_e0SAg",
+    "answer": "Aperte e mantenha pressionada a tecla Potência por 4 segundos",
+    "importedAt": 1791658874450,
+    "options": [
+      "Aperte e mantenha pressionada a tecla Potência por 4 segundos",
+      "Aperte e mantenha pressionada a tecla 10 segundos por 4 segundos",
+      "Aperte e mantenha pressionada a tecla Parar por 4 segundos",
+      "Aperte e mantenha pressionada a tecla Pipoca por 4 segundos"
+    ],
+    "question": "Como ativar/desativar a função mudo no micro-ondas NN-ST67LSRU?",
+    "series": "Básico",
+    "title": "Como ativar/desativar a função",
+    "updatedAt": 1791659131525
+  },
+  {
+    "id": "-P3bBCPjq__TmYMdN0NK",
+    "answer": "3 Movimentos",
+    "importedAt": 1791658874653,
+    "options": [
+      "2 Movimentos",
+      "3 Movimentos",
+      "1 Movimentos",
+      "4 Movimentos"
+    ],
+    "question": "Quantos movimentos o sistema ciclo realiza?",
+    "series": "Básico",
+    "title": "Quantos movimentos o sistema c",
+    "updatedAt": 1791659149058
+  },
+  {
+    "id": "-P3bBCSqlL7Ipm4bqnuG",
+    "answer": "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)",
+    "importedAt": 1791658874851,
+    "options": [
+      "600mm (60cm) (Largura), 1060mm (144cm) (Altura), 690mm (69cm) (Profundidade)",
+      "640mm (64cm) (Largura), 1440mm (144cm) (Altura), 690mm (69cm) (Profundidade)",
+      "610mm (61cm) (Largura), 1410mm (141cm)(Altura), 690mm (69cm) (Profundidade)",
+      "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)"
+    ],
+    "question": "Qual a Largura x Altura x Profundidade da máquina de lavar NA-F150B1, com a tampa aberta segundo o manual?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bBCVzoXpNDAhsrlq8",
+    "answer": "366mm",
+    "importedAt": 1791658875053,
+    "options": [
+      "368mm",
+      "367mm",
+      "365mm",
+      "366mm"
+    ],
+    "question": "O cliente deseja comprar o microondas de modelo NN-ST27LW para colocar no armário da sua cozinha, ele gostaria de saber a profundidade deste modelo?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bBCZ4Y3OVRDx1WDJp",
+    "answer": "A função pode ser ativada para aquecer 300g, 500g e 700g (peso total das duas porções)",
+    "importedAt": 1791658875251,
+    "options": [
+      "A função pode ser ativada para aquecer 100g, 200g e 500g (peso total das duas porções)",
+      "A função pode ser ativada para aquecer 500g, 700g e 900g (peso total das duas porções)",
+      "A função pode ser ativada para aquecer 300g, 500g e 700g (peso total das duas porções)"
+    ],
+    "question": "Com a função de dupla refeição presente no micro-ondas Panasonic NN-ST67LS. Quais são os valores das porções indicada pelo manual?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bBCbUz9qiuWG4YsYH",
+    "answer": "F150B1",
+    "importedAt": 1791658875468,
+    "options": [
+      "F130B1",
+      "F180D1",
+      "F150B1",
+      "F190G1"
+    ],
+    "question": "Qual modelo de lavadora possui a função Vanish Branco mais Branco?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bBCefmSW4JEp5F25a",
+    "answer": "4,2 Kg",
+    "importedAt": 1791658875673,
+    "options": [
+      "1,2 Kg",
+      "2,2 Kg",
+      "3,2 Kg",
+      "4,2 Kg"
+    ],
+    "question": "Caso o cliente use o programa de lavagem Edredom, é recomendado que estas peças tenham até qual peso máximo segundo o manual da máquina de lavar NA-F150B1?",
+    "series": "Básico",
+    "title": "Caso o cliente use o programa ",
+    "updatedAt": 1791659262992
+  },
+  {
+    "id": "-P3bBChgfbT-3Dq8t45v",
+    "answer": "Fresh, Marítimo e Espiral",
+    "importedAt": 1791658875866,
+    "options": [
+      "Imperler",
+      "Turbilhão, Agitação e Tombamento",
+      "Fresh, Marítimo e Espiral"
+    ],
+    "question": "Quais são os movimentos do sistema ciclore?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bBCke2mQsUgPFWDTk",
+    "answer": "Até 8 kgs de roupa",
+    "importedAt": 1791658876055,
+    "options": [
+      "Até 8 kgs de roupa",
+      "Até 4 kgs de roupa",
+      "Até 2 kgs de roupa",
+      "Até 19 kgs de roupa"
+    ],
+    "question": "Consumidor adquiriu uma lavadora F190G1 e gostaria de saber até quantos kg de roupa ele pode lavar no ciclo Pet?",
+    "series": "Básico",
+    "title": "Consumidor adquiriu uma lavado",
+    "updatedAt": 1791659249055
+  },
+  {
+    "id": "-P3bBCnxotwt2LIYCElW",
+    "answer": "900W",
+    "importedAt": 1791658876267,
+    "options": [
+      "900W",
+      "700W",
+      "800W",
+      "1000W"
+    ],
+    "question": "Qual a potência do micro-ondas modelo NN-ST65LWRU?",
+    "series": "Básico",
+    "title": "Qual a potência do micro-ondas",
+    "updatedAt": 1791659321557
+  },
+  {
+    "id": "-P3bBCqraCPtBBjxCObM",
+    "answer": "2 enxágues",
+    "importedAt": 1791658876453,
+    "options": [
+      "3 enxágues",
+      "2 enxágues",
+      "1 enxágue"
+    ],
+    "question": "Conforme orientação do manual, as máquinas de lavar F180D1 e F190G1 possuem quantos enxágues?",
+    "series": "Básico",
+    "title": "Conforme orientação do manual,",
+    "updatedAt": 1791659350865
+  },
+  {
+    "id": "-P3bBCu2aYuLT_9HPI1K",
+    "answer": "Não. Vendida separadamente",
+    "importedAt": 1791658876657,
+    "options": [
+      "Sim",
+      "Não. Vendida separadamente"
+    ],
+    "question": "A lavadora F190G1 acompanha a cápsula de antibactéria AG?",
+    "series": "Básico",
+    "title": "A lavadora F190G1 acompanha a ",
+    "updatedAt": 1791659369098
+  },
+  {
+    "id": "-P3bBCxLx41_ujDTihz7",
+    "answer": "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+    "importedAt": 1791658876868,
+    "options": [
+      "Micro-ondas GT68, 30 litros, com cozimento inteligente pela função SmartSense.",
+      "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+      "Micro-ondas GB68, 30 litros, com funções Grill e Micro-ondas, além de design elegante."
+    ],
+    "question": "O consumidor entrou na loja à procura de um micro-ondas, mas também quer forno elétrico e Air Fryer em um único produto compacto. Qual a melhor opção?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bBD-aFdV-BQnSM80X",
+    "answer": "NN-ST65LW",
+    "importedAt": 1791658877076,
+    "options": [
+      "NN-GB68QS",
+      "NN-ST27LW",
+      "NN-ST55LM",
+      "NN-ST65LW"
+    ],
+    "question": "Cliente gostaria de um Micro-Ondas com capacidade de 34 Litros, qual modelo abaixo devemos indicar?",
+    "series": "Básico",
+    "title": "Cliente gostaria de um Micro-O",
+    "updatedAt": 1791659402401
+  },
+  {
+    "id": "-P3bBD2agGoUtEBXBgKt",
+    "answer": "3 Receitas (Pipoca, Brigadeiro, Pudim)",
+    "importedAt": 1791658877267,
+    "options": [
+      "3 Receitas (Pipoca, Brigadeiro, Pudim)",
+      "5 Receitas (Pipoca, Brigadeiro, Cocada, Quibe, Feijão)",
+      "6 Receitas (Arroz, Batata, Vegetais frescos, Vegetais congelados, Pizza congelada e Carne)",
+      "11 Receitas (Batata frita congelada, Pão de queijo congelado, Batata frita in natura, Pão de queijo in natura, Costelinha de porco, Empanados, Vegetais frescos, Vegetais congelados, Pizza congelada, Almôndegas e Carne)"
+    ],
+    "question": "Quantas receitas possui o menu automático do forno micro-ondas NN-GT68 Panasonic de acordo com as opções abaixo?",
+    "series": "Básico",
+    "title": "Quantas receitas possui o menu",
+    "updatedAt": 1791659635398
+  },
+  {
+    "id": "-P3bGsw7_EvEP69NB4pA",
+    "answer": "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+    "importedAt": 1791660363649,
+    "options": [
+      "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+      "Somente Fervura Automática e Cocção em baixa temperatura.",
+      "Apenas Fritura normal e Fritura pesada.",
+      "Nenhum dos modos automáticos está disponível nas zonas da esquerda."
+    ],
+    "question": "Com relação ao cooktop inteligente KY-T937XLRPK, podemos dizer que nas zonas de cocção da esquerda onde temos o Genius Sensor e Sensor + vai ser possível usar os seguintes modos?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bGsza4Jz1ripvCXFy",
+    "answer": "10 Litros",
+    "importedAt": 1791660363871,
+    "options": [
+      "13 Litros",
+      "12 Litros",
+      "11 Litros",
+      "10 Litros"
+    ],
+    "question": "Qual o consumo de água da lava-louças NP-6M2FTKBRP na função ECO?",
+    "series": "Avançado",
+    "title": "Qual o consumo de água da lava",
+    "updatedAt": 1791660575598
+  },
+  {
+    "id": "-P3bGt1tIcT6mXlJ_B3Y",
+    "answer": "Nível 7 - 7,5",
+    "importedAt": 1791660364081,
+    "options": [
+      "Nível 7-8",
+      "Nível 7 - 7,5",
+      "Nível 6 - 7",
+      "Nível 3 - 4"
+    ],
+    "question": "No cooktop KY-T937XLRPK, qual o nível manual de aquecimento adequado para ovos fritos segundo o manual?",
+    "series": "Avançado",
+    "title": "No cooktop KY-T937XLRPK, qual ",
+    "updatedAt": 1791660564278
+  },
+  {
+    "id": "-P3bGt5RSqSBzSgfeSSt",
+    "answer": "1750mm (175cm)",
+    "importedAt": 1791660364309,
+    "options": [
+      "1790mm (179cm)",
+      "1750mm (175cm)",
+      "1780mm (178cm)",
+      "1760mm (176cm)"
+    ],
+    "question": "Qual a altura da geladeira NR-BT58, pois preciso saber se cabe na minha cozinha?",
+    "series": "Avançado",
+    "title": "Qual a altura da geladeira NR-",
+    "updatedAt": 1791660550000
+  },
+  {
+    "id": "-P3bGt8_JHqP7xXsz8zI",
+    "answer": "Cool Down de 3 a 5 minutos.",
+    "importedAt": 1791660364509,
+    "options": [
+      "Cool Down de 3 a 5 minutos.",
+      "Quick Cooling 10 a 15 minutos.",
+      "Rapid Freezer 45 a 60 Minutos."
+    ],
+    "question": "Qual função devo selecionar para resfriar o leite do bebê utilizando a função Prime Freezer na geladeira Panasonic UniqGlass DB69?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bGtBhnE1Ebudpjc_9",
+    "answer": "A produção leva 120 minutos com capacidade de 276 cubos",
+    "importedAt": 1791660364710,
+    "options": [
+      "A produção leva 120 minutos com capacidade de 276 cubos",
+      "A produção leva 60 minutos com capacidade de 600 cubos",
+      "A produção leva 50 minutos com capacidade de 300 cubos",
+      "A produção leva 30 minutos com capacidade de 300 cubos"
+    ],
+    "question": "Consumidor ficou encantado com a geladeira UniqGlass DB69 Panasonic, em especial sobre a facilidade da máquina de gelo automática com tanque interno, dispensando ponto de água, e perguntou em quanto tempo produz uma forma de gelo, quantos cubos suporta o dispenser?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bGtEZ0ZOrZ_rONM8A",
+    "answer": "220°C",
+    "importedAt": 1791660364893,
+    "options": [
+      "210°C",
+      "220°C",
+      "180°C",
+      "60°C"
+    ],
+    "question": "O cliente gostaria de saber a temperatura padrão na função \"Convencional com ventilador\" no forno elétrico HL-CX668SRPK?",
+    "series": "Avançado",
+    "title": "O cliente gostaria de saber a ",
+    "updatedAt": 1791660523724
+  },
+  {
+    "id": "-P3bGtHhZ7Tnb3HmIBhx",
+    "answer": "815 mm",
+    "importedAt": 1791660365093,
+    "options": [
+      "800 mm",
+      "815 mm",
+      "785 mm",
+      "795 mm"
+    ],
+    "question": "O cliente deseja saber qual a altura da lava-louças NP-6M2FTKBRP?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bI6VgK1cYLoGDQajl",
+    "answer": "Até 700 g",
+    "importedAt": 1791660685477,
+    "options": [
+      "Até 300 g",
+      "Até 500 g",
+      "Até 700 g"
+    ],
+    "question": "Qual é a quantidade total de alimentos que pode ser aquecida na função Dupla Refeição?",
+    "series": "Básico",
+    "title": "Qual é a quantidade total de a",
+    "updatedAt": 1791660946080
+  },
+  {
+    "id": "-P3bI6YiNTntc-nYWOAs",
+    "answer": "23 litros",
+    "importedAt": 1791660685671,
+    "options": [
+      "20 litros",
+      "23 litros",
+      "34 litros"
+    ],
+    "question": "Qual é a capacidade útil do Modelo NN-ST65,66 E 67 informada para melhor aproveitamento do espaço interno?",
+    "series": "Básico",
+    "title": "Qual é a capacidade útil do Mo",
+    "updatedAt": 1791660899958
+  },
+  {
+    "id": "-P3bI6fRwzirrR6QltDA",
+    "answer": "520 mm",
+    "importedAt": 1791660686165,
+    "options": [
+      "600 mm",
+      "520 mm",
+      "500 mm"
+    ],
+    "question": "Qual a largura informada para os modelos NN-ST66NBRU, NN-ST67LSRU e NN-ST65LWRU apresentados?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bI6iGwrvRVPDfkp4M",
+    "answer": "34 litros",
+    "importedAt": 1791660686346,
+    "options": [
+      "20 litros",
+      "28 litros",
+      "34 litros"
+    ],
+    "question": "Qual é a capacidade total indicada para os micro-ondas apresentados NN-ST67?",
+    "series": "Básico",
+    "title": "Qual é a capacidade total indi",
+    "updatedAt": 1791660814059
+  },
+  {
+    "id": "-P3bI6lYNjZLbL5BAQgl",
+    "answer": "É compacto por fora, aproveita melhor o espaço interno e permite aquecer duas porções simultaneamente com a Dupla Reflexão.",
+    "importedAt": 1791660686556,
+    "options": [
+      "O micro-ondas ocupa mais espaço externo para oferecer menor capacidade.",
+      "O aparelho foi desenvolvido apenas para aquecer uma porção por vez.",
+      "É compacto por fora, aproveita melhor o espaço interno e permite aquecer duas porções simultaneamente com a Dupla Reflexão."
+    ],
+    "question": "Considerando a proposta apresentada, qual argumento pode ser utilizado com o consumidor?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bI6oe_Fz1SW3qaU0X",
+    "answer": "432,1 mm",
+    "importedAt": 1791660686755,
+    "options": [
+      "432,1 mm",
+      "400 mm",
+      "450 mm"
+    ],
+    "question": "Qual a Profundidade informada para os modelos NN-ST66NBRU, NN-ST67LSRU e NN-ST65LWRU apresentados?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bI6rddMFIFxYr5L9q",
+    "answer": "520 mm (L) x 325,2 mm (A) x 432,1 mm (P)",
+    "importedAt": 1791660686946,
+    "options": [
+      "600 mm (L) x 350 mm (A) x 450 mm (P)",
+      "500 mm (L) x 300 mm (A) x 400 mm (P)",
+      "520 mm (L) x 325,2 mm (A) x 432,1 mm (P)"
+    ],
+    "question": "Quais são as medidas informadas para os modelos apresentados NN-ST66NBRU, NN-ST67LSRU e NN-ST65LWRU?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bI6ulIWlxPTXm4ZUv",
+    "answer": "325,2 mm",
+    "importedAt": 1791660687146,
+    "options": [
+      "300 mm",
+      "325,2 mm",
+      "350 mm"
+    ],
+    "question": "Qual a Altura informada para os modelos NN-ST66NBRU, NN-ST67LSRU e NN-ST65LWRU apresentados?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bJwFHxUidYJfhWG4R",
+    "answer": "A produção leva 120 minutos com capacidade de 276 cubos",
+    "importedAt": 1791661163648,
+    "options": [
+      "A produção leva 30 minutos com capacidade de 300 cubos",
+      "A produção leva 60 minutos com capacidade de 600 cubos",
+      "A produção leva 120 minutos com capacidade de 276 cubos"
+    ],
+    "question": "Consumidor ficou encantado com a geladeira UniqGlass Panasonic, em especial sobre a facilidade da máquina de gelo automática com tanque interno, dispensando ponto de água, e perguntou em quanto tempo produz uma forma de gelo, quantos cubos suporta o dispenser?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwIC_JWG-pS7KILs",
+    "answer": "Sim",
+    "importedAt": 1791661163835,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o Micro-ondas 4 em 1 CD69 possui a função Convecção, ele tem essa função?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwLFWZlI1QbibiuZ",
+    "answer": "Sistema Ciclone utiliza três movimentos de água que oferecem uma melhor eficiência de lavagem, sem danificar os tecidos.",
+    "importedAt": 1791661164030,
+    "options": [
+      "Sistema Ciclone utiliza a lavagem igual ao tanquinho, por isso lava melhor.",
+      "Sistema Ciclone utiliza três movimentos de água que oferecem uma melhor eficiência de lavagem, sem danificar os tecidos.",
+      "Sistema Ciclone lava por tombamento, oferecendo uma melhor eficiência de lavagem."
+    ],
+    "question": "O consumidor gostaria de saber como o Sistema Ciclone funciona, qual a alternativa explica melhor o sistema de lavagem que a Panasonic usa?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwOC5CcVBDiiKCMw",
+    "answer": "A exaustão suga o ar que está dentro da cozinha e o joga para fora, por meio do tubo. O depurador é baseado em dois sistemas de filtragem que sugam o ar com fumaça e gordura, purificam e o devolvem ao ambiente totalmente livre de odores.",
+    "importedAt": 1791661164219,
+    "options": [
+      "Não há nenhuma diferença entre esses dois modos, é só nomenclatura de produto.",
+      "Exaustão e Depuração são duas formas de filtros o ar. Um deles filtra a gordura do ar e o outro filtra a fumaça, devolvendo o ar purificado ao ambiente.",
+      "A exaustão suga o ar que está dentro da cozinha e o joga para fora, por meio do tubo. O depurador é baseado em dois sistemas de filtragem que sugam o ar com fumaça e gordura, purificam e o devolvem ao ambiente totalmente livre de odores."
+    ],
+    "question": "Consumidor entrou na loja buscando uma Coifa que pode ser instalada tanto na Depuração quanto na Exaustão, mas ele não sabe a diferença entre esses dois modos de funcionamento das coifas, qual a melhor explicação que podemos dar a esse consumidor?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwRLo79wZx6mmZfd",
+    "answer": "O filtro Antibactéria AG dura 156 lavagens, e pode ser substituído quando a luz do AG piscar intermitente no painel da lavadora. Consumidor pode adquirir o novo filtro na loja online da Panasonic.",
+    "importedAt": 1791661164420,
+    "options": [
+      "O filtro Antibactéria AG dura 156 lavagens, e pode ser substituído quando a luz do AG piscar intermitente no painel da lavadora. Consumidor pode adquirir o novo filtro na loja online da Panasonic.",
+      "O filtro Antibactéria AG é vitalício e não precisa ser trocado.",
+      "O filtro Antibactéria AG deve ser trocado a cada 3 anos, consumidor compra ele somente na assistência autorizada."
+    ],
+    "question": "Consumidor comprou uma lavadora 18kg da Panasonic e voltou na loja para saber em quanto tempo ele precisa trocar o filtro do Antibactéria AG. Qual a informação correta que devo passar ao consumidor?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwU31pROOUiy-UWL",
+    "answer": "O acessório que acompanha o Forno Elétrico de Embutir CX672 é o termômetro para carnes. Ele serve para que o consumidor prepare carnes no ponto ideal de acordo com a temperatura interna da carne. Isso facilita o preparo de carnes e aves com mais precisão, reduzindo o risco de queimar a carne ou tirar ela do forno ainda crua.",
+    "importedAt": 1791661164594,
+    "options": [
+      "Serve para efetuar a limpeza interna do Forno Elétrico, pois essa agulha consegue alcançar locais de difícil acesso, removendo sujeira que fica nos cantos do forno.",
+      "Serve apenas para segurar as grades no transporte, assim elas não ficam batendo e causando danos internos ao forno.",
+      "O acessório que acompanha o Forno Elétrico de Embutir CX672 é o termômetro para carnes. Ele serve para que o consumidor prepare carnes no ponto ideal de acordo com a temperatura interna da carne. Isso facilita o preparo de carnes e aves com mais precisão, reduzindo o risco de queimar a carne ou tirar ela do forno ainda crua."
+    ],
+    "question": "Consumidor quer saber para que serve aquele cabo dentro do Forno Elétrico de Embutir CX672, ele parece ter uma ponta semelhante a uma agulha mais grossa, mas o consumidor não entende para que serve. Qual a melhor resposta para esse consumidor?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwX9RSFQqJaFIYrW",
+    "answer": "GB68QS",
+    "importedAt": 1791661164792,
+    "options": [
+      "GB68QS",
+      "GT68LB",
+      "NN-ST67LS"
+    ],
+    "question": "Consumidor entrou na loja buscando um Micro-ondas de Embutir para completar a sua cozinha Black Glass, qual modelo de Micro-ondas de Embutir devo oferecer a ela para combinar com a sua cozinha Black Glass?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJw_Kk-wyEnetQwLE",
+    "answer": "Não",
+    "importedAt": 1791661164994,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o modelo ST25 possui a função de Dupla Refeição, ele tem essa função?",
+    "series": "Intermediário",
+    "title": "Consumidor gostaria de saber s",
+    "updatedAt": 1791662555218
+  },
+  {
+    "id": "-P3bJwcKjU4uH9mPIaSD",
+    "answer": "Sim. A UniqGlass DB69 tem dois tanques internos (3L e 5L), com filtro de odores, tratamento antibacteriano e livre de BPA. Isso permite ter água fresca e gelo automático mesmo sem ponto de água, garantindo praticidade e saúde no dia a dia.",
+    "importedAt": 1791661165187,
+    "options": [
+      "Não. A geladeira UniqGlass DB69 Panasonic necessita de ponto hidráulico para funcionamento do dispenser de água e máquina de gelo automática.",
+      "Sim. A UniqGlass DB69 tem dois tanques internos (3L e 5L), com filtro de odores, tratamento antibacteriano e livre de BPA. Isso permite ter água fresca e gelo automático mesmo sem ponto de água, garantindo praticidade e saúde no dia a dia.",
+      "Não. A geladeira UniqGlass DB69 possui um tanque interno de 3 litros, filtro de odores, tratamento antibacteriano e livre de BPA para o funcionamento do dispenser de água e máquina de gelo manual."
+    ],
+    "question": "Consumidor está à procura de sua primeira geladeira french door, com água na porta e fábrica de gelo automática, porém não tem o ponto de água em sua cozinha, a geladeira UniqGlass DB69 Panasonic resolveria essa questão do consumidor?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwfSRwmPKj_vjsib",
+    "answer": "Reduzir odores do interior do micro-ondas após o uso.",
+    "importedAt": 1791661165387,
+    "options": [
+      "Cozinhar Carnes",
+      "Descongelar alimentos",
+      "Reduzir odores do interior do micro-ondas após o uso."
+    ],
+    "question": "A função \"Desodorizador\" presente no micro-ondas Panasonic NN-GT68LB serve para?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwiUXvIHw0ckDYYc",
+    "answer": "7 níveis de água.",
+    "importedAt": 1791661165581,
+    "options": [
+      "5 níveis de água.",
+      "7 níveis de água.",
+      "9 níveis de água."
+    ],
+    "question": "Sobre o SmartSense nas lavadoras, o consumidor quer saber quantos níveis de água automático o SmartSense possui?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwli2E--uou7pYqz",
+    "answer": "F180P7",
+    "importedAt": 1791661165787,
+    "options": [
+      "F150B1",
+      "F170B7",
+      "F180P7"
+    ],
+    "question": "O consumidor chegou na loja procurando uma lavadora que possua o Antibactéria AG, qual dos modelos abaixo eu devo indicar?",
+    "series": "Intermediário",
+    "title": "O consumidor chegou na loja pr",
+    "updatedAt": 1791662493327
+  },
+  {
+    "id": "-P3bJwoswFkqFgXr-Er7",
+    "answer": "Sim",
+    "importedAt": 1791661165990,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "O micro-ondas Panasonic NN-ST67LS tem o revestimento antimicrobiano Antibacteria Ag?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwsLhnZbD_oFOCmr",
+    "answer": "Sim. O modelo  BT41W/X, tem 391 litros e possui a tecnologia Antibacteria AG,  que elimina 99,9% das bactérias,  neutralizando os maus odores.  É uma tecnologia livre de manutenção.",
+    "importedAt": 1791661166212,
+    "options": [
+      "Sim. O modelo BT41W/X tem 435 litros e possui a tecnologia AG Clean, que elimina 99,99% das bactérias, neutralizando os maus odores. É uma tecnologia livre de manutenção.",
+      "Sim. O modelo BT41W/X tem 435 litros e possui a tecnologia NanoeX, que elimina 99,99% das bactérias, neutralizando os maus odores. É uma tecnologia livre de manutenção.",
+      "Sim. O modelo  BT41W/X, tem 391 litros e possui a tecnologia Antibacteria AG,  que elimina 99,9% das bactérias,  neutralizando os maus odores.  É uma tecnologia livre de manutenção."
+    ],
+    "question": "O consumidor busca uma geladeira entre 380 e 400 litros e relatou que sua atual apresenta maus odores recorrentes. Nesse caso, posso oferecer a Panasonic NR-BT41W/X, qual tecnologia contra odores o consultor deve destacar?",
+    "series": "Intermediário",
+    "title": "O consumidor busca uma geladei",
+    "updatedAt": 1791662285284
+  },
+  {
+    "id": "-P3bJwvmiiYfs1bxXDCm",
+    "answer": "A função Vitamin Power utiliza luzes LED especiais, simulando a fotossíntese. Isso preserva as vitaminas C e D dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas.",
+    "importedAt": 1791661166432,
+    "options": [
+      "A função Vitamin Safe utiliza luzes LED especiais, simulando a fotossíntese. Isso preserva as vitaminas A e B dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas.",
+      "A função Power Safe utiliza íons de prata. Isso preserva as vitaminas C e D dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas.",
+      "A função Vitamin Power utiliza luzes LED especiais, simulando a fotossíntese. Isso preserva as vitaminas C e D dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas."
+    ],
+    "question": "O consumidor viu a geladeira Panasonic BB71 e perguntou sobre a função Vitamin Power. Para que ela serve e qual é o benefício no dia a dia?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJwz2IyfGUJft8JnT",
+    "answer": "Este modelo possui 1250W no total: 700W dedicados ao preparo dos alimentos e 550W para o funcionamento do micro-ondas (giro do prato, iluminação, sons).",
+    "importedAt": 1791661166641,
+    "options": [
+      "Este modelo possui 1000W de potência nominal, mas não divulgamos a potência dedicada para preparo. O funcionamento pode variar, demorando mais no aquecimento.",
+      "Este modelo possui apenas 800W. Esquenta bem, mas deve ser usado principalmente com a tecla de 30 segundos.",
+      "Este modelo possui 1250W no total: 700W dedicados ao preparo dos alimentos e 550W para o funcionamento do micro-ondas (giro do prato, iluminação, sons)."
+    ],
+    "question": "O consumidor busca um micro-ondas pequeno, eficiente e rápido. Ele perguntou qual é a potência do modelo Panasonic NN-ST25LW. Qual a melhor resposta?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJx1M96xvgttcoy4V",
+    "answer": "A pintura de tom cinza além de não amarelar com o tempo, tem a tecnologia antiaderente que facilita a limpeza 4 vezes mais fácil, já os pontos na cor prata é a tecnologia Antibacteria AG, elimina bactérias e maus odores com íons de prata.",
+    "importedAt": 1791661166852,
+    "options": [
+      "A pintura de tom cinza além de não amarelar com o tempo, tem a tecnologia antiaderente que facilita a limpeza 4 vezes mais fácil, já os pontos na cor prata é a tecnologia Antibacteria AG, elimina bactérias e maus odores com íons de prata.",
+      "A pintura de tom cinza e a tecnologia limpa fácil, ajuda na limpeza, já os pontos na cor prata é apenas estética, não interfere no funcionamento do produto.",
+      "Não é nada demais, é somente a pintura cinza com pontos brancos para dar uma estética mais moderna para o produto."
+    ],
+    "question": "O consumidor notou que o interior dos micro-ondas da Panasonic é diferente, e perguntou por que é cinza com pontos na cor prata. Qual seria a forma correta de responder a dúvida deste consumidor mostrando os benefícios?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJx4Sy62MA8BmHYW_",
+    "answer": "O Genius Sensor e o Genius Sensor+ ajudam no controle ideal da temperatura, facilitando o uso do Cooktop e o preparo de receitas mais elaboradas. Enquanto o Genius Sensor capta a temperatura do fundo da panela para maior precisão do cozimento, o Genius Sensor+ capta a temperatura e a densidade do líquido dentro da panela, proporcionando mais precisão em alimentos cozidos e refogados.",
+    "importedAt": 1791661167051,
+    "options": [
+      "O Genius Sensor e o Genius Sensor+ ajudam no controle ideal da temperatura, facilitando o uso do Cooktop e o preparo de receitas mais elaboradas. Enquanto o Genius Sensor capta a temperatura do fundo da panela para maior precisão do cozimento, o Genius Sensor+ capta a temperatura e a densidade do líquido dentro da panela, proporcionando mais precisão em alimentos cozidos e refogados.",
+      "Genius Sensor ajuda no controle de temperatura do líquido dentro da panela e o Genius Sensor+ ajuda no controle da temperatura do fundo da panela, proporcionando um melhor aproveitamento do controle de temperatura.",
+      "Genius Sensor e Genius Sensor+ trabalham juntos para ajudar no cozimento exato dos alimentos e estão presentes em todas as zonas de cocção, agilizando assim o processo de preparo de alimentos mais elaborados."
+    ],
+    "question": "O consumidor gostaria de saber mais informações sobre o Genius Sensor presente no Cooktop Inteligente da Panasonic, qual opção melhor explica essas tecnologias?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJx7_Iyn7xq1eghEQ",
+    "answer": "Não. A função Desodorizador usa apenas o ventilador de exaustão, sem emissão de ondas, trocando o ar interno em conjunto com a tecnologia Antibacteria AG, eliminando os odores.",
+    "importedAt": 1791661167250,
+    "options": [
+      "Sim. A função Tira odor usa 10% da potência total e deve ser feita com água e vinagre.",
+      "Não. A função Desodorizador usa apenas o ventilador de exaustão, sem emissão de ondas, trocando o ar interno em conjunto com a tecnologia Antibacteria AG, eliminando os odores.",
+      "Sim. A função Tira odor usa 1% da potência total e deve ser feita com água e vinagre."
+    ],
+    "question": "O consumidor perguntou se precisa usar água e vinagre no micro-ondas Panasonic NN-ST66NB para eliminar odores. Qual a orientação correta?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxAcZ18p9WddnyY1",
+    "answer": "Sim. Reposiciona a caneca ou xícara com a alça para frente, facilitando a retirada e evitando acidentes.",
+    "importedAt": 1791661167446,
+    "options": [
+      "Sim. Reposiciona o prato para frente no final do ciclo.",
+      "Sim. Reposiciona a caneca ou xícara com a alça para frente, facilitando a retirada e evitando acidentes.",
+      "Sim. Reposiciona a panela para frente no final do ciclo."
+    ],
+    "question": "O consumidor relatou um acidente ao retirar um copo de leite quente do micro-ondas. A função Pega Fácil do Panasonic NN-ST66NB poderia evitar?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxDpZjV1F7EHonj9",
+    "answer": "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+    "importedAt": 1791661167651,
+    "options": [
+      "Micro-ondas GT68, 30 litros, com cozimento inteligente pela função SmartSense.",
+      "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+      "Micro-ondas GB68, 30 litros, com funções Grill e Micro-ondas, além de design elegante."
+    ],
+    "question": "O consumidor entrou na loja à procura de um micro-ondas, mas também quer forno elétrico e Air Fryer em um único produto compacto. Qual a melhor opção?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxH4pEhn9W6vLlgb",
+    "answer": "Pesa a roupa seca",
+    "importedAt": 1791661167859,
+    "options": [
+      "Pesa a roupa seca",
+      "Pesa a roupa molhada",
+      "Tanto faz, o resultado é o mesmo."
+    ],
+    "question": "O consumidor gostaria de saber se o SmartSense pesa a roupa seca ou a roupa molhada, qual a resposta correta para esse consumidor?",
+    "series": "Intermediário",
+    "title": "O consumidor gostaria de saber",
+    "updatedAt": 1791661934637
+  },
+  {
+    "id": "-P3bJxK41OwLXMMuAPhs",
+    "answer": "Não",
+    "importedAt": 1791661168051,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o Micro-ondas ST24 possui o Antibactéria AG, ele tem essa tecnologia?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxNDxOdv3D8-6Mpk",
+    "answer": "A função Climate Control ajusta automaticamente a umidade do gavetão de vegetais, criando o ambiente ideal para conservar frutas e verduras frescas por muito mais tempo.",
+    "importedAt": 1791661168252,
+    "options": [
+      "A função Climate Control desliga o refrigerador para intensificar apenas o freezer, deixando os alimentos do refrigerador sem refrigeração adequada.",
+      "A função Climate Control utiliza luzes LED especiais, simulando a fotossíntese. Isso preserva as vitaminas C e D dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas.",
+      "A função Climate Control ajusta automaticamente a umidade do gavetão de vegetais, criando o ambiente ideal para conservar frutas e verduras frescas por muito mais tempo."
+    ],
+    "question": "O consumidor perguntou sobre o Climate Control da geladeira Panasonic BB71. O que ela faz e como ajuda no uso diário?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxQJGKjs4rI_6v-B",
+    "answer": "Lavadora Panasonic de 15kg é ideal para famílias maiores, pois possui capacidade para grandes volumes de roupa, conta com o Sistema Ciclone que garante alta performance de lavagem sem danificar os tecidos e ainda tem a tecnologia SmartSense, que ajusta automaticamente o nível de água e o tempo de lavagem conforme a carga, trazendo mais economia e praticidade, e com design compacto de 60cm de largura.",
+    "importedAt": 1791661168450,
+    "options": [
+      "Lavadora Panasonic de 15kg é ideal para famílias maiores, pois possui capacidade para grandes volumes de roupa, conta com o Sistema Ciclone que garante alta performance de lavagem sem danificar os tecidos e ainda tem a tecnologia SmartSense, que ajusta automaticamente o nível de água e o tempo de lavagem conforme a carga, trazendo mais economia e praticidade, e com design compacto de 60cm de largura.",
+      "A Lavadora Panasonic de 15kg tem o mesmo tamanho de uma lavadora de 18kg, a diferença é apenas o design, mas o desempenho é igual.",
+      "A Lavadora Panasonic de 15kg não possui tecnologias de economia, sendo necessário sempre ajustar manualmente a quantidade de água e o tempo de lavagem."
+    ],
+    "question": "Estou procurando uma lavadora de 15kg e compacta, porque minha família é grande e costumo lavar bastante roupa de uma vez só. Gostaria de saber quais são os principais diferenciais da Lavadora Panasonic de F150 e como ela pode me ajudar no dia a dia?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxTSU28XxOcEqRIb",
+    "answer": "F150B1",
+    "importedAt": 1791661168651,
+    "options": [
+      "F170B1",
+      "F180P7",
+      "F150B1"
+    ],
+    "question": "Consumidora chegou na loja procurando uma lavadora com 60cm de largura pois mudou-se para um apartamento menor e o espaço que ela tem no momento só cabe lavadoras de até 60cm, mas ela deixou claro que prefere uma lavadora de maior capacidade, qual seria a melhor opção para essa cliente entre os modelos abaixo?",
+    "series": "Intermediário",
+    "title": "Consumidora chegou na loja pro",
+    "updatedAt": 1792509825081
+  },
+  {
+    "id": "-P3bJxWPzdknWGLYnox9",
+    "answer": "O Reuso de Água permite que o consumidor reutilize a água do primeiro ou do segundo enxágue para fins de limpeza, ou seja, o consumidor vai coletar essa água da lavadora em alguns baldes para lavar a calçada de sua casa, ou a sacada do seu apartamento por exemplo.",
+    "importedAt": 1791661168840,
+    "options": [
+      "O Reuso de Água permite que a água entre em menor quantidade no cesto proporcionando mais economia.",
+      "O Reuso de Água permite reutilizar a água na própria lavadora para não desperdiçar tanta água.",
+      "O Reuso de Água permite que o consumidor reutilize a água do primeiro ou do segundo enxágue para fins de limpeza, ou seja, o consumidor vai coletar essa água da lavadora em alguns baldes para lavar a calçada de sua casa, ou a sacada do seu apartamento por exemplo."
+    ],
+    "question": "O consumidor está com dúvida de como funciona o Reuso de Água, qual a melhor explicação que podemos dar a ele?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxZNUm-UCCL813Oa",
+    "answer": "Antibacteria AG",
+    "importedAt": 1791661169029,
+    "options": [
+      "Eletro Silver",
+      "Antibacteria AG",
+      "SmartSense"
+    ],
+    "question": "O consumidor perguntou qual é a tecnologia que elimina 99,9% das bactérias dentro da geladeira Panasonic NR-BB65. Qual é a resposta correta?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxbWWp_gU6je-gxa",
+    "answer": "6M2FT",
+    "importedAt": 1791661169231,
+    "options": [
+      "6M2FT",
+      "6M1MB",
+      "Não temos mais modelos Free Standing"
+    ],
+    "question": "Consumidor gostaria de uma lava-louças de grande capacidade, mas ainda está na dúvida se quer embutir o produto ou não. Ele ouviu falar que a Panasonic tem um modelo Free Standing, que possibilita a instalação no móvel ou fora dele. Qual modelo devo indicar para esse consumidor?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxeaZqjQWVXgoScX",
+    "answer": "A função Fresh Freeze preserva melhor os nutrientes, textura e sabor. É ideal para carnes, peixes e até bebidas que precisam de resfriamento rápido sem congelar.",
+    "importedAt": 1791661169428,
+    "options": [
+      "A função Fresh Freeze apenas reduz um pouco a temperatura do freezer, sem grande impacto no uso do dia a dia.",
+      "A função Fresh Freeze preserva melhor os nutrientes, textura e sabor. É ideal para carnes, peixes e até bebidas que precisam de resfriamento rápido sem congelar."
+    ],
+    "question": "O consumidor perguntou sobre a geladeira Panasonic BB71 e ficou curioso com a função Fresh Freeze, o que ela faz e como pode ajudar no dia a dia?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxhkRuHR8TzgeOYE",
+    "answer": "Sim, a Lavadora Panasonic F150 tem 15kg de capacidade, design compacto de 60cm de largura e está disponível na cor Titanium, unindo praticidade, economia e estilo moderno.",
+    "importedAt": 1791661169630,
+    "options": [
+      "Não, as lavadoras de 15kg da Panasonic têm mais de 65cm de largura, não servindo para espaços reduzidos.",
+      "A Panasonic só oferece lavadoras de 15kg na cor branca, sem opção em Titanium.",
+      "Sim, a Lavadora Panasonic F150 tem 15kg de capacidade, design compacto de 60cm de largura e está disponível na cor Titanium, unindo praticidade, economia e estilo moderno."
+    ],
+    "question": "Estou procurando uma lavadora de 15kg na cor Titanium, mas meu espaço só comporta até 60cm de largura. A Panasonic tem um modelo que atenda essa necessidade?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxksLOz6kllZvnvH",
+    "answer": "475 LITROS",
+    "importedAt": 1791661169829,
+    "options": [
+      "397 LITROS",
+      "475 LITROS",
+      "480 LITROS"
+    ],
+    "question": "Consumidor deseja saber sobre geladeira Panasonic NR-BB64 possui quantos litros no total?",
+    "series": "Intermediário",
+    "title": "Consumidor deseja saber sobre ",
+    "updatedAt": 1791661501758
+  },
+  {
+    "id": "-P3bJxo-PhAJWmly2sE0",
+    "answer": "Não. Ela é automática, não forma gelo, facilita a limpeza e economiza tempo.",
+    "importedAt": 1791661170030,
+    "options": [
+      "Não. Ela é automática, não forma gelo, facilita a limpeza e economiza tempo.",
+      "Sim. Ela é manual e precisa desligar da tomada, esperar o gelo derreter e depois limpar.",
+      "Sim. Ela é semiautomática quando acumula gelo, é preciso apertar o botão de descongelamento, desligar a geladeira, esperar o gelo derreter e só depois limpar."
+    ],
+    "question": "Consumidor deseja saber se a geladeira Panasonic NR-BB41PV1T/G precisa descongelar?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxqxYW6TQalaWaiW",
+    "answer": "A função Kitchen Timer não altera o funcionamento da geladeira. É um temporizador personalizável de 1 a 99 minutos, que facilita os preparos na cozinha de forma prática e versátil.",
+    "importedAt": 1791661170218,
+    "options": [
+      "A função Kitchen Timer acelera o congelamento do freezer, preservando os alimentos congelados mais rapidamente.",
+      "A função Kitchen Timer não altera o funcionamento da geladeira. É um temporizador personalizável de 1 a 99 minutos, que facilita os preparos na cozinha de forma prática e versátil.",
+      "A função Kitchen Timer acelera o resfriamento do refrigerador, preservando frutas, verduras e legumes com mais eficiência."
+    ],
+    "question": "Consumidor ficou curioso sobre como funciona a função Kitchen Timer, presente na geladeira Panasonic NR-BB64PV1X/B. Qual argumento de venda devemos utilizar para gerar encantamento com essa função?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bJxu3lqGx9WAuQbvX",
+    "answer": "F190G1",
+    "importedAt": 1791661170418,
+    "options": [
+      "F140B1",
+      "F190G1",
+      "F150B1"
+    ],
+    "question": "Consumidora chegou na loja procurando uma lavadora que permita personalizar o ciclo de lavagem, qual das lavadoras eu devo apresentar para essa consumidora?",
+    "series": "Intermediário"
+  },
+  {
+    "id": "-P3bQpGCvDlPspWUp2Rn",
+    "answer": "Sim",
+    "importedAt": 1791662970051,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "A Lava e Seca Intuitive+ Panasonic possui motor Inverter?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bQpJGNC4T6JQQ4Pw7",
+    "answer": "Reduz o tempo de lavagem sem abrir mão da performance, entregando praticidade e agilidade com a eficiência.",
+    "importedAt": 1791662970247,
+    "options": [
+      "Serve para secar mais rápido.",
+      "Serve para reduzir o ruído da centrifugação.",
+      "Reduz o tempo de lavagem sem abrir mão da performance, entregando praticidade e agilidade com a eficiência."
+    ],
+    "question": "Para que serve a função Ciclo mais curto na Lava e Seca Intuitive+ Panasonic?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bQpOSLMb20KXa3_Xr",
+    "answer": "8kg",
+    "importedAt": 1791662970578,
+    "options": [
+      "13kg",
+      "8kg",
+      "10kg"
+    ],
+    "question": "A Lava e Seca Intuitive+ Panasonic possui quantos kg de capacidade de secagem?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bQpRQzkiVtfies6hD",
+    "answer": "Esterilização de até 99,99% das bactérias antes da lavagem, enquanto o ciclo antialérgico potencializa a higiene com calor intenso.",
+    "importedAt": 1791662970769,
+    "options": [
+      "Lavar roupas mais rápido.",
+      "Esterilização de até 99,99% das bactérias antes da lavagem, enquanto o ciclo antialérgico potencializa a higiene com calor intenso.",
+      "Fazer uma lavagem mais delicada para tecidos específicos."
+    ],
+    "question": "Para que serve o ciclo Vapor + Antialérgico na Lava e Seca Intuitive+ Panasonic?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bQpULmNMMgBFyrk2E",
+    "answer": "13kg",
+    "importedAt": 1791662970956,
+    "options": [
+      "13kg",
+      "8kg",
+      "10kg"
+    ],
+    "question": "A Lava e Seca Intuitive+ Panasonic possui quantos kg de capacidade de lavagem?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbAAtagFHqFebQZW",
+    "answer": "Classificação A",
+    "importedAt": 1791663174446,
+    "options": [
+      "Classificação A",
+      "Classificação B",
+      "Classificação C"
+    ],
+    "question": "Qual é a classificação de eficiência energética na nova etiqueta do Inmetro na geladeira Panasonic NR-BB65?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbDHr-_AVChQ_-fZ",
+    "answer": "Duas refeições",
+    "importedAt": 1791663174645,
+    "options": [
+      "Uma refeição",
+      "Duas refeições",
+      "Três refeições"
+    ],
+    "question": "A função Dupla Refeição permite aquecer quantas porções simultaneamente no micro-ondas Panasonic NN-ST66NB?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbGJBywxkli3MaIn",
+    "answer": "SmartSense",
+    "importedAt": 1791663174839,
+    "options": [
+      "SmartPower",
+      "SmartSense",
+      "Econavi"
+    ],
+    "question": "Como é chamada a tecnologia de Inteligência Artificial da Panasonic presente no Refrigerador UniqGlass DB69?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbJkQDlTiS_HIzP3",
+    "answer": "Bottom-Freezer",
+    "importedAt": 1791663175059,
+    "options": [
+      "Side-by-side",
+      "Top-Freezer",
+      "Bottom-Freezer"
+    ],
+    "question": "Qual é o tipo de design da geladeira Panasonic NR-BB65?",
+    "series": "Básico",
+    "title": "Qual é o tipo de design da gel",
+    "updatedAt": 1791663858062
+  },
+  {
+    "id": "-P3bRbMnnLkzmY8507Y5",
+    "answer": "Não, cliente precisa adquirir separadamente.",
+    "importedAt": 1791663175254,
+    "options": [
+      "Sim, vem junto com a lavadora.",
+      "Não, cliente precisa adquirir separadamente."
+    ],
+    "question": "Consumidor quer saber se o filtro do Antibactéria AG vem junto com a lavadora F190G1 ou ela tem que comprar separado?",
+    "series": "Básico",
+    "title": "Consumidor quer saber se o fil",
+    "updatedAt": 1791663774280
+  },
+  {
+    "id": "-P3bRbSdLNopkEau3Sd6",
+    "answer": "Inverter",
+    "importedAt": 1791663175628,
+    "options": [
+      "Convencional",
+      "Inverter",
+      "Dual Inverter"
+    ],
+    "question": "A geladeira Panasonic modelo NR-BB64 possui qual tipo de motor?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbWZrAsBGr_GRfeR",
+    "answer": "475 Litros",
+    "importedAt": 1791663175879,
+    "options": [
+      "397 Litros",
+      "475 Litros",
+      "480 Litros"
+    ],
+    "question": "Consumidor deseja saber sobre geladeira Panasonic NR-BB64 possui quantos litros no total?",
+    "series": "Básico",
+    "title": "Consumidor deseja saber sobre ",
+    "updatedAt": 1791663744745
+  },
+  {
+    "id": "-P3bRb_DSvtcXAC6YPdu",
+    "answer": "Desligar a geladeira da tomada e utilizar um pano úmido com detergente neutro.",
+    "importedAt": 1791663176113,
+    "options": [
+      "Utilizar produtos abrasivos para remover manchas difíceis.",
+      "Desligar a geladeira da tomada e utilizar um pano úmido com detergente neutro.",
+      "Utilizar água sanitária para desinfetar a geladeira."
+    ],
+    "question": "Qual a recomendação para a limpeza interna da geladeira Panasonic NR-BB64?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbgkLZA6halFnDjD",
+    "answer": "Maior eficiência energética, controle preciso da temperatura e funcionamento silencioso.",
+    "importedAt": 1791663176594,
+    "options": [
+      "Maior consumo de energia com congelamento mais rápido.",
+      "Maior eficiência energética, controle preciso da temperatura e funcionamento silencioso.",
+      "Descongelamento manual periódico."
+    ],
+    "question": "O que o sistema Inverter da geladeira Panasonic modelo NR-BB64 proporciona?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbm_XH-RRquYeu4q",
+    "answer": "Sim",
+    "importedAt": 1791663176968,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "O Micro-ondas Embutir NN-GB68QSRUK possui a função Descongelamento de Carne?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbpZk0Y4imjZuDfr",
+    "answer": "Sim",
+    "importedAt": 1791663177159,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "O micro-ondas Panasonic NN-ST67LS tem o revestimento antimicrobiano Antibacteria Ag?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbtI8DelW_FoXiDa",
+    "answer": "127v e 220v",
+    "importedAt": 1791663177398,
+    "options": [
+      "Apenas 220v",
+      "127v e 220v",
+      "Bivolt Automático"
+    ],
+    "question": "Qual a voltagem disponível no micro-ondas Panasonic de modelo NN-ST65LW?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRbwj2JSYf-_W8nLV",
+    "answer": "Não",
+    "importedAt": 1791663177618,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o modelo ST25 possui a função de Dupla Refeição, ele tem essa função?",
+    "series": "Básico",
+    "title": "Consumidor gostaria de saber s",
+    "updatedAt": 1791663602687
+  },
+  {
+    "id": "-P3bRc-0wksIPdBa_gSF",
+    "answer": "Não",
+    "importedAt": 1791663177828,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "A Lava Louças NP-6M2FTKBRP tem para vender na voltagem 110v?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRc4ltWlDcl-ffzDg",
+    "answer": "Molho de 60 e 120 minutos.",
+    "importedAt": 1791663178196,
+    "options": [
+      "Molho de 20 e 40 minutos.",
+      "Molho de 60 e 120 minutos.",
+      "Molho de 60 e 90 minutos."
+    ],
+    "question": "Na lavadora F170B1, o botão +Molho permite colocar dois tempos diferentes de Molho no ciclo, quais são esses tempos?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRc8dBmrMMGX6FaYL",
+    "answer": "Sim",
+    "importedAt": 1791663178444,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o Micro-ondas 4 em 1 CD89 possui a função Convecção, ele tem essa função?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRcCSbpkDtcSRnXfY",
+    "answer": "Não",
+    "importedAt": 1791663178688,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o Micro-ondas ST24 possui o Antibactéria AG, ele tem essa tecnologia?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRcG4SdqkwfaCaunO",
+    "answer": "Carne e Feijão",
+    "importedAt": 1791663178920,
+    "options": [
+      "Carne e Feijão",
+      "Arroz e Feijão",
+      "Pipoca e Brigadeiro"
+    ],
+    "question": "Quais são as funções de descongelamento por peso disponíveis no micro-ondas Panasonic NN-ST65LW?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRcJVDEKCC5vwKHgB",
+    "answer": "Economia de Água e Delicado",
+    "importedAt": 1791663179139,
+    "options": [
+      "Edredom e Delicado",
+      "Economia de Água e Delicado",
+      "Dia a dia e Jeans"
+    ],
+    "question": "Quais os dois ciclos de lavagem que SmartSense não pesa a roupa na Lavadora F170B7?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRcMJ899O_R3K_Yzl",
+    "answer": "Não",
+    "importedAt": 1791663179319,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "A lavadora NA-F150B1 possui o filtro de Antibactéria AG?",
+    "series": "Básico",
+    "title": "A lavadora NA-F150B1 possui o ",
+    "updatedAt": 1791663464443
+  },
+  {
+    "id": "-P3bRcTidsTmqYqM_dHj",
+    "answer": "Sim",
+    "importedAt": 1791663179792,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "O Forno Elétrico HL-CX668SRPK possui a função Grill para gratinar alimentos?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRcWjtNy8hxPkWoW8",
+    "answer": "1 ano",
+    "importedAt": 1791663179986,
+    "options": [
+      "5 anos",
+      "3 anos",
+      "1 ano"
+    ],
+    "question": "Quantos anos de garantia tem o Forno Elétrico HL-CX668SRPK?",
+    "series": "Básico",
+    "title": "Quantos anos de garantia tem o",
+    "updatedAt": 1791663432559
+  },
+  {
+    "id": "-P3bRc_36znQksDMFbap",
+    "answer": "Sim",
+    "importedAt": 1791663180199,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "A lavadora NA-F150B1 possui o ciclo Vanish Roupa Branca?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRccV3K29MdHZwflt",
+    "answer": "Desodorizador",
+    "importedAt": 1791663180419,
+    "options": [
+      "Tira Odor",
+      "Antibacteria AG",
+      "Desodorizador"
+    ],
+    "question": "Qual recurso serve para eliminar cheiros de pratos anteriores no micro-ondas da Panasonic NN-ST25LW?",
+    "series": "Básico",
+    "title": "Qual recurso serve para elimin",
+    "updatedAt": 1791663327883
+  },
+  {
+    "id": "-P3bRcfHZYZEkXtXkFuN",
+    "answer": "F180P7",
+    "importedAt": 1791663180597,
+    "options": [
+      "F150B1",
+      "F170B7",
+      "F180P7"
+    ],
+    "question": "O consumidor chegou na loja procurando uma lavadora que possua o Antibactéria AG, qual dos modelos abaixo eu devo indicar?",
+    "series": "Básico",
+    "title": "O consumidor chegou na loja pr",
+    "updatedAt": 1791663288165
+  },
+  {
+    "id": "-P3bRcijQ_fFxB8I3HmP",
+    "answer": "F190G1",
+    "importedAt": 1791663180818,
+    "options": [
+      "F150B1",
+      "F180P7",
+      "F190G1"
+    ],
+    "question": "Consumidor quer uma lavadora com ciclo Pet, qual modelo eu devo indicar a esse consumidor?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRclXDXsr__2KMDu5",
+    "answer": "Não",
+    "importedAt": 1791663180997,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "A lavadora NA-F150B1 possui o botão de Limpeza de Tanque?",
+    "series": "Básico",
+    "title": "A lavadora NA-F150B1 possui o ",
+    "updatedAt": 1791663260338
+  },
+  {
+    "id": "-P3bRcpJYvw1mi9fBRqQ",
+    "answer": "Pega Fácil",
+    "importedAt": 1791663181239,
+    "options": [
+      "Pega Fácil",
+      "Pega Rápido",
+      "Pega Automático"
+    ],
+    "question": "Qual tecnologia permite que xícaras e canecas voltem para a mesma posição inicial após o aquecimento, presente no micro-ondas Panasonic NN-ST66NB?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRcwgPEjzTkuDWzXN",
+    "answer": "Inverter com SmartSense",
+    "importedAt": 1791663181711,
+    "options": [
+      "Frost Free e Turbo Freezer",
+      "Inverter com SmartSense",
+      "Antibactéria AG e AgClean"
+    ],
+    "question": "Quais as tecnologias que proporcionam economia de energia na geladeira Panasonic NR-BB65?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRd-_iLoMrwtvTBtK",
+    "answer": "Reduzir odores do interior do micro-ondas após o uso.",
+    "importedAt": 1791663181960,
+    "options": [
+      "Cozinhar Carnes",
+      "Descongelar alimentos",
+      "Reduzir odores do interior do micro-ondas após o uso."
+    ],
+    "question": "A função \"Desodorizador\" presente no micro-ondas Panasonic NN-GT68LB serve para?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRd5fmY5pIm4WsUYH",
+    "answer": "Sim",
+    "importedAt": 1791663182350,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Posso usar a Coifa FV-6HSUB2 tanto instalada como Exaustor quanto depurador?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRd9_bn4fNRm4sI-b",
+    "answer": "F190G1",
+    "importedAt": 1791663182600,
+    "options": [
+      "F150B1",
+      "F170B7",
+      "F190G1"
+    ],
+    "question": "Qual dos modelos de lavadora abaixo tem o ciclo de lavagem Aroma+?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRdFgxtkQjL-YiBuD",
+    "answer": "0,95",
+    "importedAt": 1791663182991,
+    "options": [
+      "0,89",
+      "0,95",
+      "1,00"
+    ],
+    "question": "Qual a eficiência de lavagem da Lavadora F190G1?",
+    "series": "Básico",
+    "title": "Qual a eficiência de lavagem d",
+    "updatedAt": 1791663207126
+  },
+  {
+    "id": "-P3bRdJFjDrRhRR5IJjl",
+    "answer": "Vitamin Power",
+    "importedAt": 1791663183219,
+    "options": [
+      "Climate Control",
+      "Vitamin Power",
+      "Antibacteria AG"
+    ],
+    "question": "Qual nome da tecnologia que potencializa as vitaminas das frutas, verduras e legumes por LED presente na geladeira Panasonic BB71?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bRdM09rOTr6_4GDQA",
+    "answer": "Frost Free",
+    "importedAt": 1791663183396,
+    "options": [
+      "Degelo Manual",
+      "Cycle Defrost",
+      "Frost Free"
+    ],
+    "question": "Qual tipo de degelo a geladeira Panasonic NR-BB64 utiliza?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3bVt5wWL5TfcduyEFV",
+    "answer": "4 graus até -5 graus",
+    "importedAt": 1791664296490,
+    "options": [
+      "0 graus até -4 graus",
+      "5 graus até -4 graus",
+      "4 graus até -5 graus"
+    ],
+    "question": "Quais as temperaturas que posso escolher na gaveta Prime Fresh na geladeira UniqGlass DB69?",
+    "series": "Avançado",
+    "title": "Quais as temperaturas que poss",
+    "updatedAt": 1791674379298
+  },
+  {
+    "id": "-P3bVt9IHTdGYDA6p3D8",
+    "answer": "A função Kitchen Timer não altera o funcionamento da geladeira. É um temporizador personalizável de 1 a 99 minutos, que facilita os preparos na cozinha de forma prática e versátil.",
+    "importedAt": 1791664296706,
+    "options": [
+      "A função Kitchen Timer acelera o congelamento do freezer, preservando os alimentos congelados mais rapidamente.",
+      "A função Kitchen Timer não altera o funcionamento da geladeira. É um temporizador personalizável de 1 a 99 minutos, que facilita os preparos na cozinha de forma prática e versátil.",
+      "A função Kitchen Timer acelera o resfriamento do refrigerador, preservando frutas, verduras e legumes com mais eficiência."
+    ],
+    "question": "Consumidor ficou curioso sobre como funciona a função Kitchen Timer, presente na geladeira Panasonic NR-BB64PV1X/B. Qual argumento de venda devemos utilizar para gerar encantamento com essa função?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtC0eAPI1wmaj4-P",
+    "answer": "Rapid Freezing",
+    "importedAt": 1791664296880,
+    "options": [
+      "Cool Down",
+      "Quick Cooling",
+      "Rapid Freezing"
+    ],
+    "question": "Ao utilizar a função Prime Freezer para congelamento 5x mais rápido na geladeira UniqGlass DB69, qual função devo selecionar no painel para 45 ou 60 minutos de congelamento rápido?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtEjfe_ZKG5gnMfo",
+    "answer": "1,90m",
+    "importedAt": 1791664297053,
+    "options": [
+      "1,85m",
+      "1,90m",
+      "1,95m"
+    ],
+    "question": "Consumidor quer saber qual a altura da geladeira Panasonic de modelo NR-BB71 pois ele quer descobrir se ela vai servir no espaço disponível na sua cozinha.",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtHIlOqs7umqy20h",
+    "answer": "Sim. A UniqGlass DB69 tem dois tanques internos (3L e 5L), com filtro de odores, tratamento antibacteriano e livre de BPA. Isso permite ter água fresca e gelo automático mesmo sem ponto de água, garantindo praticidade e saúde no dia a dia.",
+    "importedAt": 1791664297218,
+    "options": [
+      "Não. A geladeira UniqGlass DB69 Panasonic necessita de ponto hidráulico para funcionamento do dispenser de água e máquina de gelo automática.",
+      "Sim. A UniqGlass DB69 tem dois tanques internos (3L e 5L), com filtro de odores, tratamento antibacteriano e livre de BPA. Isso permite ter água fresca e gelo automático mesmo sem ponto de água, garantindo praticidade e saúde no dia a dia.",
+      "Não. A geladeira UniqGlass DB69 possui um tanque interno de 3 litros, filtro de odores, tratamento antibacteriano e livre de BPA para o funcionamento do dispenser de água e máquina de gelo manual."
+    ],
+    "question": "Consumidor está à procura de sua primeira geladeira french door, com água na porta e fábrica de gelo automática, porém não tem o ponto de água em sua cozinha, a geladeira UniqGlass DB69 Panasonic resolveria essa questão do consumidor?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtKXuz3uLSjT1b9Q",
+    "answer": "A produção leva 120 minutos com capacidade de 276 cubos",
+    "importedAt": 1791664297424,
+    "options": [
+      "A produção leva 30 minutos com capacidade de 300 cubos",
+      "A produção leva 60 minutos com capacidade de 600 cubos",
+      "A produção leva 120 minutos com capacidade de 276 cubos"
+    ],
+    "question": "Consumidor ficou encantado com a geladeira UniqGlass Panasonic, em especial sobre a facilidade da máquina de gelo automática com tanque interno, dispensando ponto de água, e perguntou em quanto tempo produz uma forma de gelo, quantos gelos cubos suporta o dispenser?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtNp16csH0Cxgrmt",
+    "answer": "-5°C",
+    "importedAt": 1791664297636,
+    "options": [
+      "-2°C",
+      "-3°C",
+      "-5°C"
+    ],
+    "question": "Consumidor comprou a geladeira Panasonic de modelo BB71GVFBX/G, e gostaria de saber qual temperatura deve escolher para manter a preservação ideal de peixes por até 8 dias na gaveta Fresh Freezer.",
+    "series": "Avançado",
+    "title": "Consumidor comprou a geladeira",
+    "updatedAt": 1791665253361
+  },
+  {
+    "id": "-P3bVtQodmFJghx4_qWL",
+    "answer": "A função Vitamin Power utiliza luzes LED especiais, simulando a fotossíntese. Isso preserva as vitaminas C e D dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas.",
+    "importedAt": 1791664297827,
+    "options": [
+      "A função Vitamin Safe utiliza luzes LED especiais, simulando a fotossíntese. Isso preserva as vitaminas A e B dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas.",
+      "A função Power Safe utiliza íons de prata. Isso preserva as vitaminas C e D dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas.",
+      "A função Vitamin Power utiliza luzes LED especiais, simulando a fotossíntese. Isso preserva as vitaminas C e D dos alimentos por mais tempo, mantendo frutas e verduras frescas e nutritivas."
+    ],
+    "question": "O consumidor viu a geladeira Panasonic BB71 e perguntou sobre a função Vitamin Power. Para que ela serve e qual é o benefício no dia a dia?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtUHq2fQ9erOMhdU",
+    "answer": "Tempo de 40 minutos e deve ser colocada dentro do freezer, após o término soará aviso sonoro para retirada e evitar o congelamento.",
+    "importedAt": 1791664298049,
+    "options": [
+      "Tempo de 60 minutos e deve ser colocada dentro do refrigerador, após o término soará aviso sonoro para retirada e evitar o congelamento.",
+      "Tempo de 50 minutos e deve ser colocada dentro do Fresh Freezer, após o término soará aviso sonoro para retirada e evitar o congelamento.",
+      "Tempo de 40 minutos e deve ser colocada dentro do freezer, após o término soará aviso sonoro para retirada e evitar o congelamento."
+    ],
+    "question": "Ao ativar a função Drink Cooler na geladeira Panasonic BB71, para atingir a temperatura ideal de vinhos, quanto tempo é programado e onde devo colocar o vinho?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtXgchub3Upu3-Ft",
+    "answer": "61 Litros",
+    "importedAt": 1791664298267,
+    "options": [
+      "61 Litros",
+      "186 Litros",
+      "142 Litros"
+    ],
+    "question": "Qual a capacidade da gaveta Prime Fresh da geladeira UniqGlass DB69 Panasonic?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVta4xQDfuGU37ELk",
+    "answer": "Sistema Ciclone utiliza três movimentos de água que oferecem uma melhor eficiência de lavagem, sem danificar os tecidos.",
+    "importedAt": 1791664298484,
+    "options": [
+      "Sistema Ciclone utiliza a lavagem igual ao tanquinho, por isso lava melhor.",
+      "Sistema Ciclone utiliza três movimentos de água que oferecem uma melhor eficiência de lavagem, sem danificar os tecidos.",
+      "Sistema Ciclone lava por tombamento, oferecendo uma melhor eficiência de lavagem."
+    ],
+    "question": "O consumidor gostaria de saber como o Sistema Ciclone funciona, qual a alternativa explica melhor o sistema de lavagem que a Panasonic usa?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtco4ZrGDMRdjj9c",
+    "answer": "Para evitar acidentes como afogamento de crianças, ela começa a apitar assim que a tampa é erguida e se em 10 segundos a tampa não for fechada, ela drena toda a água.",
+    "importedAt": 1791664298659,
+    "options": [
+      "Para que a tampa não abra durante a centrifugação.",
+      "Para que a tampa não abra durante toda a lavagem.",
+      "Para evitar acidentes como afogamento de crianças, ela começa a apitar assim que a tampa é erguida e se em 10 segundos a tampa não for fechada, ela drena toda a água."
+    ],
+    "question": "Para que serve a Trava de Segurança na lavadora NA-F130B1?",
+    "series": "Avançado",
+    "title": "Para que serve a Trava de Segu",
+    "updatedAt": 1791665095685
+  },
+  {
+    "id": "-P3bVtffMFY_jYYaRSiZ",
+    "answer": "O Reuso de Água permite que o consumidor reutilize a água do primeiro ou do segundo enxágue para fins de limpeza, ou seja, o consumidor vai coletar essa água da lavadora em alguns baldes para lavar a calçada de sua casa, ou a sacada do seu apartamento por exemplo.",
+    "importedAt": 1791664298842,
+    "options": [
+      "O Reuso de Água permite que a água entre em menor quantidade no cesto proporcionando mais economia.",
+      "O Reuso de Água permite reutilizar a água na própria lavadora para não desperdiçar tanta água.",
+      "O Reuso de Água permite que o consumidor reutilize a água do primeiro ou do segundo enxágue para fins de limpeza, ou seja, o consumidor vai coletar essa água da lavadora em alguns baldes para lavar a calçada de sua casa, ou a sacada do seu apartamento por exemplo."
+    ],
+    "question": "O consumidor está com dúvida de como funciona o Reuso de Água, qual a melhor explicação que podemos dar a ele?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVticRZipr3VZm8a8",
+    "answer": "Não, pois é somente uma centrifugação de 60min para tirar o excesso de umidade das roupas.",
+    "importedAt": 1791664299030,
+    "options": [
+      "Sim, pois funciona como uma secadora de roupas também.",
+      "Não, pois é somente uma centrifugação de 60min para tirar o excesso de umidade das roupas."
+    ],
+    "question": "A Turbo Secagem presente nos ciclos da lavadora NA-F130B1, ele aquece o ar para secar as roupas dentro do cesto?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtlS7MYxuaiba_29",
+    "answer": "7 níveis de água.",
+    "importedAt": 1791664299212,
+    "options": [
+      "5 níveis de água.",
+      "7 níveis de água.",
+      "9 níveis de água."
+    ],
+    "question": "Sobre o SmartSense nas lavadoras, o consumidor quer saber quantos níveis de água automático o SmartSense possui?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVto1atsZsKhNBwBc",
+    "answer": "F190G1",
+    "importedAt": 1791664299377,
+    "options": [
+      "F140B1",
+      "F190G1",
+      "F150B1"
+    ],
+    "question": "Consumidora chegou na loja procurando uma lavadora que permite personalizar o ciclo de lavagem, qual das lavadoras eu devo apresentar para essa consumidora?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtqmnB13NnoEuzOF",
+    "answer": "Serve para encaixar embaixo da lavadora, evitando a entrada de roedores.",
+    "importedAt": 1791664299553,
+    "options": [
+      "Serve para proteger o vidro no transporte.",
+      "Serve para proteger o gabinete no transporte.",
+      "Serve para encaixar embaixo da lavadora, evitando a entrada de roedores."
+    ],
+    "question": "A lavadora NA-F130B1 possui uma grade preta que acompanha a lavadora, para que serve essa grade?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVttVtfvWAQwwXFOv",
+    "answer": "O filtro Antibactéria AG dura 156 lavagens, e pode ser substituído quando a luz do AG piscar intermitente no painel da lavadora. Consumidor pode adquirir o novo filtro na loja online da Panasonic.",
+    "importedAt": 1791664299726,
+    "options": [
+      "O filtro Antibactéria AG dura 156 lavagens, e pode ser substituído quando a luz do AG piscar intermitente no painel da lavadora. Consumidor pode adquirir o novo filtro na loja online da Panasonic.",
+      "O filtro Antibactéria AG é vitalício e não precisa ser trocado.",
+      "O filtro Antibactéria AG deve ser trocado a cada 3 anos, consumidor compra ele somente na assistência autorizada."
+    ],
+    "question": "Consumidor comprou uma lavadora 18kg da Panasonic e voltou na loja para saber em quanto tempo ele precisa trocar o filtro do Antibactéria AG. Qual a informação correta que devo passar ao consumidor?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtwCzi-tpgpy2j1w",
+    "answer": "Sim",
+    "importedAt": 1791664299900,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "A lavadora NA-F130B1 possui o botão de Início/Pausa?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVtz45onfWDpGPocT",
+    "answer": "Serve para eliminar até 99,99% das bactérias das roupas.",
+    "importedAt": 1791664300084,
+    "options": [
+      "Serve para eliminar até 99,99% das bactérias das roupas.",
+      "Serve para fazer uma pré-lavagem na roupa.",
+      "Serve para testar se a roupa vai encolher durante a lavagem."
+    ],
+    "question": "Consumidor quer saber para que serve a função Vapor + Antialérgico na Lava e Seca Panasonic NA-S26MK1LB?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVu0sC_LkKL8ATVT-",
+    "answer": "Este modelo possui 1250W no total: 700W dedicados ao preparo dos alimentos e 550W para o funcionamento do micro-ondas (giro do prato, iluminação, sons).",
+    "importedAt": 1791664300263,
+    "options": [
+      "Este modelo possui 1000W de potência nominal, mas não divulgamos a potência dedicada para preparo. O funcionamento pode variar, demorando mais no aquecimento.",
+      "Este modelo possui apenas 800W. Esquenta bem, mas deve ser usado principalmente com a tecla de 30 segundos.",
+      "Este modelo possui 1250W no total: 700W dedicados ao preparo dos alimentos e 550W para o funcionamento do micro-ondas (giro do prato, iluminação, sons)."
+    ],
+    "question": "O consumidor busca um micro-ondas pequeno, eficiente e rápido. Ele perguntou qual é a potência do modelo Panasonic NN-ST25LW. Qual a melhor resposta?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVu3kc_hc-lQKfu21",
+    "answer": "A pintura de tom cinza além de não amarelar com o tempo, tem a tecnologia antiaderente que facilita a limpeza 4 vezes mais fácil, já os pontos na cor prata é a tecnologia Antibacteria AG, elimina bactérias e maus odores com íons de prata.",
+    "importedAt": 1791664300447,
+    "options": [
+      "A pintura de tom cinza além de não amarelar com o tempo, tem a tecnologia antiaderente que facilita a limpeza 4 vezes mais fácil, já os pontos na cor prata é a tecnologia Antibacteria AG, elimina bactérias e maus odores com íons de prata.",
+      "A pintura de tom cinza e a tecnologia limpa fácil, ajuda na limpeza, já os pontos na cor prata é apenas estética, não interfere no funcionamento do produto.",
+      "Não é nada demais, é somente a pintura cinza com pontos brancos para dar uma estética mais moderna para o produto."
+    ],
+    "question": "O consumidor notou que o interior dos micro-ondas da Panasonic é diferente, e perguntou por que é cinza com pontos na cor prata. Qual seria a forma correta de responder a dúvida deste consumidor mostrando os benefícios?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVu6VhH-c8ySzbJKj",
+    "answer": "Não. A função Desodorizador usa apenas o ventilador de exaustão, sem emissão de ondas, trocando o ar interno em conjunto com a tecnologia Antibacteria AG, eliminando os odores.",
+    "importedAt": 1791664300623,
+    "options": [
+      "Sim. A função Tira odor usa 10% da potência total e deve ser feita com água e vinagre.",
+      "Não. A função Desodorizador usa apenas o ventilador de exaustão, sem emissão de ondas, trocando o ar interno em conjunto com a tecnologia Antibacteria AG, eliminando os odores.",
+      "Sim. A função Tira odor usa 1% da potência total e deve ser feita com água e vinagre."
+    ],
+    "question": "O consumidor perguntou se precisa usar água e vinagre no micro-ondas Panasonic NN-ST66NB para eliminar odores. Qual a orientação correta?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVu9EYzzHoSJHVpVh",
+    "answer": "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+    "importedAt": 1791664300798,
+    "options": [
+      "Micro-ondas GT68, 30 litros, com cozimento inteligente pela função SmartSense.",
+      "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+      "Micro-ondas GB68, 30 litros, com funções Grill e Micro-ondas, além de design elegante."
+    ],
+    "question": "O consumidor entrou na loja à procura de um micro-ondas, mas também quer forno elétrico e Air Fryer em um único produto compacto. Qual a melhor opção?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVuCgBnPcCZVIhktN",
+    "answer": "Sim. Reposiciona a caneca ou xícara com a alça para frente, facilitando a retirada e evitando acidentes.",
+    "importedAt": 1791664301019,
+    "options": [
+      "Sim. Reposiciona o prato para frente no final do ciclo.",
+      "Sim. Reposiciona a caneca ou xícara com a alça para frente, facilitando a retirada e evitando acidentes.",
+      "Sim. Reposiciona a panela para frente no final do ciclo."
+    ],
+    "question": "O consumidor relatou um acidente ao retirar um copo de leite quente do micro-ondas. A função Pega Fácil do Panasonic NN-ST66NB poderia evitar?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVuFphl6u5ogtAPUr",
+    "answer": "Sim",
+    "importedAt": 1791664301220,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "O micro-ondas Panasonic NN-ST67LS tem o revestimento antimicrobiano Antibacteria Ag?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVuJIRL1xBYmtawrx",
+    "answer": "Reduzir odores do interior do micro-ondas após o uso.",
+    "importedAt": 1791664301442,
+    "options": [
+      "Cozinhar Carnes",
+      "Descongelar alimentos",
+      "Reduzir odores do interior do micro-ondas após o uso."
+    ],
+    "question": "A função \"Desodorizador\" presente no micro-ondas Panasonic NN-GT68LB serve para?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVuM0RcO8f1lTDteZ",
+    "answer": "Não",
+    "importedAt": 1791664301616,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o modelo ST25 possui a função de Dupla Refeição, ele tem essa função?",
+    "series": "Avançado",
+    "title": "Consumidor gostaria de saber s",
+    "updatedAt": 1791664522894
+  },
+  {
+    "id": "-P3bVuOsZ_ev1uiuEnBL",
+    "answer": "Não",
+    "importedAt": 1791664301799,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o Micro-ondas ST24 possui o Antibactéria AG, ele tem essa tecnologia?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVuRnx6KNmOow6AUj",
+    "answer": "Sim",
+    "importedAt": 1791664301986,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Consumidor gostaria de saber se o Micro-ondas 4 em 1 CD69 possui a função Convecção, ele tem essa função?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVuUd-k2rITL2hkrq",
+    "answer": "GB68QB",
+    "importedAt": 1791664302168,
+    "options": [
+      "GB68QS",
+      "GB68QB",
+      "GT68LB"
+    ],
+    "question": "Consumidor entrou na loja buscando um Micro-ondas de Embutir para completar a sua cozinha Black Glass, qual modelo de Micro-ondas de Embutir devo oferecer a ela para combinar com a sua cozinha Black Glass?",
+    "series": "Avançado",
+    "title": "Consumidor entrou na loja busc",
+    "updatedAt": 1791664484566
+  },
+  {
+    "id": "-P3bVuXYmyIRkTWGtSD3",
+    "answer": "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/leve (rasa).",
+    "importedAt": 1791664302354,
+    "options": [
+      "Fritura normal, Fritura pesada (imersão)/leve (rasa).",
+      "Fervura Automática, Cocção em baixa temperatura.",
+      "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/leve (rasa)."
+    ],
+    "question": "Com relação ao Cooktop inteligente KY-T937XLRPK, podemos dizer que nas zonas de cocção da esquerda onde temos o Genius Sensor + vai ser possível usar os seguintes modos?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVu_PtxX5eLnr7SFy",
+    "answer": "O acessório que acompanha o Forno Elétrico de Embutir CX672 é o termômetro para carnes. Ele serve para que o consumidor prepare carnes no ponto ideal de acordo com a temperatura interna da carne. Isso facilita o preparo de carnes e aves com mais precisão, reduzindo o risco de queimar a carne ou tirar ela do forno ainda crua.",
+    "importedAt": 1791664302537,
+    "options": [
+      "Serve para efetuar a limpeza interna do Forno Elétrico, pois essa agulha consegue alcançar locais de difícil acesso, removendo sujeira que fica nos cantos do forno.",
+      "Serve apenas para segurar as grades no transporte, assim elas não ficam batendo e causando danos internos ao forno.",
+      "O acessório que acompanha o Forno Elétrico de Embutir CX672 é o termômetro para carnes. Ele serve para que o consumidor prepare carnes no ponto ideal de acordo com a temperatura interna da carne. Isso facilita o preparo de carnes e aves com mais precisão, reduzindo o risco de queimar a carne ou tirar ela do forno ainda crua."
+    ],
+    "question": "Consumidor quer saber para que serve aquele cabo dentro do Forno Elétrico de Embutir CX672, ele parece ter uma ponta semelhante a uma agulha mais grossa, mas o consumidor não entende para que serve. Qual a melhor resposta para esse consumidor?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVucFA5acfr1s-3Jo",
+    "answer": "6M2FT",
+    "importedAt": 1791664302718,
+    "options": [
+      "6M2FT",
+      "6M1MB",
+      "Não temos mais modelos Free Standing"
+    ],
+    "question": "Consumidor gostaria de uma lava-louça de grande capacidade, mas ainda está na dúvida se quer embutir o produto ou não. Ele ouviu falar que a Panasonic tem um modelo Free Standing, que possibilita a instalação no móvel ou fora dele. Qual modelo devo indicar para esse consumidor?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3bVuf9F_-_mAy1UGR3",
+    "answer": "A exaustão suga o ar que está dentro da cozinha e o joga para fora, por meio do tubo. O depurador é baseado em dois sistemas de filtragem que sugam o ar com fumaça e gordura, purificam e o devolvem ao ambiente totalmente livre de odores.",
+    "importedAt": 1791664302904,
+    "options": [
+      "Não há nenhuma diferença entre esses dois modos, é só nomenclatura de produto.",
+      "Exaustão e Depuração são duas formas de filtrar o ar. Um deles filtra a gordura do ar e o outro filtra a fumaça, devolvendo o ar purificado ao ambiente.",
+      "A exaustão suga o ar que está dentro da cozinha e o joga para fora, por meio do tubo. O depurador é baseado em dois sistemas de filtragem que sugam o ar com fumaça e gordura, purificam e o devolvem ao ambiente totalmente livre de odores."
+    ],
+    "question": "Consumidor entrou na loja buscando uma Coifa que pode ser instalada tanto na Depuração quanto na Exaustão, mas ele não sabe a diferença entre esses dois modos de funcionamento das coifas, qual a melhor explicação que podemos dar a esse consumidor?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P3c8hJU3zeyLH7o7ale",
+    "answer": "Utilização de três movimentos de água para melhorar a lavagem",
+    "importedAt": 1791674996095,
+    "options": [
+      "Secagem automática das roupas",
+      "Uso de vapor para higienização",
+      "Utilização de três movimentos de água para melhorar a lavagem"
+    ],
+    "question": "Qual é o diferencial do Sistema Ciclone presente nessas lavadoras?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3c8hMILklgBNGkIgq7",
+    "answer": "Manter as roupas perfumadas por mais tempo através da diluição potencializada do amaciante.",
+    "importedAt": 1791674996275,
+    "options": [
+      "Economizar água durante o ciclo de lavagem.",
+      "Manter as roupas perfumadas por mais tempo através da diluição potencializada do amaciante.",
+      "Remover manchas difíceis com jatos de água quente."
+    ],
+    "question": "Qual é o principal benefício da função \"Aroma Plus\"?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3c8hP3zTEiTIrnarzp",
+    "answer": "F190G1",
+    "importedAt": 1791674996453,
+    "options": [
+      "F120B1",
+      "F180D1",
+      "F190G1"
+    ],
+    "question": "O consumidor chegou na loja procurando uma lavadora que possua como opcional o Antibactéria AG, qual dos modelos abaixo eu devo indicar?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3c8hRuA0ubKMvpqxo8",
+    "answer": "Remove 97,7% dos pelos dos animais com alta eficiência.",
+    "importedAt": 1791674996635,
+    "options": [
+      "Remove cerca de 50% dos pelos acumulados.",
+      "Elimina totalmente (100%) os odores de animais de estimação.",
+      "Remove 97,7% dos pelos dos animais com alta eficiência."
+    ],
+    "question": "De acordo com o material, qual a eficácia do \"Ciclo Pet\" na remoção de pelos de animais?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3c8hW3QVAHWJ2y4w2g",
+    "answer": "Permitir o controle da lavagem, programação de tempo e ciclos, além de salvar um favorito.",
+    "importedAt": 1791674996901,
+    "options": [
+      "Apenas melhorar a aparência do produto",
+      "Reduzir o consumo de energia automaticamente",
+      "Permitir o controle da lavagem, programação de tempo e ciclos, além de salvar um favorito."
+    ],
+    "question": "Qual é a principal vantagem do painel flutuante nas lavadoras F190G1W/T?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3c8hZGeN3K46RQxjj6",
+    "answer": "Fechamento suave e seguro, evitando impactos",
+    "importedAt": 1791674997105,
+    "options": [
+      "Fechamento suave e seguro, evitando impactos",
+      "Fechamento rápido e com impacto",
+      "Abertura automática da tampa"
+    ],
+    "question": "O que o sistema Soft Close proporciona ao usuário?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P3c8hbP2vs2ovGvorIf",
+    "answer": "Utiliza jatos intensos de água para deixar as roupas mais limpas e livres de manchas.",
+    "importedAt": 1791674997307,
+    "options": [
+      "Utiliza jatos intensos de água para deixar as roupas mais limpas e livres de manchas.",
+      "Através de um sistema de secagem ultrarrápido por ar quente.",
+      "Aumentando o tempo de molho das peças para desprender a sujeira."
+    ],
+    "question": "Como a tecnologia \"JetWash+\" atua na limpeza das roupas?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHXhYIasW269xPKY",
+    "answer": "Nível 7 - 7,5",
+    "importedAt": 1792526333109,
+    "options": [
+      "Nível 7-8",
+      "Nível 7 - 7,5",
+      "Nível 6 - 7",
+      "Nível 3 - 4"
+    ],
+    "question": "No cooktop KY-T937XLRPK, qual o nível manual de aquecimento adequado para ovos fritos segundo o manual?",
+    "series": "Básico",
+    "title": "No cooktop KY-T937XLRPK, qual ",
+    "updatedAt": 1792526928399
+  },
+  {
+    "id": "-P4PtH_EOglVpz9T5WyR",
+    "answer": "6 Receitas (Arroz, Batata, Vegetais frescos, Vegetais congelados, Pizza congelada e Carne)",
+    "importedAt": 1792526333271,
+    "options": [
+      "3 Receitas (Pipoca, Brigadeiro, Cocada)",
+      "5 Receitas (Pipoca, Brigadeiro, Cocada, Quibe, Feijão)",
+      "6 Receitas (Arroz, Batata, Vegetais frescos, Vegetais congelados, Pizza congelada e Carne)",
+      "11 Receitas (Batata frita congelada, Pão de queijo congelado, Batata frita inatura, Pão de queijo inatura, Costelinha de porco, Empanados, Vegetais frescos, Vegetais congelados, Pizza congelada, Almondegas e Carne)"
+    ],
+    "question": "Quantas receitas são pré programadas na função SmartSense do micro-ondas modelo NN-GT68LB, e quais são elas?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHbjzUY-7bFoRxmK",
+    "answer": "Até 8 kgs de roupa",
+    "importedAt": 1792526333431,
+    "options": [
+      "Até 8 kgs de roupa",
+      "Até 4 kgs de roupa",
+      "Até 2 kgs de roupa",
+      "Até 19 kgs de roupa"
+    ],
+    "question": "Consumidor adquiriu uma lavadora F190G1 e gostaria de saber até quantos kg de roupa ele pode lavar no ciclo Pet?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHeEIQLBSk-FSGQl",
+    "answer": "Cool Down de 3 a 5 minutos.",
+    "importedAt": 1792526333591,
+    "options": [
+      "Cool Down de 3 a 5 minutos.",
+      "Quick Cooling 10 a 15 minutos.",
+      "Rapid Freezer 45 a 60 Minutos"
+    ],
+    "question": "Qual função devo selecionar para resfriar o leite do bebê utilizando a função Prime Freezer na geladeira Panasonic UniqGlass DB69?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHhAAbF1fjr2Mws8",
+    "answer": "4,2 Kg",
+    "importedAt": 1792526333779,
+    "options": [
+      "1,2 Kg",
+      "2,2 Kg",
+      "3,2 Kg",
+      "4,2 Kg"
+    ],
+    "question": "Caso o cliente use o programa de lavagem Edredom, é recomendado que estas peças tenham até qual peso máximo segundo o manual da máquina de lavar NA-F150B1?",
+    "series": "Básico",
+    "title": "Caso o cliente use o programa ",
+    "updatedAt": 1792526900513
+  },
+  {
+    "id": "-P4PtHjnbNafq8E0trRI",
+    "answer": "366mm",
+    "importedAt": 1792526333947,
+    "options": [
+      "368mm",
+      "367mm",
+      "365mm",
+      "366mm"
+    ],
+    "question": "O cliente deseja comprar o microondas de modelo NN-ST27LW para colocar no armário da sua cozinha, ele gostaria de saber a profundidade deste modelo?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHmIF6VnC5XTDTeZ",
+    "answer": "A produção leva 120 minutos com capacidade de 276 cubos",
+    "importedAt": 1792526334107,
+    "options": [
+      "A produção leva 120 minutos com capacidade de 276 cubos",
+      "A produção leva 60 minutos com capacidade de 600 cubos",
+      "A produção leva 50 minutos com capacidade de 300 cubos"
+    ],
+    "question": "Consumidor ficou encantado com a geladeira UniqGlass DB69 Panasonic, em especial sobre a facilidade da máquina de gelo automática com tanque interno, dispensando ponto de água, e perguntou em quanto tempo produz uma forma de gelo, quantos gelos cubos suporta o dispense?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHonYT073SS0sVK_",
+    "answer": "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+    "importedAt": 1792526334267,
+    "options": [
+      "Micro-ondas GT68, 30 litros, com cozimento inteligente pela função SmartSense.",
+      "Forno Micro-ondas CD89, 30 litros, com 4 funções em 1 só produto: micro-ondas, convecção, Air Fryer e grill. Economiza espaço e traz mais praticidade.",
+      "Micro-ondas GB68, 30 litros, com funções Grill e Micro-ondas, além de design elegante."
+    ],
+    "question": "O consumidor entrou na loja a procura de um micro-ondas, mas também quer forno elétrico e Air Fryer em um único produto compacto. Qual a melhor opção?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHrI31AdxncEnWMC",
+    "answer": "NN-ST65LW",
+    "importedAt": 1792526334427,
+    "options": [
+      "NN-GB68QS",
+      "NN-ST27LW",
+      "NN-ST55LM",
+      "NN-ST65LW"
+    ],
+    "question": "Cliente gostaria de um Micro-Ondas com capacidade de 34 Litros, qual modelo abaixo devemos indicar?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtHtn6PfJTuTKTuLw",
+    "answer": "NR-BB71",
+    "importedAt": 1792526334587,
+    "options": [
+      "NR-BT44",
+      "NR-BT58",
+      "NR-BB65",
+      "NR-BB71"
+    ],
+    "question": "Cliente está na loja e gostaria de saber qual o refrigerador Panasonic consome 29,8kWh/mês classificada na categoria A na nova regulamentação Inmetro?",
+    "series": "Básico",
+    "title": "Cliente está na loja e gostari",
+    "updatedAt": 1792526860915
+  },
+  {
+    "id": "-P4PtHwIiTCF7ew9No9N",
+    "answer": "15 serviços",
+    "importedAt": 1792526334747,
+    "options": [
+      "08 serviços",
+      "10 serviços",
+      "15 serviços",
+      "13 serviços"
+    ],
+    "question": "Quantos serviços possui a lava-louças de embutir NP-6M2FTKBRP, o cliente esta na loja e gostaria de saber?",
+    "series": "Básico",
+    "title": "Quantos serviços possui a lava",
+    "updatedAt": 1792526841454
+  },
+  {
+    "id": "-P4PtHymqXA5FDGXzlI2",
+    "answer": "10 Litros",
+    "importedAt": 1792526334906,
+    "options": [
+      "13 Litros",
+      "12 Litros",
+      "10 Litros"
+    ],
+    "question": "Qual o consumo de água da lava-louças NP-6M2FTKBRP na função ECO?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtI0GDHKPqKJdgDC_",
+    "answer": "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)",
+    "importedAt": 1792526335065,
+    "options": [
+      "600mm (60cm) (Largura), 1060mm (144cm) (Altura), 690mm (69cm) (Profundidade)",
+      "640mm (64cm) (Largura), 1440mm (144cm) (Altura), 690mm (69cm) (Profundidade)",
+      "610mm (61cm) (Largura), 1410mm (141cm)(Altura), 690mm (69cm) (Profundidade)",
+      "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)"
+    ],
+    "question": "Qual a Largura x Altura x Profundidade da máquina de lavar NA-F150B1, com a tampa aberta segundo o manual?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtI3HPTN7c6x1aJHY",
+    "answer": "600 Rpm",
+    "importedAt": 1792526335258,
+    "options": [
+      "700 Rpm",
+      "760 Rpm",
+      "590 Rpm",
+      "600 Rpm"
+    ],
+    "question": "Sobre a centrifugação na lavadora NA-F190G1, o cliente gostaria de saber a velocidade de centrifugação?",
+    "series": "Básico",
+    "title": "Sobre a centrifugação na lavad",
+    "updatedAt": 1792526763533
+  },
+  {
+    "id": "-P4PtI5sM3on-1ViPNUH",
+    "answer": "3 Sensores (Temperatura interna, Temperatura externa e Abertura de porta)",
+    "importedAt": 1792526335424,
+    "options": [
+      "5 Sensores (Temperatura interna, Temperatura externa e Abertura de porta, Iluminação e umidade)",
+      "3 Sensores (Temperatura interna, Temperatura externa e Abertura de porta)",
+      "4 Sensores (Temperatura interna, Temperatura externa e Abertura de porta, Iluminação)"
+    ],
+    "question": "Quantos sensores e quais são presentes no SmartSense da geladeira Panasonic NR-BB65GV7?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtI8QXgrMBR-HvFGs",
+    "answer": "Fresh, Maritimo e Espiral",
+    "importedAt": 1792526335587,
+    "options": [
+      "Imperler",
+      "Turbilhão, Agitação e Tombamento",
+      "Fresh, Maritimo e Espiral"
+    ],
+    "question": "Quais são os movimentos do sistema ciclore?",
+    "series": "Básico",
+    "title": "Quais são os movimentos do sis",
+    "updatedAt": 1792526747942
+  },
+  {
+    "id": "-P4PtIAvIoX37F1vULjW",
+    "answer": "2 enxagues",
+    "importedAt": 1792526335747,
+    "options": [
+      "3 enxagues",
+      "2 enxagues",
+      "1 enxagues"
+    ],
+    "question": "Conforme orientação do manual, as máquinas de lavar F180D1 e F190G1 possuem quantos enxagues?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtIDzBYSuJ0UcOBV4",
+    "answer": "1750mm (175cm)",
+    "importedAt": 1792526335942,
+    "options": [
+      "1750mm (175cm)",
+      "1780mm (178cm)"
+    ],
+    "question": "Qual a altura da geladeira NR-BT58, pois preciso saber se cabe na minha cozinha?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtIGWLVMBan4RmSgx",
+    "answer": "Não. Vendida separadamente",
+    "importedAt": 1792526336105,
+    "options": [
+      "Sim",
+      "Não. Vendida separadamente"
+    ],
+    "question": "A lavadora F190G1 acompanha a capsula de antibacteria AG?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtIJ5i5ew_aumony0",
+    "answer": "F150B1",
+    "importedAt": 1792526336270,
+    "options": [
+      "F130B1",
+      "F180D1",
+      "F150B1",
+      "F190G1"
+    ],
+    "question": "Qual modelo de lavadora possui a função Vanish Branco mais Branco?",
+    "series": "Básico",
+    "title": "Qual modelo de lavadora possui",
+    "updatedAt": 1792526687723
+  },
+  {
+    "id": "-P4PtILZcgrG5eTBS0zG",
+    "answer": "1250W",
+    "importedAt": 1792526336428,
+    "options": [
+      "1250W",
+      "900W",
+      "800W",
+      "700W"
+    ],
+    "question": "Quero comprar o modelo NN-ST25LWRU, porém gostaria de saber a potência de entrada, das opções abaixo qual a correta?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtIOGlGPywUAtvwb8",
+    "answer": "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+    "importedAt": 1792526336601,
+    "options": [
+      "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+      "Fervura Automática, Cocção em baixa temperatura.",
+      "Fritura normal, Fritura pesada (imersão)/leve (rasa)."
+    ],
+    "question": "Com relação ao cooktop inteligente KY-T937XLRPK, podemos dizer que nas zonas de cocção da esquerda onde temos o Genius Sensor e Sensor + vai ser possível usar os seguintes modos?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtIR5lDXPdveEgn1k",
+    "answer": "2700w",
+    "importedAt": 1792526336782,
+    "options": [
+      "2700w",
+      "2600w",
+      "2800w",
+      "3100w"
+    ],
+    "question": "O cliente chegou com um dúvida na loja sobre qual a potência total do forno elétrico HL-CX668SRPK?",
+    "series": "Básico",
+    "title": "O cliente chegou com um dúvida",
+    "updatedAt": 1792526658389
+  },
+  {
+    "id": "-P4PtITZMO2OXgz3Sx9D",
+    "answer": "Aperte e mantenha pressionada a tecla Potência por 4 segundos",
+    "importedAt": 1792526336940,
+    "options": [
+      "Aperte e mantenha pressionada a tecla Potência por 4 segundos",
+      "Aperte e mantenha pressionada a tecla 10 segundos por 4 segundos",
+      "Aperte e mantenha pressionada a tecla Parar por 4 segundos",
+      "Aperte e mantenha pressionada a tecla Pipoca por 4 segundos"
+    ],
+    "question": "Como ativar/desativar a função mudo no micro-ondas NN-ST67LSRU?",
+    "series": "Básico",
+    "title": "Como ativar/desativar a função",
+    "updatedAt": 1792526648173
+  },
+  {
+    "id": "-P4PtIW1UKVPbIrdvXKO",
+    "answer": "3 Movimentos",
+    "importedAt": 1792526337098,
+    "options": [
+      "2 Movimentos",
+      "3 Movimentos",
+      "1 Movimentos",
+      "4 Movimentos"
+    ],
+    "question": "Quantos movimentos o sistema ciclore realiza?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4PtIYYhjb0K2O043LJ",
+    "answer": "900W",
+    "importedAt": 1792526337259,
+    "options": [
+      "900W",
+      "700W",
+      "800W",
+      "1000W"
+    ],
+    "question": "Qual a potência de saída do micro-ondas modelo NN-ST65LWRU?",
+    "series": "Básico"
+  },
+  {
+    "id": "-P4sXykkL4Oc-TCVCWZR",
+    "answer": "295 litros",
+    "importedAt": 1793023798812,
+    "options": [
+      "333 litros",
+      "295 litros",
+      "368 litros",
+      "441 litros"
+    ],
+    "question": "O cliente entra na loja para perguntar quantos litros úteis de refrigerador, nós temos na geladeira NR-BT44?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXynFyIygCmAz4diz",
+    "answer": "5cm",
+    "importedAt": 1793023798972,
+    "options": [
+      "7cm",
+      "6cm",
+      "5cm",
+      "8cm"
+    ],
+    "question": "O cliente gostaria de saber qual a distância mínima nas laterais para a instalação do refrigerador NR-BT58, segundo manual posso afirmar que deve ser?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXypjC1mL12YvfXZd",
+    "answer": "Com 3 LEDs Acesos",
+    "importedAt": 1793023799131,
+    "options": [
+      "Apenas 1 LED aceso",
+      "Com 2 LEDs Acesos",
+      "Com 3 LEDs Acesos",
+      "Nenhum LED aceso"
+    ],
+    "question": "Para saber se a função Turbo da geladeira NR-BT44 está ativa, os LEDs acima do botão freezer control devem estar?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXysEjNqpsKw-RUWp",
+    "answer": "1 hora",
+    "importedAt": 1793023799291,
+    "options": [
+      "4 horas",
+      "6 horas",
+      "1 hora",
+      "7 horas"
+    ],
+    "question": "O cliente chegou com a seguinte dúvida em loja, com relação ao modo \"Compras\" da geladeira NR-BT58, qual o tempo mínimo de funcionamento do modo assim que ativado?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXyuhZWoZZ82w8a76",
+    "answer": "Sim",
+    "importedAt": 1793023799449,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Na geladeira NR-BT71 é possível cancelar a função \"Turbo\"?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXyxA59RumBzRbijX",
+    "answer": "1750mm (175cm)",
+    "importedAt": 1793023799607,
+    "options": [
+      "1790mm (179cm)",
+      "1750mm (175cm)",
+      "1780mm (178cm)",
+      "1760mm (176cm)"
+    ],
+    "question": "Qual a altura da geladeira NR-BT58, pois preciso saber se cabe na minha cozinha?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXyzfDuy_O_KL0Vt7",
+    "answer": "Sim",
+    "importedAt": 1793023799767,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Com relação a temperatura do compartimento freezer da geladeira NR-BT58, podemos afirmar que em dias de condições normais de utilização o freezer vai trabalhar com temperaturas entre -17°C a -22°C?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXz18JAYeIbF2ufS4",
+    "answer": "Cool Down de 3 a 5 minutos.",
+    "importedAt": 1793023799925,
+    "options": [
+      "Cool Down de 3 a 5 minutos.",
+      "Quick Cooling 10 a 15 minutos.",
+      "Rapind Freezer 45 a 60 Minutos"
+    ],
+    "question": "Qual função devo selecionar para resfriar o leite do bebê utilizando a função Prime Freezer na geladeira Panasonic UniqGlass DB69?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXz3eGz1QFfvoZLdF",
+    "answer": "A função Kitchen Timer não altera o funcionamento da geladeira. é um temporizador personalizável de 1 a 99 minutos, que facilita o dia a dia de forma prática e versátil, servido de timer para qualquer coisa que o consumidor precisar.",
+    "importedAt": 1793023800086,
+    "options": [
+      "A função Kitchen Timer acelera o congelamento do freezer, preservando os alimentos congelados mais rapidamente.",
+      "A função Kitchen Timer acelera o resfriamento do refrigerador, preservando frutas, verduras e legumes com mais eficiência.",
+      "A função Kitchen Timer não altera o funcionamento da geladeira. é um temporizador personalizável de 1 a 99 minutos, que facilita o dia a dia de forma prática e versátil, servido de timer para qualquer coisa que o consumidor precisar.",
+      "A função Kitchen Timer ajuda na preservação dos alimentos por mais tempo."
+    ],
+    "question": "Consumidor ficou curioso sobre como funciona a função Kitchen Timer, presente na geladeira Panasonic NR-BB64PV1X/B. Qual argumento de venda devemos utilizar para gerar encantamento com essa função?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXz69E9uQ2cd1Q0mD",
+    "answer": "A produção leva 120 minutos com capacidade de 276 cubos",
+    "importedAt": 1793023800246,
+    "options": [
+      "A produção leva 30 minutos com capacidade de 300 cubos",
+      "A produção leva 50 minutos com capacidade de 300 cubos",
+      "A produção leva 60 minutos com capacidade de 600 cubos",
+      "A produção leva 120 minutos com capacidade de 276 cubos"
+    ],
+    "question": "Consumidor ficou encantado com a geladeira UniqGlass DB69 Panasonic, em especial sobre a facilidade da máquina de gelo automática com tanque interno, dispensando ponto de água, e perguntou em quanto tempo produz uma forma de gelo, quantos gelos cubos suporta o dispense?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXz8dbs-4kwzlWplH",
+    "answer": "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)",
+    "importedAt": 1793023800405,
+    "options": [
+      "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)",
+      "610mm (61cm) (Largura), 1410mm (141cm)(Altura), 690mm (69cm) (Profundidade)",
+      "640mm (64cm) (Largura), 1440mm (144cm) (Altura), 690mm (69cm) (Profundidade)",
+      "600mm (60cm) (Largura), 1060mm (144cm) (Altura), 690mm (69cm) (Profundidade)"
+    ],
+    "question": "Qual a Largura x Altura x Profundidade da máquina de lavar NA-F150, com a tampa aberta segundo o manual?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzBZEMZxoYQwnbKY",
+    "answer": "Extra Enxague",
+    "importedAt": 1793023800592,
+    "options": [
+      "Extra Enxague",
+      "Tira-Manchas"
+    ],
+    "question": "Das funções abaixo somente uma não é possível combinar (adicionar) com o programa rápido no máquina de lavar NA-F150B1?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzEBzWr5il1VDLNk",
+    "answer": "Centrifugar ou \"Turbo Secagem\" não funciona.",
+    "importedAt": 1793023800760,
+    "options": [
+      "Trava de Segurança foi ativada.",
+      "Centrifugar ou \"Turbo Secagem\" não funciona.",
+      "A tampa está aberta.",
+      "Água não é fornecida."
+    ],
+    "question": "Consumidor quer saber o que significa o erro da lavadora F150B1 onde ficam piscando as luzes Baixo, Enxaguar e Centrifugar. O que significa esse erro?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzGgTlwySadlgxCd",
+    "answer": "2 Enxagues",
+    "importedAt": 1793023800920,
+    "options": [
+      "3 Enxagues",
+      "2 Enxagues",
+      "1 Enxague",
+      "4 Enxagues"
+    ],
+    "question": "O Cliente deseja saber quantos enxagues teremos no programa \"Dia a Dia\", na máquina de lavar NA-F150?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzJBb6HZ9IdjVdft",
+    "answer": "600 Rpm",
+    "importedAt": 1793023801080,
+    "options": [
+      "700 Rpm",
+      "760 Rpm",
+      "590 Rpm",
+      "600 Rpm"
+    ],
+    "question": "Sobre a centrifugação na lavadora NA-F190G1, o cliente gostaria de saber a velocidade de centrifugação?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzLfRKtL6x6u_qn0",
+    "answer": "02Kg",
+    "importedAt": 1793023801239,
+    "options": [
+      "01Kg",
+      "02Kg",
+      "03Kg",
+      "04Kg"
+    ],
+    "question": "Caso o cliente use o programa de lavagem Edredom com o nível médio de água escolhido, é recomendado que estas peças tenham até qual peso máximo segundo o manual da máquina de lavar NA-F150?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzO8ucmkCuc10cjS",
+    "answer": "03 horas a 24 horas",
+    "importedAt": 1793023801397,
+    "options": [
+      "01 hora a 24 horas",
+      "02 horas a 24 horas",
+      "03 horas a 24 horas",
+      "Para este programa de lavagem esta função não esta disponível"
+    ],
+    "question": "Segundo manual da máquina de lavar NA-F190G1 é possível definir a quantidade de horas que o programa será concluído com a função tempo de espera, sabendo isso no programa \"Jeans\" é possível escolher entre?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzQhWKIhtmQ3jcBc",
+    "answer": "até 8kgs de roupa",
+    "importedAt": 1793023801561,
+    "options": [
+      "até 8kgs de roupa",
+      "até 15kgs de roupa",
+      "até 19kgs de roupa",
+      "até 12kgs de roupa"
+    ],
+    "question": "Consumidor adquiriu uma lavadora F190G1 e gostaria de saber até quantos kg de roupa ele pode lavar no ciclo Pet?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzTAYeEknY5aQF6F",
+    "answer": "até 4kgs de roupa",
+    "importedAt": 1793023801719,
+    "options": [
+      "até 8kgs de roupa",
+      "até 10kgs de roupa",
+      "até 6kgs de roupa",
+      "até 4kgs de roupa"
+    ],
+    "question": "Consumidor adquiriu uma lavadora F190G1 e gostaria de saber até quantos kg de roupa ele pode lavar no Delicado?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzVebr7Kx2aCy3nS",
+    "answer": "Água foi drenada a força (Trava de Segurança)",
+    "importedAt": 1793023801878,
+    "options": [
+      "A tensão da fonte de alimentação é muito alta.",
+      "O peso das roupas está desnivelado no cesto.",
+      "Água foi drenada a força (Trava de Segurança)",
+      "A tampa está aberta."
+    ],
+    "question": "Consumidor entrou em contato com a loja pois a sua lavadora F190G1 está apresentando o Erro U99. Qual o motivo desse erro?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzY8pADD8WHd9VWb",
+    "answer": "3",
+    "importedAt": 1793023802037,
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "question": "O cliente comprou o micro-ondas NN-GT68, porém ele esta com uma dúvida, quantos níveis de \"Grill\" tem este modelo?",
+    "series": "Avançado",
+    "title": "O cliente comprou o micro-onda",
+    "updatedAt": 1793023881584
+  },
+  {
+    "id": "-P4sXz_dbwXwsoBTWrOk",
+    "answer": "Sim",
+    "importedAt": 1793023802197,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Preciso comprar um micro-ondas onde o peso sem embalagem seja de 12,9 Kg, é correto indicar o modelo NN-ST55 para este cliente?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzc839jDynG4iqSG",
+    "answer": "Não",
+    "importedAt": 1793023802357,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "Preciso comprar um micro-ondas com altura 291 mm, é correto indicar o modelo NN-ST27 para este cliente?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzeb40B9cF93Vwwo",
+    "answer": "Todas alternativas corretas.",
+    "importedAt": 1793023802515,
+    "options": [
+      "Ao pressionar a tecla Grill, no visor aparecerá: do1, do2 ou do3",
+      "O Grill é obtido através de raios infravermelhos, portanto, somente as partes expostas terão alteração de cor.",
+      "Na função Grill, a resistência trabalha em ciclo liga/desliga.",
+      "Todas alternativas corretas."
+    ],
+    "question": "Com relação a função grill do modelo NN-GT68 é correto afirmar:",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzh69WinodzpCnGE",
+    "answer": "Nível 3 (combinado 3)",
+    "importedAt": 1793023802675,
+    "options": [
+      "Nível 1 (combinado 1)",
+      "Nível 2 (combinado 2)",
+      "Nível 3 (combinado 3)",
+      "Nível 4 (combinado 4)"
+    ],
+    "question": "Existem 4 níveis na função combinado no NN-CD89, qual nível devemos escolher para cozimento de carnes, peixes e vegetais no micro-ondas?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzjbjShAY1NKML9s",
+    "answer": "Este utensílio deve ser utilizado somente durante o uso das teclas do Combinado e Grill.",
+    "importedAt": 1793023802835,
+    "options": [
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Combinado e Grill.",
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Auto descongelamento e Grill.",
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Auto reaquecimento e Grill.",
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Arroz e Grill."
+    ],
+    "question": "Das informações abaixo sobre a grelha suporte presente no micro-ondas NN-GT68, qual podemos considerar correta?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzm5oQnTasZFYJtb",
+    "answer": "Ao posicionar a grelha nos quatro suportes, não use a grelha encostada na paredes do forno, caso contrário, comprometerá o uso do mesmo. Utilize-a somente encaixada com os suportes fornecidos.",
+    "importedAt": 1793023802993,
+    "options": [
+      "Aqueça alimentos diretamente sobre a grelha para não sujar louça.",
+      "Pode utilizar a grelha enquanto estourar pipoca, ela não irá atrapalhar esse processo, e não apresentará riscos.",
+      "Ao posicionar a grelha nos quatro suportes, não use a grelha encostada na paredes do forno, caso contrário, comprometerá o uso do mesmo. Utilize-a somente encaixada com os suportes fornecidos.",
+      "A grelha é segura para colocar recipientes de metal em cima dela, use sem medo."
+    ],
+    "question": "De acordo com as observações de segurança para o uso da função Dupla Refeição no micro-ondas ST66, qual das alternativas abaixo está correta?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzo_BuqIZmgnBseO",
+    "answer": "Função Mudo: Pressionar tecla potencia por 4 segundos",
+    "importedAt": 1793023803153,
+    "options": [
+      "Função Mudo: Pressionar tecla potencia por 4 segundos",
+      "Modo Silêncio: Pressionar a tecla cancelar por 4 segundos",
+      "Aviso Fácil: Pressionar a tecla ligar por 6 segundos",
+      "Aviso Fácil: Pressionar a tecla ligar por 4 segundos"
+    ],
+    "question": "Qual recurso permite silenciar os sinais de fim de preparo no micro-ondas Panasonic NN-ST65, como ativar e desativar essa função?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzr4vwgzkqa7GsSk",
+    "answer": "1200W",
+    "importedAt": 1793023803313,
+    "options": [
+      "900W",
+      "1000W",
+      "1100W",
+      "1200W"
+    ],
+    "question": "Qual a potência do grill do micro-ondas Airfryer CD89?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXztYyVP6o4GOxMDm",
+    "answer": "27 cm",
+    "importedAt": 1793023803471,
+    "options": [
+      "27 cm",
+      "24 cm",
+      "30 cm",
+      "32cm"
+    ],
+    "question": "Qual o diâmetro do prato giratório do micro-ondas Panasonic NN ST25LW?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzw22s-UV3Ojc_Pv",
+    "answer": "Sim",
+    "importedAt": 1793023803631,
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "question": "O cliente na loja para perguntar sobre o Forno Elétrico HL-CX668SRPK, ele gostaria de saber se a luz do forno acenderá em todas as funções, posso afirmar que vai ou não acender?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sXzyY5_GcVj33tibX",
+    "answer": "220°C",
+    "importedAt": 1793023803791,
+    "options": [
+      "210°C",
+      "180°C",
+      "60°C",
+      "220°C"
+    ],
+    "question": "O cliente gostaria de saber a temperatura padrão na função \"Convencional com ventilador\" no forno elétrico HL-CX668SRPK?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sY-00uB3KSUBRPR54",
+    "answer": "Nível 7-7,5",
+    "importedAt": 1793023803949,
+    "options": [
+      "Nível 7-8",
+      "Nível 3-4",
+      "Nível 6-7",
+      "Nível 7-7,5"
+    ],
+    "question": "No cooktop KY-T937XLRPK, qual o nível manual de aquecimento adequado para ovos fritos segundo o manual?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sY-2WL9tXTtFA6mv-",
+    "answer": "Transbordamento (Vazamento na lava-louças).",
+    "importedAt": 1793023804109,
+    "options": [
+      "Transbordamento (Vazamento na lava-louças).",
+      "Tempo de Entrada Longo (Torneira não está aberta, entrada de água restrita ou pessão da água muito baixa).",
+      "Falha de distribuição da valvula distribuidora. (Circuito aberto ou queda da válvula distribuidora).",
+      "Tocar em um botão por mais de 30 segundos. (Água ou algo no botão)."
+    ],
+    "question": "O cliente gostaria de saber o que significa o erro E4 na Lava Louças NP-6M2FTKBRP?",
+    "series": "Avançado"
+  },
+  {
+    "id": "-P4sY-4znD-U9lJ0M8Qy",
+    "answer": "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+    "importedAt": 1793023804267,
+    "options": [
+      "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+      "Fervura Automática, Cocção em baixa temperatura.",
+      "Fritura normal, Fritura pesada (imersão)/leve (rasa).",
+      "Somente Fervura Automática."
+    ],
+    "question": "Com relação ao cooktop inteligente KY-T937XLRPK, podemos dizer que nas zonas de cocção da esquerda onde temos o Genius Sensor e Sensor + vai ser possível usar os seguintes modos?",
+    "series": "Avançado"
+  }
+]

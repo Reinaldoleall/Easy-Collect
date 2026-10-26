@@ -1,0 +1,24 @@
+[
+  {
+    "question": "Qual tecnologia exclusiva da Panasonic elimina odores e microrganismos no ar por meio de radicais OH?",
+    "options": [
+      "Nanoe™ X",
+      "Turbo Cool",
+      "Inverter Plus",
+      "Eco Flow"
+    ],
+    "answer": "Nanoe™ X",
+    "series": "Básico"
+  },
+  {
+    "question": "A principal vantagem da tecnologia Panasonic Inverter é:",
+    "options": [
+      "Ajustar a rotação de forma contínua proporcionando alta eficiência energética",
+      "Desligar o compressor a cada ciclo de 5 minutos",
+      "Aumentar o ruído sonoro para indicar refrigeração",
+      "Funcionar exclusivamente em 110V"
+    ],
+    "answer": "Ajustar a rotação de forma contínua proporcionando alta eficiência energética",
+    "series": "Básico"
+  }
+]

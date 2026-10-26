@@ -1,0 +1,374 @@
+[
+  {
+    "question": "O cliente entra na loja para perguntar quantos litros úteis de refrigerador, nós temos na geladeira NR-BT44?",
+    "options": [
+      "333 litros",
+      "295 litros",
+      "368 litros",
+      "441 litros"
+    ],
+    "answer": "295 litros",
+    "series": "Avançado"
+  },
+  {
+    "question": "O cliente gostaria de saber qual a distância mínima nas laterais para a instalação do refrigerador NR-BT58, segundo manual posso afirmar que deve ser?",
+    "options": [
+      "7cm",
+      "6cm",
+      "5cm",
+      "8cm"
+    ],
+    "answer": "5cm",
+    "series": "Avançado"
+  },
+  {
+    "question": "Para saber se a função Turbo da geladeira NR-BT44 está ativa, os LEDs acima do botão freezer control devem estar?",
+    "options": [
+      "Apenas 1 LED aceso",
+      "Com 2 LEDs Acesos",
+      "Com 3 LEDs Acesos",
+      "Nenhum LED aceso"
+    ],
+    "answer": "Com 3 LEDs Acesos",
+    "series": "Avançado"
+  },
+  {
+    "question": "O cliente chegou com a seguinte dúvida em loja, com relação ao modo \"Compras\" da geladeira NR-BT58, qual o tempo mínimo de funcionamento do modo assim que ativado?",
+    "options": [
+      "4 horas",
+      "6 horas",
+      "1 hora",
+      "7 horas"
+    ],
+    "answer": "1 hora",
+    "series": "Avançado"
+  },
+  {
+    "question": "Na geladeira NR-BT71 é possível cancelar a função \"Turbo\"?",
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "answer": "Sim",
+    "series": "Avançado"
+  },
+  {
+    "question": "Qual a altura da geladeira NR-BT58, pois preciso saber se cabe na minha cozinha?",
+    "options": [
+      "1790mm (179cm)",
+      "1750mm (175cm)",
+      "1780mm (178cm)",
+      "1760mm (176cm)"
+    ],
+    "answer": "1750mm (175cm)",
+    "series": "Avançado"
+  },
+  {
+    "question": "Com relação a temperatura do compartimento freezer da geladeira NR-BT58, podemos afirmar que em dias de condições normais de utilização o freezer vai trabalhar com temperaturas entre -17°C a -22°C?",
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "answer": "Sim",
+    "series": "Avançado"
+  },
+  {
+    "question": "Qual função devo selecionar para resfriar o leite do bebê utilizando a função Prime Freezer na geladeira Panasonic UniqGlass DB69?",
+    "options": [
+      "Cool Down de 3 a 5 minutos.",
+      "Quick Cooling 10 a 15 minutos.",
+      "Rapind Freezer 45 a 60 Minutos"
+    ],
+    "answer": "Cool Down de 3 a 5 minutos.",
+    "series": "Avançado"
+  },
+  {
+    "question": "Consumidor ficou curioso sobre como funciona a função Kitchen Timer, presente na geladeira Panasonic NR-BB64PV1X/B. Qual argumento de venda devemos utilizar para gerar encantamento com essa função?",
+    "options": [
+      "A função Kitchen Timer acelera o congelamento do freezer, preservando os alimentos congelados mais rapidamente.",
+      "A função Kitchen Timer acelera o resfriamento do refrigerador, preservando frutas, verduras e legumes com mais eficiência.",
+      "A função Kitchen Timer não altera o funcionamento da geladeira. é um temporizador personalizável de 1 a 99 minutos, que facilita o dia a dia de forma prática e versátil, servido de timer para qualquer coisa que o consumidor precisar.",
+      "A função Kitchen Timer ajuda na preservação dos alimentos por mais tempo."
+    ],
+    "answer": "A função Kitchen Timer não altera o funcionamento da geladeira. é um temporizador personalizável de 1 a 99 minutos, que facilita o dia a dia de forma prática e versátil, servido de timer para qualquer coisa que o consumidor precisar.",
+    "series": "Avançado"
+  },
+  {
+    "question": "Consumidor ficou encantado com a geladeira UniqGlass DB69 Panasonic, em especial sobre a facilidade da máquina de gelo automática com tanque interno, dispensando ponto de água, e perguntou em quanto tempo produz uma forma de gelo, quantos gelos cubos suporta o dispense?",
+    "options": [
+      "A produção leva 30 minutos com capacidade de 300 cubos",
+      "A produção leva 50 minutos com capacidade de 300 cubos",
+      "A produção leva 60 minutos com capacidade de 600 cubos",
+      "A produção leva 120 minutos com capacidade de 276 cubos"
+    ],
+    "answer": "A produção leva 120 minutos com capacidade de 276 cubos",
+    "series": "Avançado"
+  },
+  {
+    "question": "Qual a Largura x Altura x Profundidade da máquina de lavar NA-F150, com a tampa aberta segundo o manual?",
+    "options": [
+      "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)",
+      "610mm (61cm) (Largura), 1410mm (141cm)(Altura), 690mm (69cm) (Profundidade)",
+      "640mm (64cm) (Largura), 1440mm (144cm) (Altura), 690mm (69cm) (Profundidade)",
+      "600mm (60cm) (Largura), 1060mm (144cm) (Altura), 690mm (69cm) (Profundidade)"
+    ],
+    "answer": "600mm (60cm) (Largura), 1410mm (141cm) (Altura), 690mm (69cm) (Profundidade)",
+    "series": "Avançado"
+  },
+  {
+    "question": "Das funções abaixo somente uma não é possível combinar (adicionar) com o programa rápido no máquina de lavar NA-F150B1?",
+    "options": [
+      "Extra Enxague",
+      "Tira-Manchas"
+    ],
+    "answer": "Extra Enxague",
+    "series": "Avançado"
+  },
+  {
+    "question": "Consumidor quer saber o que significa o erro da lavadora F150B1 onde ficam piscando as luzes Baixo, Enxaguar e Centrifugar. O que significa esse erro?",
+    "options": [
+      "Trava de Segurança foi ativada.",
+      "Centrifugar ou \"Turbo Secagem\" não funciona.",
+      "A tampa está aberta.",
+      "Água não é fornecida."
+    ],
+    "answer": "Centrifugar ou \"Turbo Secagem\" não funciona.",
+    "series": "Avançado"
+  },
+  {
+    "question": "O Cliente deseja saber quantos enxagues teremos no programa \"Dia a Dia\", na máquina de lavar NA-F150?",
+    "options": [
+      "3 Enxagues",
+      "2 Enxagues",
+      "1 Enxague",
+      "4 Enxagues"
+    ],
+    "answer": "2 Enxagues",
+    "series": "Avançado"
+  },
+  {
+    "question": "Sobre a centrifugação na lavadora NA-F190G1, o cliente gostaria de saber a velocidade de centrifugação?",
+    "options": [
+      "700 Rpm",
+      "760 Rpm",
+      "590 Rpm",
+      "600 Rpm"
+    ],
+    "answer": "600 Rpm",
+    "series": "Avançado"
+  },
+  {
+    "question": "Caso o cliente use o programa de lavagem Edredom com o nível médio de água escolhido, é recomendado que estas peças tenham até qual peso máximo segundo o manual da máquina de lavar NA-F150?",
+    "options": [
+      "01Kg",
+      "02Kg",
+      "03Kg",
+      "04Kg"
+    ],
+    "answer": "02Kg",
+    "series": "Avançado"
+  },
+  {
+    "question": "Segundo manual da máquina de lavar NA-F190G1 é possível definir a quantidade de horas que o programa será concluído com a função tempo de espera, sabendo isso no programa \"Jeans\" é possível escolher entre?",
+    "options": [
+      "01 hora a 24 horas",
+      "02 horas a 24 horas",
+      "03 horas a 24 horas",
+      "Para este programa de lavagem esta função não esta disponível"
+    ],
+    "answer": "03 horas a 24 horas",
+    "series": "Avançado"
+  },
+  {
+    "question": "Consumidor adquiriu uma lavadora F190G1 e gostaria de saber até quantos kg de roupa ele pode lavar no ciclo Pet?",
+    "options": [
+      "até 8kgs de roupa",
+      "até 15kgs de roupa",
+      "até 19kgs de roupa",
+      "até 12kgs de roupa"
+    ],
+    "answer": "até 8kgs de roupa",
+    "series": "Avançado"
+  },
+  {
+    "question": "Consumidor adquiriu uma lavadora F190G1 e gostaria de saber até quantos kg de roupa ele pode lavar no Delicado?",
+    "options": [
+      "até 8kgs de roupa",
+      "até 10kgs de roupa",
+      "até 6kgs de roupa",
+      "até 4kgs de roupa"
+    ],
+    "answer": "até 4kgs de roupa",
+    "series": "Avançado"
+  },
+  {
+    "question": "Consumidor entrou em contato com a loja pois a sua lavadora F190G1 está apresentando o Erro U99. Qual o motivo desse erro?",
+    "options": [
+      "A tensão da fonte de alimentação é muito alta.",
+      "O peso das roupas está desnivelado no cesto.",
+      "Água foi drenada a força (Trava de Segurança)",
+      "A tampa está aberta."
+    ],
+    "answer": "Água foi drenada a força (Trava de Segurança)",
+    "series": "Avançado"
+  },
+  {
+    "question": "O cliente comprou o micro-ondas NN-GT68, porém ele esta com uma dúvida, quantos níveis de \"Grill\" tem este modelo?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "series": "Avançado"
+  },
+  {
+    "question": "Preciso comprar um micro-ondas onde o peso sem embalagem seja de 12,9 Kg, é correto indicar o modelo NN-ST55 para este cliente?",
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "answer": "Sim",
+    "series": "Avançado"
+  },
+  {
+    "question": "Preciso comprar um micro-ondas com altura 291 mm, é correto indicar o modelo NN-ST27 para este cliente?",
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "answer": "Não",
+    "series": "Avançado"
+  },
+  {
+    "question": "Com relação a função grill do modelo NN-GT68 é correto afirmar:",
+    "options": [
+      "Ao pressionar a tecla Grill, no visor aparecerá: do1, do2 ou do3",
+      "O Grill é obtido através de raios infravermelhos, portanto, somente as partes expostas terão alteração de cor.",
+      "Na função Grill, a resistência trabalha em ciclo liga/desliga.",
+      "Todas alternativas corretas."
+    ],
+    "answer": "Todas alternativas corretas.",
+    "series": "Avançado"
+  },
+  {
+    "question": "Existem 4 níveis na função combinado no NN-CD89, qual nível devemos escolher para cozimento de carnes, peixes e vegetais no micro-ondas?",
+    "options": [
+      "Nível 1 (combinado 1)",
+      "Nível 2 (combinado 2)",
+      "Nível 3 (combinado 3)",
+      "Nível 4 (combinado 4)"
+    ],
+    "answer": "Nível 3 (combinado 3)",
+    "series": "Avançado"
+  },
+  {
+    "question": "Das informações abaixo sobre a grelha suporte presente no micro-ondas NN-GT68, qual podemos considerar correta?",
+    "options": [
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Combinado e Grill.",
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Auto descongelamento e Grill.",
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Auto reaquecimento e Grill.",
+      "Este utensílio deve ser utilizado somente durante o uso das teclas do Arroz e Grill."
+    ],
+    "answer": "Este utensílio deve ser utilizado somente durante o uso das teclas do Combinado e Grill.",
+    "series": "Avançado"
+  },
+  {
+    "question": "De acordo com as observações de segurança para o uso da função Dupla Refeição no micro-ondas ST66, qual das alternativas abaixo está correta?",
+    "options": [
+      "Aqueça alimentos diretamente sobre a grelha para não sujar louça.",
+      "Pode utilizar a grelha enquanto estourar pipoca, ela não irá atrapalhar esse processo, e não apresentará riscos.",
+      "Ao posicionar a grelha nos quatro suportes, não use a grelha encostada na paredes do forno, caso contrário, comprometerá o uso do mesmo. Utilize-a somente encaixada com os suportes fornecidos.",
+      "A grelha é segura para colocar recipientes de metal em cima dela, use sem medo."
+    ],
+    "answer": "Ao posicionar a grelha nos quatro suportes, não use a grelha encostada na paredes do forno, caso contrário, comprometerá o uso do mesmo. Utilize-a somente encaixada com os suportes fornecidos.",
+    "series": "Avançado"
+  },
+  {
+    "question": "Qual recurso permite silenciar os sinais de fim de preparo no micro-ondas Panasonic NN-ST65, como ativar e desativar essa função?",
+    "options": [
+      "Função Mudo: Pressionar tecla potencia por 4 segundos",
+      "Modo Silêncio: Pressionar a tecla cancelar por 4 segundos",
+      "Aviso Fácil: Pressionar a tecla ligar por 6 segundos",
+      "Aviso Fácil: Pressionar a tecla ligar por 4 segundos"
+    ],
+    "answer": "Função Mudo: Pressionar tecla potencia por 4 segundos",
+    "series": "Avançado"
+  },
+  {
+    "question": "Qual a potência do grill do micro-ondas Airfryer CD89?",
+    "options": [
+      "900W",
+      "1000W",
+      "1100W",
+      "1200W"
+    ],
+    "answer": "1200W",
+    "series": "Avançado"
+  },
+  {
+    "question": "Qual o diâmetro do prato giratório do micro-ondas Panasonic NN ST25LW?",
+    "options": [
+      "27 cm",
+      "24 cm",
+      "30 cm",
+      "32cm"
+    ],
+    "answer": "27 cm",
+    "series": "Avançado"
+  },
+  {
+    "question": "O cliente na loja para perguntar sobre o Forno Elétrico HL-CX668SRPK, ele gostaria de saber se a luz do forno acenderá em todas as funções, posso afirmar que vai ou não acender?",
+    "options": [
+      "Sim",
+      "Não"
+    ],
+    "answer": "Sim",
+    "series": "Avançado"
+  },
+  {
+    "question": "O cliente gostaria de saber a temperatura padrão na função \"Convencional com ventilador\" no forno elétrico HL-CX668SRPK?",
+    "options": [
+      "210°C",
+      "180°C",
+      "60°C",
+      "220°C"
+    ],
+    "answer": "220°C",
+    "series": "Avançado"
+  },
+  {
+    "question": "No cooktop KY-T937XLRPK, qual o nível manual de aquecimento adequado para ovos fritos segundo o manual?",
+    "options": [
+      "Nível 7-8",
+      "Nível 3-4",
+      "Nível 6-7",
+      "Nível 7-7,5"
+    ],
+    "answer": "Nível 7-7,5",
+    "series": "Avançado"
+  },
+  {
+    "question": "O cliente gostaria de saber o que significa o erro E4 na Lava Louças NP-6M2FTKBRP?",
+    "options": [
+      "Transbordamento (Vazamento na lava-louças).",
+      "Tempo de Entrada Longo (Torneira não está aberta, entrada de água restrita ou pessão da água muito baixa).",
+      "Falha de distribuição da valvula distribuidora. (Circuito aberto ou queda da válvula distribuidora).",
+      "Tocar em um botão por mais de 30 segundos. (Água ou algo no botão)."
+    ],
+    "answer": "Transbordamento (Vazamento na lava-louças).",
+    "series": "Avançado"
+  },
+  {
+    "question": "Com relação ao cooktop inteligente KY-T937XLRPK, podemos dizer que nas zonas de cocção da esquerda onde temos o Genius Sensor e Sensor + vai ser possível usar os seguintes modos?",
+    "options": [
+      "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+      "Fervura Automática, Cocção em baixa temperatura.",
+      "Fritura normal, Fritura pesada (imersão)/leve (rasa).",
+      "Somente Fervura Automática."
+    ],
+    "answer": "Fervura Automática, Cocção em baixa temperatura, Fritura normal, Fritura pesada (imersão)/ leve (rasa).",
+    "series": "Avançado"
+  }
+]

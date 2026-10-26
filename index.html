@@ -35,102 +35,322 @@
     <!-- Chart.js for High-End Interactive Analytics & Comparisons -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
-    <style>
-        :root {
+        <style>
+        /* ======================================================== */
+        /* DESIGN TOKENS & ELEVATION SYSTEM                         */
+        /* Modo Noite (Dark Mode) & Modo Dia (Light Mode)           */
+        /* ======================================================== */
+        :root, [data-theme="dark"] {
             --brand-primary: #3b82f6;
             --brand-indigo: #6366f1;
             --brand-emerald: #10b981;
             --brand-amber: #f59e0b;
             --brand-rose: #f43f5e;
-            --bg-dark: #0b0f19;
-            --bg-card: #131b2e;
-            --border-card: #1e293b;
+            
+            /* Dark Surfaces & Hierarchy */
+            --bg-dark: #070b14;
+            --bg-card: #111a2e;
+            --bg-card-sub: #0c1220;
+            --bg-card-hover: #16223b;
+            --border-card: #283752;
+            --border-sub: #1f2c42;
+            --border-focus: #3b82f6;
+            --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.65), 0 2px 6px -1px rgba(0, 0, 0, 0.45);
+            
+            /* Typography */
+            --text-heading: #ffffff;
+            --text-body: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            
+            /* Buttons */
+            --btn-sec-bg: #1e293b;
+            --btn-sec-hover: #2e3e57;
+            --btn-sec-border: #475569;
+            --btn-sec-text: #ffffff;
+            
+            /* Form inputs */
+            --input-bg: #0c1220;
+            --input-border: #3b4d6b;
+            --input-text: #ffffff;
+            --input-placeholder: #94a3b8;
+            
+            /* Tables */
+            --tbl-header-bg: #0c1322;
+            --tbl-header-text: #f1f5f9;
+            --tbl-border: #1e2b42;
+            --tbl-row-alt: rgba(255, 255, 255, 0.025);
+            --tbl-row-hover: rgba(59, 130, 246, 0.14);
+        }
+
+        [data-theme="light"] {
+            --brand-primary: #2563eb;
+            --brand-indigo: #4f46e5;
+            --brand-emerald: #059669;
+            --brand-amber: #d97706;
+            --brand-rose: #e11d48;
+            
+            /* Light Surfaces & Hierarchy */
+            --bg-dark: #f1f5f9;
+            --bg-card: #ffffff;
+            --bg-card-sub: #f8fafc;
+            --bg-card-hover: #f1f5f9;
+            --border-card: #cbd5e1;
+            --border-sub: #e2e8f0;
+            --border-focus: #2563eb;
+            --card-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+            
+            /* Typography */
+            --text-heading: #0f172a;
+            --text-body: #0f172a;
+            --text-secondary: #334155;
+            --text-muted: #475569;
+            
+            /* Buttons */
+            --btn-sec-bg: #ffffff;
+            --btn-sec-hover: #f1f5f9;
+            --btn-sec-border: #cbd5e1;
+            --btn-sec-text: #0f172a;
+            
+            /* Form inputs */
+            --input-bg: #ffffff;
+            --input-border: #cbd5e1;
+            --input-text: #0f172a;
+            --input-placeholder: #64748b;
+            
+            /* Tables */
+            --tbl-header-bg: #f8fafc;
+            --tbl-header-text: #0f172a;
+            --tbl-border: #e2e8f0;
+            --tbl-row-alt: #f8fafc;
+            --tbl-row-hover: #eff6ff;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg-dark);
-            color: #f1f5f9;
+            color: var(--text-body);
             overscroll-behavior-y: none;
             -webkit-tap-highlight-color: transparent;
         }
 
         /* Custom Modern Scrollbars */
-        ::-webkit-scrollbar { width: 5px; height: 5px; }
-        ::-webkit-scrollbar-track { background: #0b0f19; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 9999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: #3b4d6b; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
 
         /* Animation utilities */
         @keyframes pulse-subtle {
             0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.65; transform: scale(0.98); }
+            50% { opacity: 0.85; transform: scale(1.02); }
         }
-        .animate-pulse-subtle { animation: pulse-subtle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .animate-pulse-subtle { animation: pulse-subtle 2.5s infinite ease-in-out; }
 
-        @keyframes float-subtle {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-3px); }
-        }
-        .animate-float { animation: float-subtle 4s ease-in-out infinite; }
-
-        /* Glassmorphism surfaces */
-        .glass-panel {
-            background: rgba(19, 27, 46, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
+        /* Card Elevations & Glassmorphism */
         .glass-header {
-            background: rgba(11, 15, 25, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        
+        .glass-panel {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-card);
+            box-shadow: var(--card-shadow);
         }
 
-        /* Active Nav indicator */
+        .chart-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-card);
+            box-shadow: var(--card-shadow);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--brand-primary), var(--brand-indigo), transparent);
+            opacity: 0.8;
+        }
+
+        /* Nav active item */
         .nav-item-active {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(99, 102, 241, 0.15));
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(99, 102, 241, 0.18)) !important;
             color: #60a5fa !important;
-            border-color: rgba(96, 165, 250, 0.4);
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+            border-color: rgba(96, 165, 250, 0.45) !important;
+            box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.3) !important;
         }
 
-        /* Mobile bottom nav safe padding (generoso para nunca cortar botões ou produtos) */
-        @media (max-width: 767px) {
-            main {
-                padding-bottom: calc(160px + env(safe-area-inset-bottom)) !important;
-            }
-        }
-
-        /* Animações e Estilos de Modais e Bottom Sheets Estilo App */
-        @keyframes slideUpSheet {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .animate-sheet-up {
-            animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
+        /* App Picker Trigger Button */
         .app-picker-trigger {
-            transition: all 0.15s ease-in-out;
+            background-color: var(--input-bg);
+            border: 1px solid var(--input-border);
+            color: var(--input-text);
+            transition: all 0.2s ease;
         }
-        .app-picker-trigger:active {
-            transform: scale(0.985);
+        .app-picker-trigger:hover {
+            border-color: var(--border-focus);
+        }
+
+        /* Dark Mode High-Contrast Rules */
+        :root .text-slate-100, :root .text-white,
+        [data-theme="dark"] .text-slate-100, [data-theme="dark"] .text-white {
+            color: #ffffff !important;
+        }
+        :root .text-slate-200,
+        [data-theme="dark"] .text-slate-200 {
+            color: #f1f5f9 !important;
+        }
+        :root .text-slate-300,
+        [data-theme="dark"] .text-slate-300 {
+            color: #e2e8f0 !important;
+        }
+        :root .text-slate-400,
+        [data-theme="dark"] .text-slate-400 {
+            color: #cbd5e1 !important;
+        }
+        :root .text-slate-500,
+        [data-theme="dark"] .text-slate-500 {
+            color: #94a3b8 !important;
+        }
+
+        /* Secondary buttons in Dark Mode */
+        :root button.bg-slate-800, :root button.bg-slate-900,
+        [data-theme="dark"] button.bg-slate-800, [data-theme="dark"] button.bg-slate-900 {
+            background-color: var(--btn-sec-bg) !important;
+            border: 1px solid var(--btn-sec-border) !important;
+            color: var(--btn-sec-text) !important;
+        }
+        :root button.bg-slate-800:hover, :root button.bg-slate-900:hover,
+        [data-theme="dark"] button.bg-slate-800:hover, [data-theme="dark"] button.bg-slate-900:hover {
+            background-color: var(--btn-sec-hover) !important;
+            border-color: #64748b !important;
+        }
+
+        /* Form Inputs & Selects in Dark Mode */
+        :root input:not([type="checkbox"]):not([type="radio"]), :root select, :root textarea,
+        [data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]), [data-theme="dark"] select, [data-theme="dark"] textarea {
+            background-color: var(--input-bg) !important;
+            border: 1px solid var(--input-border) !important;
+            color: var(--input-text) !important;
+        }
+        :root input::placeholder, :root textarea::placeholder,
+        [data-theme="dark"] input::placeholder, [data-theme="dark"] textarea::placeholder {
+            color: var(--input-placeholder) !important;
+            opacity: 1 !important;
+        }
+
+        /* Table Design in Dark Mode */
+        :root table thead tr, [data-theme="dark"] table thead tr {
+            background-color: var(--tbl-header-bg) !important;
+            color: var(--tbl-header-text) !important;
+            border-bottom: 2px solid #334460 !important;
+            font-weight: 700 !important;
+        }
+        :root table tbody tr, [data-theme="dark"] table tbody tr {
+            border-bottom: 1px solid var(--tbl-border) !important;
+        }
+        :root table tbody tr:nth-child(even), [data-theme="dark"] table tbody tr:nth-child(even) {
+            background-color: var(--tbl-row-alt) !important;
+        }
+        :root table tbody tr:hover, [data-theme="dark"] table tbody tr:hover {
+            background-color: var(--tbl-row-hover) !important;
+        }
+
+        /* Badges in Dark Mode */
+        :root .bg-emerald-500\/15, :root .bg-emerald-500\/20,
+        [data-theme="dark"] .bg-emerald-500\/15, [data-theme="dark"] .bg-emerald-500\/20 {
+            background-color: rgba(16, 185, 129, 0.22) !important;
+            color: #6ee7b7 !important;
+            border: 1px solid rgba(52, 211, 153, 0.45) !important;
+            font-weight: 700 !important;
+        }
+        :root .bg-amber-500\/10, :root .bg-amber-500\/15, :root .bg-amber-500\/20,
+        [data-theme="dark"] .bg-amber-500\/10, [data-theme="dark"] .bg-amber-500\/15, [data-theme="dark"] .bg-amber-500\/20 {
+            background-color: rgba(245, 158, 11, 0.22) !important;
+            color: #fde047 !important;
+            border: 1px solid rgba(251, 191, 36, 0.45) !important;
+            font-weight: 700 !important;
+        }
+        :root .bg-orange-500\/10, :root .bg-orange-500\/15, :root .bg-orange-500\/20,
+        [data-theme="dark"] .bg-orange-500\/10, [data-theme="dark"] .bg-orange-500\/15, [data-theme="dark"] .bg-orange-500\/20 {
+            background-color: rgba(249, 115, 22, 0.22) !important;
+            color: #fdba74 !important;
+            border: 1px solid rgba(251, 146, 60, 0.45) !important;
+            font-weight: 700 !important;
+        }
+        :root .bg-red-500\/15, :root .bg-red-500\/20, :root .bg-rose-500\/10, :root .bg-rose-500\/20,
+        [data-theme="dark"] .bg-red-500\/15, [data-theme="dark"] .bg-red-500\/20, [data-theme="dark"] .bg-rose-500\/10, [data-theme="dark"] .bg-rose-500\/20 {
+            background-color: rgba(244, 63, 94, 0.22) !important;
+            color: #fda4af !important;
+            border: 1px solid rgba(251, 113, 133, 0.45) !important;
+            font-weight: 700 !important;
+        }
+        :root .bg-blue-500\/10, :root .bg-blue-500\/15, :root .bg-blue-500\/20, :root .bg-blue-600\/30,
+        [data-theme="dark"] .bg-blue-500\/10, [data-theme="dark"] .bg-blue-500\/15, [data-theme="dark"] .bg-blue-500\/20, [data-theme="dark"] .bg-blue-600\/30 {
+            background-color: rgba(37, 99, 235, 0.25) !important;
+            color: #93c5fd !important;
+            border: 1px solid rgba(96, 165, 250, 0.45) !important;
+            font-weight: 700 !important;
+        }
+        :root .bg-cyan-500\/10, :root .bg-cyan-500\/15, :root .bg-cyan-500\/20,
+        [data-theme="dark"] .bg-cyan-500\/10, [data-theme="dark"] .bg-cyan-500\/15, [data-theme="dark"] .bg-cyan-500\/20 {
+            background-color: rgba(6, 182, 212, 0.22) !important;
+            color: #67e8f9 !important;
+            border: 1px solid rgba(34, 211, 238, 0.45) !important;
+            font-weight: 700 !important;
+        }
+        :root .bg-purple-500\/10, :root .bg-purple-500\/15, :root .bg-purple-500\/20,
+        [data-theme="dark"] .bg-purple-500\/10, [data-theme="dark"] .bg-purple-500\/15, [data-theme="dark"] .bg-purple-500\/20 {
+            background-color: rgba(168, 85, 247, 0.22) !important;
+            color: #e9d5ff !important;
+            border: 1px solid rgba(192, 132, 252, 0.45) !important;
+            font-weight: 700 !important;
+        }
+
+        /* Modals in Dark Mode */
+        :root #app-picker-modal > div:last-child,
+        :root #modal-multi-product-compare > div,
+        :root #modal-item-history > div,
+        :root #modal-edit-store > div,
+        :root #modal-confirm > div,
+        :root #modal-quick-price > div,
+        :root #modal-quick-stock > div,
+        :root #modal-edit-product > div,
+        :root #mobile-drawer > div:last-child,
+        [data-theme="dark"] #app-picker-modal > div:last-child,
+        [data-theme="dark"] #modal-multi-product-compare > div,
+        [data-theme="dark"] #modal-item-history > div,
+        [data-theme="dark"] #modal-edit-store > div,
+        [data-theme="dark"] #modal-confirm > div,
+        [data-theme="dark"] #modal-quick-price > div,
+        [data-theme="dark"] #modal-quick-stock > div,
+        [data-theme="dark"] #modal-edit-product > div,
+        [data-theme="dark"] #mobile-drawer > div:last-child {
+            background-color: #111a2e !important;
+            border: 2px solid #334460 !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85) !important;
+        }
+
+        /* Toast Notifications in Dark Mode */
+        #toast-container > div {
+            border-radius: 1rem !important;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid #283752 !important;
+            border-left-width: 4px !important;
         }
 
         /* ======================================================== */
-        /* IMPRESSÃO EXECUTIVA EM ALTA RESOLUÇÃO (PRINT ENGINE)     */
+        /* PRINT ENGINE                                             */
         /* ======================================================== */
         @media print {
-            aside,
-            header,
-            nav,
-            #mobile-drawer,
-            #app-picker-modal,
-            .print-hide,
-            button:not(.print-allow),
-            .no-print {
+            aside, header, nav, #mobile-drawer, #app-picker-modal, .print-hide, button:not(.print-allow), .no-print {
                 display: none !important;
             }
             body, html {
@@ -139,170 +359,452 @@
                 overflow: visible !important;
                 height: auto !important;
             }
-            main {
-                max-width: 100% !important;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-            .glass-panel {
-                background: #ffffff !important;
-                border: 1px solid #cbd5e1 !important;
-                box-shadow: none !important;
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-            .chart-card {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-            .print-header {
-                display: block !important;
-            }
-            canvas {
-                max-width: 100% !important;
-            }
+            main { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+            .glass-panel { background: #ffffff !important; border: 1px solid #cbd5e1 !important; box-shadow: none !important; }
+            .chart-card { break-inside: avoid; page-break-inside: avoid; }
+            .print-header { display: block !important; }
+            canvas { max-width: 100% !important; }
         }
-        .print-header {
-            display: none;
-        }
+        .print-header { display: none; }
 
         /* ======================================================== */
-        /* MODO DIA / MODO NOITE (LIGHT / DARK SYSTEM)             */
+        /* MODO DIA (LIGHT THEME) — REESTRUTURAÇÃO COMPLETA         */
         /* ======================================================== */
-        [data-theme="light"] {
-            --bg-dark: #f8fafc;
-            --bg-card: #ffffff;
-            --border-card: #e2e8f0;
-        }
-
         [data-theme="light"] body {
-            background-color: #f8fafc !important;
-            color: #0f172a !important;
+            background-color: var(--bg-dark) !important;
+            color: var(--text-body) !important;
         }
 
         [data-theme="light"] aside {
             background-color: #ffffff !important;
-            border-color: #e2e8f0 !important;
+            border-color: #cbd5e1 !important;
         }
 
         [data-theme="light"] .glass-header {
-            background: rgba(255, 255, 255, 0.95) !important;
-            border-bottom: 1px solid #e2e8f0 !important;
+            background: rgba(255, 255, 255, 0.98) !important;
+            border-bottom: 1px solid #cbd5e1 !important;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05) !important;
         }
 
+        /* TODOS OS CARTÕES E PAINÉIS PRINCIPAIS EM MODO CLARO */
         [data-theme="light"] .glass-panel,
+        [data-theme="light"] .chart-card,
         [data-theme="light"] .bg-\[\#131b2e\],
         [data-theme="light"] .bg-\[\#090d16\],
         [data-theme="light"] .bg-\[\#0b0f19\] {
             background-color: #ffffff !important;
-            border-color: #e2e8f0 !important;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+            border-color: #cbd5e1 !important;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04) !important;
         }
 
-        [data-theme="light"] .bg-slate-900,
-        [data-theme="light"] .bg-slate-950,
-        [data-theme="light"] .bg-slate-900\/80,
-        [data-theme="light"] .bg-slate-950\/60,
-        [data-theme="light"] .bg-slate-900\/60,
-        [data-theme="light"] .bg-slate-900\/40,
-        [data-theme="light"] .bg-slate-800\/60,
-        [data-theme="light"] .bg-slate-800\/80,
-        [data-theme="light"] .bg-slate-800 {
+        /* TODOS OS BLOCOS INTERNOS SLATE (Qualquer opacidade /90, /80, /60, /50, /40) */
+        [data-theme="light"] [class*="bg-slate-9"],
+        [data-theme="light"] [class*="bg-slate-8"]:not(button):not([class*="bg-emerald"]):not([class*="bg-blue"]):not([class*="bg-red"]):not([class*="bg-cyan"]):not([class*="bg-amber"]),
+        [data-theme="light"] [class*="bg-slate-7"]:not(button):not([class*="bg-emerald"]):not([class*="bg-blue"]):not([class*="bg-red"]):not([class*="bg-cyan"]):not([class*="bg-amber"]),
+        [data-theme="light"] [class*="bg-blue-950"],
+        [data-theme="light"] [class*="bg-cyan-950"]:not(tr) {
+            background-color: #f8fafc !important;
+            border-color: #e2e8f0 !important;
+        }
+
+        /* BORDAS & DIVISORES EM MODO CLARO */
+        [data-theme="light"] [class*="border-slate-8"],
+        [data-theme="light"] [class*="border-slate-7"],
+        [data-theme="light"] [class*="border-slate-9"],
+        [data-theme="light"] [class*="divide-slate-8"] > * + * {
+            border-color: #e2e8f0 !important;
+        }
+
+        /* ESTADOS DE HOVER EM MODO CLARO — NUNCA MAIS ESCURO */
+        [data-theme="light"] [class*="hover:bg-slate-"]:hover,
+        [data-theme="light"] [class*="hover:bg-slate-"]:focus,
+        [data-theme="light"] [class*="hover:bg-slate-"]:active {
             background-color: #f1f5f9 !important;
-            border-color: #e2e8f0 !important;
         }
 
-        [data-theme="light"] .text-white,
-        [data-theme="light"] .text-slate-100,
-        [data-theme="light"] .text-slate-200 {
+        /* CARDS DA LISTA DE CONSULTA (MOBILE) */
+        [data-theme="light"] #consulta-mobile-list > div {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+        }
+        [data-theme="light"] #consulta-mobile-list > div:hover,
+        [data-theme="light"] #consulta-mobile-list > div:active {
+            background-color: #f8fafc !important;
+        }
+
+        /* BLOCO DE ESTOQUE NO CARD MOBILE */
+        [data-theme="light"] #consulta-mobile-list [class*="bg-slate-950"],
+        [data-theme="light"] [class*="bg-slate-950/50"] {
+            background-color: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+        }
+        [data-theme="light"] [class*="bg-slate-950/50"] span.text-slate-400 {
+            color: #334155 !important;
+            font-weight: 700 !important;
+        }
+
+        /* BADGE SEM ESTOQUE */
+        [data-theme="light"] .bg-slate-800.text-slate-400,
+        [data-theme="light"] span.bg-slate-800 {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #475569 !important;
+            font-weight: 700 !important;
+        }
+
+        /* 4 BOXES DE MÉTRICAS DO SISTEMA (TAB MAIS) */
+        [data-theme="light"] .grid .bg-slate-900\/90,
+        [data-theme="light"] .grid [class*="bg-slate-900"],
+        [data-theme="light"] .grid [class*="bg-slate-950"] {
+            background-color: #f8fafc !important;
+            border: 1px solid #cbd5e1 !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+        }
+        [data-theme="light"] .grid [class*="bg-slate-900"] span,
+        [data-theme="light"] .grid [class*="bg-slate-900\/90"] span,
+        [data-theme="light"] .grid [class*="bg-slate-950"] span {
+            color: #475569 !important;
+            font-weight: 800 !important;
+        }
+
+        /* TEXTOS GERAIS EM MODO CLARO */
+        [data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, [data-theme="light"] h4,
+        [data-theme="light"] h5, [data-theme="light"] h6 {
             color: #0f172a !important;
         }
-
+        [data-theme="light"] .text-slate-100, [data-theme="light"] .text-slate-200 {
+            color: #0f172a !important;
+        }
         [data-theme="light"] .text-slate-300 {
             color: #1e293b !important;
         }
-
         [data-theme="light"] .text-slate-400 {
-            color: #475569 !important;
-        }
-
-        [data-theme="light"] .text-slate-500 {
-            color: #64748b !important;
-        }
-
-        [data-theme="light"] .border-slate-800,
-        [data-theme="light"] .border-slate-800\/80,
-        [data-theme="light"] .border-slate-700,
-        [data-theme="light"] .border-slate-700\/80,
-        [data-theme="light"] .border-slate-700\/60 {
-            border-color: #e2e8f0 !important;
-        }
-
-        [data-theme="light"] input,
-        [data-theme="light"] select,
-        [data-theme="light"] textarea {
-            background-color: #ffffff !important;
-            color: #0f172a !important;
-            border-color: #cbd5e1 !important;
-        }
-
-        [data-theme="light"] input::placeholder,
-        [data-theme="light"] textarea::placeholder {
-            color: #94a3b8 !important;
-        }
-
-        [data-theme="light"] table thead tr {
-            background-color: #f1f5f9 !important;
             color: #334155 !important;
-            border-color: #e2e8f0 !important;
+            font-weight: 600;
+        }
+        [data-theme="light"] .text-slate-500 {
+            color: #475569 !important;
+            font-weight: 600;
         }
 
-        [data-theme="light"] table tbody tr {
-            border-color: #f1f5f9 !important;
-        }
-
-        [data-theme="light"] table tbody tr:hover {
-            background-color: #f8fafc !important;
-        }
-
-        [data-theme="light"] nav.fixed.bottom-0 {
-            background-color: rgba(255, 255, 255, 0.96) !important;
-            border-top: 1px solid #e2e8f0 !important;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05) !important;
-        }
-
-        [data-theme="light"] #mobile-drawer > div:last-child {
-            background-color: #ffffff !important;
-            border-color: #e2e8f0 !important;
-        }
-
-        [data-theme="light"] .nav-item-active {
-            background: #eff6ff !important;
-            color: #2563eb !important;
-            border-color: #bfdbfe !important;
-            box-shadow: 0 1px 3px rgba(37, 99, 235, 0.1) !important;
-        }
-
-        [data-theme="light"] #theme-toggle-btn {
-            background-color: #ffffff !important;
-            border-color: #e2e8f0 !important;
+        /* PREÇOS & TEXT-WHITE EM MODO CLARO */
+        [data-theme="light"] div.text-white,
+        [data-theme="light"] p.text-white,
+        [data-theme="light"] td.text-white,
+        [data-theme="light"] th.text-white,
+        [data-theme="light"] .font-extrabold.text-white,
+        [data-theme="light"] span.text-white:not([class*="bg-"]):not([class*="from-"]) {
             color: #0f172a !important;
         }
 
-        [data-theme="light"] #app-picker-modal > div:last-child {
-            background-color: #ffffff !important;
-            border-color: #e2e8f0 !important;
+        /* CORES DE ACENTO EM MODO CLARO (VIBRANTES E ESCURAS) */
+        [data-theme="light"] .text-blue-400, [data-theme="light"] .text-blue-300 {
+            color: #1d4ed8 !important;
+            font-weight: 700;
+        }
+        [data-theme="light"] .text-emerald-400, [data-theme="light"] .text-emerald-300 {
+            color: #047857 !important;
+            font-weight: 700;
+        }
+        [data-theme="light"] .text-cyan-400, [data-theme="light"] .text-cyan-300 {
+            color: #0e7490 !important;
+            font-weight: 700;
+        }
+        [data-theme="light"] .text-amber-400, [data-theme="light"] .text-amber-300, [data-theme="light"] .text-yellow-400, [data-theme="light"] .text-orange-400, [data-theme="light"] .text-orange-300 {
+            color: #b45309 !important;
+            font-weight: 700;
+        }
+        [data-theme="light"] .text-rose-400, [data-theme="light"] .text-rose-300, [data-theme="light"] .text-red-400, [data-theme="light"] .text-red-300 {
+            color: #be123c !important;
+            font-weight: 700;
+        }
+        [data-theme="light"] .text-purple-400, [data-theme="light"] .text-purple-300 {
+            color: #7e22ce !important;
+            font-weight: 700;
+        }
+        [data-theme="light"] .text-indigo-400, [data-theme="light"] .text-indigo-300 {
+            color: #4338ca !important;
+            font-weight: 700;
         }
 
+        /* BOTÕES DE AÇÃO RÁPIDA NOS CARDS (PREÇO, ESTOQUE, LOG) */
+        [data-theme="light"] .bg-blue-600\/20,
+        [data-theme="light"] button.bg-blue-600\/20 {
+            background-color: #eff6ff !important;
+            border: 1px solid #93c5fd !important;
+            color: #1d4ed8 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] .bg-blue-600\/20 *,
+        [data-theme="light"] button.bg-blue-600\/20 * {
+            color: #1d4ed8 !important;
+        }
+        [data-theme="light"] button.bg-blue-600\/20:hover {
+            background-color: #2563eb !important;
+            border-color: #2563eb !important;
+            color: #ffffff !important;
+        }
+        [data-theme="light"] button.bg-blue-600\/20:hover * {
+            color: #ffffff !important;
+        }
+
+        [data-theme="light"] .bg-cyan-600\/20,
+        [data-theme="light"] button.bg-cyan-600\/20 {
+            background-color: #ecfeff !important;
+            border: 1px solid #67e8f9 !important;
+            color: #0e7490 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] .bg-cyan-600\/20 *,
+        [data-theme="light"] button.bg-cyan-600\/20 * {
+            color: #0e7490 !important;
+        }
+        [data-theme="light"] button.bg-cyan-600\/20:hover {
+            background-color: #0891b2 !important;
+            border-color: #0891b2 !important;
+            color: #ffffff !important;
+        }
+        [data-theme="light"] button.bg-cyan-600\/20:hover * {
+            color: #ffffff !important;
+        }
+
+        [data-theme="light"] .bg-amber-500\/15,
+        [data-theme="light"] button.bg-amber-500\/15 {
+            background-color: #fffbeb !important;
+            border: 1px solid #fde68a !important;
+            color: #b45309 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] .bg-amber-500\/15 *,
+        [data-theme="light"] button.bg-amber-500\/15 * {
+            color: #b45309 !important;
+        }
+        [data-theme="light"] button.bg-amber-500\/15:hover {
+            background-color: #d97706 !important;
+            border-color: #d97706 !important;
+            color: #ffffff !important;
+        }
+        [data-theme="light"] button.bg-amber-500\/15:hover * {
+            color: #ffffff !important;
+        }
+
+        /* BADGES PASTÉIS EM MODO CLARO */
+        [data-theme="light"] .bg-blue-500\/10, [data-theme="light"] .bg-blue-500\/15, [data-theme="light"] .bg-blue-500\/20, [data-theme="light"] .bg-blue-600\/30 {
+            background-color: #eff6ff !important;
+            border: 1px solid #bfdbfe !important;
+            color: #1d4ed8 !important;
+        }
+        [data-theme="light"] .bg-emerald-500\/10, [data-theme="light"] .bg-emerald-500\/15, [data-theme="light"] .bg-emerald-500\/20 {
+            background-color: #ecfdf5 !important;
+            border: 1px solid #a7f3d0 !important;
+            color: #047857 !important;
+        }
+        [data-theme="light"] .bg-cyan-500\/10, [data-theme="light"] .bg-cyan-500\/15, [data-theme="light"] .bg-cyan-500\/20 {
+            background-color: #ecfeff !important;
+            border: 1px solid #a5f3fc !important;
+            color: #0e7490 !important;
+        }
+        [data-theme="light"] .bg-amber-500\/10, [data-theme="light"] .bg-amber-500\/20 {
+            background-color: #fffbeb !important;
+            border: 1px solid #fde68a !important;
+            color: #b45309 !important;
+        }
+        [data-theme="light"] .bg-orange-500\/10, [data-theme="light"] .bg-orange-500\/15, [data-theme="light"] .bg-orange-500\/20 {
+            background-color: #fff7ed !important;
+            border: 1px solid #fed7aa !important;
+            color: #c2410c !important;
+        }
+        [data-theme="light"] .bg-rose-500\/10, [data-theme="light"] .bg-rose-500\/20, [data-theme="light"] .bg-red-500\/15, [data-theme="light"] .bg-red-500\/20 {
+            background-color: #fef2f2 !important;
+            border: 1px solid #fecdd3 !important;
+            color: #be123c !important;
+        }
+        [data-theme="light"] .bg-purple-500\/10, [data-theme="light"] .bg-purple-500\/15, [data-theme="light"] .bg-purple-500\/20 {
+            background-color: #faf5ff !important;
+            border: 1px solid #e9d5ff !important;
+            color: #7e22ce !important;
+        }
+
+        /* APENAS BOTÕES SÓLIDOS PRIMÁRIOS MANTÊM TEXTO BRANCO */
+        button.bg-blue-600:not([class*="/"]),
+        button.bg-emerald-600:not([class*="/"]),
+        button.bg-red-600:not([class*="/"]),
+        button.bg-cyan-600:not([class*="/"]),
+        button.bg-indigo-600:not([class*="/"]),
+        button.bg-purple-600:not([class*="/"]),
+        button[class*="from-blue-"]:not([class*="/"]),
+        button[class*="from-cyan-"]:not([class*="/"]),
+        [data-theme="light"] button.bg-blue-600:not([class*="/"]),
+        [data-theme="light"] button.bg-emerald-600:not([class*="/"]),
+        [data-theme="light"] button.bg-red-600:not([class*="/"]),
+        [data-theme="light"] button.bg-cyan-600:not([class*="/"]),
+        [data-theme="light"] button.bg-indigo-600:not([class*="/"]),
+        [data-theme="light"] button.bg-purple-600:not([class*="/"]),
+        [data-theme="light"] button[class*="from-blue-"]:not([class*="/"]),
+        [data-theme="light"] button[class*="from-cyan-"]:not([class*="/"]) {
+            color: #ffffff !important;
+        }
+        [data-theme="light"] button.bg-blue-600:not([class*="/"]) *,
+        [data-theme="light"] button.bg-emerald-600:not([class*="/"]) *,
+        [data-theme="light"] button.bg-red-600:not([class*="/"]) *,
+        [data-theme="light"] button.bg-cyan-600:not([class*="/"]) *,
+        [data-theme="light"] button.bg-indigo-600:not([class*="/"]) *,
+        [data-theme="light"] button.bg-purple-600:not([class*="/"]) *,
+        [data-theme="light"] button[class*="from-blue-"]:not([class*="/"]) *,
+        [data-theme="light"] button[class*="from-cyan-"]:not([class*="/"]) * {
+            color: #ffffff !important;
+        }
+
+        /* BOTÕES SECUNDÁRIOS EM MODO CLARO */
+        [data-theme="light"] button.bg-slate-800, [data-theme="light"] button.bg-slate-900,
+        [data-theme="light"] button[class*="hover:bg-slate-700"]:not([class*="bg-cyan"]):not([class*="bg-blue"]):not([class*="bg-emerald"]):not([class*="bg-red"]):not([class*="from-"]):not([class*="app-picker-trigger"]) {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #0f172a !important;
+            font-weight: 600 !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+        }
+        [data-theme="light"] button.bg-slate-800:hover, [data-theme="light"] button.bg-slate-900:hover {
+            background-color: #f1f5f9 !important;
+            border-color: #64748b !important;
+            color: #0f172a !important;
+        }
+
+        /* INPUTS & SELECTS EM MODO CLARO */
         [data-theme="light"] .app-picker-trigger {
             background-color: #ffffff !important;
-            border-color: #cbd5e1 !important;
+            border: 1px solid #cbd5e1 !important;
             color: #0f172a !important;
+            font-weight: 600 !important;
+        }
+        [data-theme="light"] .app-picker-trigger i { color: #475569 !important; }
+        [data-theme="light"] .app-picker-trigger:hover { border-color: #2563eb !important; }
+        [data-theme="light"] input, [data-theme="light"] select, [data-theme="light"] textarea {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border: 1px solid #cbd5e1 !important;
+        }
+        [data-theme="light"] input::placeholder, [data-theme="light"] textarea::placeholder {
+            color: #64748b !important;
+            opacity: 1 !important;
         }
 
+        /* TABELAS EM MODO CLARO */
+        [data-theme="light"] tr.bg-cyan-950\/20, [data-theme="light"] .bg-cyan-950\/20 {
+            background-color: #e0f2fe !important;
+        }
+        [data-theme="light"] table thead tr {
+            background-color: #f8fafc !important;
+            color: #0f172a !important;
+            border-bottom: 2px solid #cbd5e1 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] table tbody tr {
+            border-bottom: 1px solid #e2e8f0 !important;
+        }
+        [data-theme="light"] table tbody tr:nth-child(even) {
+            background-color: #f8fafc !important;
+        }
+        [data-theme="light"] table tbody tr:hover {
+            background-color: #eff6ff !important;
+        }
+
+        /* MODAIS EM MODO CLARO */
+        [data-theme="light"] #app-picker-modal > div:last-child,
+        [data-theme="light"] #modal-multi-product-compare > div,
+        [data-theme="light"] #modal-item-history > div,
+        [data-theme="light"] #modal-edit-store > div,
+        [data-theme="light"] #modal-confirm > div,
+        [data-theme="light"] #modal-quick-price > div,
+        [data-theme="light"] #modal-quick-stock > div,
+        [data-theme="light"] #modal-edit-product > div {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25) !important;
+        }
         [data-theme="light"] #picker-search-container {
             background-color: #f8fafc !important;
             border-color: #e2e8f0 !important;
+        }
+
+        /* MOBILE DRAWER EM MODO CLARO */
+        [data-theme="light"] #mobile-drawer > div:last-child {
+            background-color: #ffffff !important;
+            border-right: 1px solid #cbd5e1 !important;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25) !important;
+        }
+        [data-theme="light"] #mobile-drawer nav button {
+            background-color: transparent !important;
+            color: #0f172a !important;
+        }
+        [data-theme="light"] #mobile-drawer nav button:hover,
+        [data-theme="light"] #mobile-drawer nav button:focus,
+        [data-theme="light"] #mobile-drawer nav button:active {
+            background-color: #eff6ff !important;
+            color: #1d4ed8 !important;
+        }
+        [data-theme="light"] #mobile-drawer nav button span {
+            color: inherit !important;
+        }
+        [data-theme="light"] #mobile-drawer .border-slate-800 {
+            border-color: #e2e8f0 !important;
+        }
+        [data-theme="light"] #mobile-drawer [class*="bg-slate-800"],
+        [data-theme="light"] #mobile-drawer [class*="bg-slate-900"] {
+            background-color: #f8fafc !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+        }
+
+        /* HEADER PILLS & TOGGLES */
+        #top-connection-pill {
+            display: none !important;
+        }
+        [data-theme="light"] #theme-toggle-btn {
+            background-color: #ffffff !important;
+            border-color: #cbd5e1 !important;
+            color: #0f172a !important;
+        }
+        [data-theme="light"] #theme-toggle-btn span {
+            color: #0f172a !important;
+        }
+
+        /* TOASTS EM MODO CLARO */
+        [data-theme="light"] #toast-container > div {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border: 1px solid #cbd5e1 !important;
+            border-left-width: 4px !important;
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.2) !important;
+        }
+        [data-theme="light"] #toast-container > div.bg-red-950\/90 {
+            background-color: #fef2f2 !important;
+            border-color: #f87171 !important;
+            color: #991b1b !important;
+        }
+        [data-theme="light"] #toast-container > div span {
+            color: #0f172a !important;
+        }
+
+        /* NAVEGAÇÃO ATIVA & BOTTOM DOCK EM MODO CLARO */
+        [data-theme="light"] .nav-item-active {
+            background: #eff6ff !important;
+            color: #1d4ed8 !important;
+            border-color: #93c5fd !important;
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.15) !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] nav.fixed.bottom-0 {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            border-top: 1px solid #cbd5e1 !important;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05) !important;
+        }
+        [data-theme="light"] nav.fixed.bottom-0 button {
+            color: #64748b;
+        }
+        [data-theme="light"] nav.fixed.bottom-0 button.font-bold,
+        [data-theme="light"] nav.fixed.bottom-0 button.text-blue-400 {
+            color: #1d4ed8 !important;
         }
 
         [data-theme="light"] ::-webkit-scrollbar-track { background: #f8fafc; }
@@ -493,10 +995,10 @@
                     <span class="sm:hidden">Instalar</span>
                 </button>
 
-                <!-- Status Pill Nuvem/Offline -->
-                <div id="top-connection-pill" class="inline-flex items-center gap-1.5 bg-slate-900 border border-slate-700/80 px-2.5 py-1 rounded-full text-[10px]">
-                    <span id="top-status-dot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span id="top-status-text" class="text-slate-300 font-semibold hidden sm:inline">Online</span>
+                <!-- Status Pill Nuvem/Offline (Oculto no Topo) -->
+                <div id="top-connection-pill" class="hidden" style="display: none !important;" aria-hidden="true">
+                    <span id="top-status-dot"></span>
+                    <span id="top-status-text"></span>
                 </div>
 
                 <!-- Botão Rápido "+ Preços & Estoque" -->
@@ -2117,28 +2619,56 @@
                 <div class="w-12 h-1.5 bg-slate-700/80 rounded-full"></div>
             </div>
             <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                <div>
-                    <h3 class="font-bold text-white text-sm">Atualizar Preço</h3>
-                    <p id="quick-price-item-name" class="text-xs text-blue-400 font-medium truncate"></p>
-                    <p id="quick-price-sku-display" class="text-[10px] text-slate-400 font-mono mt-0.5 truncate"></p>
-                </div>
-                <button onclick="window.app.closeModal('modal-quick-price')" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            <div class="space-y-3">
-                <div class="flex justify-between text-xs bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
-                    <span class="text-slate-400">Preço Atual:</span>
-                    <strong id="quick-price-current-display" class="text-white font-bold">R$ 0,00</strong>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Novo Preço (R$) *</label>
-                    <div class="relative">
-                        <span class="absolute left-3 top-2.5 text-xs text-slate-500 font-bold">R$</span>
-                        <input type="number" inputmode="decimal" step="0.01" id="quick-price-input" placeholder="0.00" class="w-full rounded-xl border border-slate-700 pl-9 pr-3 py-2 text-sm font-bold bg-slate-900 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <h3 class="font-bold text-white text-sm">Atualizar Preço da Loja</h3>
+                        <p id="quick-price-item-name" class="text-xs text-blue-400 font-medium truncate"></p>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <button onclick="window.app.closeModal('modal-quick-price')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2.5 rounded-xl font-semibold">Cancelar</button>
-                    <button id="btn-quick-price-save" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs py-2.5 rounded-xl font-bold shadow-md shadow-emerald-600/20">Salvar Preço</button>
+                <button type="button" onclick="window.app.closeModal('modal-quick-price')" class="text-slate-400 hover:text-white p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div class="space-y-3">
+                <div class="text-[11px] text-slate-300 font-medium">
+                    <span id="quick-price-store-name" class="text-white font-bold block"></span>
+                    <span id="quick-price-sku-display" class="text-[10px] text-slate-400 font-mono block"></span>
+                </div>
+
+                <!-- Card de Preço Atual e Variação -->
+                <div class="grid grid-cols-2 gap-2 text-center bg-slate-900/80 p-2.5 rounded-xl border border-slate-800">
+                    <div>
+                        <span class="block text-[9px] text-slate-400 uppercase font-bold">Preço Atual</span>
+                        <strong id="quick-price-current-display" class="text-xs font-mono font-bold text-white mt-1 block">R$ 0,00</strong>
+                    </div>
+                    <div>
+                        <span class="block text-[9px] text-slate-400 uppercase font-bold">Variação</span>
+                        <div id="quick-price-diff-display" class="mt-1"><span class="text-[10px] text-slate-500">—</span></div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-200 mb-1">Novo Preço (R$) *</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-2.5 text-xs text-slate-500 font-bold">R$</span>
+                        <input type="text" inputmode="decimal" id="quick-price-input" placeholder="0,00" class="w-full rounded-xl border border-slate-700 pl-9 pr-3 py-2 text-sm font-bold bg-slate-900 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                    <!-- Atalhos de Preço -->
+                    <div class="flex items-center gap-1.5 mt-2">
+                        <button type="button" onclick="window.app.adjustInputPrice('quick-price-input', 0, -1)" class="flex-1 py-1 text-[11px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700">-1,00</button>
+                        <button type="button" onclick="window.app.adjustInputPrice('quick-price-input', 0, -0.10)" class="flex-1 py-1 text-[11px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700">-0,10</button>
+                        <button type="button" onclick="window.app.adjustInputPrice('quick-price-input', 0, 0.10)" class="flex-1 py-1 text-[11px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700">+0,10</button>
+                        <button type="button" onclick="window.app.adjustInputPrice('quick-price-input', 0, 1)" class="flex-1 py-1 text-[11px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700">+1,00</button>
+                        <button type="button" onclick="window.app.setPriceEnding99('quick-price-input')" class="flex-1 py-1 text-[11px] font-bold bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white rounded-lg border border-blue-500/30">,99</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 pt-1">
+                    <button type="button" onclick="window.app.closeModal('modal-quick-price')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2.5 rounded-xl font-semibold transition">Cancelar</button>
+                    <button type="button" id="btn-quick-price-save" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs py-2.5 rounded-xl font-bold shadow-md shadow-emerald-600/20 transition flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-check text-xs"></i> Salvar Preço
+                    </button>
                 </div>
             </div>
         </div>
@@ -3495,6 +4025,7 @@
             input.value = val;
             input.dispatchEvent(new Event('input', { bubbles: true }));
             input.focus();
+            input.select();
             vibrate(10);
         }
 
@@ -3507,6 +4038,34 @@
             input.value = updated;
             input.dispatchEvent(new Event('input', { bubbles: true }));
             input.focus();
+            input.select();
+            vibrate(10);
+        }
+
+        function adjustInputPrice(inputId, baseFallback, delta) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+            let cur = parseFloat((input.value || '').replace(',', '.').trim());
+            if (isNaN(cur)) cur = baseFallback || 0;
+            const updated = Math.max(0.01, cur + delta);
+            input.value = updated.toFixed(2).replace('.', ',');
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.focus();
+            input.select();
+            vibrate(10);
+        }
+
+        function setPriceEnding99(inputId) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+            let cur = parseFloat((input.value || '').replace(',', '.').trim());
+            if (isNaN(cur) || cur <= 0) cur = 0;
+            const intPart = Math.floor(cur);
+            const updated = intPart + 0.99;
+            input.value = updated.toFixed(2).replace('.', ',');
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.focus();
+            input.select();
             vibrate(10);
         }
 
@@ -3516,10 +4075,23 @@
             activeQuickPrice = { storeId, productId };
             const st = state.stores.find(s => s.id === storeId);
             const pr = state.products.find(p => p.id === productId);
+            const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === productId);
             const skuInfo = getProductDisplaySku(pr, st);
 
-            document.getElementById('quick-price-item-name').textContent = productName;
-            document.getElementById('quick-price-current-display').textContent = formatBRL(currentPrice);
+            const prodName = productName || pr?.name || 'Produto';
+            const price = (currentPrice !== undefined && currentPrice !== null) ? currentPrice : sp?.currentPrice;
+            const numPrice = (price !== null && price !== undefined && price !== '') ? Number(price) : null;
+
+            const nameEl = document.getElementById('quick-price-item-name');
+            if (nameEl) nameEl.textContent = prodName;
+
+            const storeNameEl = document.getElementById('quick-price-store-name');
+            if (storeNameEl) {
+                storeNameEl.textContent = st ? `${st.name} (${st.uf}) • ${st.revendaId}` : '';
+            }
+
+            const curDisplayEl = document.getElementById('quick-price-current-display');
+            if (curDisplayEl) curDisplayEl.textContent = formatBRL(price);
 
             const skuDisplayEl = document.getElementById('quick-price-sku-display');
             if (skuDisplayEl) {
@@ -3529,17 +4101,68 @@
             }
 
             const input = document.getElementById('quick-price-input');
-            input.value = currentPrice ? currentPrice.toFixed(2) : '';
-            
-            document.getElementById('btn-quick-price-save').onclick = () => {
-                const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === productId);
-                const brandId = sp?.brandId || pr?.brandId || '';
-                saveProductPrice(storeId, productId, brandId, 'quick-price-input');
-                closeModal('modal-quick-price');
+            const updateDiffPreview = () => {
+                const diffEl = document.getElementById('quick-price-diff-display');
+                if (!diffEl) return;
+                const raw = (input ? input.value : '').replace(',', '.').trim();
+                const newPrice = parseFloat(raw);
+                if (isNaN(newPrice) || newPrice <= 0) {
+                    diffEl.innerHTML = `<span class="text-[10px] text-slate-500">—</span>`;
+                    return;
+                }
+                if (numPrice === null || numPrice <= 0) {
+                    diffEl.innerHTML = `<span class="text-[10px] text-cyan-400 font-bold bg-cyan-500/15 border border-cyan-500/30 px-2 py-0.5 rounded">Novo Preço</span>`;
+                    return;
+                }
+                const diff = newPrice - numPrice;
+                const pct = ((newPrice - numPrice) / numPrice) * 100;
+                if (Math.abs(diff) < 0.005) {
+                    diffEl.innerHTML = `<span class="text-[10px] text-slate-400 font-medium">Estável</span>`;
+                } else if (diff > 0) {
+                    diffEl.innerHTML = `<span class="text-[10px] text-red-400 font-bold bg-red-500/15 border border-red-500/30 px-2 py-0.5 rounded">📈 +${pct.toFixed(1)}% (+${formatBRL(diff)})</span>`;
+                } else {
+                    diffEl.innerHTML = `<span class="text-[10px] text-emerald-400 font-bold bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 rounded">📉 ${pct.toFixed(1)}% (${formatBRL(diff)})</span>`;
+                }
             };
 
-            document.getElementById('modal-quick-price').classList.remove('hidden');
-            setTimeout(() => input.focus(), 100);
+            const saveBtn = document.getElementById('btn-quick-price-save');
+            if (saveBtn) {
+                saveBtn.onclick = () => {
+                    const latestSp = state.storePrices.find(x => x.storeId === storeId && x.productId === productId);
+                    const brandId = latestSp?.brandId || pr?.brandId || '';
+                    saveProductPrice(storeId, productId, brandId, 'quick-price-input');
+                    closeModal('modal-quick-price');
+                };
+            }
+
+            if (input) {
+                input.value = numPrice ? numPrice.toFixed(2).replace('.', ',') : '';
+                input.oninput = updateDiffPreview;
+                input.onkeydown = (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (saveBtn) saveBtn.click();
+                    } else if (e.key === 'Escape') {
+                        e.preventDefault();
+                        closeModal('modal-quick-price');
+                    }
+                };
+            }
+            updateDiffPreview();
+
+            const modal = document.getElementById('modal-quick-price');
+            if (modal) {
+                modal.onclick = (e) => {
+                    if (e.target === modal) closeModal('modal-quick-price');
+                };
+                modal.classList.remove('hidden');
+            }
+            if (input) {
+                setTimeout(() => {
+                    input.focus();
+                    input.select();
+                }, 100);
+            }
         }
 
         // Modal de Auditoria Rápida de Estoque & Ruptura
@@ -3548,11 +4171,24 @@
             activeQuickStock = { storeId, productId };
             const st = state.stores.find(s => s.id === storeId);
             const pr = state.products.find(p => p.id === productId);
+            const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === productId);
             const skuInfo = getProductDisplaySku(pr, st);
-            const cur = (currentStock !== undefined && currentStock !== null && currentStock !== '') ? Number(currentStock) : null;
-            const prev = (previousStock !== undefined && previousStock !== null && previousStock !== '') ? Number(previousStock) : null;
 
-            document.getElementById('quick-stock-item-name').textContent = productName;
+            const prodName = productName || pr?.name || 'Produto';
+            const cur = (currentStock !== undefined && currentStock !== null && currentStock !== '') 
+                ? Number(currentStock) 
+                : (sp && sp.currentStock !== undefined && sp.currentStock !== null && sp.currentStock !== '' ? Number(sp.currentStock) : null);
+            const prev = (previousStock !== undefined && previousStock !== null && previousStock !== '') 
+                ? Number(previousStock) 
+                : (sp && sp.previousStock !== undefined && sp.previousStock !== null && sp.previousStock !== '' ? Number(sp.previousStock) : null);
+
+            const nameEl = document.getElementById('quick-stock-item-name');
+            if (nameEl) nameEl.textContent = prodName;
+
+            const storeNameEl = document.getElementById('quick-stock-store-name');
+            if (storeNameEl) {
+                storeNameEl.textContent = st ? `${st.name} (${st.uf}) • ${st.revendaId}` : '';
+            }
 
             const skuDisplayEl = document.getElementById('quick-stock-sku-display');
             if (skuDisplayEl) {
@@ -3562,17 +4198,32 @@
             }
 
             const stBadge = getStockStatus(cur);
-            document.getElementById('quick-stock-current-badge').innerHTML = `<span class="text-[11px] px-2.5 py-0.5 rounded-full border ${stBadge.badgeClass}">${stBadge.label}</span>`;
-            document.getElementById('quick-stock-previous-display').textContent = prev !== null ? `${prev} un` : '—';
+            const currentBadgeEl = document.getElementById('quick-stock-current-display') || document.getElementById('quick-stock-current-badge');
+            if (currentBadgeEl) {
+                currentBadgeEl.innerHTML = `<span class="text-[11px] px-2.5 py-0.5 rounded-full border ${stBadge.badgeClass}">${stBadge.label}</span>`;
+            }
+
+            const prevDisplayEl = document.getElementById('quick-stock-previous-display');
+            if (prevDisplayEl) {
+                prevDisplayEl.textContent = prev !== null ? `${prev} un` : '—';
+            }
 
             const input = document.getElementById('quick-stock-input');
             const noteInput = document.getElementById('quick-stock-note');
-            if (noteInput) noteInput.value = '';
+            if (noteInput) {
+                noteInput.value = '';
+                noteInput.onkeydown = (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (saveBtn) saveBtn.click();
+                    }
+                };
+            }
 
             const updateDiffPreview = () => {
                 const diffEl = document.getElementById('quick-stock-diff-display');
                 if (!diffEl) return;
-                const newQty = parseInt(input.value, 10);
+                const newQty = parseInt(input ? input.value : '', 10);
                 if (isNaN(newQty)) {
                     diffEl.innerHTML = `<span class="text-[10px] text-slate-500">—</span>`;
                     return;
@@ -3584,20 +4235,45 @@
                 else diffEl.innerHTML = `<span class="text-[10px] text-emerald-400 font-bold bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 rounded">📈 +${d} un</span>`;
             };
 
-            input.value = cur !== null ? cur : '';
-            input.oninput = updateDiffPreview;
+            const saveBtn = document.getElementById('btn-quick-stock-save');
+            if (saveBtn) {
+                saveBtn.onclick = () => {
+                    const latestSp = state.storePrices.find(x => x.storeId === storeId && x.productId === productId);
+                    const brandId = latestSp?.brandId || pr?.brandId || '';
+                    const note = noteInput ? noteInput.value : '';
+                    saveProductStock(storeId, productId, brandId, 'quick-stock-input', note);
+                    closeModal('modal-quick-stock');
+                };
+            }
+
+            if (input) {
+                input.value = cur !== null ? cur : '';
+                input.oninput = updateDiffPreview;
+                input.onkeydown = (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (saveBtn) saveBtn.click();
+                    } else if (e.key === 'Escape') {
+                        e.preventDefault();
+                        closeModal('modal-quick-stock');
+                    }
+                };
+            }
             updateDiffPreview();
 
-            document.getElementById('btn-quick-stock-save').onclick = () => {
-                const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === productId);
-                const brandId = sp?.brandId || pr?.brandId || '';
-                const note = noteInput ? noteInput.value : '';
-                saveProductStock(storeId, productId, brandId, 'quick-stock-input', note);
-                closeModal('modal-quick-stock');
-            };
-
-            document.getElementById('modal-quick-stock').classList.remove('hidden');
-            setTimeout(() => input.focus(), 100);
+            const modal = document.getElementById('modal-quick-stock');
+            if (modal) {
+                modal.onclick = (e) => {
+                    if (e.target === modal) closeModal('modal-quick-stock');
+                };
+                modal.classList.remove('hidden');
+            }
+            if (input) {
+                setTimeout(() => {
+                    input.focus();
+                    input.select();
+                }, 100);
+            }
         }
 
         // Cadastro de Lojas
@@ -5071,11 +5747,12 @@
         function getChartThemeColors() {
             const isLight = document.documentElement.getAttribute('data-theme') === 'light';
             return {
-                textColor: isLight ? '#334155' : '#94a3b8',
-                gridColor: isLight ? 'rgba(0, 0, 0, 0.06)' : 'rgba(255, 255, 255, 0.08)',
-                tooltipBg: isLight ? 'rgba(255, 255, 255, 0.96)' : 'rgba(15, 23, 42, 0.96)',
-                tooltipText: isLight ? '#0f172a' : '#f8fafc',
-                tooltipBorder: isLight ? '#cbd5e1' : '#334155'
+                isLight,
+                textColor: isLight ? '#0f172a' : '#e2e8f0',
+                gridColor: isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.12)',
+                tooltipBg: isLight ? '#ffffff' : '#0f172a',
+                tooltipText: isLight ? '#0f172a' : '#ffffff',
+                tooltipBorder: isLight ? '#cbd5e1' : '#475569'
             };
         }
 
@@ -5397,11 +6074,11 @@
                 const sortedBrands = Object.keys(brandMap).sort(sortBrandsWithPanasonicFirst);
                 const g2Data = sortedBrands.map(b => brandMap[b]);
                 const brandColors = sortedBrands.map(b => {
-                    if (isPanasonicBrand(b)) return '#1e3a8a'; // Panasonic: Royal Blue
+                    if (isPanasonicBrand(b)) return '#2563eb'; // Panasonic: Royal Blue (High-Contrast)
                     if (b.toUpperCase().includes('BRASTEMP')) return '#f97316'; // Orange
                     if (b.toUpperCase().includes('ELECTROLUX')) return '#06b6d4'; // Cyan
                     if (b.toUpperCase().includes('CONSUL')) return '#10b981'; // Emerald
-                    return '#64748b'; // Slate
+                    return themeColors.isLight ? '#64748b' : '#94a3b8'; // Slate
                 });
 
                 chartInstances.chartBrandShare = new Chart(ctx2, {
@@ -5549,13 +6226,13 @@
                             {
                                 label: 'Média Panasonic ⭐',
                                 data: panaAverages,
-                                backgroundColor: '#1e3a8a',
+                                backgroundColor: '#2563eb',
                                 borderRadius: 6
                             },
                             {
                                 label: 'Média Concorrência',
                                 data: othersAverages,
-                                backgroundColor: '#64748b',
+                                backgroundColor: themeColors.isLight ? '#64748b' : '#94a3b8',
                                 borderRadius: 6
                             }
                         ]
@@ -7516,6 +8193,8 @@
             saveProductStock,
             setQuickInputStock,
             adjustInputStock,
+            adjustInputPrice,
+            setPriceEnding99,
             openQuickStockModal,
             getStockStatus,
             getStockDiffBadge,
