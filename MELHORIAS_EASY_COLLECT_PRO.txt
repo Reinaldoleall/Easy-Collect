@@ -2,8 +2,8 @@
            EASY COLLECT PRO - RELATÓRIO EXECUTIVO DE MELHORIAS & ROADMAP
 ================================================================================
 Projeto: Easy Collect (Auditoria, Coleta e Inteligência de Preços de Varejo)
-Versão Atual: 1.0.4 (PWA Híbrido • Modo Dia/Noite • App Pickers Bottom Sheet • 100% Dados Reais)
-Data: 2026-10-24
+Versão Atual: 1.1.0 (Inteligência de Mercado • Gráficos Interativos Chart.js • Benchmarking Lado a Lado • Impressão A4 & PDF Executivo)
+Data: 2026-10-26
 Status: Produção & Alta Fidelidade
 
 --------------------------------------------------------------------------------
@@ -22,6 +22,83 @@ assim que houver sinal.
 --------------------------------------------------------------------------------
 2. MELHORIAS IMPLEMENTADAS NA VERSÃO ATUAL (ENTREGUES)
 --------------------------------------------------------------------------------
+
+[✔] NOVA TELA EXECUTIVA: GRÁFICOS & COMPARATIVO DE MERCADO (v1.1.0)
+    - Módulo Completo de Inteligência de Mercado & Benchmarking:
+      * Nova aba dedicada 'Gráficos & Comparativo' acessível via Sidebar (com badge 'Analytics'),
+        Menu Inferior Mobile e Drawer Lateral.
+      * Navegação por URL direta via hash (#graficos) e atalhos rápidos.
+    - 4 Cards de KPIs Executivos com Cálculo Dinâmico em Tempo Real:
+      * 1. Maior Dispersão (Spread R$ e % entre a loja mais barata e a mais cara do mercado).
+      * 2. Loja Mais Competitiva (Identificação automática da rede/loja com menor ticket médio geral).
+      * 3. Share de Presença Panasonic (% de presença do catálogo Panasonic e volume de estoque).
+      * 4. Taxa de Ruptura de Estoque (% e quantidade de itens com estoque zerado no varejo).
+    - 5 Gráficos Interativos de Alta Resolução via Chart.js 4.4.1:
+      * 1. Comparativo de Preço Entre Redes e Lojas (Bar Chart com linha de Preço Médio e destaque de cores: verde para a mais barata, vermelho para a mais cara e ciano para as demais).
+      * 2. Share de Presença por Marca (Doughnut Chart com destaque exclusivo para Panasonic em Azul Royal no topo e concorrentes mapeados).
+      * 3. Saúde do Estoque & Rupturas por Categoria (Stacked Bar Chart: Unidades em Estoque vs Itens em Ruptura).
+      * 4. Ticket Médio: Panasonic vs Concorrência (Grouped Bar Chart comparativo direto por categoria).
+      * 5. Histórico e Tendência de Alterações Auditadas (Line Chart com gradiente e área preenchida).
+    - Filtros Estratégicos Multidimensionais:
+      * Produto em Destaque (ao selecionar um produto específico, o gráfico de lojas compara diretamente o produto em todas as lojas cadastradas).
+      * Banner Informativo do Produto em Foco (Menor Preço e Loja, Preço Médio, Maior Preço e Spread %).
+      * Categoria de Produto (Refrigeradores, Lavadoras, Micro-ondas, Outros).
+      * Marca e Estado (UF).
+    - Matriz de Benchmarking Completa (Tabela Lado a Lado):
+      * Colunas: Produto / Modelo (destaque com estrela para Panasonic), Categoria, Marca,
+        Menor Preço & Loja/UF, Preço Médio, Maior Preço & Loja/UF, Dispersão R$ e %, Estoque & Ruptura e Botão de Ação "Ver Gráfico".
+      * Campo de busca instantânea integrado na tabela.
+    - Impressão Profissional A4 e Exportação Executiva para PDF:
+      * Botão "Imprimir Gráficos": Folha de estilo @media print calibrada para A4, ocultando barras de navegação, gavetas e botões desnecessários, gerando saída executiva limpa.
+      * Botão "Exportar Relatório PDF": PDF executivo de 3 páginas em formato paisagem (landscape) contendo:
+        - Página 1: Cabeçalho corporativo, 4 KPIs estratégicos e Gráficos 1 e 2.
+        - Página 2: Gráficos 3, 4 e 5 em alta resolução convertidos em imagens vetoriais/rasterizadas.
+        - Página 3: Matriz completa de Benchmarking de Preços formatada com jspdf-autotable.
+    - Integração de Tema:
+      * Os gráficos adaptam automaticamente as cores dos eixos, grades, textos e tooltips ao alternar entre Modo Dia e Modo Noite.
+
+[✔] LIMPEZA VISUAL & REFINAMENTO EXECUTIVO DOS RELATÓRIOS PDF (v1.0.9)
+    - Remoção de Metadados Técnicos e Textos de Diagnóstico:
+      * Removidos dos cabeçalhos do PDF os textos redundantes:
+        - '| Filtro Estoque: ALL | Marca: Todas'
+        - 'Estrutura: Agrupado por Marca (Foco: PANASONIC no Topo) -> Refrigeradores (3D L) | Lavadoras (KG) | Micro-ondas (2D L)'
+      * Cabeçalhos agora exibem apenas informações executivas limpas, diretas e profissionais.
+    - Títulos de Categoria 100% Limpos (Sem Sufixos de Especificação de Regra):
+      * Removidos os caracteres '(3D L)', '(2D L)' e '(KG)' dos títulos de seções de todas as marcas.
+      * Títulos padronizados e elegantes em todas as tabelas:
+        - 'REFRIGERADORES' (em vez de 'REFRIGERADORES (3D L)')
+        - 'LAVADORAS DE ROUPA' (em vez de 'LAVADORAS DE ROUPA (KG)')
+        - 'FORNOS MICRO-ONDAS' (em vez de 'FORNOS MICRO-ONDAS (2D L)')
+        - 'OUTROS PRODUTOS'
+    - Remoção de sufixos redundantes '(UN)' nos nomes dos produtos nos relatórios.
+    - Ocultação do Card de Metadados Técnicos na Tela de Backup:
+      * Ocultadas as informações de depuração interna ('Projeto Firebase: rota2d', 'ID da Sessão' e 'Cache Offline PWA') para manter a interface da aba Backup mais limpa, segura e focada no usuário final.
+
+[✔] AGRUPAMENTO ESTRATÉGICO POR MARCA COM PANASONIC COMPLETA NO TOPO (v1.0.8)
+    - Nova Hierarquia Estrutural dos Relatórios PDF (Consulta, Loja e Completo):
+      * NÍVEL 1: MARCAS (Com a PANASONIC SEMPRE NO TOPO ABSOLUTO).
+      * NÍVEL 2: CATEGORIAS DENTRO DE CADA MARCA (Refrigeradores -> Lavadoras -> Micro-ondas).
+    - Eliminação Definitiva da Fragmentação de Produtos:
+      * Anteriormente, ao agrupar primeiro por categoria, produtos da mesma marca
+        ficavam espalhados no início, meio e fim do relatório.
+      * Agora, TODOS os produtos da PANASONIC aparecem JUNTOS no topo do relatório:
+        1. ❄️ REFRIGERADORES PANASONIC (3 dígitos antes do L, ex: 590L, 387L, 425L)
+        2. 🧺 LAVADORAS PANASONIC (KG no nome ou unidade, ex: 17KG, 12KG)
+        3. 📻 FORNOS MICRO-ONDAS PANASONIC (2 dígitos antes do L, ex: 21L, 32L)
+        4. 📦 DEMAIS PRODUTOS PANASONIC (se houver)
+    - DEMAIS MARCAS (CONCORRÊNCIA) LOGO ABAIXO:
+      * Após a Panasonic, cada marca concorrente (Brastemp, Electrolux, Consul, etc.,
+        em ordem alfabética) ganha seu bloco unificado completo contendo:
+        - ❄️ Seus Refrigeradores
+        - 🧺 Suas Lavadoras
+        - 📻 Seus Micro-ondas
+    - Identidade Visual & Design Corporativo:
+      * Banner Master da PANASONIC em azul-marinho executivo ([30, 58, 138]) com tag ⭐.
+      * Banners das Marcas Concorrentes em cinza ardósia ([51, 65, 85]).
+      * Sub-títulos coloridos por categoria com contagem, estoque consolidado e rupturas.
+      * Remoção da coluna redundante 'Marca' nas tabelas internas, concedendo mais espaço
+        horizontal e legibilidade perfeita para Produto/Modelo e SKU.
+      * Alerta visual em vermelho negrito para Rupturas de Estoque ([0 un]).
 
 [✔] ZERO CORTE NO CELULAR: RESPIRO DINÂMICO & ROLAGEM 100% VISÍVEL
     - Resolução definitiva do problema do último produto cortado pela barra inferior.
@@ -100,9 +177,95 @@ assim que houver sinal.
     - PDF por Loja: dossiê individual da unidade com histórico de variações.
     - Correção de acentuação e compatibilidade ISO/UTF-8 no jsPDF.
 
+[✔] INTELIGÊNCIA DE SKUs POR REDE (DE-PARA DE SKUs & PRODUTO MESTRE)
+    - Resolução definitiva do problema de redes diferentes utilizarem SKUs distintos
+      para o mesmo produto físico.
+    - Catálogo Mestre Unificado: o produto continua cadastrado uma única vez,
+      garantindo que 100% dos relatórios, gráficos e comparativos de preços entre
+      redes (ex: Carrefour vs Assaí) funcionem de forma consolidada e precisa.
+    - Modal 'Produto & SKUs por Rede': permite vincular códigos específicos de cada
+      rede (ex: Carrefour -> SKU 104920, Assaí -> SKU 8832) com sugestões automáticas.
+    - Busca Universal por Qualquer SKU: ao digitar qualquer SKU (seja o mestre, o EAN
+      ou o código interno de qualquer rede), o sistema encontra o produto mestre na hora.
+    - Exibição Contextual da Loja: os cards e tabelas de consulta e precificação exibem
+      automaticamente o SKU daquela rede específica (com indicação do SKU Mestre).
+    - Relatórios e PDFs Contextuais: os relatórios por unidade e consolidados imprimem
+      o SKU correspondente daquela rede.
+
+[✔] EDIÇÃO RÁPIDA DE NOME DE PRODUTOS & CORREÇÃO CADASTRAL
+    - Resolução imediata para nomes cadastrados incorretamente ou com erros de digitação.
+    - Botão destacado 'Editar Nome' no Catálogo (Desktop e Mobile) com ícone de caneta.
+    - Acesso com 1 clique sobre o próprio nome do produto em todas as telas
+      (Catálogo, Consulta Geral e Lançamento de Preços) com indicador visual de edição (lápis).
+    - Foco automático com texto selecionado no campo 'Nome do Produto' ao abrir o modal,
+      permitindo renomear imediatamente sem cliques extras.
+    - Atualização instantânea em cascata em todas as abas, relatórios, LocalStorage e Firestore.
+
+[✔] CONTROLE, AUDITORIA & ACOMPANHAMENTO DE ESTOQUE POR LOJA (COM ANÁLISE DE RUPTURA & VARIAÇÃO)
+    - Resolução completa para acompanhamento e controle de estoque de cada produto em cada loja cadastrada:
+      * Posição de Estoque Físico Individual: cada filial/loja mantém sua contagem atualizada de unidades.
+      * Cálculo Automático de Variação de Estoque: registra a diferença exata da contagem atual em relação à anterior
+        (ex: '📉 -4 un' para saídas/vendas e '📈 +10 un' para recebimentos/reposições).
+      * Alerta Crítico de Ruptura de Gôndola (0 un): badge visual vermelho pulsante ('🚨 Ruptura [0 un]')
+        que alerta instantaneamente a equipe sobre falta de mercadoria na gôndola.
+      * Alerta de Estoque Crítico (1 a 5 un): badge âmbar preventivo avisando iminência de ruptura.
+      * Painel de KPIs de Estoque por Loja: exibe no topo da auditoria o Total Físico de Unidades, Cobertura
+        de Itens Auditados, Rupturas Ativas, Itens Críticos e a Taxa de Ruptura percentual da loja.
+      * Auditoria Rápida & Lançamento Duplo: na aba de auditoria ('Preços & Estoque'), é possível lançar tanto
+        preços quanto quantidades de estoque por produto com botão expresso 'Declarar Ruptura (0 un)',
+        atalhos de ajuste rápido (-5, -1, +1, +5, +10) e salvamento via tecla Enter.
+      * Modal de Auditoria Rápida ('modal-quick-stock'): acionável com 1 clique diretamente na tela de Consulta
+        e nos cartões de cada loja, com pré-visualização da variação e campo para nota/motivo da contagem.
+      * Filtro Inteligente de Estoque ('filter-stock'): permite filtrar rapidamente a visão por Ruptura,
+        Estoque Crítico, Estoque Normal, Itens com Saída/Vendas ou Itens com Entrada/Reposição.
+      * Histórico & Logs Unificados ('tab-logs'): rastreabilidade de todas as contagens com filtro exclusivo
+        por tipo de auditoria ('log-filter-type': Todos, Preços, Estoque & Rupturas).
+      * Histórico Individual por Item: exibe na mesma linha temporal tanto as variações de preço quanto
+        as contagens e variações físicas de estoque daquele produto naquela loja.
+      * Relatórios em PDF Completos: inclusão das colunas de Estoque, Status e Ruptura no PDF Filtrado,
+        no Relatório Completo e no Relatório Individual da Unidade.
+      * Persistência Resiliente: salvamento automático em LocalStorage, inclusão no Backup JSON e sincronização
+        em nuvem em tempo real com o Firestore ('store_prices' e coleção 'stock_logs').
+
+[✔] DASHBOARD ANALÍTICO DE BUSINESS INTELLIGENCE & BENCHMARKING DE MERCADO (ABA 'GRÁFICOS')
+    - Central executiva de inteligência competitiva com indicadores visuais completos:
+      * KPIs no Topo: Total de Lojas Ativas, Produtos Monitorados, Dispersão Média de Preços entre Redes e Ruptura Global.
+      * Gráficos Interativos (Chart.js):
+        1. Comparativo de Preço por Loja para o produto selecionado.
+        2. Dispersão de Preços (Mínimo, Médio e Máximo).
+        3. Histórico de Evolução de Preços ao longo das coletas.
+        4. Distribuição do Estoque Físico por Loja com alerta de Ruptura (0 un).
+        5. Share de Presença por Marca no catálogo.
+        6. Ranking de Competitividade de Preço por Rede (% de vitórias com menor preço).
+      * Tabela de Benchmarking Competitivo: visão consolidada com Menor Preço, Maior Preço, Diferença (R$ e %), Menor Loja, Média de Mercado e Estoque Total na Rede.
+      * Exportação Executiva em PDF do Dashboard e Impressão otimizada via CSS Print.
+
+[✔] COMPARADOR MULTI-PRODUTOS HEAD-TO-HEAD (CONFRONTO DIRETO DE 2 OU MAIS PRODUTOS)
+    - Nova ferramenta avançada para confronto simultâneo de 2 a 6 produtos com análise cruzada de Preço, Estoque, Litragem/Capacidade e Lojas:
+      * Seletor Multi-Produtos:
+        - Checkboxes integrados na Tabela de Benchmarking com barra flutuante de contagem e botão 'Confrontar Agora'.
+        - Modal de Seleção ('modal-multi-product-compare') com busca em tempo real, filtros de categoria por pills (Geladeiras, Lavadoras, Micro-ondas) e contadores dinâmicos.
+        - Chips dismissíveis no topo do comparador com remoção em 1 clique.
+        - Presets Inteligentes de 1 Clique: 'Top Geladeiras', 'Top Lavadoras', 'Top Micro-ondas' e 'Panasonic vs Concorrentes'.
+      * Extração Automática de Litragem / Capacidade Técnica:
+        - Algoritmo regex inteligente que detecta Litragem ('590L', '425L', '28L') e Capacidade de Carga ('18KG', '12KG') diretamente do nome ou modelo.
+        - Identificação automática do tipo de linha (Refrigeradores, Lavadoras, Micro-ondas) com badges visuais coloridos e ícones contextuais.
+      * Cards Comparativos Executivos:
+        - Especificações técnicas de cada modelo: Litragem/KG, Menor Preço e Loja Líder, Preço Médio, Maior Preço, Estoque Total na Rede e Rupturas.
+      * 3 Gráficos Específicos para o Confronto:
+        1. Gráfico de Preços por Loja (Barras Agrupadas por Loja): visualiza lado a lado qual produto é mais barato e mais caro dentro de cada rede varejista (ex: Fast Shop, Magazine Luiza, Casas Bahia).
+        2. Gráfico de Litragem / Capacidade vs Preço Médio: gráfico de dispersão/linha de eficiência técnica (R$ por Litro ou R$ por KG de capacidade).
+        3. Gráfico de Estoque e Disponibilidade por Loja: barras agrupadas mostrando a quantidade de unidades de cada produto em cada ponto de venda.
+      * Matriz Cruzada (Lojas x Produtos):
+        - Tabela matricial completa comparando cada rede varejista, destacando a melhor oferta com badge 'Menor Preço' verde e alertando rupturas em vermelho.
+      * Exportação Dedicada em PDF:
+        - Relatório em formato paisagem (Landscape A4) de alta definição gerado pelo jsPDF com resumo executivo, tabela de especificações técnicas, gráficos renderizados e matriz cruzada de lojas.
+      * Impressão Dedicada (window.print):
+        - Formatação CSS @media print estilizada para relatórios físicos ou salvar como PDF pelo navegador.
+
 [✔] RESILIÊNCIA E BACKUP
     - Armazenamento em nuvem no Firestore sincronizado em tempo real.
-    - Backup e Restauração completa em arquivo padrão JSON (.json) com 1 clique.
+    - Backup e Restauração completa em arquivo padrão JSON (.json) com 1 clique (incluindo lojas, produtos, preços, estoque e logs).
     - Fallback para cache local caso a internet caia durante a coleta em loja.
 
 
