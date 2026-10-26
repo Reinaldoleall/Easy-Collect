@@ -198,50 +198,58 @@
             border-color: var(--border-focus);
         }
 
-        /* Dark Mode High-Contrast Rules */
-        :root .text-slate-100, :root .text-white,
-        [data-theme="dark"] .text-slate-100, [data-theme="dark"] .text-white {
+        /* Dark Mode High-Contrast Rules (Restrito a data-theme="dark") */
+        [data-theme="dark"] .text-slate-100,
+        [data-theme="dark"] .text-white {
             color: #ffffff !important;
         }
-        :root .text-slate-200,
         [data-theme="dark"] .text-slate-200 {
             color: #f1f5f9 !important;
         }
-        :root .text-slate-300,
         [data-theme="dark"] .text-slate-300 {
             color: #e2e8f0 !important;
         }
-        :root .text-slate-400,
         [data-theme="dark"] .text-slate-400 {
             color: #cbd5e1 !important;
         }
-        :root .text-slate-500,
         [data-theme="dark"] .text-slate-500 {
             color: #94a3b8 !important;
         }
 
         /* Secondary buttons in Dark Mode */
-        :root button.bg-slate-800, :root button.bg-slate-900,
-        [data-theme="dark"] button.bg-slate-800, [data-theme="dark"] button.bg-slate-900 {
+        [data-theme="dark"] button.bg-slate-800,
+        [data-theme="dark"] button.bg-slate-900 {
             background-color: var(--btn-sec-bg) !important;
             border: 1px solid var(--btn-sec-border) !important;
             color: var(--btn-sec-text) !important;
         }
-        :root button.bg-slate-800:hover, :root button.bg-slate-900:hover,
-        [data-theme="dark"] button.bg-slate-800:hover, [data-theme="dark"] button.bg-slate-900:hover {
+        [data-theme="dark"] button.bg-slate-800:hover,
+        [data-theme="dark"] button.bg-slate-900:hover {
             background-color: var(--btn-sec-hover) !important;
             border-color: #64748b !important;
         }
 
         /* Form Inputs & Selects in Dark Mode */
-        :root input:not([type="checkbox"]):not([type="radio"]), :root select, :root textarea,
-        [data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]), [data-theme="dark"] select, [data-theme="dark"] textarea {
+        [data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]),
+        [data-theme="dark"] select,
+        [data-theme="dark"] textarea {
             background-color: var(--input-bg) !important;
             border: 1px solid var(--input-border) !important;
             color: var(--input-text) !important;
+            -webkit-text-fill-color: var(--input-text) !important;
         }
-        :root input::placeholder, :root textarea::placeholder,
-        [data-theme="dark"] input::placeholder, [data-theme="dark"] textarea::placeholder {
+        [data-theme="dark"] select option,
+        [data-theme="dark"] select optgroup {
+            background-color: #0f172a !important;
+            color: #f8fafc !important;
+            -webkit-text-fill-color: #f8fafc !important;
+        }
+        [data-theme="dark"] select option:checked {
+            background-color: #1e293b !important;
+            color: #60a5fa !important;
+        }
+        [data-theme="dark"] input::placeholder,
+        [data-theme="dark"] textarea::placeholder {
             color: var(--input-placeholder) !important;
             opacity: 1 !important;
         }
@@ -769,6 +777,15 @@
             color: #0f172a !important;
         }
 
+        /* WHATSAPP PREVIEW BUBBLE EM MODO CLARO */
+        [data-theme="light"] #mix-wa-preview-bubble {
+            background-color: #e7fce3 !important;
+            border-color: #86efac !important;
+        }
+        [data-theme="light"] #mix-wa-preview-text {
+            color: #111827 !important;
+        }
+
         /* TOASTS EM MODO CLARO */
         [data-theme="light"] #toast-container > div {
             background-color: #ffffff !important;
@@ -810,7 +827,407 @@
         [data-theme="light"] ::-webkit-scrollbar-track { background: #f8fafc; }
         [data-theme="light"] ::-webkit-scrollbar-thumb { background: #cbd5e1; }
         [data-theme="light"] ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-    </style>
+    
+        /* ======================================================== */
+        /* CORREÇÃO DE ALTO CONTRASTE: CONSULTA & RELATÓRIOS         */
+        /* ======================================================== */
+        #selected-store-banner {
+            background: linear-gradient(135deg, #090e1a 0%, #151d36 50%, #0d1527 100%) !important;
+            border: 1.5px solid rgba(59, 130, 246, 0.4) !important;
+            box-shadow: 0 10px 25px -5px rgba(2, 6, 23, 0.5) !important;
+        }
+        [data-theme="light"] #selected-store-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+            border: 1.5px solid #334155 !important;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25) !important;
+        }
+        #selected-store-banner #banner-store-name,
+        [data-theme="light"] #selected-store-banner #banner-store-name {
+            color: #ffffff !important;
+            font-weight: 800 !important;
+        }
+        #selected-store-banner #banner-store-address,
+        [data-theme="light"] #selected-store-banner #banner-store-address {
+            color: #f8fafc !important;
+            font-weight: 600 !important;
+        }
+        #selected-store-banner #banner-store-address i,
+        [data-theme="light"] #selected-store-banner #banner-store-address i {
+            color: #ef4444 !important;
+        }
+        #selected-store-banner .grid,
+        [data-theme="light"] #selected-store-banner .grid {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: rgba(255, 255, 255, 0.18) !important;
+        }
+        #selected-store-banner .grid span,
+        [data-theme="light"] #selected-store-banner .grid span {
+            color: #e2e8f0 !important;
+            font-weight: 700 !important;
+        }
+        #selected-store-banner .grid span.text-red-400,
+        [data-theme="light"] #selected-store-banner .grid span.text-red-400 {
+            color: #fca5a5 !important;
+        }
+        #selected-store-banner .grid span.text-cyan-400,
+        [data-theme="light"] #selected-store-banner .grid span.text-cyan-400 {
+            color: #7dd3fc !important;
+        }
+        #selected-store-banner .grid strong,
+        [data-theme="light"] #selected-store-banner .grid strong {
+            color: #ffffff !important;
+            font-weight: 800 !important;
+        }
+        #selected-store-banner #banner-store-rupturas,
+        [data-theme="light"] #selected-store-banner #banner-store-rupturas {
+            color: #f87171 !important;
+            font-weight: 800 !important;
+        }
+        #selected-store-banner #banner-store-units,
+        [data-theme="light"] #selected-store-banner #banner-store-units {
+            color: #38bdf8 !important;
+            font-weight: 800 !important;
+        }
+        #selected-store-banner #banner-store-logs,
+        [data-theme="light"] #selected-store-banner #banner-store-logs {
+            color: #fbbf24 !important;
+            font-weight: 800 !important;
+        }
+
+        /* Consulta: Rótulos e Seletores em Modo Claro */
+        [data-theme="light"] #tab-consulta label {
+            color: #475569 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] #tab-consulta label.text-cyan-400 {
+            color: #0e7490 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] #tab-consulta input[type="text"] {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border-color: #cbd5e1 !important;
+            font-weight: 600 !important;
+        }
+        [data-theme="light"] #tab-consulta input[type="text"]::placeholder {
+            color: #64748b !important;
+        }
+        [data-theme="light"] #pdf-include-logs + span {
+            color: #0f172a !important;
+            font-weight: 600 !important;
+        }
+        [data-theme="light"] table thead th {
+            color: #334155 !important;
+            font-weight: 800 !important;
+        }
+        [data-theme="light"] table tbody td {
+            color: #0f172a !important;
+        }
+
+        /* ======================================================== */
+        /* CORREÇÃO DE ALTO CONTRASTE: REBAIXAS DE PREÇO            */
+        /* ======================================================== */
+        /* Top Header Banner em Modo Claro */
+        [data-theme="light"] #tab-rebaixas > div:first-child {
+            background: linear-gradient(135deg, #fff1f2 0%, #f8fafc 50%, #eff6ff 100%) !important;
+            border: 1.5px solid #fecdd3 !important;
+            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.08) !important;
+        }
+        [data-theme="light"] #tab-rebaixas > div:first-child h2 {
+            color: #9f1239 !important;
+            font-weight: 900 !important;
+        }
+        [data-theme="light"] #tab-rebaixas > div:first-child h2 i {
+            color: #e11d48 !important;
+        }
+        [data-theme="light"] #tab-rebaixas > div:first-child p {
+            color: #334155 !important;
+            font-weight: 500 !important;
+        }
+        [data-theme="light"] #tab-rebaixas #rebaixas-total-badge {
+            color: #be123c !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] #tab-rebaixas > div:first-child span.bg-rose-500\/20 {
+            background-color: #ffe4e6 !important;
+            border-color: #fda4af !important;
+            color: #be123c !important;
+            font-weight: 800 !important;
+        }
+
+        /* Seletor de Loja em Modo Claro */
+        [data-theme="light"] #rebaixas-select-store {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border: 1.5px solid #cbd5e1 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] #rebaixas-select-store option {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            font-weight: 600 !important;
+        }
+        [data-theme="light"] #tab-rebaixas label {
+            color: #475569 !important;
+            font-weight: 700 !important;
+        }
+
+        /* Botões de Modo: Todos, Alterados, Selecionados */
+        [data-theme="light"] #btn-rebaixa-mode-all,
+        [data-theme="light"] #btn-rebaixa-mode-changed,
+        [data-theme="light"] #btn-rebaixa-mode-selected {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #334155 !important;
+            font-weight: 700 !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+        }
+        [data-theme="light"] #btn-rebaixa-mode-all:hover,
+        [data-theme="light"] #btn-rebaixa-mode-changed:hover,
+        [data-theme="light"] #btn-rebaixa-mode-selected:hover {
+            background-color: #f1f5f9 !important;
+        }
+        [data-theme="light"] #btn-rebaixa-mode-all.bg-slate-700 {
+            background-color: #0f172a !important;
+            color: #ffffff !important;
+            border-color: #0f172a !important;
+        }
+        [data-theme="light"] #btn-rebaixa-mode-changed.bg-rose-600 {
+            background-color: #e11d48 !important;
+            color: #ffffff !important;
+            border-color: #e11d48 !important;
+        }
+        [data-theme="light"] #btn-rebaixa-mode-selected.bg-emerald-600 {
+            background-color: #059669 !important;
+            color: #ffffff !important;
+            border-color: #059669 !important;
+        }
+
+        /* Chips de Marcas em Modo Claro */
+        [data-theme="light"] #rebaixas-brand-chips-container button {
+            border: 1px solid #cbd5e1 !important;
+        }
+        [data-theme="light"] #rebaixas-brand-chips-container button:not(.bg-emerald-600):not(.bg-blue-600):not(.bg-rose-600) {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            font-weight: 600 !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+        }
+        [data-theme="light"] #rebaixas-brand-chips-container button:not(.bg-emerald-600):not(.bg-blue-600):not(.bg-rose-600):hover {
+            background-color: #f1f5f9 !important;
+            border-color: #94a3b8 !important;
+        }
+        [data-theme="light"] #rebaixas-brand-chips-container button:not(.bg-emerald-600):not(.bg-blue-600):not(.bg-rose-600) span.chip-count {
+            background-color: #f1f5f9 !important;
+            color: #0f172a !important;
+            border: 1px solid #cbd5e1 !important;
+            font-weight: 800 !important;
+        }
+        [data-theme="light"] #rebaixas-brand-filter-status {
+            color: #475569 !important;
+            font-weight: 600 !important;
+        }
+
+        /* Campo de Busca de Produtos em Rebaixas */
+        [data-theme="light"] #rebaixas-search-product {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border: 1.5px solid #cbd5e1 !important;
+            font-weight: 600 !important;
+        }
+        [data-theme="light"] #rebaixas-search-product::placeholder {
+            color: #64748b !important;
+        }
+
+        /* Cards de Produtos da Loja Selecionada */
+        [data-theme="light"] .rebaixa-product-card {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05) !important;
+        }
+        [data-theme="light"] .rebaixa-product-card.is-selected {
+            background-color: #fff1f2 !important;
+            border-color: #fb7185 !important;
+            box-shadow: 0 4px 12px rgba(244, 63, 94, 0.12) !important;
+        }
+        [data-theme="light"] .rebaixa-product-title,
+        [data-theme="light"] .rebaixa-product-title span {
+            color: #0f172a !important;
+            font-weight: 800 !important;
+        }
+        [data-theme="light"] .rebaixa-brand-badge {
+            background-color: #f1f5f9 !important;
+            border-color: #cbd5e1 !important;
+            color: #1e293b !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] .rebaixa-sku-badge {
+            color: #475569 !important;
+            font-weight: 600 !important;
+        }
+        [data-theme="light"] .rebaixa-price-lbl {
+            color: #475569 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] .rebaixa-price-lbl-por {
+            color: #047857 !important;
+            font-weight: 800 !important;
+        }
+        [data-theme="light"] .rebaixa-price-inp {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border: 1.5px solid #cbd5e1 !important;
+            font-weight: 800 !important;
+        }
+        [data-theme="light"] .rebaixa-price-inp:focus {
+            border-color: #e11d48 !important;
+        }
+        [data-theme="light"] .rebaixa-price-inp-por {
+            background-color: #ffffff !important;
+            color: #047857 !important;
+            border: 1.5px solid #10b981 !important;
+            font-weight: 800 !important;
+        }
+        [data-theme="light"] .rebaixa-price-inp-por:focus {
+            border-color: #059669 !important;
+        }
+        [data-theme="light"] .rebaixa-arrow {
+            color: #64748b !important;
+        }
+        [data-theme="light"] .rebaixa-btn-discount {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #0f172a !important;
+            font-weight: 700 !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+        }
+        [data-theme="light"] .rebaixa-btn-discount:hover {
+            background-color: #f1f5f9 !important;
+            border-color: #94a3b8 !important;
+        }
+        [data-theme="light"] .rebaixa-badge-neutral {
+            background-color: #f1f5f9 !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #475569 !important;
+            font-weight: 600 !important;
+        }
+
+        /* Painel WhatsApp (Coluna Direita) em Modo Claro */
+        [data-theme="light"] .rebaixa-wa-title,
+        [data-theme="light"] h4.rebaixa-wa-title {
+            color: #0f172a !important;
+            font-weight: 800 !important;
+        }
+        [data-theme="light"] #rebaixas-preview-selected-store-name {
+            color: #475569 !important;
+            font-weight: 600 !important;
+        }
+        [data-theme="light"] .rebaixa-live-badge {
+            background-color: #ecfdf5 !important;
+            color: #047857 !important;
+            border: 1px solid #a7f3d0 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] #rebaixa-inp-revenda,
+        [data-theme="light"] #rebaixa-inp-filial,
+        [data-theme="light"] #rebaixa-inp-cidade,
+        [data-theme="light"] #rebaixa-inp-regional,
+        [data-theme="light"] #rebaixa-inp-title {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border: 1.5px solid #cbd5e1 !important;
+            font-weight: 700 !important;
+        }
+        [data-theme="light"] #rebaixas-preview-text {
+            background-color: #f0fdf4 !important;
+            color: #064e3b !important;
+            border: 1.5px solid #86efac !important;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+        }
+        [data-theme="light"] button[onclick="window.app.copyRebaixaText()"] {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border: 1.5px solid #cbd5e1 !important;
+            font-weight: 700 !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+        }
+        [data-theme="light"] button[onclick="window.app.copyRebaixaText()"]:hover {
+            background-color: #f1f5f9 !important;
+        }
+
+        /* ======================================================== */
+        /* REGRAS GLOBAIS DEFINITIVAS: SELECTS E OPTIONS EM MODO CLARO */
+        /* ======================================================== */
+        [data-theme="light"] select,
+        [data-theme="light"] select option,
+        [data-theme="light"] select optgroup,
+        [data-theme="light"] select.text-white,
+        [data-theme="light"] select.text-slate-100,
+        [data-theme="light"] select.text-slate-200,
+        [data-theme="light"] select.text-slate-300,
+        [data-theme="light"] select.text-slate-400 {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            font-weight: 600 !important;
+        }
+
+        [data-theme="light"] select {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            border: 1.5px solid #cbd5e1 !important;
+        }
+
+        [data-theme="light"] select:focus {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+            outline: none !important;
+        }
+
+        [data-theme="light"] select option {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            font-weight: 600 !important;
+            padding: 8px 12px !important;
+        }
+
+        [data-theme="light"] select option:checked {
+            background-color: #dbeafe !important;
+            color: #1e40af !important;
+            font-weight: 700 !important;
+        }
+
+        /* Todos os inputs e textareas em Modo Claro */
+        [data-theme="light"] input:not([type="checkbox"]):not([type="radio"]),
+        [data-theme="light"] textarea,
+        [data-theme="light"] input.text-white,
+        [data-theme="light"] textarea.text-white {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            -webkit-text-fill-color: #0f172a !important;
+            border: 1.5px solid #cbd5e1 !important;
+            font-weight: 600 !important;
+        }
+
+        [data-theme="light"] input:not([type="checkbox"]):not([type="radio"]):focus,
+        [data-theme="light"] textarea:focus {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+            outline: none !important;
+        }
+
+        [data-theme="light"] input::placeholder,
+        [data-theme="light"] textarea::placeholder {
+            color: #64748b !important;
+            -webkit-text-fill-color: #64748b !important;
+            opacity: 1 !important;
+        }
+</style>
 </head>
 <body class="min-h-screen flex flex-col md:flex-row bg-[#0b0f19] text-slate-100 selection:bg-blue-600 selection:text-white">
 
@@ -867,6 +1284,14 @@
                             <span>Preços & Estoque</span>
                         </div>
                         <span class="text-[9px] font-bold bg-emerald-500/15 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30">Auditoria</span>
+                    </button>
+
+                    <button onclick="window.app.switchTab('rebaixas')" id="side-btn-rebaixas" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/60 transition group border border-transparent">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-tags text-sm text-rose-400 group-hover:scale-110 transition-transform"></i>
+                            <span>Rebaixas de Preço</span>
+                        </div>
+                        <span id="side-badge-rebaixas" class="text-[9px] font-bold bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full border border-rose-500/30">WhatsApp</span>
                     </button>
 
                     <button onclick="window.app.switchTab('lojas')" id="side-btn-lojas" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/60 transition group border border-transparent">
@@ -1085,7 +1510,7 @@
                                 <span class="text-[10px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">Filtro Ativo</span>
                             </div>
                             <h3 id="banner-store-name" class="text-sm sm:text-base font-bold text-white truncate">Loja Selecionada</h3>
-                            <p id="banner-store-address" class="text-xs text-slate-300 truncate"><i class="fa-solid fa-location-dot mr-1 text-red-400"></i> Endereço</p>
+                            <p id="banner-store-address" class="text-xs text-slate-100 font-medium truncate"><i class="fa-solid fa-location-dot mr-1 text-red-400"></i> Endereço</p>
                         </div>
                         <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto">
                             <div class="grid grid-cols-4 gap-1.5 sm:gap-2 bg-white/5 border border-white/10 p-2 rounded-xl text-center flex-1 sm:flex-none">
@@ -1109,6 +1534,10 @@
                             <button id="banner-btn-pricing" onclick="window.app.goToStoreFromBanner()" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs px-3 py-3 rounded-xl transition flex items-center gap-1.5 shadow-md">
                                 <i class="fa-solid fa-boxes-stacked"></i>
                                 <span class="hidden sm:inline">Preços & Estoque</span>
+                            </button>
+                            <button type="button" onclick="window.app.openMixWhatsAppModal(document.getElementById('filter-store').value)" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs px-3 py-3 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-emerald-600/20" title="Compartilhar Mix desta Loja no WhatsApp">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span class="hidden sm:inline">Mix WhatsApp</span>
                             </button>
                         </div>
                     </div>
@@ -1136,6 +1565,15 @@
                             <button onclick="window.app.generateFullPDF()" title="Exportar Todo o Banco em PDF" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs px-3 py-1.5 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
                                 <i class="fa-solid fa-file-zipper text-blue-400"></i>
                                 <span>Relatório Completo</span>
+                            </button>
+                            <button type="button" onclick="window.app.openMixWhatsAppModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-3 py-1.5 rounded-xl shadow-md shadow-emerald-600/20 transition flex items-center gap-1.5" title="Compartilhar Mix no WhatsApp">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Mix WhatsApp</span>
+                            </button>
+                            <button type="button" onclick="window.app.switchTab('rebaixas')" class="bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-white border border-rose-500/30 font-bold text-xs px-3 py-1.5 rounded-xl shadow-md transition flex items-center gap-1.5" title="Rebaixas de Preço no WhatsApp">
+                                <i class="fa-solid fa-tags text-rose-400"></i>
+                                <span>Rebaixas</span>
+                                <span id="header-btn-rebaixas-badge" class="bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full hidden">0</span>
                             </button>
                         </div>
                     </div>
@@ -1363,6 +1801,188 @@
                 </div>
 
             </section>
+            <!-- ======================================================== -->
+            <!-- ABA REBAIXAS: REBAIXA DE PREÇO & COMPARTILHAMENTO        -->
+            <!-- ======================================================== -->
+            <section id="tab-rebaixas" class="hidden space-y-4">
+                <!-- Top Header Banner -->
+                <div class="bg-gradient-to-r from-rose-950/40 via-slate-900 to-indigo-950/40 border border-rose-500/25 rounded-2xl p-4 sm:p-5 shadow-lg backdrop-blur-md">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">
+                                    <i class="fa-solid fa-bolt"></i> COMPARTILHAMENTO INTELIGENTE
+                                </span>
+                                <span id="rebaixas-total-badge" class="text-xs font-semibold text-slate-400">0 selecionados para WhatsApp</span>
+                            </div>
+                            <h2 class="text-lg sm:text-xl font-black text-white flex items-center gap-2">
+                                <i class="fa-solid fa-tags text-rose-400"></i> Central de Rebaixas & Alterações de Preço
+                            </h2>
+                            <p class="text-xs text-slate-300 mt-1 max-w-2xl">
+                                Selecione a Revenda, filtre pela Marca desejada e marque os produtos para gerar a legenda oficial do WhatsApp.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <button type="button" onclick="window.app.selectAllRebaixaProducts(true)" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-3 py-2 rounded-xl transition flex items-center gap-1.5 shadow-sm active:scale-95 cursor-pointer">
+                                <i class="fa-solid fa-check-double"></i>
+                                <span>Selecionar Todos da Marca</span>
+                            </button>
+                            <button type="button" onclick="window.app.unselectAllRebaixaProducts()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold px-3 py-2 rounded-xl transition flex items-center gap-1.5 shadow-sm active:scale-95 cursor-pointer">
+                                <i class="fa-solid fa-xmark"></i>
+                                <span>Desmarcar Todos</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barra de Seleção de Loja Principal -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-md space-y-3">
+                    <!-- Linha 1: Seletor de Loja / Revenda com destaque -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+                        <div class="flex items-center gap-2.5 flex-1 min-w-0">
+                            <div class="w-9 h-9 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-400 flex items-center justify-center text-sm shrink-0">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">1. Selecione a Loja / Revenda:</label>
+                                <select id="rebaixas-select-store" onchange="window.app.onRebaixasStoreChange(this.value)" class="w-full mt-0.5 rounded-xl border border-slate-700 px-3 py-2 text-xs sm:text-sm font-bold focus:ring-2 focus:ring-rose-500 focus:outline-none">
+                                    <!-- Lojas populadas via JS -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Modos de Exibição de Produtos da Loja -->
+                        <div class="flex items-center gap-1.5 shrink-0">
+                            <button type="button" id="btn-rebaixa-mode-all" onclick="window.app.setRebaixasProductFilterMode('ALL')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-700 text-white transition cursor-pointer">
+                                Todos
+                            </button>
+                            <button type="button" id="btn-rebaixa-mode-changed" onclick="window.app.setRebaixasProductFilterMode('CHANGED')" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 text-slate-400 hover:text-white transition cursor-pointer">
+                                Alterados
+                            </button>
+                            <button type="button" id="btn-rebaixa-mode-selected" onclick="window.app.setRebaixasProductFilterMode('SELECTED')" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 text-slate-400 hover:text-white transition cursor-pointer">
+                                Selecionados
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Linha 2: Filtro de Marcas (Chips) -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-slate-200 flex items-center gap-1.5">
+                                <i class="fa-solid fa-copyright text-cyan-400"></i> 2. Filtrar por Marca para o WhatsApp:
+                            </span>
+                            <span class="text-[11px] text-slate-400 font-medium" id="rebaixas-brand-filter-status">Filtrando: Todas as marcas disponíveis</span>
+                        </div>
+                        <div id="rebaixas-brand-chips-container" class="flex flex-wrap items-center gap-1.5">
+                            <!-- Chips populados via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Linha 3: Busca de Produtos dentro da Loja -->
+                    <div class="pt-2 border-t border-slate-800/80">
+                        <div class="relative">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+                            <input type="text" id="rebaixas-search-product" oninput="window.app.renderRebaixasTab()" placeholder="Buscar produto pelo modelo ou SKU (ex: BWF14, BB53, Micro-ondas...)" class="w-full rounded-xl border border-slate-700 bg-slate-950 pl-8 pr-3 py-1.5 text-xs text-white placeholder:text-slate-500 focus:ring-1 focus:ring-rose-500 focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Principal: Coluna Esquerda (Produtos da Loja) & Coluna Direita (Live WhatsApp Preview) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+                    <!-- Coluna Esquerda: Lista de Produtos da Loja Selecionada -->
+                    <div class="lg:col-span-7 space-y-3">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-1">
+                            <div>
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-boxes-stacked text-rose-400"></i> Produtos da Revenda
+                                </h3>
+                                <span id="rebaixas-products-count-label" class="text-[11px] text-slate-400 font-medium">0 produtos</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <button type="button" onclick="window.app.selectAllRebaixaProducts(true)" class="text-[11px] font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 px-2.5 py-1 rounded-lg transition active:scale-95 cursor-pointer" title="Marcar todos os produtos exibidos">
+                                    <i class="fa-solid fa-check-double text-[9px]"></i>
+                                    <span>Marcar Todos</span>
+                                </button>
+                                <button type="button" onclick="window.app.unselectAllRebaixaProducts()" class="text-[11px] font-semibold text-rose-400 hover:text-rose-300 flex items-center gap-1 bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 px-2.5 py-1 rounded-lg transition active:scale-95 cursor-pointer" title="Desmarcar todos os produtos desta loja">
+                                    <i class="fa-solid fa-xmark text-[9px]"></i>
+                                    <span>Desmarcar Todos</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="rebaixas-products-list" class="space-y-3">
+                            <!-- Injetado dinamicamente via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Coluna Direita: Painel de Compartilhamento & Preview WhatsApp Sticky -->
+                    <div class="lg:col-span-5 space-y-4 lg:sticky lg:top-20">
+                        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-3.5">
+                            <div class="flex items-center justify-between pb-2.5 border-b border-slate-800">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-sm">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </span>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-white rebaixa-wa-title">Mensagem Oficial WhatsApp</h4>
+                                        <p class="text-[10px] text-slate-400" id="rebaixas-preview-selected-store-name">Carrefour</p>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded-full font-mono rebaixa-live-badge">
+                                    Ao Vivo
+                                </span>
+                            </div>
+
+                            <!-- Campos de Cabeçalho Editáveis -->
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div>
+                                    <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Revenda:</label>
+                                    <input type="text" id="rebaixa-inp-revenda" oninput="window.app.updateRebaixasWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs text-white focus:ring-1 focus:ring-emerald-500 font-medium">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Filial:</label>
+                                    <input type="text" id="rebaixa-inp-filial" oninput="window.app.updateRebaixasWhatsAppPreview()" placeholder="Ex: Marginal Pinheiros" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs text-white focus:ring-1 focus:ring-emerald-500 font-medium">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Cidade:</label>
+                                    <input type="text" id="rebaixa-inp-cidade" oninput="window.app.updateRebaixasWhatsAppPreview()" placeholder="Ex: São Paulo - SP" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs text-white focus:ring-1 focus:ring-emerald-500 font-medium">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Regional:</label>
+                                    <input type="text" id="rebaixa-inp-regional" value="Leste" oninput="window.app.updateRebaixasWhatsAppPreview()" placeholder="Ex: Leste" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs text-white focus:ring-1 focus:ring-emerald-500 font-medium">
+                                </div>
+                            </div>
+
+                            <!-- Título Customizável -->
+                            <div>
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Título da Mensagem:</label>
+                                <input type="text" id="rebaixa-inp-title" value="Rebaixa de Preço" oninput="window.app.updateRebaixasWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs text-white focus:ring-1 focus:ring-emerald-500 font-bold">
+                            </div>
+
+                            <!-- Textarea com estilo Balão WhatsApp -->
+                            <div class="relative">
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-1 flex items-center justify-between">
+                                    <span>Texto Formatado:</span>
+                                    <span class="text-[10px] text-emerald-400 font-semibold"><i class="fa-solid fa-check-double mr-1"></i>Padrão Solicitado</span>
+                                </label>
+                                <textarea id="rebaixas-preview-text" rows="12" readonly class="w-full rounded-xl border border-slate-700 bg-slate-950 p-3 text-xs font-mono text-emerald-200 focus:outline-none select-all leading-relaxed" placeholder="Marque os produtos ao lado para incluir na mensagem..."></textarea>
+                            </div>
+
+                            <!-- Ações de Compartilhamento -->
+                            <div class="space-y-2 pt-1">
+                                <button onclick="window.app.shareRebaixaToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-lg shadow-emerald-900/30 transition flex items-center justify-center gap-2 text-xs active:scale-98 cursor-pointer">
+                                    <i class="fa-brands fa-whatsapp text-base"></i>
+                                    <span>Compartilhar Revenda no WhatsApp</span>
+                                </button>
+                                <button onclick="window.app.copyRebaixaText()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-2 px-3 rounded-xl border border-slate-700 transition flex items-center justify-center gap-2 text-xs active:scale-98 cursor-pointer">
+                                    <i class="fa-regular fa-copy"></i>
+                                    <span>Copiar Mensagem Formatada</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <!-- ======================================================== -->
             <!-- ABA 3: LOJAS & UNIDADES                                   -->
@@ -1393,7 +2013,7 @@
                         <div class="grid grid-cols-2 gap-2">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-300 mb-1">Estado (UF) *</label>
-                                <select id="store-uf" required class="w-full rounded-xl border border-slate-700 px-2.5 py-2 text-xs bg-slate-900 text-slate-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                                <select id="store-uf" required class="w-full rounded-xl border border-slate-700 px-2.5 py-2 text-xs font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none">
                                     <option value="SP">SP - São Paulo</option>
                                     <option value="RJ">RJ - Rio de Janeiro</option>
                                     <option value="MG">MG - Minas Gerais</option>
@@ -1511,7 +2131,7 @@
                                 <input type="text" id="product-name" required placeholder="Nome do Produto Mestre (Ex: Leite Moça 395g)" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-slate-100 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                                 <div class="grid grid-cols-2 gap-2">
                                     <input type="text" id="product-sku" placeholder="SKU Mestre / Código" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-mono bg-slate-900 text-slate-100 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-                                    <select id="product-unit" class="w-full rounded-xl border border-slate-700 px-2 py-2 text-xs bg-slate-900 text-slate-100 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                                    <select id="product-unit" class="w-full rounded-xl border border-slate-700 px-2 py-2 text-xs font-semibold focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                                         <option value="UN">UN - Unidade</option>
                                         <option value="KG">KG - Quilo</option>
                                         <option value="CX">CX - Caixa</option>
@@ -1861,7 +2481,7 @@
                         <!-- Filtro 1: Produto em Destaque -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Produto em Destaque (Comparativo)</label>
-                            <select id="analytics-filter-product" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <select id="analytics-filter-product" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
                                 <option value="ALL">-- Todos os Produtos (Visão Geral) --</option>
                             </select>
                         </div>
@@ -1869,7 +2489,7 @@
                         <!-- Filtro 2: Categoria -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Categoria de Produto</label>
-                            <select id="analytics-filter-category" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <select id="analytics-filter-category" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
                                 <option value="ALL">Todas as Categorias</option>
                                 <option value="REFRIGERADORES">❄️ Refrigeradores</option>
                                 <option value="LAVADORAS">🧺 Lavadoras de Roupa</option>
@@ -1881,7 +2501,7 @@
                         <!-- Filtro 3: Marca -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Marca</label>
-                            <select id="analytics-filter-brand" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <select id="analytics-filter-brand" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
                                 <option value="ALL">Todas as Marcas</option>
                             </select>
                         </div>
@@ -1889,7 +2509,7 @@
                         <!-- Filtro 4: Estado (UF) -->
                         <div>
                             <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Estado (UF)</label>
-                            <select id="analytics-filter-uf" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-white focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                            <select id="analytics-filter-uf" onchange="window.app.onAnalyticsFilterChange()" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-2 focus:ring-cyan-500 focus:outline-none">
                                 <option value="ALL">Todas as UFs</option>
                             </select>
                         </div>
@@ -2388,6 +3008,11 @@
                         <i class="fa-solid fa-cash-register text-emerald-400 w-5"></i>
                         <span>Atualizar Preços</span>
                     </button>
+                    <button onclick="window.app.switchTab('rebaixas'); window.app.toggleMobileDrawer();" class="w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 transition">
+                        <i class="fa-solid fa-tags text-rose-400 w-5"></i>
+                        <span>Rebaixas de Preço</span>
+                        <span id="mob-badge-rebaixas" class="ml-auto text-[9px] font-bold bg-rose-500/20 text-rose-400 px-2 py-0.5 rounded-full border border-rose-500/30">WhatsApp</span>
+                    </button>
                     <button onclick="window.app.switchTab('lojas'); window.app.toggleMobileDrawer();" class="w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-xs font-semibold text-slate-200 hover:bg-slate-800 transition">
                         <i class="fa-solid fa-store text-cyan-400 w-5"></i>
                         <span>Lojas & Redes</span>
@@ -2670,6 +3295,9 @@
                         <i class="fa-solid fa-check text-xs"></i> Salvar Preço
                     </button>
                 </div>
+                <button type="button" id="btn-quick-price-save-rebaixa" class="w-full bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-white border border-rose-500/30 text-xs py-2 rounded-xl font-bold transition flex items-center justify-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-tags text-rose-400"></i> Salvar & Compartilhar Rebaixa
+                </button>
             </div>
         </div>
     </div>
@@ -2783,12 +3411,12 @@
                     <div class="grid grid-cols-2 gap-2">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Marca *</label>
-                            <select id="edit-product-brand" required class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                            <select id="edit-product-brand" required class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                             </select>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Unidade *</label>
-                            <select id="edit-product-unit" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs bg-slate-900 text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                            <select id="edit-product-unit" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                                 <option value="UN">UN - Unidade</option>
                                 <option value="KG">KG - Quilo</option>
                                 <option value="CX">CX - Caixa</option>
@@ -2849,6 +3477,247 @@
                 <div class="grid grid-cols-2 gap-2 pt-2">
                     <button type="button" onclick="window.app.closeModal('modal-edit-product')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2.5 rounded-xl font-semibold transition">Cancelar</button>
                     <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs py-2.5 rounded-xl font-bold shadow-md shadow-indigo-600/20 transition">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+        
+    <!-- ======================================================== -->
+    <!-- MODAL 6: COMPARTILHAR MIX NO WHATSAPP                    -->
+    <!-- ======================================================== -->
+    <div id="modal-mix-whatsapp" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4 transition-all">
+        <div class="bg-[#131b2e] rounded-t-3xl sm:rounded-2xl max-w-4xl w-full shadow-2xl border-t sm:border border-slate-700/80 overflow-hidden flex flex-col max-h-[94vh] animate-sheet-up">
+            
+            <!-- Drag indicator no Mobile -->
+            <div class="sm:hidden pt-3 pb-1 flex justify-center">
+                <div class="w-12 h-1.5 bg-slate-700 rounded-full"></div>
+            </div>
+
+            <!-- Cabeçalho do Modal -->
+            <div class="px-5 py-3.5 border-b border-slate-800 flex items-center justify-between shrink-0">
+                <div class="flex items-center gap-2.5 min-w-0">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-lg shrink-0 shadow-xs">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <h3 class="font-bold text-white text-sm sm:text-base truncate flex items-center gap-2">
+                            <span>Compartilhar Mix no WhatsApp</span>
+                            <span id="mix-wa-selected-count-badge" class="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">0 itens</span>
+                        </h3>
+                        <p class="text-[11px] text-slate-400 truncate">Selecione a loja, marque os itens e compartilhe no padrão com preço e estoque</p>
+                    </div>
+                </div>
+                <button type="button" onclick="window.app.closeModal('modal-mix-whatsapp')" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Corpo em 2 Colunas (Mobile empilhado, Desktop lado a lado) -->
+            <div class="p-4 sm:p-5 overflow-y-auto flex-1 grid grid-cols-1 lg:grid-cols-12 gap-4">
+                
+                <!-- Coluna 1: Loja, Legenda Fixa e Seleção do Mix (7 cols) -->
+                <div class="lg:col-span-7 space-y-3.5">
+                    
+                    <!-- 1. Seletor de Loja -->
+                    <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
+                        <label class="block text-xs font-bold text-slate-300 flex items-center gap-1.5">
+                            <i class="fa-solid fa-store text-blue-400"></i>
+                            <span>1. Selecionar Loja *</span>
+                        </label>
+                        <select id="mix-wa-store" onchange="window.app.onMixStoreChange()" class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        </select>
+                    </div>
+
+                    <!-- 2. Informações da Legenda Fixa Superior -->
+                    <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-slate-300 uppercase tracking-wide flex items-center gap-1.5">
+                                <i class="fa-solid fa-clipboard-list text-cyan-400"></i>
+                                <span>2. Legenda Fixa Superior</span>
+                            </span>
+                            <span class="text-[10px] text-slate-400 font-medium">Preenchimento automático</span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            <div>
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Filial</label>
+                                <input type="text" id="mix-wa-filial" oninput="window.app.updateMixWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 px-2.5 py-1.5 text-xs bg-slate-950 text-white focus:ring-1 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">ID Revenda</label>
+                                <input type="text" id="mix-wa-id" oninput="window.app.updateMixWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 px-2.5 py-1.5 text-xs bg-slate-950 text-white focus:ring-1 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Consultora</label>
+                                <input type="text" id="mix-wa-consultora" value="Reinaldo Leal" oninput="window.app.updateMixWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 px-2.5 py-1.5 text-xs bg-slate-950 text-white focus:ring-1 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Cidade</label>
+                                <input type="text" id="mix-wa-cidade" oninput="window.app.updateMixWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 px-2.5 py-1.5 text-xs bg-slate-950 text-white focus:ring-1 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Data</label>
+                                <input type="text" id="mix-wa-data" oninput="window.app.updateMixWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 px-2.5 py-1.5 text-xs bg-slate-950 text-white focus:ring-1 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-semibold text-slate-400 mb-0.5">Título do Mix</label>
+                                <input type="text" id="mix-wa-custom-title" placeholder="Ex: MIX CARREFOUR" oninput="window.app.updateMixWhatsAppPreview()" class="w-full rounded-lg border border-slate-700 px-2.5 py-1.5 text-xs bg-slate-950 text-white focus:ring-1 focus:ring-emerald-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- 3. Filtro de Marcas -->
+                    <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800 space-y-2">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <label class="block text-xs font-bold text-slate-200 flex items-center gap-1.5">
+                                <i class="fa-solid fa-tags text-indigo-400"></i>
+                                <span>3. Filtrar Marcas no Mix</span>
+                                <span id="mix-wa-brands-badge" class="text-[10px] bg-indigo-500/15 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold">Todas as Marcas</span>
+                            </label>
+                            
+                            <!-- Atalhos Rápidos de Marca -->
+                            <div class="flex items-center gap-1.5">
+                                <button type="button" onclick="window.app.setMixBrandFilter('panasonic')" class="text-[10px] font-bold bg-blue-600 hover:bg-blue-500 text-white px-2.5 py-1 rounded-lg shadow-sm transition flex items-center gap-1 cursor-pointer">
+                                    <i class="fa-solid fa-star text-[9px] text-amber-300"></i>
+                                    <span>Só Panasonic</span>
+                                </button>
+                                <button type="button" onclick="window.app.setMixBrandFilter('all')" class="text-[10px] font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded-lg border border-slate-700 transition cursor-pointer">
+                                    Todas
+                                </button>
+                                <button type="button" onclick="window.app.setMixBrandFilter('none')" class="text-[10px] font-semibold bg-slate-800 hover:bg-slate-700 text-slate-400 px-2 py-1 rounded-lg border border-slate-700 transition cursor-pointer">
+                                    Limpar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Chips clicáveis das Marcas -->
+                        <div id="mix-wa-brand-chips" class="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto pr-1">
+                            <!-- Injetado dinamicamente via JS -->
+                        </div>
+                    </div>
+
+                    <!-- 4. Seleção de Produtos do Mix -->
+                    <div class="space-y-2">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <span class="text-xs font-bold text-slate-200 flex items-center gap-1.5">
+                                <i class="fa-solid fa-boxes-stacked text-amber-400"></i>
+                                <span>4. Selecionar Produtos para o Mix</span>
+                            </span>
+                            <div class="flex items-center gap-1.5">
+                                <button type="button" onclick="window.app.selectMixPreset('store')" class="text-[10px] font-bold bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white px-2 py-1 rounded-lg border border-blue-500/30 transition">
+                                    Cadastrados na Loja
+                                </button>
+                                <button type="button" onclick="window.app.selectMixPreset('all')" class="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded-lg border border-slate-700 transition">
+                                    Todos
+                                </button>
+                                <button type="button" onclick="window.app.selectMixPreset('none')" class="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-400 px-2 py-1 rounded-lg border border-slate-700 transition">
+                                    Limpar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Barra de Busca Rápida -->
+                        <div class="relative">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-slate-500"></i>
+                            <input type="text" id="mix-wa-search" placeholder="Filtrar por modelo ou nome..." oninput="window.app.filterMixProductsList()" class="w-full rounded-xl border border-slate-700/80 pl-8 pr-3 py-1.5 text-xs bg-slate-900 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        </div>
+
+                        <!-- Container com Lista Agrupada por Categoria -->
+                        <div id="mix-wa-products-container" class="space-y-3 max-h-[36vh] overflow-y-auto pr-1">
+                            <!-- Injetado dinamicamente via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Pré-visualização do WhatsApp & Ações (5 cols) -->
+                <div class="lg:col-span-5 flex flex-col space-y-3">
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Prévia da Mensagem</span>
+                        </span>
+                        <label class="flex items-center gap-1.5 text-[10px] text-slate-400 cursor-pointer">
+                            <input type="checkbox" id="mix-wa-hide-empty" onchange="window.app.updateMixWhatsAppPreview()" class="rounded text-emerald-500 focus:ring-0 bg-slate-800 border-slate-700">
+                            <span>Ocultar categorias vazias</span>
+                        </label>
+                    </div>
+
+                    <!-- WhatsApp Bubble Preview -->
+                    <div id="mix-wa-preview-bubble" class="flex-1 flex flex-col relative rounded-2xl border border-emerald-500/30 bg-[#0e1f18] p-3 shadow-inner min-h-[280px]">
+                        <div class="flex items-center justify-between border-b border-emerald-500/20 pb-2 mb-2">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="text-[11px] font-bold text-emerald-300">Formatado para WhatsApp</span>
+                            </div>
+                            <span class="text-[10px] text-slate-400 font-mono">Texto editável</span>
+                        </div>
+                        <textarea id="mix-wa-preview-text" rows="14" class="w-full flex-1 bg-transparent text-slate-100 text-xs font-mono resize-none focus:outline-none leading-relaxed selection:bg-emerald-600/40" placeholder="A mensagem formatada aparecerá aqui..."></textarea>
+                    </div>
+
+                    <!-- Botões de Ação -->
+                    <div class="space-y-2 pt-1">
+                        <button type="button" onclick="window.app.shareMixToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm py-3 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2 cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Compartilhar no WhatsApp</span>
+                        </button>
+                        
+                        <div class="grid grid-cols-2 gap-2">
+                            <button type="button" onclick="window.app.copyMixWhatsAppText()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs py-2.5 rounded-xl border border-slate-700 transition flex items-center justify-center gap-1.5">
+                                <i class="fa-regular fa-copy text-xs"></i>
+                                <span>Copiar Mensagem</span>
+                            </button>
+                            <button type="button" onclick="window.app.closeModal('modal-mix-whatsapp')" class="bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white font-semibold text-xs py-2.5 rounded-xl border border-slate-700 transition">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+                </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL: ADICIONAR REBAIXA / ALTERAÇÃO MANUAL               -->
+    <!-- ======================================================== -->
+    <div id="modal-add-manual-rebaixa" class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm hidden p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-md p-5 shadow-2xl text-slate-100 space-y-4 animate-sheet-up">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-tags text-rose-400"></i> Adicionar Rebaixa / Alteração Manual
+                </h3>
+                <button type="button" onclick="window.app.closeModal('modal-add-manual-rebaixa')" class="text-slate-400 hover:text-white text-base cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form onsubmit="window.app.handleManualRebaixaSubmit(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Loja / Revenda *</label>
+                    <select id="manual-rebaixa-store" onchange="window.app.onManualRebaixaProductSelect()" required class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-1 focus:ring-rose-500">
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Produto *</label>
+                    <select id="manual-rebaixa-product" onchange="window.app.onManualRebaixaProductSelect()" required class="w-full rounded-xl border border-slate-700 px-3 py-2 text-xs font-semibold focus:ring-1 focus:ring-rose-500">
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">De (Preço Antigo R$) *</label>
+                        <input type="text" id="manual-rebaixa-old-price" placeholder="Ex: 1998,50" required class="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-xs text-white focus:ring-1 focus:ring-rose-500 font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Por (Preço Novo R$) *</label>
+                        <input type="text" id="manual-rebaixa-new-price" placeholder="Ex: 1798,50" required class="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-xs text-white focus:ring-1 focus:ring-rose-500 font-mono">
+                    </div>
+                </div>
+                <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-800/80">
+                    <button type="button" onclick="window.app.closeModal('modal-add-manual-rebaixa')" class="px-3 py-2 text-xs font-semibold text-slate-400 hover:text-white cursor-pointer">Cancelar</button>
+                    <button type="submit" class="bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-md active:scale-95 cursor-pointer">Adicionar à Lista</button>
                 </div>
             </form>
         </div>
@@ -3040,6 +3909,7 @@
                     state.storePrices = parsed.storePrices || [];
                     state.priceLogs = parsed.priceLogs || [];
                     state.stockLogs = parsed.stockLogs || [];
+                    state.priceChanges = parsed.priceChanges || [];
                     return true;
                 }
             } catch (err) {
@@ -3057,6 +3927,7 @@
                     storePrices: state.storePrices,
                     priceLogs: state.priceLogs,
                     stockLogs: state.stockLogs,
+                    priceChanges: state.priceChanges || [],
                     savedAt: new Date().toISOString()
                 }));
             } catch (err) {
@@ -3907,6 +4778,39 @@
             else state.storePrices.push(priceData);
 
             state.priceLogs.unshift(logData);
+
+            // Registro automático de Rebaixa / Alteração de Preço para Compartilhamento
+            if (oldPrice !== null && !isNaN(oldPrice) && Number(oldPrice) !== Number(val)) {
+                if (!state.priceChanges) state.priceChanges = [];
+                const changeEntry = {
+                    id: 'pc_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+                    storeId,
+                    productId,
+                    brandId: priceData.brandId,
+                    oldPrice: Number(oldPrice),
+                    newPrice: Number(val),
+                    diff: Number(val) - Number(oldPrice),
+                    percent: oldPrice > 0 ? ((Number(val) - Number(oldPrice)) / Number(oldPrice)) * 100 : 0,
+                    isReduction: Number(val) < Number(oldPrice),
+                    timestamp: now,
+                    shared: false
+                };
+                const existingIdx = state.priceChanges.findIndex(x => x.storeId === storeId && x.productId === productId);
+                if (existingIdx >= 0) {
+                    const origOld = state.priceChanges[existingIdx].oldPrice;
+                    state.priceChanges[existingIdx] = {
+                        ...changeEntry,
+                        oldPrice: (origOld !== undefined && origOld !== null) ? origOld : Number(oldPrice),
+                        diff: Number(val) - ((origOld !== undefined && origOld !== null) ? origOld : Number(oldPrice)),
+                        percent: (origOld && origOld > 0) ? ((Number(val) - origOld) / origOld) * 100 : changeEntry.percent,
+                        isReduction: (origOld && origOld > 0) ? Number(val) < origOld : changeEntry.isReduction
+                    };
+                } else {
+                    state.priceChanges.unshift(changeEntry);
+                }
+                if (typeof updateRebaixasBadges === 'function') updateRebaixasBadges();
+            }
+
             saveToLocalStorage();
             inputEl.value = '';
             vibrate(15);
@@ -4132,6 +5036,17 @@
                     const brandId = latestSp?.brandId || pr?.brandId || '';
                     saveProductPrice(storeId, productId, brandId, 'quick-price-input');
                     closeModal('modal-quick-price');
+                };
+            }
+            const saveRebaixaBtn = document.getElementById('btn-quick-price-save-rebaixa');
+            if (saveRebaixaBtn) {
+                saveRebaixaBtn.onclick = () => {
+                    const latestSp = state.storePrices.find(x => x.storeId === storeId && x.productId === productId);
+                    const brandId = latestSp?.brandId || pr?.brandId || '';
+                    saveProductPrice(storeId, productId, brandId, 'quick-price-input');
+                    closeModal('modal-quick-price');
+                    rebaixasSelectedStoreId = storeId;
+                    switchTab('rebaixas');
                 };
             }
 
@@ -7726,7 +8641,7 @@
         // NAVEGAÇÃO ENTRE ABAS & CONTROLE DO PWA
         // ============================================================
         function switchTab(tab) {
-            const tabs = ['consulta', 'graficos', 'precos', 'lojas', 'catalogo', 'logs', 'mais'];
+            const tabs = ['consulta', 'graficos', 'precos', 'rebaixas', 'lojas', 'catalogo', 'logs', 'mais'];
             if (!tabs.includes(tab)) tab = 'consulta';
             state.activeTab = tab;
 
@@ -7734,6 +8649,7 @@
                 consulta: 'Consulta & Relatórios',
                 graficos: 'Gráficos & Comparativo de Mercado',
                 precos: 'Atualizador de Preços',
+                rebaixas: 'Rebaixas de Preço & Compartilhamento',
                 lojas: 'Lojas & Redes',
                 catalogo: 'Catálogo de Produtos',
                 logs: 'Histórico & Logs',
@@ -7776,6 +8692,9 @@
                 } else if (typeof renderAnalyticsCharts === 'function') {
                     renderAnalyticsCharts();
                 }
+            }
+            if (tab === 'rebaixas' && typeof renderRebaixasTab === 'function') {
+                renderRebaixasTab();
             }
 
             window.location.hash = tab;
@@ -7866,6 +8785,537 @@
         function closeModal(id) {
             document.getElementById(id).classList.add('hidden');
         }
+
+        // ============================================================
+        // COMPARTILHAMENTO DE MIX DE PRODUTOS NO WHATSAPP
+        // ============================================================
+        let mixWhatsAppSelectedProducts = new Set();
+        let mixWhatsAppSelectedBrands = new Set();
+        let currentMixSearch = '';
+
+        function openMixWhatsAppModal(preferredStoreId = null) {
+            if (!state.stores || state.stores.length === 0) {
+                return showToast("Cadastre ao menos uma loja antes de gerar o Mix.", "warning");
+            }
+
+            const storeSelect = document.getElementById('mix-wa-store');
+            if (!storeSelect) return;
+
+            // Popula opções de loja
+            storeSelect.innerHTML = state.stores.map(s => 
+                `<option value="${s.id}">${s.name} (${s.uf}) - ID: ${s.revendaId || s.id}</option>`
+            ).join('');
+
+            // Define loja selecionada inicial
+            let targetId = preferredStoreId;
+            if (!targetId || targetId === 'ALL') {
+                const filterStoreVal = document.getElementById('filter-store')?.value;
+                if (filterStoreVal && filterStoreVal !== 'ALL') {
+                    targetId = filterStoreVal;
+                } else if (state.stores.length > 0) {
+                    targetId = state.stores[0].id;
+                }
+            }
+
+            if (targetId) {
+                storeSelect.value = targetId;
+            }
+
+            // Inicializa marcas selecionadas (todas por padrão)
+            mixWhatsAppSelectedBrands = new Set(state.brands.map(b => b.id));
+
+            onMixStoreChange();
+
+            const modal = document.getElementById('modal-mix-whatsapp');
+            if (modal) {
+                modal.onclick = (e) => {
+                    if (e.target === modal) closeModal('modal-mix-whatsapp');
+                };
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function onMixStoreChange() {
+            const storeSelect = document.getElementById('mix-wa-store');
+            if (!storeSelect) return;
+            const storeId = storeSelect.value;
+            const store = state.stores.find(s => s.id === storeId);
+
+            // Preenche dados do cabeçalho da mensagem
+            const titleInput = document.getElementById('mix-wa-custom-title');
+            if (titleInput) {
+                const isOnlyPana = mixWhatsAppSelectedBrands.size === 1 && state.brands.some(b => isPanasonicBrand(b) && mixWhatsAppSelectedBrands.has(b.id));
+                titleInput.value = store ? (isOnlyPana ? `MIX PANASONIC ${store.name.toUpperCase()}` : `MIX ${store.name.toUpperCase()}`) : 'MIX PRODUTOS';
+            }
+
+            const filialInput = document.getElementById('mix-wa-filial');
+            if (filialInput) {
+                filialInput.value = store ? store.name : '';
+            }
+
+            const idInput = document.getElementById('mix-wa-id');
+            if (idInput) {
+                idInput.value = store ? (store.revendaId || store.id) : '';
+            }
+
+            const consultoraInput = document.getElementById('mix-wa-consultora');
+            if (consultoraInput && !consultoraInput.value) {
+                consultoraInput.value = 'Reinaldo Leal';
+            }
+
+            const cidadeInput = document.getElementById('mix-wa-cidade');
+            if (cidadeInput) {
+                cidadeInput.value = store ? (store.city ? `${store.city} - ${store.uf}` : store.uf) : '';
+            }
+
+            const dataInput = document.getElementById('mix-wa-data');
+            if (dataInput) {
+                dataInput.value = new Date().toLocaleDateString('pt-BR');
+            }
+
+            // Seleção inicial automática: produtos cadastrados nessa loja
+            const storeProducts = state.storePrices.filter(sp => 
+                sp.storeId === storeId && (
+                    (sp.currentPrice !== null && sp.currentPrice !== undefined && sp.currentPrice !== '') ||
+                    (sp.currentStock !== null && sp.currentStock !== undefined && sp.currentStock !== '')
+                )
+            ).map(sp => sp.productId);
+
+            if (storeProducts.length > 0) {
+                mixWhatsAppSelectedProducts = new Set(storeProducts);
+            } else {
+                mixWhatsAppSelectedProducts = new Set(state.products.map(p => p.id));
+            }
+
+            const searchInput = document.getElementById('mix-wa-search');
+            if (searchInput) searchInput.value = '';
+            currentMixSearch = '';
+
+            renderMixBrandChips();
+            renderMixProductsList();
+            updateMixWhatsAppPreview();
+        }
+
+        function renderMixBrandChips() {
+            const container = document.getElementById('mix-wa-brand-chips');
+            if (!container) return;
+
+            const sortedBrands = [...state.brands].sort(sortBrandsWithPanasonicFirst);
+            let html = '';
+
+            sortedBrands.forEach(b => {
+                const isPana = isPanasonicBrand(b);
+                const isSelected = mixWhatsAppSelectedBrands.has(b.id);
+                const productCount = state.products.filter(p => p.brandId === b.id).length;
+
+                if (isPana) {
+                    html += `
+                        <button type="button" onclick="window.app.toggleMixBrand('${b.id}')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-xs ${isSelected ? 'bg-blue-600/30 text-blue-300 border border-blue-500/60 ring-1 ring-blue-500/40' : 'bg-slate-950/60 text-slate-400 border border-slate-800 hover:border-slate-700 opacity-60 hover:opacity-100'}">
+                            <i class="fa-solid ${isSelected ? 'fa-check text-blue-400' : 'fa-plus text-slate-500'} text-[10px]"></i>
+                            <span>⭐ ${b.name}</span>
+                            <span class="text-[10px] px-1.5 py-0.2 rounded font-mono ${isSelected ? 'bg-blue-500/20 text-blue-200' : 'bg-slate-800 text-slate-500'}">${productCount}</span>
+                        </button>
+                    `;
+                } else {
+                    html += `
+                        <button type="button" onclick="window.app.toggleMixBrand('${b.id}')" class="px-2.5 py-1 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 cursor-pointer shadow-xs ${isSelected ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/50' : 'bg-slate-950/60 text-slate-400 border border-slate-800 hover:border-slate-700 opacity-60 hover:opacity-100'}">
+                            <i class="fa-solid ${isSelected ? 'fa-check text-indigo-400' : 'fa-plus text-slate-500'} text-[10px]"></i>
+                            <span>${b.name}</span>
+                            <span class="text-[10px] px-1.5 py-0.2 rounded font-mono ${isSelected ? 'bg-indigo-500/20 text-indigo-200' : 'bg-slate-800 text-slate-500'}">${productCount}</span>
+                        </button>
+                    `;
+                }
+            });
+
+            container.innerHTML = html;
+
+            // Atualiza badge de marcas ativas
+            const badge = document.getElementById('mix-wa-brands-badge');
+            if (badge) {
+                const totalBrands = state.brands.length;
+                const selCount = mixWhatsAppSelectedBrands.size;
+                const isOnlyPana = selCount === 1 && state.brands.some(b => isPanasonicBrand(b) && mixWhatsAppSelectedBrands.has(b.id));
+
+                if (selCount === totalBrands && totalBrands > 0) {
+                    badge.textContent = "Todas as Marcas";
+                    badge.className = "text-[10px] bg-indigo-500/15 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold";
+                } else if (isOnlyPana) {
+                    badge.textContent = "⭐ Só Panasonic";
+                    badge.className = "text-[10px] bg-blue-500/20 text-blue-300 border border-blue-500/40 px-2 py-0.5 rounded-full font-bold";
+                } else if (selCount === 0) {
+                    badge.textContent = "Nenhuma Marca";
+                    badge.className = "text-[10px] bg-red-500/15 text-red-400 border border-red-500/30 px-2 py-0.5 rounded-full font-bold";
+                } else {
+                    badge.textContent = `${selCount} marca(s) ativa(s)`;
+                    badge.className = "text-[10px] bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold";
+                }
+            }
+        }
+
+        function toggleMixBrand(brandId) {
+            const storeId = document.getElementById('mix-wa-store')?.value;
+            const brandProducts = state.products.filter(p => p.brandId === brandId).map(p => p.id);
+
+            if (mixWhatsAppSelectedBrands.has(brandId)) {
+                mixWhatsAppSelectedBrands.delete(brandId);
+                // Remove produtos dessa marca da seleção
+                brandProducts.forEach(pid => mixWhatsAppSelectedProducts.delete(pid));
+            } else {
+                mixWhatsAppSelectedBrands.add(brandId);
+                // Adiciona produtos dessa marca que têm preço/estoque nessa loja (ou todos)
+                const storeProds = state.storePrices.filter(sp => sp.storeId === storeId && brandProducts.includes(sp.productId)).map(sp => sp.productId);
+                if (storeProds.length > 0) {
+                    storeProds.forEach(pid => mixWhatsAppSelectedProducts.add(pid));
+                } else {
+                    brandProducts.forEach(pid => mixWhatsAppSelectedProducts.add(pid));
+                }
+            }
+
+            renderMixBrandChips();
+            renderMixProductsList(currentMixSearch);
+            updateMixWhatsAppPreview();
+        }
+
+        function setMixBrandFilter(mode) {
+            const storeId = document.getElementById('mix-wa-store')?.value;
+            const store = state.stores.find(s => s.id === storeId);
+            const titleInput = document.getElementById('mix-wa-custom-title');
+
+            if (mode === 'panasonic') {
+                mixWhatsAppSelectedBrands.clear();
+                const pana = state.brands.find(b => isPanasonicBrand(b));
+                if (pana) {
+                    mixWhatsAppSelectedBrands.add(pana.id);
+                    // Mantém apenas produtos da Panasonic
+                    mixWhatsAppSelectedProducts = new Set(
+                        state.products.filter(p => p.brandId === pana.id).map(p => p.id)
+                    );
+                }
+                if (titleInput && store) {
+                    titleInput.value = `MIX PANASONIC ${store.name.toUpperCase()}`;
+                }
+                showToast("Filtro ativado: Só Panasonic", "info");
+            } else if (mode === 'all') {
+                mixWhatsAppSelectedBrands = new Set(state.brands.map(b => b.id));
+                if (titleInput && store) {
+                    titleInput.value = `MIX ${store.name.toUpperCase()}`;
+                }
+                selectMixPreset('store');
+                showToast("Todas as marcas selecionadas", "info");
+            } else if (mode === 'none') {
+                mixWhatsAppSelectedBrands.clear();
+                mixWhatsAppSelectedProducts.clear();
+                showToast("Marcas desmarcadas", "info");
+            }
+
+            renderMixBrandChips();
+            renderMixProductsList(currentMixSearch);
+            updateMixWhatsAppPreview();
+        }
+
+        function filterMixProductsList() {
+            const searchInput = document.getElementById('mix-wa-search');
+            currentMixSearch = (searchInput ? searchInput.value : '').trim().toLowerCase();
+            renderMixProductsList(currentMixSearch);
+        }
+
+        function renderMixProductsList(searchTerm = '') {
+            const container = document.getElementById('mix-wa-products-container');
+            if (!container) return;
+
+            const storeId = document.getElementById('mix-wa-store')?.value;
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+
+            // Agrupa produtos pelas 4 categorias
+            const categories = [
+                { key: 'REFRIGERADORES', label: 'GELADEIRAS', icon: '❄️', badgeClass: 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30' },
+                { key: 'LAVADORAS', label: 'MÁQUINA DE LAVAR', icon: '🧺', badgeClass: 'bg-blue-500/15 text-blue-400 border-blue-500/30' },
+                { key: 'MICROONDAS', label: 'MWO (MICROONDAS)', icon: '📻', badgeClass: 'bg-amber-500/15 text-amber-400 border-amber-500/30' },
+                { key: 'OUTROS', label: 'DEMAIS PRODUTOS', icon: '📦', badgeClass: 'bg-slate-700/30 text-slate-400 border-slate-700' }
+            ];
+
+            let html = '';
+
+            categories.forEach(cat => {
+                // Filtra produtos pela categoria E pela marca ativa no filtro
+                let catProducts = state.products.filter(p => {
+                    const c = classifyProductCategory(p);
+                    const isBrandActive = mixWhatsAppSelectedBrands.has(p.brandId);
+                    return c.id === cat.key && isBrandActive;
+                });
+
+                if (searchTerm) {
+                    catProducts = catProducts.filter(p => {
+                        const br = bMap[p.brandId]?.name || '';
+                        return p.name.toLowerCase().includes(searchTerm) || 
+                               (p.sku && p.sku.toLowerCase().includes(searchTerm)) ||
+                               br.toLowerCase().includes(searchTerm);
+                    });
+                }
+
+                if (catProducts.length === 0) {
+                    if (cat.key === 'OUTROS') return; // omite outros se vazio
+                }
+
+                const catSelectedCount = catProducts.filter(p => mixWhatsAppSelectedProducts.has(p.id)).length;
+                const isAllSelected = catProducts.length > 0 && catSelectedCount === catProducts.length;
+
+                html += `
+                    <div class="bg-slate-900/60 rounded-xl border border-slate-800 overflow-hidden">
+                        <!-- Cabeçalho da Categoria -->
+                        <div class="px-3 py-2 bg-slate-900 flex items-center justify-between border-b border-slate-800/80">
+                            <div class="flex items-center gap-2 min-w-0">
+                                <span class="text-xs">${cat.icon}</span>
+                                <span class="text-[11px] font-bold text-white uppercase tracking-wider truncate">${cat.label}</span>
+                                <span class="text-[9px] px-1.5 py-0.5 rounded-full border ${cat.badgeClass} font-bold">${catSelectedCount}/${catProducts.length}</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <button type="button" onclick="window.app.toggleMixCategory('${cat.key}', ${!isAllSelected})" class="text-[10px] font-semibold text-cyan-400 hover:text-cyan-300 px-2 py-0.5 rounded hover:bg-cyan-500/10 transition cursor-pointer">
+                                    ${isAllSelected ? 'Desmarcar' : 'Marcar Todos'}
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Lista de Itens -->
+                        <div class="p-2 space-y-1.5">
+                `;
+
+                if (catProducts.length === 0) {
+                    html += `<p class="text-[10px] text-slate-500 italic p-2 text-center">Nenhum produto das marcas selecionadas.</p>`;
+                } else {
+                    catProducts.forEach(p => {
+                        const isChecked = mixWhatsAppSelectedProducts.has(p.id);
+                        const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === p.id);
+                        const br = bMap[p.brandId];
+                        const isPana = isPanasonicBrand(br);
+
+                        const priceFormatted = (sp && sp.currentPrice !== null && sp.currentPrice !== undefined && sp.currentPrice !== '')
+                            ? formatBRL(sp.currentPrice)
+                            : '<span class="text-slate-500">Sem preço</span>';
+
+                        let stockBadge = '<span class="text-[9px] text-slate-500">Sem estoque</span>';
+                        if (sp && sp.currentStock !== null && sp.currentStock !== undefined && sp.currentStock !== '') {
+                            const curStk = Number(sp.currentStock);
+                            if (curStk === 0) {
+                                stockBadge = '<span class="text-[9px] text-red-400 font-bold bg-red-500/15 border border-red-500/30 px-1.5 py-0.5 rounded">Ruptura (0)</span>';
+                            } else {
+                                stockBadge = `<span class="text-[9px] text-cyan-300 font-bold bg-cyan-500/15 border border-cyan-500/30 px-1.5 py-0.5 rounded">Est: ${curStk} un</span>`;
+                            }
+                        }
+
+                        const brandTag = br ? (isPana 
+                            ? `<span class="text-[9px] font-bold text-blue-300 bg-blue-500/15 border border-blue-500/30 px-1.5 py-0.2 rounded mr-1">⭐ ${br.name}</span>`
+                            : `<span class="text-[9px] font-semibold text-slate-300 bg-slate-800 border border-slate-700 px-1.5 py-0.2 rounded mr-1">${br.name}</span>`
+                        ) : '';
+
+                        html += `
+                            <label class="flex items-center justify-between p-2 rounded-lg border transition cursor-pointer select-none ${isChecked ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-slate-950/40 border-slate-800/80 hover:border-slate-700'}">
+                                <div class="flex items-center gap-2 min-w-0 flex-1 pr-2">
+                                    <input type="checkbox" ${isChecked ? 'checked' : ''} onchange="window.app.toggleMixProduct('${p.id}')" class="rounded text-emerald-500 focus:ring-0 bg-slate-900 border-slate-700 shrink-0">
+                                    <div class="min-w-0">
+                                        <div class="text-[11px] font-semibold ${isChecked ? 'text-white' : 'text-slate-300'} truncate">${p.name}</div>
+                                        <div class="text-[9px] text-slate-400 font-mono truncate flex items-center mt-0.5">${brandTag}<span>SKU: ${p.sku || '—'}</span></div>
+                                    </div>
+                                </div>
+                                <div class="text-right shrink-0 space-y-0.5">
+                                    <div class="text-[10px] font-bold font-mono text-emerald-400">${priceFormatted}</div>
+                                    <div>${stockBadge}</div>
+                                </div>
+                            </label>
+                        `;
+                    });
+                }
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function toggleMixProduct(productId) {
+            if (mixWhatsAppSelectedProducts.has(productId)) {
+                mixWhatsAppSelectedProducts.delete(productId);
+            } else {
+                mixWhatsAppSelectedProducts.add(productId);
+            }
+            updateMixWhatsAppPreview();
+            renderMixProductsList(currentMixSearch);
+        }
+
+        function toggleMixCategory(categoryKey, forceSelect = null) {
+            const catProducts = state.products.filter(p => {
+                return classifyProductCategory(p).id === categoryKey && mixWhatsAppSelectedBrands.has(p.brandId);
+            });
+            const allSelected = catProducts.length > 0 && catProducts.every(p => mixWhatsAppSelectedProducts.has(p.id));
+            const shouldSelect = forceSelect !== null ? forceSelect : !allSelected;
+
+            catProducts.forEach(p => {
+                if (shouldSelect) mixWhatsAppSelectedProducts.add(p.id);
+                else mixWhatsAppSelectedProducts.delete(p.id);
+            });
+
+            renderMixProductsList(currentMixSearch);
+            updateMixWhatsAppPreview();
+        }
+
+        function selectMixPreset(preset) {
+            const storeId = document.getElementById('mix-wa-store')?.value;
+            if (preset === 'none') {
+                mixWhatsAppSelectedProducts.clear();
+            } else if (preset === 'all') {
+                mixWhatsAppSelectedProducts = new Set(
+                    state.products.filter(p => mixWhatsAppSelectedBrands.has(p.brandId)).map(p => p.id)
+                );
+            } else if (preset === 'store') {
+                const storeProducts = state.storePrices.filter(sp => 
+                    sp.storeId === storeId && (
+                        (sp.currentPrice !== null && sp.currentPrice !== undefined && sp.currentPrice !== '') ||
+                        (sp.currentStock !== null && sp.currentStock !== undefined && sp.currentStock !== '')
+                    )
+                ).map(sp => sp.productId);
+
+                mixWhatsAppSelectedProducts = new Set(
+                    state.products.filter(p => storeProducts.includes(p.id) && mixWhatsAppSelectedBrands.has(p.brandId)).map(p => p.id)
+                );
+            }
+            renderMixProductsList(currentMixSearch);
+            updateMixWhatsAppPreview();
+        }
+
+        function updateMixWhatsAppPreview() {
+            const storeSelect = document.getElementById('mix-wa-store');
+            const storeId = storeSelect ? storeSelect.value : null;
+            const store = state.stores.find(s => s.id === storeId);
+            const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+
+            const title = (document.getElementById('mix-wa-custom-title')?.value || (store ? `MIX ${store.name.toUpperCase()}` : 'MIX PRODUTOS')).trim();
+            const filial = (document.getElementById('mix-wa-filial')?.value || (store ? store.name : '')).trim();
+            const idRevenda = (document.getElementById('mix-wa-id')?.value || (store ? (store.revendaId || store.id) : '')).trim();
+            const consultora = (document.getElementById('mix-wa-consultora')?.value || 'Reinaldo Leal').trim();
+            const cidade = (document.getElementById('mix-wa-cidade')?.value || (store ? (store.city ? `${store.city} - ${store.uf}` : store.uf) : '')).trim();
+            const data = (document.getElementById('mix-wa-data')?.value || new Date().toLocaleDateString('pt-BR')).trim();
+            const hideEmpty = document.getElementById('mix-wa-hide-empty')?.checked || false;
+
+            let text = `🗒️ *${title}*\n\n`;
+            text += `FILIAL: ${filial}\n`;
+            text += `ID: ${idRevenda}\n`;
+            text += `Consultora: ${consultora}\n`;
+            text += `Cidade: ${cidade}\n`;
+            text += `Data: ${data}\n\n`;
+
+            const categoriesConfig = [
+                { key: 'REFRIGERADORES', title: '*GELADEIRAS*' },
+                { key: 'LAVADORAS', title: '*MÁQUINA DE LAVAR*' },
+                { key: 'MICROONDAS', title: '*MWO* (MICROONDAS)' },
+                { key: 'OUTROS', title: '*OUTROS PRODUTOS*' }
+            ];
+
+            let totalSelectedInPreview = 0;
+
+            categoriesConfig.forEach(cat => {
+                const selectedInCat = state.products.filter(p => 
+                    classifyProductCategory(p).id === cat.key && 
+                    mixWhatsAppSelectedProducts.has(p.id) &&
+                    mixWhatsAppSelectedBrands.has(p.brandId)
+                );
+
+                totalSelectedInPreview += selectedInCat.length;
+
+                if (selectedInCat.length === 0) {
+                    if (hideEmpty || cat.key === 'OUTROS') return;
+                    text += `${cat.title}\n\n`;
+                    return;
+                }
+
+                text += `${cat.title}\n`;
+                selectedInCat.forEach(p => {
+                    const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === p.id);
+                    const priceStr = (sp && sp.currentPrice !== null && sp.currentPrice !== undefined && sp.currentPrice !== '')
+                        ? formatBRL(sp.currentPrice)
+                        : 'Sem preço';
+
+                    let stockStr = 'Estoque: -';
+                    if (sp && sp.currentStock !== null && sp.currentStock !== undefined && sp.currentStock !== '') {
+                        const cur = Number(sp.currentStock);
+                        if (cur === 0) stockStr = 'Ruptura (0 un)';
+                        else stockStr = `Estoque: ${cur} un`;
+                    }
+
+                    // Se mais de uma marca estiver selecionada, coloca a marca na frente se não estiver no nome
+                    const brName = bMap[p.brandId]?.name || '';
+                    const shouldPrefix = mixWhatsAppSelectedBrands.size > 1 && brName && !p.name.toUpperCase().includes(brName.toUpperCase());
+                    const lineName = shouldPrefix ? `${brName} ${p.name}` : p.name;
+
+                    text += `• ${lineName} - ${priceStr} | ${stockStr}\n`;
+                });
+                text += `\n`;
+            });
+
+            const previewTextarea = document.getElementById('mix-wa-preview-text');
+            if (previewTextarea) {
+                previewTextarea.value = text.trim();
+            }
+
+            const countBadge = document.getElementById('mix-wa-selected-count-badge');
+            if (countBadge) {
+                countBadge.textContent = `${totalSelectedInPreview} itens`;
+            }
+        }
+
+        async function shareMixToWhatsApp() {
+            const previewTextarea = document.getElementById('mix-wa-preview-text');
+            const text = (previewTextarea ? previewTextarea.value : '').trim();
+            if (!text) {
+                return showToast("Selecione ao menos um item ou preencha a mensagem antes de compartilhar.", "warning");
+            }
+
+            // Tenta navigator.share no Mobile nativo
+            if (navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                try {
+                    await navigator.share({
+                        title: 'Mix de Produtos',
+                        text: text
+                    });
+                    showToast("Compartilhado com sucesso!", "success");
+                    return;
+                } catch (err) {
+                    if (err.name === 'AbortError') return;
+                }
+            }
+
+            // Fallback direto via URL do WhatsApp Web / App
+            const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            showToast("Abrindo WhatsApp...", "success");
+        }
+
+        function copyMixWhatsAppText() {
+            const previewTextarea = document.getElementById('mix-wa-preview-text');
+            const text = (previewTextarea ? previewTextarea.value : '').trim();
+            if (!text) {
+                return showToast("A mensagem está vazia.", "warning");
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast("Texto do Mix copiado com sucesso! Pronto para colar no WhatsApp.", "success");
+                }).catch(() => {
+                    if (previewTextarea) {
+                        previewTextarea.select();
+                        document.execCommand('copy');
+                        showToast("Texto copiado!", "success");
+                    }
+                });
+            } else if (previewTextarea) {
+                previewTextarea.select();
+                document.execCommand('copy');
+                showToast("Texto copiado!", "success");
+            }
+        }
+
 
         // ============================================================
         // APP PICKER ENGINE (SELETOR ESTILO NATIVO BOTTOM SHEET)
@@ -8150,6 +9600,775 @@
             }
         }
 
+// ============================================================
+// CENTRAL DE REBAIXAS & ALTERAÇÕES DE PREÇO (WHATSAPP AGREGADO)
+// ============================================================
+let rebaixasSelectedBrandId = 'ALL'; // 'ALL', 'PANASONIC', ou brandId específico
+let rebaixasSelectedStoreId = null;
+let rebaixasProductFilterMode = 'ALL'; // 'ALL' (todos da loja), 'CHANGED' (apenas alterados), 'SELECTED' (apenas selecionados)
+let rebaixasStoreData = {}; // { [storeId_productId]: { oldPrice, newPrice, selected, custom: boolean } }
+
+function initRebaixasData() {
+    // Carrega dados salvos de rebaixas do localStorage
+    try {
+        const saved = localStorage.getItem('easy_collect_rebaixas_data_v2');
+        if (saved) {
+            rebaixasStoreData = JSON.parse(saved);
+        }
+    } catch(e) {
+        rebaixasStoreData = {};
+    }
+
+    // Inicializa loja selecionada se ainda não houver
+    if (!rebaixasSelectedStoreId && state.stores && state.stores.length > 0) {
+        rebaixasSelectedStoreId = state.stores[0].id;
+    }
+
+    // Auto-detecta alterações de preço em state.storePrices
+    if (state.storePrices && state.storePrices.length > 0) {
+        state.storePrices.forEach(sp => {
+            const key = `${sp.storeId}_${sp.productId}`;
+            const curP = sp.currentPrice !== null && sp.currentPrice !== undefined ? Number(sp.currentPrice) : null;
+            const prevP = sp.previousPrice !== null && sp.previousPrice !== undefined ? Number(sp.previousPrice) : null;
+
+            if (curP !== null && !rebaixasStoreData[key]) {
+                const hasDiff = (prevP !== null && prevP > 0 && prevP !== curP);
+                rebaixasStoreData[key] = {
+                    oldPrice: hasDiff ? prevP : curP,
+                    newPrice: curP,
+                    selected: hasDiff, // Auto-seleciona se tiver diferença
+                    custom: false
+                };
+            }
+        });
+    }
+
+    updateRebaixasBadges();
+}
+
+function saveRebaixasStoreData() {
+    try {
+        localStorage.setItem('easy_collect_rebaixas_data_v2', JSON.stringify(rebaixasStoreData));
+    } catch(e) {}
+    updateRebaixasBadges();
+}
+
+function updateRebaixasBadges() {
+    let selectedCount = 0;
+    let changedCount = 0;
+
+    Object.keys(rebaixasStoreData).forEach(key => {
+        const item = rebaixasStoreData[key];
+        if (item.selected) selectedCount++;
+        if (item.oldPrice && item.newPrice && item.oldPrice !== item.newPrice) changedCount++;
+    });
+
+    const sideBadge = document.getElementById('side-badge-rebaixas');
+    if (sideBadge) {
+        if (selectedCount > 0) {
+            sideBadge.textContent = `${selectedCount} sel`;
+            sideBadge.className = "text-[9px] font-bold bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded-full border border-rose-500/30";
+        } else {
+            sideBadge.textContent = "WhatsApp";
+            sideBadge.className = "text-[9px] font-bold bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full border border-slate-700";
+        }
+    }
+
+    const mobBadge = document.getElementById('mob-badge-rebaixas');
+    if (mobBadge) {
+        if (selectedCount > 0) {
+            mobBadge.textContent = `${selectedCount}`;
+            mobBadge.classList.remove('hidden');
+        } else {
+            mobBadge.textContent = "WhatsApp";
+        }
+    }
+
+    const headerBadge = document.getElementById('header-btn-rebaixas-badge');
+    if (headerBadge) {
+        if (selectedCount > 0) {
+            headerBadge.textContent = `${selectedCount}`;
+            headerBadge.classList.remove('hidden');
+        } else {
+            headerBadge.classList.add('hidden');
+        }
+    }
+
+    const totalLabel = document.getElementById('rebaixas-total-badge');
+    if (totalLabel) {
+        totalLabel.textContent = `${selectedCount} selecionado${selectedCount === 1 ? '' : 's'} para WhatsApp (${changedCount} alterado${changedCount === 1 ? '' : 's'})`;
+    }
+}
+
+function formatRebaixaPrice(val) {
+    if (val === null || val === undefined || isNaN(val)) return 'R$0,00';
+    return 'R$' + Number(val).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function formatRebaixaProductHeading(p) {
+    const cat = classifyProductCategory(p.name || p);
+    let catPrefix = 'Produto';
+    if (cat.id === 'LAVADORAS') catPrefix = 'Lavadora';
+    else if (cat.id === 'REFRIGERADORES') catPrefix = 'Geladeira';
+    else if (cat.id === 'MICROONDAS') catPrefix = 'Micro-ondas';
+
+    let rawName = (p.name || '').trim();
+    // Limpa categoria redundante no início do nome caso o cadastro já tenha "Lavadora BWF14AB..."
+    const regex = new RegExp(`^(?:${catPrefix}|Lavadora|Lavadodora|Refrigerador|Geladeira|Micro-ondas|Microondas|MWO)\s*`, 'i');
+    let cleaned = rawName.replace(regex, '').trim();
+    if (!cleaned) cleaned = rawName;
+
+    return `${catPrefix} *${cleaned}*`;
+}
+
+function onRebaixasStoreChange(storeId) {
+    rebaixasSelectedStoreId = storeId;
+    syncRebaixasStoreInputs();
+    renderRebaixasTab();
+}
+
+function syncRebaixasStoreInputs() {
+    const store = state.stores.find(s => s.id === rebaixasSelectedStoreId);
+    if (!store) return;
+
+    const revEl = document.getElementById('rebaixa-inp-revenda');
+    if (revEl) revEl.value = store.name;
+
+    const filEl = document.getElementById('rebaixa-inp-filial');
+    if (filEl) filEl.value = store.revendaId || '';
+
+    const cidEl = document.getElementById('rebaixa-inp-cidade');
+    if (cidEl) cidEl.value = store.city ? (store.uf ? `${store.city} - ${store.uf}` : store.city) : (store.uf || '');
+
+    const regEl = document.getElementById('rebaixa-inp-regional');
+    if (regEl) {
+        regEl.value = localStorage.getItem('easy_collect_rebaixa_regional') || 'Leste';
+    }
+}
+
+function setRebaixasBrandFilter(brandId) {
+    rebaixasSelectedBrandId = brandId;
+    renderRebaixasBrandChips();
+    renderRebaixasTab();
+}
+
+function setRebaixasProductFilterMode(mode) {
+    rebaixasProductFilterMode = mode;
+    renderRebaixasTab();
+}
+
+function renderRebaixasBrandChips() {
+    const container = document.getElementById('rebaixas-brand-chips-container');
+    if (!container) return;
+
+    const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+    const storeId = rebaixasSelectedStoreId;
+
+    // Contagem de produtos por marca na loja selecionada
+    const brandCounts = {};
+    let panasonicCount = 0;
+    let totalCount = 0;
+
+    state.products.forEach(p => {
+        const br = bMap[p.brandId];
+        const isPana = isPanasonicBrand(br?.name);
+        if (isPana) panasonicCount++;
+        brandCounts[p.brandId] = (brandCounts[p.brandId] || 0) + 1;
+        totalCount++;
+    });
+
+    // Ordena marcas: Panasonic primeiro
+    const sortedBrands = [...state.brands].sort(sortBrandsWithPanasonicFirst);
+
+    let html = '';
+
+    // Chip "Todas as Marcas"
+    const isAllActive = rebaixasSelectedBrandId === 'ALL';
+    html += `
+        <button type="button" onclick="window.app.setRebaixasBrandFilter('ALL')" 
+            class="px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 cursor-pointer ${
+                isAllActive 
+                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-500/30 border border-emerald-400 font-bold' 
+                : 'bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/80'
+            }">
+            <span>Todas as Marcas</span>
+            <span class="text-[10px] px-1.5 py-0.2 rounded-full font-mono chip-count ${isAllActive ? 'bg-white/20 text-white' : 'bg-slate-900 text-slate-400'}">${totalCount}</span>
+        </button>
+    `;
+
+    // Chip "⭐ Só Panasonic"
+    const isPanaActive = rebaixasSelectedBrandId === 'PANASONIC';
+    html += `
+        <button type="button" onclick="window.app.setRebaixasBrandFilter('PANASONIC')" 
+            class="px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                isPanaActive 
+                ? 'bg-blue-600 text-white shadow-md shadow-blue-500/30 border border-blue-400' 
+                : 'bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/80'
+            }">
+            <span>⭐ Só Panasonic</span>
+            <span class="text-[10px] px-1.5 py-0.2 rounded-full font-mono chip-count ${isPanaActive ? 'bg-white/20 text-white' : 'bg-slate-900 text-blue-400'}">${panasonicCount}</span>
+        </button>
+    `;
+
+    // Chips individuais para cada marca cadastrada
+    sortedBrands.forEach(b => {
+        const count = brandCounts[b.id] || 0;
+        const isActive = rebaixasSelectedBrandId === b.id;
+        const isPana = isPanasonicBrand(b.name);
+        html += `
+            <button type="button" onclick="window.app.setRebaixasBrandFilter('${b.id}')" 
+                class="px-2.5 py-1.5 rounded-xl text-xs font-medium transition flex items-center gap-1.5 cursor-pointer ${
+                    isActive 
+                    ? 'bg-rose-600 text-white shadow-md shadow-rose-500/30 border border-rose-400 font-bold' 
+                    : 'bg-slate-800/60 hover:bg-slate-700 text-slate-300 border border-slate-700/60'
+                }">
+                <span>${isPana ? '⭐ ' : ''}${b.name}</span>
+                <span class="text-[10px] px-1.5 py-0.2 rounded-full font-mono ${isActive ? 'bg-white/20 text-white' : 'bg-slate-900 text-slate-400'}">${count}</span>
+            </button>
+        `;
+    });
+
+    container.innerHTML = html;
+
+    // Atualiza label de status
+    const statusEl = document.getElementById('rebaixas-brand-filter-status');
+    if (statusEl) {
+        if (rebaixasSelectedBrandId === 'PANASONIC') {
+            statusEl.textContent = "Filtrando: ⭐ Apenas produtos Panasonic";
+        } else if (rebaixasSelectedBrandId === 'ALL') {
+            statusEl.textContent = "Filtrando: Todas as marcas disponíveis";
+        } else {
+            const b = bMap[rebaixasSelectedBrandId];
+            statusEl.textContent = `Filtrando: Apenas marca ${b ? b.name : ''}`;
+        }
+    }
+}
+
+function renderRebaixasTab() {
+    renderRebaixasBrandChips();
+
+    // 1. Atualiza e popula o Seletor de Lojas com TODAS as lojas cadastradas
+    const storeSelect = document.getElementById('rebaixas-select-store');
+    if (storeSelect) {
+        if (!state.stores || state.stores.length === 0) {
+            storeSelect.innerHTML = '<option value="">Nenhuma loja cadastrada</option>';
+        } else {
+            let optHtml = '';
+            state.stores.forEach(s => {
+                const isSelected = (s.id === rebaixasSelectedStoreId) ? 'selected' : '';
+                optHtml += `<option value="${s.id}" ${isSelected}>🏬 ${s.name} • ${s.revendaId || s.id} (${s.city ? `${s.city} - ` : ''}${s.uf})</option>`;
+            });
+            storeSelect.innerHTML = optHtml;
+            if (rebaixasSelectedStoreId) {
+                storeSelect.value = rebaixasSelectedStoreId;
+            } else if (state.stores.length > 0) {
+                rebaixasSelectedStoreId = state.stores[0].id;
+                storeSelect.value = rebaixasSelectedStoreId;
+            }
+        }
+    }
+
+    const storeId = rebaixasSelectedStoreId;
+    const store = state.stores.find(s => s.id === storeId);
+    syncRebaixasStoreInputs();
+
+    // 2. Filtra produtos desta loja
+    const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+    const searchTerm = (document.getElementById('rebaixas-search-product')?.value || '').toLowerCase().trim();
+
+    let productList = [...state.products];
+
+    // Filtro por Marca
+    if (rebaixasSelectedBrandId === 'PANASONIC') {
+        productList = productList.filter(p => {
+            const br = bMap[p.brandId];
+            return isPanasonicBrand(br?.name);
+        });
+    } else if (rebaixasSelectedBrandId !== 'ALL') {
+        productList = productList.filter(p => p.brandId === rebaixasSelectedBrandId);
+    }
+
+    // Filtro por termo de busca
+    if (searchTerm) {
+        productList = productList.filter(p => 
+            p.name.toLowerCase().includes(searchTerm) || 
+            (p.sku && p.sku.toLowerCase().includes(searchTerm))
+        );
+    }
+
+    // Coleta dados de preço para cada produto nesta loja
+    const items = productList.map(p => {
+        const key = `${storeId}_${p.id}`;
+        const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === p.id);
+        const curP = sp && sp.currentPrice !== null && sp.currentPrice !== undefined ? Number(sp.currentPrice) : 0;
+        const prevP = sp && sp.previousPrice !== null && sp.previousPrice !== undefined ? Number(sp.previousPrice) : 0;
+
+        let entry = rebaixasStoreData[key];
+        if (!entry) {
+            const hasDiff = prevP > 0 && prevP !== curP;
+            entry = {
+                oldPrice: hasDiff ? prevP : curP,
+                newPrice: curP,
+                selected: hasDiff,
+                custom: false
+            };
+            rebaixasStoreData[key] = entry;
+        }
+
+        const oldP = entry.oldPrice !== undefined ? Number(entry.oldPrice) : curP;
+        const newP = entry.newPrice !== undefined ? Number(entry.newPrice) : curP;
+        const diff = newP - oldP;
+        const percent = oldP > 0 ? ((newP - oldP) / oldP) * 100 : 0;
+        const isReduction = newP < oldP;
+        const isIncrease = newP > oldP;
+
+        return {
+            product: p,
+            brand: bMap[p.brandId],
+            key,
+            storePrice: sp,
+            oldPrice: oldP,
+            newPrice: newP,
+            diff,
+            percent,
+            isReduction,
+            isIncrease,
+            selected: !!entry.selected
+        };
+    });
+
+    // Filtro por Modo de Exibição (Apenas alterados vs Todos)
+    let displayItems = items;
+    if (rebaixasProductFilterMode === 'CHANGED') {
+        displayItems = items.filter(it => it.diff !== 0);
+    } else if (rebaixasProductFilterMode === 'SELECTED') {
+        displayItems = items.filter(it => it.selected);
+    }
+
+    // Ordenação: selecionados primeiro, depois alterados, depois por nome
+    displayItems.sort((a,b) => {
+        if (a.selected !== b.selected) return a.selected ? -1 : 1;
+        if ((a.diff !== 0) !== (b.diff !== 0)) return (a.diff !== 0) ? -1 : 1;
+        return a.product.name.localeCompare(b.product.name);
+    });
+
+    // 3. Renderiza a lista de produtos na coluna esquerda
+    const listEl = document.getElementById('rebaixas-products-list');
+    const countLabel = document.getElementById('rebaixas-products-count-label');
+    const selectedCount = items.filter(it => it.selected).length;
+    const changedCount = items.filter(it => it.diff !== 0).length;
+
+    if (countLabel) {
+        countLabel.textContent = `${displayItems.length} produtos exibidos (${selectedCount} selecionados para o WhatsApp)`;
+    }
+
+    // Atualiza botões de filtro de modo
+    const btnModeAll = document.getElementById('btn-rebaixa-mode-all');
+    const btnModeChanged = document.getElementById('btn-rebaixa-mode-changed');
+    const btnModeSelected = document.getElementById('btn-rebaixa-mode-selected');
+
+    if (btnModeAll) {
+        btnModeAll.className = `px-3 py-1.5 rounded-xl text-xs font-semibold transition cursor-pointer ${rebaixasProductFilterMode === 'ALL' ? 'bg-slate-700 text-white font-bold' : 'bg-slate-800/80 text-slate-400 hover:text-white'}`;
+        btnModeAll.textContent = `Todos (${items.length})`;
+    }
+    if (btnModeChanged) {
+        btnModeChanged.className = `px-3 py-1.5 rounded-xl text-xs font-semibold transition cursor-pointer ${rebaixasProductFilterMode === 'CHANGED' ? 'bg-rose-600 text-white font-bold' : 'bg-slate-800/80 text-slate-400 hover:text-white'}`;
+        btnModeChanged.textContent = `Alterados (${changedCount})`;
+    }
+    if (btnModeSelected) {
+        btnModeSelected.className = `px-3 py-1.5 rounded-xl text-xs font-semibold transition cursor-pointer ${rebaixasProductFilterMode === 'SELECTED' ? 'bg-emerald-600 text-white font-bold' : 'bg-slate-800/80 text-slate-400 hover:text-white'}`;
+        btnModeSelected.textContent = `Selecionados (${selectedCount})`;
+    }
+
+    if (displayItems.length === 0) {
+        if (listEl) {
+            listEl.innerHTML = `
+                <div class="bg-slate-900/60 border border-dashed border-slate-800 rounded-2xl p-8 text-center space-y-3">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-slate-800 flex items-center justify-center text-slate-500 text-xl">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-sm font-bold text-slate-300">Nenhum produto encontrado</p>
+                        <p class="text-xs text-slate-500 max-w-sm mx-auto">
+                            Tente selecionar "Todas as Marcas" acima ou mudar o filtro para "Todos os Produtos".
+                        </p>
+                    </div>
+                    <button onclick="window.app.setRebaixasProductFilterMode('ALL'); window.app.setRebaixasBrandFilter('ALL');" class="bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-md active:scale-95 inline-flex items-center gap-1.5 cursor-pointer">
+                        Ver Todos os Produtos
+                    </button>
+                </div>
+            `;
+        }
+    } else if (listEl) {
+        let html = '';
+        displayItems.forEach(it => {
+            const p = it.product;
+            const br = it.brand;
+            const heading = formatRebaixaProductHeading(p);
+
+            let diffBadge = '';
+            if (it.isReduction) {
+                diffBadge = `<span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">📉 ${it.percent.toFixed(1)}% (${formatRebaixaPrice(it.diff)})</span>`;
+            } else if (it.isIncrease) {
+                diffBadge = `<span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded-full font-bold">📈 +${it.percent.toFixed(1)}% (+${formatRebaixaPrice(it.diff)})</span>`;
+            } else {
+                diffBadge = `<span class="text-[10px] text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded-full font-mono rebaixa-badge-neutral">Sem alteração</span>`;
+            }
+
+            html += `
+                <div class="border rounded-2xl p-3.5 transition-all duration-200 rebaixa-product-card ${
+                    it.selected 
+                    ? 'bg-slate-900 border-rose-500/40 shadow-md shadow-rose-950/20 ring-1 ring-rose-500/30 is-selected' 
+                    : 'bg-slate-900/70 border-slate-800 hover:border-slate-700'
+                }">
+                    <!-- Linha 1: Checkbox, Título e Marca -->
+                    <div class="flex items-start justify-between gap-3 pb-2.5 border-b border-slate-800/80">
+                        <label class="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0">
+                            <input type="checkbox" ${it.selected ? 'checked' : ''} 
+                                onchange="window.app.toggleRebaixaProductSelection('${p.id}')"
+                                class="w-4 h-4 rounded text-rose-600 focus:ring-0 bg-slate-800 border-slate-700 cursor-pointer shrink-0">
+                            <div class="min-w-0">
+                                <h4 class="text-xs sm:text-sm font-bold text-white truncate flex items-center gap-2 rebaixa-product-title">
+                                    <span>${heading}</span>
+                                    ${br ? `<span class="text-[9px] bg-slate-800 text-slate-300 border border-slate-700 px-1.5 py-0.2 rounded font-normal shrink-0 rebaixa-brand-badge">${br.name}</span>` : ''}
+                                </h4>
+                                <span class="text-[10px] text-slate-400 font-mono rebaixa-sku-badge">SKU: ${p.sku || p.id}</span>
+                            </div>
+                        </label>
+                        <div class="shrink-0">
+                            ${diffBadge}
+                        </div>
+                    </div>
+
+                    <!-- Linha 2: Campos Editáveis De (R$) e Por (R$) com Atalhos -->
+                    <div class="pt-2.5 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-2">
+                            <div>
+                                <label class="block text-[9px] font-bold uppercase text-slate-400 rebaixa-price-lbl">De (R$):</label>
+                                <input type="text" value="${it.oldPrice > 0 ? it.oldPrice.toFixed(2).replace('.', ',') : ''}"
+                                    placeholder="0,00"
+                                    onchange="window.app.setRebaixaPriceValue('${p.id}', 'old', this.value)"
+                                    class="w-24 rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1 text-xs font-mono font-bold text-slate-300 text-center focus:ring-1 focus:ring-rose-500 rebaixa-price-inp">
+                            </div>
+                            <span class="text-slate-500 mt-3 font-bold rebaixa-arrow">➔</span>
+                            <div>
+                                <label class="block text-[9px] font-bold uppercase text-emerald-400 rebaixa-price-lbl-por">Por (R$):</label>
+                                <input type="text" value="${it.newPrice > 0 ? it.newPrice.toFixed(2).replace('.', ',') : ''}"
+                                    placeholder="0,00"
+                                    onchange="window.app.setRebaixaPriceValue('${p.id}', 'new', this.value)"
+                                    class="w-24 rounded-lg border border-emerald-500/50 bg-slate-950 px-2.5 py-1 text-xs font-mono font-bold text-emerald-300 text-center focus:ring-1 focus:ring-emerald-500 rebaixa-price-inp-por">
+                            </div>
+                        </div>
+
+                        <!-- Botões Rápidos de Rebaixa -->
+                        <div class="flex items-center gap-1.5">
+                            <button type="button" onclick="window.app.applyQuickRebaixaPercent('${p.id}', 5)" title="Dar 5% de desconto" class="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded-lg border border-slate-700 cursor-pointer transition active:scale-95">-5%</button>
+                            <button type="button" onclick="window.app.applyQuickRebaixaPercent('${p.id}', 10)" title="Dar 10% de desconto" class="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-emerald-300 px-2 py-1 rounded-lg border border-slate-700 cursor-pointer transition active:scale-95">-10%</button>
+                            <button type="button" onclick="window.app.applyQuickRebaixaValue('${p.id}', 100)" title="Reduzir R$ 100" class="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded-lg border border-slate-700 cursor-pointer transition active:scale-95">-100</button>
+                            <button type="button" onclick="window.app.applyQuickRebaixaValue('${p.id}', 200)" title="Reduzir R$ 200" class="text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded-lg border border-slate-700 cursor-pointer transition active:scale-95">-200</button>
+                            <button type="button" onclick="window.app.saveRebaixaPriceToStore('${p.id}')" title="Gravar este novo preço na tabela oficial da loja" class="text-[10px] font-bold bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white px-2.5 py-1 rounded-lg border border-emerald-500/30 cursor-pointer transition active:scale-95 flex items-center gap-1">
+                                <i class="fa-solid fa-floppy-disk text-[9px]"></i>
+                                <span>Salvar na Loja</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        listEl.innerHTML = html;
+    }
+
+    updateRebaixasWhatsAppPreview();
+    updateRebaixasBadges();
+}
+
+function toggleRebaixaProductSelection(productId) {
+    const key = `${rebaixasSelectedStoreId}_${productId}`;
+    if (!rebaixasStoreData[key]) {
+        rebaixasStoreData[key] = { oldPrice: 0, newPrice: 0, selected: true, custom: false };
+    } else {
+        rebaixasStoreData[key].selected = !rebaixasStoreData[key].selected;
+    }
+    saveRebaixasStoreData();
+    renderRebaixasTab();
+}
+
+function setRebaixaPriceValue(productId, type, rawVal) {
+    const key = `${rebaixasSelectedStoreId}_${productId}`;
+    const num = parseFloat((rawVal || '').replace(',', '.').trim());
+    if (isNaN(num) || num < 0) return;
+
+    if (!rebaixasStoreData[key]) {
+        rebaixasStoreData[key] = { oldPrice: 0, newPrice: 0, selected: true, custom: true };
+    }
+    if (type === 'old') rebaixasStoreData[key].oldPrice = num;
+    if (type === 'new') rebaixasStoreData[key].newPrice = num;
+
+    // Se o usuário digitou uma rebaixa, marca como selecionado automaticamente
+    rebaixasStoreData[key].selected = true;
+    rebaixasStoreData[key].custom = true;
+
+    saveRebaixasStoreData();
+    renderRebaixasTab();
+}
+
+function applyQuickRebaixaPercent(productId, pct) {
+    const key = `${rebaixasSelectedStoreId}_${productId}`;
+    let item = rebaixasStoreData[key];
+    const basePrice = (item && item.oldPrice > 0) ? item.oldPrice : (item?.newPrice || 0);
+
+    if (basePrice <= 0) {
+        return showToast("Defina primeiro o preço 'De (R$)' deste produto.", "warning");
+    }
+
+    const discounted = basePrice * (1 - (pct / 100));
+    if (!item) {
+        item = { oldPrice: basePrice, newPrice: discounted, selected: true, custom: true };
+    } else {
+        item.oldPrice = basePrice;
+        item.newPrice = discounted;
+        item.selected = true;
+        item.custom = true;
+    }
+    rebaixasStoreData[key] = item;
+    saveRebaixasStoreData();
+    renderRebaixasTab();
+    showToast(`Desconto de ${pct}% aplicado (${formatRebaixaPrice(discounted)})!`, "success");
+}
+
+function applyQuickRebaixaValue(productId, discountVal) {
+    const key = `${rebaixasSelectedStoreId}_${productId}`;
+    let item = rebaixasStoreData[key];
+    const basePrice = (item && item.oldPrice > 0) ? item.oldPrice : (item?.newPrice || 0);
+
+    if (basePrice <= 0) {
+        return showToast("Defina primeiro o preço 'De (R$)' deste produto.", "warning");
+    }
+
+    const discounted = Math.max(0, basePrice - discountVal);
+    if (!item) {
+        item = { oldPrice: basePrice, newPrice: discounted, selected: true, custom: true };
+    } else {
+        item.oldPrice = basePrice;
+        item.newPrice = discounted;
+        item.selected = true;
+        item.custom = true;
+    }
+    rebaixasStoreData[key] = item;
+    saveRebaixasStoreData();
+    renderRebaixasTab();
+    showToast(`Redução de R$ ${discountVal} aplicada (${formatRebaixaPrice(discounted)})!`, "success");
+}
+
+async function saveRebaixaPriceToStore(productId) {
+    const key = `${rebaixasSelectedStoreId}_${productId}`;
+    const item = rebaixasStoreData[key];
+    if (!item || isNaN(item.newPrice) || item.newPrice <= 0) {
+        return showToast("Insira um preço válido maior que zero.", "warning");
+    }
+
+    const pr = state.products.find(p => p.id === productId);
+    const storeId = rebaixasSelectedStoreId;
+    const val = item.newPrice;
+    const oldPrice = item.oldPrice > 0 ? item.oldPrice : val;
+
+    const docId = `${storeId}_${productId}`;
+    const now = new Date().toISOString();
+    const priceData = {
+        id: docId,
+        storeId,
+        productId,
+        brandId: pr?.brandId || '',
+        currentPrice: val,
+        previousPrice: oldPrice,
+        updatedAt: now,
+        updatedBy: currentUser ? currentUser.uid : 'local'
+    };
+
+    const idx = state.storePrices.findIndex(sp => sp.id === docId);
+    if (idx >= 0) state.storePrices[idx] = { ...state.storePrices[idx], ...priceData };
+    else state.storePrices.push(priceData);
+
+    saveToLocalStorage();
+    showToast(`Preço gravado com sucesso na loja (${formatBRL(val)})!`, "success");
+}
+
+function selectAllRebaixaProducts(select) {
+    const storeId = rebaixasSelectedStoreId;
+    const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+    
+    state.products.forEach(p => {
+        // Respeita filtro de marca ativo
+        if (rebaixasSelectedBrandId === 'PANASONIC') {
+            if (!isPanasonicBrand(bMap[p.brandId]?.name)) return;
+        } else if (rebaixasSelectedBrandId !== 'ALL') {
+            if (p.brandId !== rebaixasSelectedBrandId) return;
+        }
+
+        const key = `${storeId}_${p.id}`;
+        if (!rebaixasStoreData[key]) {
+            const sp = state.storePrices.find(x => x.storeId === storeId && x.productId === p.id);
+            const curP = sp?.currentPrice || 0;
+            rebaixasStoreData[key] = { oldPrice: curP, newPrice: curP, selected: select, custom: false };
+        } else {
+            rebaixasStoreData[key].selected = select;
+        }
+    });
+
+    saveRebaixasStoreData();
+    renderRebaixasTab();
+}
+
+function generateRebaixasTextForStore(storeId = null) {
+    const stId = storeId || rebaixasSelectedStoreId;
+    const store = state.stores.find(s => s.id === stId);
+    if (!store) return '';
+
+    const revendaInput = (document.getElementById('rebaixa-inp-revenda')?.value || store.name || '').trim();
+    const filialInput = (document.getElementById('rebaixa-inp-filial')?.value !== undefined
+        ? document.getElementById('rebaixa-inp-filial').value
+        : (store.revendaId || '')).trim();
+    const cidadeInput = (document.getElementById('rebaixa-inp-cidade')?.value !== undefined
+        ? document.getElementById('rebaixa-inp-cidade').value
+        : (store.city ? (store.uf ? `${store.city} - ${store.uf}` : store.city) : store.uf || '')).trim();
+    const regionalInput = (document.getElementById('rebaixa-inp-regional')?.value !== undefined
+        ? document.getElementById('rebaixa-inp-regional').value
+        : (localStorage.getItem('easy_collect_rebaixa_regional') || 'Leste')).trim();
+    const titleInput = (document.getElementById('rebaixa-inp-title')?.value || 'Rebaixa de Preço').trim();
+
+    // Salva regional para memorizar escolha
+    if (regionalInput) {
+        localStorage.setItem('easy_collect_rebaixa_regional', regionalInput);
+    }
+
+    const bMap = Object.fromEntries(state.brands.map(b => [b.id, b]));
+
+    // Coleta produtos selecionados desta loja respeitando o filtro de marca
+    const selectedBlocks = [];
+    state.products.forEach(p => {
+        // Filtro de marca
+        if (rebaixasSelectedBrandId === 'PANASONIC') {
+            if (!isPanasonicBrand(bMap[p.brandId]?.name)) return;
+        } else if (rebaixasSelectedBrandId !== 'ALL') {
+            if (p.brandId !== rebaixasSelectedBrandId) return;
+        }
+
+        const key = `${stId}_${p.id}`;
+        const item = rebaixasStoreData[key];
+        if (item && item.selected) {
+            const heading = formatRebaixaProductHeading(p);
+            const oldStr = formatRebaixaPrice(item.oldPrice);
+            const newStr = formatRebaixaPrice(item.newPrice);
+            selectedBlocks.push(`${heading}  \n\nDe: ${oldStr}\nPor: ${newStr}`);
+        }
+    });
+
+    if (selectedBlocks.length === 0) return '';
+
+    let text = `*${titleInput}*\n\n`;
+    text += `Revenda: ${revendaInput}\n`;
+    text += `Filial: ${filialInput}\n`;
+    text += `Cidade: ${cidadeInput}\n`;
+    text += `Regional: ${regionalInput}\n\n`;
+
+    text += selectedBlocks.join('\n\n');
+    return text.trim();
+}
+
+function updateRebaixasWhatsAppPreview() {
+    const previewTextarea = document.getElementById('rebaixas-preview-text');
+    const storeSubTitle = document.getElementById('rebaixas-preview-selected-store-name');
+
+    if (!rebaixasSelectedStoreId) {
+        if (previewTextarea) previewTextarea.value = "Selecione uma loja acima para começar.";
+        if (storeSubTitle) storeSubTitle.textContent = "Nenhuma revenda selecionada";
+        return;
+    }
+
+    const store = state.stores.find(s => s.id === rebaixasSelectedStoreId);
+    if (storeSubTitle && store) {
+        storeSubTitle.textContent = `${store.name} (${store.uf}) • ${store.revendaId || store.id}`;
+    }
+
+    const text = generateRebaixasTextForStore(rebaixasSelectedStoreId);
+    if (previewTextarea) {
+        if (!text) {
+            previewTextarea.value = "Marque os produtos ao lado na lista para incluí-los na mensagem...";
+        } else {
+            previewTextarea.value = text;
+        }
+    }
+}
+
+function shareRebaixaToWhatsApp() {
+    if (!rebaixasSelectedStoreId) {
+        return showToast("Selecione uma revenda para compartilhar.", "warning");
+    }
+
+    const text = generateRebaixasTextForStore(rebaixasSelectedStoreId);
+    if (!text) {
+        return showToast("Marque pelo menos um produto na lista para compartilhar no WhatsApp.", "warning");
+    }
+
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+    showToast("Abrindo WhatsApp com a mensagem da Revenda...", "success");
+}
+
+function copyRebaixaText() {
+    if (!rebaixasSelectedStoreId) {
+        return showToast("Selecione uma revenda para copiar.", "warning");
+    }
+
+    const text = generateRebaixasTextForStore(rebaixasSelectedStoreId);
+    if (!text) {
+        return showToast("A mensagem está vazia. Marque produtos na lista ao lado.", "warning");
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast("Mensagem de Rebaixa copiada com sucesso!", "success");
+        }).catch(() => {
+            const previewEl = document.getElementById('rebaixas-preview-text');
+            if (previewEl) {
+                previewEl.select();
+                document.execCommand('copy');
+                showToast("Mensagem copiada!", "success");
+            }
+        });
+    } else {
+        const previewEl = document.getElementById('rebaixas-preview-text');
+        if (previewEl) {
+            previewEl.select();
+            document.execCommand('copy');
+            showToast("Mensagem copiada!", "success");
+        }
+    }
+}
+
+function unselectAllRebaixaProducts() {
+    const storeId = rebaixasSelectedStoreId;
+    if (!storeId) return;
+
+    Object.keys(rebaixasStoreData).forEach(key => {
+        if (key.startsWith(`${storeId}_`)) {
+            rebaixasStoreData[key].selected = false;
+        }
+    });
+
+    saveRebaixasStoreData();
+    renderRebaixasTab();
+    showToast("Todos os produtos foram desmarcados.", "info");
+}
+
+function clearAllPriceChanges() {
+    unselectAllRebaixaProducts();
+}
+
+
+        
+
+
         // ============================================================
         // INICIALIZAÇÃO DO APP NO DOM
         // ============================================================
@@ -8209,6 +10428,40 @@
             generateFullPDF,
             generateStorePDF,
             closeModal,
+            openMixWhatsAppModal,
+            onMixStoreChange,
+            renderMixBrandChips,
+            toggleMixBrand,
+            setMixBrandFilter,
+            filterMixProductsList,
+            toggleMixProduct,
+            toggleMixCategory,
+            selectMixPreset,
+            updateMixWhatsAppPreview,
+            shareMixToWhatsApp,
+            copyMixWhatsAppText,
+            initRebaixasData,
+            renderRebaixasTab,
+            renderRebaixasBrandChips,
+            setRebaixasBrandFilter,
+            setRebaixasProductFilterMode,
+            onRebaixasStoreChange,
+            syncRebaixasStoreInputs,
+            toggleRebaixaProductSelection,
+            setRebaixaPriceValue,
+            applyQuickRebaixaPercent,
+            applyQuickRebaixaValue,
+            saveRebaixaPriceToStore,
+            selectAllRebaixaProducts,
+            unselectAllRebaixaProducts,
+            generateRebaixasTextForStore,
+            updateRebaixasWhatsAppPreview,
+            shareRebaixaToWhatsApp,
+            copyRebaixaText,
+            clearAllPriceChanges,
+            formatRebaixaProductHeading,
+            formatRebaixaPrice,
+            updateRebaixasBadges,
             goToStore,
             goToStoreFromBanner,
             promptPWAInstall,
@@ -8245,12 +10498,13 @@
 
             refreshAllViews();
             syncPickerLabels();
+            initRebaixasData();
             initFirebase();
             setupPWA();
 
             // Hash Navigation
             const hash = window.location.hash.replace('#', '');
-            if (['consulta', 'graficos', 'precos', 'lojas', 'catalogo', 'logs', 'mais'].includes(hash)) {
+            if (['consulta', 'graficos', 'precos', 'rebaixas', 'lojas', 'catalogo', 'logs', 'mais'].includes(hash)) {
                 switchTab(hash);
             } else {
                 switchTab('consulta');
